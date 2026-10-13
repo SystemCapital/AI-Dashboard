@@ -1119,10 +1119,6 @@
   "(\"data center\" OR \"data centre\") lease (MW OR gigawatt) (AI OR GPU OR hyperscaler) billion when:7d"
  ],
  "edgar_phrases": [],
- "errors": [
-  "news: <urlopen error Tunnel connection failed: 403 Forbidden>",
-  "news: <urlopen error Tunnel connection failed: 403 Forbidden>",
-  "news: <urlopen error Tunnel connection failed: 403 Forbidden>"
- ],
+ "errors": [],
  "note": "Headlines and filings the daily scan matched to a multi-year GPU / AI-compute contract, with the figures it could read from them. Review each one: a confirmed deal goes into data/rental_rates.json 'contracts' (classified; see engine/deals_seed.py for the fields); set status to 'added' or 'dismissed' here to drop it from the page's review box. Nothing here enters the model until it is moved."
 }

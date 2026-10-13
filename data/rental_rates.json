@@ -34,7 +34,7 @@
    "price_hr": 42.0,
    "per_gpu_hr": 10.5,
    "url": "https://www.coreweave.com/pricing",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Inference single-GPU column also $10.50. Reserved capacity 'up to 60% off'.",
    "refresh": {
     "kind": "html",
@@ -43,8 +43,7 @@
     "gpus": 4
    },
    "hyperscaler": false,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "CoreWeave",
@@ -55,7 +54,7 @@
    "price_hr": null,
    "per_gpu_hr": null,
    "url": "https://www.coreweave.com/pricing",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "CoreWeave publishes no GB300 price ('Contact sales'); the row is read every day so a published price shows up the day it appears.",
    "refresh": {
     "kind": "html",
@@ -66,8 +65,7 @@
    "hyperscaler": false,
    "pricing": "list",
    "status": "not published",
-   "refresh_note": "the vendor shows 'Contact sales' for this row (no published price)",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "refresh_note": "the vendor shows 'Contact sales' for this row (no published price)"
   },
   {
    "vendor": "CoreWeave",
@@ -78,7 +76,7 @@
    "price_hr": 68.8,
    "per_gpu_hr": 8.6,
    "url": "https://www.coreweave.com/pricing",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Spot $34.11 = $4.26/GPU-hr.",
    "refresh": {
     "kind": "html",
@@ -87,8 +85,7 @@
     "gpus": 8
    },
    "hyperscaler": false,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "CoreWeave",
@@ -99,7 +96,7 @@
    "price_hr": 49.24,
    "per_gpu_hr": 6.155,
    "url": "https://www.coreweave.com/pricing",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Context only.",
    "refresh": {
     "kind": "html",
@@ -108,8 +105,7 @@
     "gpus": 8
    },
    "hyperscaler": false,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "CoreWeave",
@@ -120,7 +116,7 @@
    "price_hr": 35.84,
    "per_gpu_hr": 4.48,
    "url": "https://www.coreweave.com/pricing",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Interruptible spot capacity; on-demand B300 is 'contact sales'.",
    "refresh": {
     "kind": "html",
@@ -130,8 +126,7 @@
     "gpus": 8
    },
    "hyperscaler": false,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "CoreWeave",
@@ -142,7 +137,7 @@
    "price_hr": 34.11,
    "per_gpu_hr": 4.2637,
    "url": "https://www.coreweave.com/pricing",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Interruptible spot capacity.",
    "refresh": {
     "kind": "html",
@@ -152,8 +147,7 @@
     "gpus": 8
    },
    "hyperscaler": false,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "AWS",
@@ -164,7 +158,7 @@
    "price_hr": 761.904,
    "per_gpu_hr": 10.582,
    "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Capacity Blocks only (no on-demand). US East (Dallas) Local Zone. Unchanged by AWS's 1 Jul and 7 Oct repricings.",
    "refresh": {
     "kind": "html",
@@ -172,8 +166,7 @@
     "gpus": 72
    },
    "hyperscaler": true,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "AWS",
@@ -184,7 +177,7 @@
    "price_hr": 113.666,
    "per_gpu_hr": 14.2082,
    "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "US regions (first row of AWS's table). Repriced to $12.355 on 1 Jul 2026 and to $14.208 on 7 Oct 2026 (AWS's own notice on the page). On-demand via price API: $113.93 = $14.24/GPU-hr (unchanged).",
    "refresh": {
     "kind": "html",
@@ -197,8 +190,7 @@
     }
    },
    "hyperscaler": true,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "AWS",
@@ -209,7 +201,7 @@
    "price_hr": 129.168,
    "per_gpu_hr": 16.146,
    "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "US regions (first row of AWS's table). Repriced to $14.04 on 1 Jul 2026 and to $16.146 on 7 Oct 2026 (AWS's own notice on the page); AWS says the next update is scheduled for January 2027.",
    "refresh": {
     "kind": "html",
@@ -222,8 +214,7 @@
     }
    },
    "hyperscaler": true,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "Microsoft Azure",
@@ -234,7 +225,7 @@
    "price_hr": 108.16,
    "per_gpu_hr": 27.04,
    "url": "https://prices.azure.com/api/retail/prices?$filter=armSkuName%20eq%20%27Standard_ND128isr_NDR_GB200_v6%27%20and%20priceType%20eq%20%27Consumption%27",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Azure Retail Prices API, East US, Linux consumption. Hyperscaler list price, well above neocloud rates.",
    "refresh": {
     "kind": "azure",
@@ -243,8 +234,7 @@
     "region": "eastus"
    },
    "hyperscaler": true,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "Microsoft Azure",
@@ -255,7 +245,7 @@
    "price_hr": 84.8,
    "per_gpu_hr": 10.6,
    "url": "https://prices.azure.com/api/retail/prices?$filter=armSkuName%20eq%20%27Standard_ND96isr_H200_v5%27",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Context only.",
    "refresh": {
     "kind": "azure",
@@ -264,8 +254,7 @@
     "region": "eastus2"
    },
    "hyperscaler": true,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "Oracle OCI",
@@ -276,15 +265,14 @@
    "price_hr": 72.0,
    "per_gpu_hr": 18.0,
    "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?partNumber=B112140&currencyCode=USD",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Oracle public price-list API, metric 'GPU Per Hour'. The oracle.com HTML price list shows blank cells.",
    "refresh": {
     "kind": "oracle",
     "part": "B112140"
    },
    "hyperscaler": true,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "Oracle OCI",
@@ -295,15 +283,14 @@
    "price_hr": 64.0,
    "per_gpu_hr": 16.0,
    "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?partNumber=B110979&currencyCode=USD",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "",
    "refresh": {
     "kind": "oracle",
     "part": "B110979"
    },
    "hyperscaler": true,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "Oracle OCI",
@@ -314,15 +301,14 @@
    "price_hr": 120.0,
    "per_gpu_hr": 15.0,
    "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?partNumber=B112237&currencyCode=USD",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "",
    "refresh": {
     "kind": "oracle",
     "part": "B112237"
    },
    "hyperscaler": true,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "Oracle OCI",
@@ -333,15 +319,14 @@
    "price_hr": 112.0,
    "per_gpu_hr": 14.0,
    "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?partNumber=B110978&currencyCode=USD",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "",
    "refresh": {
     "kind": "oracle",
     "part": "B110978"
    },
    "hyperscaler": true,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "Nebius",
@@ -352,7 +337,7 @@
    "price_hr": 9.5,
    "per_gpu_hr": 9.5,
    "url": "https://nebius.com/prices",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Nebius's table carries an 'On-demand, GPU-hour' column and, from 2026-09-23, a 'GPU-hour (Effective October 1, 2026)' column. The collector takes the dated column once its date has passed (before that it records it as announced). $7.85 until 30 Sep 2026, $9.50 from 1 Oct 2026; readings of 1-12 Oct taken from the old column were corrected on 12 Oct. GB200/GB300 NVL72: contact us.",
    "refresh": {
     "kind": "html",
@@ -364,9 +349,7 @@
     "effective_nth": 2
    },
    "hyperscaler": false,
-   "pricing": "list",
-   "refresh_note": "price from the column headed 'GPU-hour (Effective October 1, 2026)' (in force since 2026-10-01)",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "Nebius",
@@ -377,7 +360,7 @@
    "price_hr": 8.5,
    "per_gpu_hr": 8.5,
    "url": "https://nebius.com/prices",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Nebius's table carries an 'On-demand, GPU-hour' column and, from 2026-09-23, a 'GPU-hour (Effective October 1, 2026)' column. The collector takes the dated column once its date has passed (before that it records it as announced). $7.15 until 30 Sep 2026, $8.50 from 1 Oct 2026; readings of 1-12 Oct taken from the old column were corrected on 12 Oct. GB200/GB300 NVL72: contact us.",
    "refresh": {
     "kind": "html",
@@ -389,9 +372,7 @@
     "effective_nth": 2
    },
    "hyperscaler": false,
-   "pricing": "list",
-   "refresh_note": "price from the column headed 'GPU-hour (Effective October 1, 2026)' (in force since 2026-10-01)",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "Nebius",
@@ -436,7 +417,7 @@
    "price_hr": 6.69,
    "per_gpu_hr": 6.69,
    "url": "https://lambda.ai/pricing",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "1-Click Cluster reserved: $9.86 (16 GPUs) to $8.87 (256+).",
    "refresh": {
     "kind": "html",
@@ -444,8 +425,7 @@
     "gpus": 1
    },
    "hyperscaler": false,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "Lambda",
@@ -456,7 +436,7 @@
    "price_hr": 8.87,
    "per_gpu_hr": 8.87,
    "url": "https://lambda.ai/pricing",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "16 GPUs $9.86, 64 GPUs $9.36, 256+ GPUs $8.87; 1 year+: talk to sales. First read 2026-10-12.",
    "refresh": {
     "kind": "html",
@@ -465,8 +445,7 @@
     "gpus": 1
    },
    "hyperscaler": false,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "Verda (ex-DataCrunch)",
@@ -474,10 +453,10 @@
    "tier": "on-demand",
    "instance": "GB300 SXM6 288GB 1x",
    "gpus": 1,
-   "price_hr": 10.95,
-   "per_gpu_hr": 10.95,
+   "price_hr": 11.06,
+   "per_gpu_hr": 11.06,
    "url": "https://verda.com/pricing",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Single-GPU instance, not an NVL72 rack. Spot $4.31.",
    "refresh": {
     "kind": "html",
@@ -488,8 +467,7 @@
    },
    "hyperscaler": false,
    "pricing": "dynamic",
-   "logged_value": 10.74,
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "logged_value": 10.74
   },
   {
    "vendor": "Verda (ex-DataCrunch)",
@@ -497,10 +475,10 @@
    "tier": "on-demand",
    "instance": "B300 SXM6 1x",
    "gpus": 1,
-   "price_hr": 9.52,
-   "per_gpu_hr": 9.52,
+   "price_hr": 9.62,
+   "per_gpu_hr": 9.62,
    "url": "https://verda.com/pricing",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Spot $3.75.",
    "refresh": {
     "kind": "html",
@@ -511,8 +489,7 @@
    },
    "hyperscaler": false,
    "pricing": "dynamic",
-   "logged_value": 9.34,
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "logged_value": 9.34
   },
   {
    "vendor": "Verda (ex-DataCrunch)",
@@ -520,10 +497,10 @@
    "tier": "on-demand",
    "instance": "B200 SXM6 1x",
    "gpus": 1,
-   "price_hr": 7.56,
-   "per_gpu_hr": 7.56,
+   "price_hr": 7.64,
+   "per_gpu_hr": 7.64,
    "url": "https://verda.com/pricing",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Spot $3.06.",
    "refresh": {
     "kind": "html",
@@ -534,8 +511,7 @@
    },
    "hyperscaler": false,
    "pricing": "dynamic",
-   "logged_value": 7.56,
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "logged_value": 7.56
   },
   {
    "vendor": "Verda (ex-DataCrunch)",
@@ -543,10 +519,10 @@
    "tier": "spot",
    "instance": "GB300 SXM6 288GB 1x spot",
    "gpus": 1,
-   "price_hr": 5.48,
-   "per_gpu_hr": 5.48,
+   "price_hr": 5.53,
+   "per_gpu_hr": 5.53,
    "url": "https://verda.com/pricing",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Spot price of the single-GPU instance (not an NVL72 rack).",
    "refresh": {
     "kind": "html",
@@ -557,8 +533,7 @@
    },
    "hyperscaler": false,
    "pricing": "dynamic",
-   "logged_value": 5.37,
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "logged_value": 5.37
   },
   {
    "vendor": "Verda (ex-DataCrunch)",
@@ -566,10 +541,10 @@
    "tier": "spot",
    "instance": "B300 SXM6 1x spot",
    "gpus": 1,
-   "price_hr": 4.76,
-   "per_gpu_hr": 4.76,
+   "price_hr": 4.81,
+   "per_gpu_hr": 4.81,
    "url": "https://verda.com/pricing",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Spot price.",
    "refresh": {
     "kind": "html",
@@ -580,8 +555,7 @@
    },
    "hyperscaler": false,
    "pricing": "dynamic",
-   "logged_value": 4.67,
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "logged_value": 4.67
   },
   {
    "vendor": "Verda (ex-DataCrunch)",
@@ -589,10 +563,10 @@
    "tier": "spot",
    "instance": "B200 SXM6 1x spot",
    "gpus": 1,
-   "price_hr": 3.78,
-   "per_gpu_hr": 3.78,
+   "price_hr": 3.82,
+   "per_gpu_hr": 3.82,
    "url": "https://verda.com/pricing",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Spot price.",
    "refresh": {
     "kind": "html",
@@ -603,8 +577,7 @@
    },
    "hyperscaler": false,
    "pricing": "dynamic",
-   "logged_value": 3.78,
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "logged_value": 3.78
   },
   {
    "vendor": "Together AI",
@@ -615,7 +588,7 @@
    "price_hr": 8.19,
    "per_gpu_hr": 8.19,
    "url": "https://www.together.ai/gpu-clusters",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Reserved from $6.79. GB200/GB300 NVL72: contact us.",
    "refresh": {
     "kind": "html",
@@ -625,8 +598,7 @@
     "gpus": 1
    },
    "hyperscaler": false,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "Together AI",
@@ -637,7 +609,7 @@
    "price_hr": 9.99,
    "per_gpu_hr": 9.99,
    "url": "https://www.together.ai/gpu-clusters",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Reserved: contact us. First read 2026-10-12 (the row was added that day).",
    "refresh": {
     "kind": "html",
@@ -647,8 +619,7 @@
     "gpus": 1
    },
    "hyperscaler": false,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "Hyperbolic",
@@ -670,7 +641,7 @@
    "hyperscaler": false,
    "pricing": "dynamic",
    "logged_value": 5.99,
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "refresh_error": "2026-10-13: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>"
   },
   {
    "vendor": "Vultr",
@@ -681,7 +652,7 @@
    "price_hr": 68.0,
    "per_gpu_hr": 8.5,
    "url": "https://www.vultr.com/pricing/",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "From Vultr's public plan API (api.vultr.com/v2/plans-metal), hourly price of the 8-GPU bare-metal plan. First read 2026-10-12.",
    "refresh": {
     "kind": "vultr",
@@ -689,8 +660,7 @@
     "gpus": 8
    },
    "hyperscaler": false,
-   "pricing": "list",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "list"
   },
   {
    "vendor": "Vultr",
@@ -714,10 +684,10 @@
    "tier": "spot",
    "instance": "p6-b300.48xlarge EC2 Spot, us-east-1 (Linux)",
    "gpus": 8,
-   "price_hr": 72.081,
-   "per_gpu_hr": 9.0101,
+   "price_hr": 70.3968,
+   "per_gpu_hr": 8.7996,
    "url": "https://aws.amazon.com/ec2/spot/pricing/",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "AWS's published EC2 Spot price (public feed behind the Spot pricing page); interruptible capacity. Hyperscaler spot row in the near-term median.",
    "refresh": {
     "kind": "aws_spot",
@@ -727,8 +697,7 @@
    },
    "hyperscaler": true,
    "pricing": "dynamic",
-   "logged_value": 9.2888,
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "logged_value": 9.2888
   },
   {
    "vendor": "AWS",
@@ -736,10 +705,10 @@
    "tier": "spot",
    "instance": "p6-b200.48xlarge EC2 Spot, us-east-1 (Linux)",
    "gpus": 8,
-   "price_hr": 80.6843,
-   "per_gpu_hr": 10.0855,
+   "price_hr": 83.6509,
+   "per_gpu_hr": 10.4564,
    "url": "https://aws.amazon.com/ec2/spot/pricing/",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "AWS's published EC2 Spot price; interruptible capacity. B200, so a market-history series only (the near-term median is GB300/B300).",
    "refresh": {
     "kind": "aws_spot",
@@ -749,8 +718,7 @@
    },
    "hyperscaler": true,
    "pricing": "dynamic",
-   "logged_value": 9.5321,
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "logged_value": 9.5321
   },
   {
    "vendor": "Google Cloud",
@@ -761,7 +729,7 @@
    "price_hr": 39.6336,
    "per_gpu_hr": 4.9542,
    "url": "https://cloud.google.com/spot-vms/pricing",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Google's published Spot VM price for the A4 (8x B200) machine type, the page's default region; Spot prices change at most once a day. No A4X (GB200) or B300 Spot price is published. B200, so a market-history series only.",
    "refresh": {
     "kind": "html",
@@ -771,8 +739,7 @@
    },
    "hyperscaler": true,
    "pricing": "dynamic",
-   "logged_value": 4.9542,
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "logged_value": 4.9542
   },
   {
    "vendor": "Microsoft Azure",
@@ -783,7 +750,7 @@
    "price_hr": 108.16,
    "per_gpu_hr": 27.04,
    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Azure Retail Prices API, Spot meter. On 2026-09-14 the spot price equalled pay-as-you-go in every region (no discount: the SKU is capacity-constrained). GB200, so a reference row only.",
    "refresh": {
     "kind": "azure",
@@ -794,8 +761,7 @@
    },
    "hyperscaler": true,
    "pricing": "dynamic",
-   "logged_value": 27.04,
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "logged_value": 27.04
   },
   {
    "vendor": "Silicon Data",
@@ -803,10 +769,10 @@
    "tier": "index",
    "instance": "SDB200RT B200 Rental Price Index",
    "gpus": 1,
-   "price_hr": 5.93,
-   "per_gpu_hr": 5.93,
+   "price_hr": 5.94,
+   "per_gpu_hr": 5.94,
    "url": "https://www.silicondata.com/products/silicon-index/b200",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Daily index of observed B200 rental rates (Bloomberg ticker SDB200RT), weighted across ~80% of the rental market; no GB200/GB300/B300 index exists. Shown as the market reference line on the page.",
    "refresh": {
     "kind": "silicon",
@@ -814,9 +780,8 @@
     "tab": "neo-cloud"
    },
    "hyperscaler": false,
-   "as_of": "2026-10-11",
-   "pricing": "index",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "as_of": "2026-10-12",
+   "pricing": "index"
   },
   {
    "vendor": "Silicon Data",
@@ -824,10 +789,10 @@
    "tier": "index",
    "instance": "SDH100RT H100 Rental Price Index",
    "gpus": 1,
-   "price_hr": 2.83,
-   "per_gpu_hr": 2.83,
+   "price_hr": 2.85,
+   "per_gpu_hr": 2.85,
    "url": "https://www.silicondata.com/products/silicon-index/h100",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Context only.",
    "refresh": {
     "kind": "silicon",
@@ -835,9 +800,8 @@
     "tab": "neo-cloud"
    },
    "hyperscaler": false,
-   "as_of": "2026-10-11",
-   "pricing": "index",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "as_of": "2026-10-12",
+   "pricing": "index"
   },
   {
    "vendor": "Silicon Data",
@@ -845,11 +809,11 @@
    "tier": "index",
    "instance": "H200 Rental Price Index (no Bloomberg ticker yet)",
    "gpus": 1,
-   "price_hr": 3.44,
-   "per_gpu_hr": 3.44,
+   "price_hr": 3.35,
+   "per_gpu_hr": 3.35,
    "url": "https://www.silicondata.com/products/silicon-index/h200",
-   "read_on": "2026-10-12",
-   "as_of": "2026-10-11",
+   "read_on": "2026-10-13",
+   "as_of": "2026-10-12",
    "note": "Context only (Hopper).",
    "refresh": {
     "kind": "silicon",
@@ -857,8 +821,7 @@
     "tab": "neo-cloud"
    },
    "hyperscaler": false,
-   "pricing": "index",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "index"
   },
   {
    "vendor": "Ornn",
@@ -866,19 +829,18 @@
    "tier": "index",
    "instance": "Ornn Compute Price Index (OCPI) B200",
    "gpus": 1,
-   "price_hr": 7.45,
-   "per_gpu_hr": 7.45,
+   "price_hr": 7.33,
+   "per_gpu_hr": 7.33,
    "url": "https://data.ornn.com/preview",
-   "read_on": "2026-10-12",
-   "as_of": "2026-10-11",
+   "read_on": "2026-10-13",
+   "as_of": "2026-10-12",
    "note": "Blackwell reference (transacted rates, volume-weighted, Bloomberg-listed); no GB200/GB300/B300 index exists.",
    "refresh": {
     "kind": "ornn",
     "gpu": "B200"
    },
    "hyperscaler": false,
-   "pricing": "index",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "index"
   },
   {
    "vendor": "Ornn",
@@ -886,19 +848,18 @@
    "tier": "index",
    "instance": "Ornn Compute Price Index (OCPI) H100 SXM",
    "gpus": 1,
-   "price_hr": 2.65,
-   "per_gpu_hr": 2.65,
+   "price_hr": 2.92,
+   "per_gpu_hr": 2.92,
    "url": "https://data.ornn.com/preview",
-   "read_on": "2026-10-12",
-   "as_of": "2026-10-11",
+   "read_on": "2026-10-13",
+   "as_of": "2026-10-12",
    "note": "Context only (Hopper).",
    "refresh": {
     "kind": "ornn",
     "gpu": "H100 SXM"
    },
    "hyperscaler": false,
-   "pricing": "index",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "index"
   },
   {
    "vendor": "Ornn",
@@ -906,19 +867,18 @@
    "tier": "index",
    "instance": "Ornn Compute Price Index (OCPI) H200",
    "gpus": 1,
-   "price_hr": 5.61,
-   "per_gpu_hr": 5.61,
+   "price_hr": 5.24,
+   "per_gpu_hr": 5.24,
    "url": "https://data.ornn.com/preview",
-   "read_on": "2026-10-12",
-   "as_of": "2026-10-11",
+   "read_on": "2026-10-13",
+   "as_of": "2026-10-12",
    "note": "Context only (Hopper).",
    "refresh": {
     "kind": "ornn",
     "gpu": "H200"
    },
    "hyperscaler": false,
-   "pricing": "index",
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "pricing": "index"
   },
   {
    "vendor": "GetDeploying",
@@ -926,10 +886,10 @@
    "tier": "index",
    "instance": "B300 on-demand, median across providers (weekly)",
    "gpus": 1,
-   "price_hr": 8.99,
-   "per_gpu_hr": 8.99,
+   "price_hr": 9.0,
+   "per_gpu_hr": 9.0,
    "url": "https://getdeploying.com/gpus/nvidia-b300",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Aggregator reference (CC-BY-4.0, GetDeploying): each provider's median price, then the median across providers, by week. Not a provider rate, so in no basis.",
    "refresh": {
     "kind": "getdeploying",
@@ -938,9 +898,8 @@
    },
    "hyperscaler": false,
    "pricing": "index",
-   "as_of": "2026-10-05",
-   "providers": 15,
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "as_of": "2026-10-12",
+   "providers": 13
   },
   {
    "vendor": "GetDeploying",
@@ -951,7 +910,7 @@
    "price_hr": 5.265,
    "per_gpu_hr": 5.265,
    "url": "https://getdeploying.com/gpus/nvidia-b300",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Aggregator reference (CC-BY-4.0, GetDeploying): each provider's median price, then the median across providers, by week. Not a provider rate, so in no basis.",
    "refresh": {
     "kind": "getdeploying",
@@ -960,9 +919,8 @@
    },
    "hyperscaler": false,
    "pricing": "index",
-   "as_of": "2026-10-05",
-   "providers": 5,
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "as_of": "2026-10-12",
+   "providers": 7
   },
   {
    "vendor": "GetDeploying",
@@ -970,10 +928,10 @@
    "tier": "index",
    "instance": "B200 on-demand, median across providers (weekly)",
    "gpus": 1,
-   "price_hr": 6.79,
-   "per_gpu_hr": 6.79,
+   "price_hr": 7.4069,
+   "per_gpu_hr": 7.4069,
    "url": "https://getdeploying.com/gpus/nvidia-b200",
-   "read_on": "2026-10-12",
+   "read_on": "2026-10-13",
    "note": "Aggregator reference (CC-BY-4.0, GetDeploying): each provider's median price, then the median across providers, by week. Not a provider rate, so in no basis.",
    "refresh": {
     "kind": "getdeploying",
@@ -982,9 +940,8 @@
    },
    "hyperscaler": false,
    "pricing": "index",
-   "as_of": "2026-10-05",
-   "providers": 19,
-   "refresh_error": "2026-10-13: <urlopen error Tunnel connection failed: 403 Forbidden>"
+   "as_of": "2026-10-12",
+   "providers": 20
   }
  ],
  "contracts": [
@@ -3473,7 +3430,7 @@
    "read_on": "2026-09-09"
   }
  ],
- "refreshed_at": "2026-10-13T09:08:52",
+ "refreshed_at": "2026-10-13T16:35:21",
  "price_actions": [
   {
    "date": "2026-01-04",
@@ -3988,7 +3945,7 @@
    "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
    "text": "The current prices are scheduled to be updated next in January, 2027",
    "first_seen": "2026-10-12",
-   "last_seen": "2026-10-12"
+   "last_seen": "2026-10-13"
   }
  ],
  "price_news": [
@@ -4256,6 +4213,40 @@
     "Nebius"
    ],
    "first_seen": "2026-10-12",
+   "status": "unverified"
+  },
+  {
+   "title": "Amazon Stocks Drop as AWS Raises Reserved GPU Prices",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQSl9uRFV6ZDNuUGNLWlVpc0VFV3UtNjhoQnVENm5mTW11U05GMk1UWVVsN3dLUlh3YXZyTTYwZGRlZlA5ZEVnM2NJVUNpYURQa2l5enRUT2FXYm01ZG1wZ1hWOUotMlVEeHRsb2k3NFBvMlcxRTUtLWJFbkpsaks0T1BVOHFwSzY0VUJpVFJSU19GQVVuekE?oc=5",
+   "source": "GuruFocus",
+   "published": "2026-10-08",
+   "providers": [
+    "AWS",
+    "Amazon"
+   ],
+   "first_seen": "2026-10-13",
+   "status": "unverified"
+  },
+  {
+   "title": "Nebius to raise Nvidia GPU rental prices by up to 21% starting Oct. 1",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOVS1Xa040eTVYWl9WNVBPX2xyTy1WVUk4SkVCOEVVZGZaOWlDdi14VjU4QTNMY0w3c2wtOHM3alFYMm5lTFAxSFRUamlUQ0t6RWRLUng2R0ZNaUxla0FYeWFmdXdtZW1RNEVWVUw4Slc1NjE3NmY1ZzEwLVMxVGhnN3czOTN4QndoX1R5a1BXVEp5YVN3elhN?oc=5",
+   "source": "Moomoo",
+   "published": "2026-09-16",
+   "providers": [
+    "Nebius"
+   ],
+   "first_seen": "2026-10-13",
+   "status": "unverified"
+  },
+  {
+   "title": "Truist raises CoreWeave stock price target on pricing power gains By Investing.com",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOc3Jlb2RhMVJZOGNReDd1UXotM1JHY2FTM2ZUam5OWUhSMGhQSDFSa19IVHFMZ2RwTTdKNEFRVHdTbS00YUJFYmpya2FnOXNySktRdlZmdjFNNnE5aW0xVWFaWlE1czlKMjJyT2cxbTRlRXZFMFlRT2cyRHZyd3ZROHU2SVA3TURzbENuazZoQkRheWhZakJvT2xhQVBvVW9NYmMyMi1TTW5TSDNxSDZCYUFsSG1nekIyVUphUURHMFQ1Z1B0?oc=5",
+   "source": "Investing.com UK",
+   "published": "2026-08-24",
+   "providers": [
+    "CoreWeave"
+   ],
+   "first_seen": "2026-10-13",
    "status": "unverified"
   }
  ]

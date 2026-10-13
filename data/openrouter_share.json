@@ -2972,58 +2972,58 @@
    ]
   },
   "2026-10-12": {
-   "total": 29791396203652,
-   "closed": 5275094965599,
-   "open": 13877325740102,
-   "others": 10638975497951,
+   "total": 31929653165492,
+   "closed": 5585783603856,
+   "open": 14861007040464,
+   "others": 11482862521172,
    "partial": true,
    "read_on": "2026-10-13",
-   "closed_min": 0.17707,
-   "closed_max": 0.53418,
+   "closed_min": 0.17494,
+   "closed_max": 0.53457,
    "models": [
     [
      "DeepSeek: DeepSeek V4.1 Flash (batch)",
-     6552798398267,
+     6928124771516,
      "open"
     ],
     [
      "StepFun: Step 5 Preview",
-     3424577585404,
+     3599698469834,
      "closed"
     ],
     [
      "Z.ai: GLM 5.3 Flash (batch)",
-     2270077308919,
+     2472208475619,
      "open"
     ],
     [
      "Xiaomi: MiMo-V2.6-Flash",
-     1782425226800,
-     "open"
-    ],
-    [
-     "NVIDIA: Nemotron 3 Ultra",
-     1278551242218,
+     1927075208681,
      "open"
     ],
     [
      "Tencent: Hy4 preview",
-     1268914501284,
+     1382236590399,
+     "open"
+    ],
+    [
+     "NVIDIA: Nemotron 3 Ultra",
+     1376559207577,
      "open"
     ],
     [
      "OpenAI: GPT-6 Luna (batch)",
-     959237626686,
+     1019146407758,
      "closed"
     ],
     [
      "Anthropic: Claude Opus 5.5",
-     891279753509,
+     966938726264,
      "closed"
     ],
     [
      "Z.ai: GLM 5.3 (batch)",
-     724559062614,
+     774802786672,
      "open"
     ]
    ]
@@ -3579,16 +3579,16 @@
   "2026-10-13": {
    "read_on": "2026-10-13",
    "data_through": "2026-10-12",
-   "source": "live: every model in the weekly ranking (657)",
+   "source": "live: every model in the weekly ranking",
    "rows": 657,
    "tokens": {
     "closed": [
-     58419234509479,
-     1595249116760
+     58419312853598,
+     1595258173834
     ],
     "open": [
-     110194597290339,
-     2704731685742
+     110194597651477,
+     2704731944990
     ],
     "unknown": [
      3700097,
@@ -3598,7 +3598,7 @@
    "closed_share_all": 0.34708,
    "closed_share_out": 0.37099,
    "unknown_share": 0.0,
-   "total_tokens": 172913816370315,
+   "total_tokens": 172913904391894,
    "top": {
     "closed": [
      [
@@ -3655,6 +3655,6 @@
    }
   }
  },
- "refreshed_at": "2026-10-13T14:20:00",
+ "refreshed_at": "2026-10-13T16:32:57",
  "backfill": "Built on 2026-10-13: weeks from OpenRouter's Top Models chart as read that day (53 weeks, 13 Oct 2025 to 12 Oct 2026); reads from the weekly rankings this project saved (4 Sep archive, top 76 models; daily snapshots from 28 Sep, top 250 models) classified with OpenRouter's catalog of 13 Oct 2026 and the registry, and the full ranking read on 13 Oct."
 }
