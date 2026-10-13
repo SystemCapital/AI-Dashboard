@@ -1,0 +1,726 @@
+{
+ "_comment": [
+  "Every dial in one file. Market data is never typed here: token prices, usage, rental rates, throughput",
+  "and capital all come from the files in data/ and from AI mastersheet.xlsx. This file says how they are",
+  "combined. Each block carries a 'source' or a 'note' saying where the default came from.",
+  "Edit, then run: python update.py --offline   (rebuilds the page without fetching)."
+ ],
+ "site": {
+  "mw": 1000,
+  "chip": "GB300",
+  "chip_label": "GB300 NVL72 (Blackwell Ultra)",
+  "note": "1 GW facility of GB300 NVL72 racks. Fleet size, capital and power come from AI mastersheet.xlsx (sheet 'GB300 '); the alternative chip for throughput and rental evidence is GB200."
+ },
+ "mastersheet": {
+  "path": "AI mastersheet.xlsx",
+  "note": "The copy of AI mastersheet.xlsx in this folder (fleet size, capital and power). To update the capital picture, save the new workbook over it (same name). Set another path (absolute, or relative to this folder) to read a workbook elsewhere; null = search this folder, then its parents (3 levels) and their subfolders.",
+  "cells": {
+   "gpus": {
+    "sheet": "GB300 ",
+    "label": "Number of GPUs Required"
+   },
+   "gpus_per_rack": {
+    "sheet": "GB300 ",
+    "label": "GPUs Per Rack"
+   },
+   "gpu_cost": {
+    "sheet": "GB300 ",
+    "label": "Cost Per GPU"
+   },
+   "rack_cost_musd": {
+    "sheet": "GB300 ",
+    "label": "Total Rack Cost ($M)"
+   },
+   "kw_per_rack": {
+    "sheet": "GB300 ",
+    "label": "Power Required Per Rack (kW)"
+   },
+   "pue": {
+    "sheet": "GB300 ",
+    "label": "Power Usage Effectiveness (PUE)"
+   },
+   "power_price_mwh": {
+    "sheet": "GB300 ",
+    "label": "Power Cost ($/MWh), Including T&D"
+   },
+   "shell_cost_musd": {
+    "sheet": "GB300 ",
+    "label": "Cost of Powered Shell"
+   },
+   "total_capex_musd": {
+    "sheet": "GB300 ",
+    "label": "Total Data Center Costs ($M)"
+   },
+   "site_mw": {
+    "sheet": "GB300 ",
+    "label": "Size Data Center (MW)"
+   },
+   "rent_util": {
+    "sheet": "ROIC Dashboard",
+    "row_label": "GB300",
+    "block": "Rental economics",
+    "col": "Utilisation"
+   },
+   "serve_util": {
+    "sheet": "ROIC Dashboard",
+    "row_label": "GB300",
+    "block": "Token economics",
+    "col": "Utilisation"
+   },
+   "other_opex_musd": {
+    "sheet": "ROIC Dashboard",
+    "row_label": "GB300",
+    "block": "Rental economics",
+    "col": "Other costs"
+   },
+   "roic_power_price": {
+    "sheet": "ROIC Dashboard",
+    "row_label": "GB300",
+    "block": "Rental economics",
+    "col": "Power price"
+   }
+  }
+ },
+ "fallback_if_mastersheet_missing": {
+  "gpus": 444444,
+  "gpus_per_rack": 72,
+  "gpu_cost": 40000,
+  "rack_cost_musd": 4.628,
+  "kw_per_rack": 135,
+  "pue": 1.2,
+  "power_price_mwh": 110,
+  "shell_cost_musd": 16200,
+  "total_capex_musd": 44769,
+  "site_mw": 1000,
+  "rent_util": 0.8,
+  "serve_util": 0.7,
+  "other_opex_musd": 1000,
+  "roic_power_price": 50,
+  "note": "Values read from AI mastersheet.xlsx on 2026-09-24 (Lev's update: $40,000 per GPU, PUE 1.2). Used only if the workbook cannot be found; the page says so."
+ },
+ "overrides": {
+  "power_price_mwh": null,
+  "other_opex_musd": null,
+  "rent_util": null,
+  "serve_util": null,
+  "note": "null = take the mastersheet value. The GB300 sheet prices power at $110/MWh including T&D while the ROIC Dashboard sheet uses $50; the GB300 figure is used unless overridden here."
+ },
+ "rental": {
+  "basis": "contract",
+  "bases": {
+   "contract": "GPU-weighted median of the disclosed multi-year GB300 / B300 GPU-rental rates (data/rental_rates.json: contracts with 'use' true), so the hyperscaler-scale deals set the level for a 410,000-GPU fleet; a market reference with no GPU count counts as 10,000",
+   "contract_median": "Simple median of the same deals (small enterprise deals weigh as much as the 100,000-GPU ones)",
+   "mw_deals": "MW-weighted median of the GPU-rental deals disclosed as value / term / MW (GB300 and Vera Rubin), converted to $/GPU-hr at this fleet's GPUs per MW (facility MW divided by PUE)",
+   "ondemand": "Median of published on-demand GB200/GB300 per-GPU-hour quotes (data/rental_rates.json: quotes, hyperscaler list included)",
+   "acv2026": "2026 new-deal annual contract value per IT-MW (IREN, Nebius stated figures) converted at this fleet's GPUs per IT-MW"
+  },
+  "chips_for_ondemand": [
+   "GB300",
+   "GB200"
+  ],
+  "term_structure": {
+   "near_term_basis": "all_median",
+   "near_term_bases": {
+    "all_median": "Median of every current published GB300 / B300 per-GPU-hour rate - spot / preemptible, on-demand and capacity blocks, every provider tracked (data/rental_rates.json quotes; engine/rental_history.py). Default since 2026-10-13 (Lev): the median moves with the market when providers reprice, and a single provider's outlier rate (a hyperscaler list price, a deep spot discount) does not drag it. A quote counts as current when it was read within max_quote_age_days and the vendor still publishes it; reserved / contract rows and the aggregator indices are not in it.",
+    "all_avg": "Average (mean) of the same rates. The default from 2026-10-12 to 2026-10-13; every provider's price change moves it in proportion, outliers included.",
+    "spot": "Median of current spot / preemptible Blackwell Ultra (GB300, B300) rates, neoclouds and hyperscalers alike (AWS EC2 Spot for p6-b300 is the hyperscaler row; Azure's GB200 spot equals pay-as-you-go, Google Cloud publishes Spot only for B200, Oracle has no preemptible bare-metal GPU shapes). The default until 2026-10-12.",
+    "neocloud": "Median of neocloud (non-hyperscaler) on-demand GB200/GB300 quotes",
+    "ondemand": "Median of all published on-demand GB200/GB300 quotes, hyperscaler list included",
+    "sdb200": "Silicon Data SDB200RT: observed B200 rental-rate index (older part; reference for the level of the cleared market)",
+    "ornnb200": "Ornn Compute Price Index for B200: volume-weighted average of transacted rental rates, settled daily (older part; a second, transaction-based reference for the level of the cleared market)"
+   },
+   "chips_for_spot": [
+    "GB300",
+    "B300"
+   ],
+   "spot_years": 1,
+   "converge_years": 3,
+   "note": "Years 1 to spot_years rent at the near-term rate (near_term_basis: the median of every current GB300/B300 rate by default); the rate then moves linearly to the long-term rate ('basis' above, contract by default) over converge_years, and stays there. With spot_years = 1 and converge_years = 3: year 1 = spot, year 2 = two thirds of the gap, year 3 = one third, year 4 onward = long-term. With spot_years = 3 and converge_years = 0 the spot rate holds for three years and steps to the long-term rate in year 4. rental_rate_decline_per_year in 'finance' compounds on top. Both are dials on the page; the cash-flow table shows the rate and utilisation assumed in every year. The Silicon Data and Ornn B200 indices are shown against every path as the two daily, market-based references; no GB200/GB300 index exists.",
+   "chips_for_average": [
+    "GB300",
+    "B300"
+   ]
+  },
+  "note": "A 1 GW build rented out ends up on a take-or-pay contract, so the long-term rate is 'contract' by default; near-term revenue is what the market charges today, the median of every published GB300/B300 rate. The page shows every basis so the gaps are visible.",
+  "max_quote_age_days": 10,
+  "max_quote_age_note": "A published rate counts as current for 10 days after it was last read (a vendor page the daily run cannot read drops out after that); in the history a rate also holds across a longer gap when the readings either side of it are the same."
+ },
+ "deals": {
+  "sec_user_agent": "",
+  "note": "Daily deal scout (update.py step 'deals', engine/collect_deals.py): scans Google News RSS and SEC EDGAR full-text search for newly announced multi-year GPU / AI-compute contracts and queues them in data/deal_candidates.json for review; nothing enters the rental medians until a row is added to data/rental_rates.json 'contracts'. The SEC requires automated EDGAR clients to identify themselves: put your company or name and a contact email here, e.g. 'Example Capital jane@example.com'. While blank, only the news pass runs."
+ },
+ "serving": {
+  "interactivity_basis": "measured",
+  "interactivity_tok_s_per_user": 100,
+  "workload": "8k/1k",
+  "price_basis": "effective",
+  "cache_hit_rate": null,
+  "frontier_derate": 0.5,
+  "tps_realisation": "market",
+  "realisation": 1.0,
+  "split_mode": "cost",
+  "premium_tolerance": null,
+  "closed_share_override": null,
+  "notes": {
+   "interactivity": "The fixed tokens-per-second-per-user point used when interactivity_basis is 'fixed'. Lower it and every model serves more tokens per GPU.",
+   "workload": "Benchmark shape the economics run on. '8k/1k' (8,192 input / 1,024 output per request) is the standard single-turn shape. Each model is billed at its own measured input:output rate from the same InferenceX run (8:1 by construction for this shape), so throughput and billing describe the same request. '1k/1k' is the other measured shape. A model with no run under the chosen shape on any Blackwell part is excluded from the mix.",
+   "cache_hit_rate": "Only used under the 'list' price basis. null = each model's measured OpenRouter cache-hit rate; a number 0-1 overrides it for every model.",
+   "frontier_derate": "The frontier basket's tokens per GPU = the largest open model measured on this chip and workload x this factor. No lab publishes its own throughput, so this is the one proxy left in the model, and it is labelled as such wherever it appears.",
+   "realisation": "Multiplier on list price for frontier tokens (1.0 = list; 0.5 = everything at batch price).",
+   "split_mode": "How the frontier (closed) vs open-weight split of output tokens is set. 'cost' = the task framework's frontier share per task, pulled down where the frontier premium exceeds premium_tolerance (the dial). 'openrouter' = the closed-weight share of completion tokens OpenRouter routed in its latest weekly ranking (every closed lab, not just the basket), applied to both serving scenarios; the within-tier mixes stay. 'manual' = closed_share_override / closed_share_override_openai.",
+   "premium_tolerance": "The cost dial, in multiples of the open-weight price: a task keeps its framework frontier share while the frontier basket costs no more than this many times the routed open-weight mix for the task's own token shape (input and output priced separately, on the price basis in force, frontier at its realised price); above it the share falls as (tolerance / premium) ^ (1 - framework share), so a task rated 5 never moves, a 4 moves a third as fast as a 3, and 2-and-below stay open. null = no limit = the framework unchanged. Recomputed per basket from the live prices on every run and every dial move.",
+   "closed_share_override": "Manual overlay for scenario B (Anthropic basket), used only when split_mode is 'manual': a number 0-1 forces the frontier share of OUTPUT tokens to that value, keeping the within-bucket mixes; null = the framework's derived share.",
+   "tps_realisation": "Fraction of the published benchmark throughput a production GPU-hour realises. 'market' = implied per model by the open-weight token market: for each open model, (rental rate x (1 + renter_roic)) / (what a GPU-hour would earn at that model's benchmark peak x that model's own price), capped at 1. Each model carries its own factor; nothing is averaged across models. It bundles real utilisation, latency headroom and host margin into one number the market sets per model, and it means a competitively hosted open model earns the spot rental rate plus the renter's return per GPU-hour unless its benchmark ceiling is below it. 1.0 = benchmark peak (a ceiling). Any other number is one manual factor for every model. data/anchors.json holds public evidence to judge it against.",
+   "interactivity_basis": "'measured' = each model's throughput curve is read at the output speed OpenRouter's hosts actually deliver for that model (token-weighted median of per-host 7-day tok/s per request); 'fixed' = every model at interactivity_tok_s_per_user.",
+   "price_basis": "'effective' = the traffic-weighted price OpenRouter customers actually paid per token over the trailing week (cache hits already embedded in the input price; frontier rows use the lab's own OpenRouter traffic); 'list' = cheapest host's list price for open weights and the lab's list price for frontier, with cache hits blended at the measured rate.",
+   "frontier_realisation": "Which realisation factor the frontier basket gets under 'market' (no lab's models are hosted competitively, so none has a market-implied factor of its own). 'reference' = the factor of the open model whose curve the basket borrows; 'median' = token-weighted median of the open models' factors; a number 0-1 = manual.",
+   "basket": "Which lab's models carry the frontier tokens in the headline serving scenario: 'anthropic' or 'openai'. The page computes both baskets side by side; this only picks which one the verdict paragraph and history line lead with.",
+   "implied_rate": "Which rental rate the market-implied realisation is built on: 'near' (default since 2026-10-12) = the near-term rate of the rental scenario, by default the median of every current published GB300 / B300 rate (spot, on-demand and capacity blocks, every provider), so a provider's price change moves what an open-weight GPU-hour is made to earn as well as scenario A; 'spot' = the median of the current GB300 and B300 spot / preemptible rates (the default until 2026-10-12); 'longterm' = the long-term basis the rental scenario converges to (contract by default). renter_roic is added on top.",
+   "throughput_scope": "'measured' = only models InferenceX has benchmarked under their own name can carry tokens (no proxies; unbenchmarked traffic is re-spread). 'estimated' = every open model OpenRouter routes to carries tokens; a model with no benchmark of its own gets the best estimate, in order: the InferenceX curve of the same architecture under another name (family curve), else a log-log fit of output tok/s per GPU on active parameters across every benchmarked model at that model's interactivity (fitted). Every estimated row is flagged and vendor-reported measurements are shown beside it where any exist.",
+   "volumes": "'traces' = tasks mapped to an agent-trace family take measured per-run token volumes by model family (Anthropic, OpenAI, DeepSeek, Kimi, open-weight average) from data/traces.json; 'pooled' = the same tasks take one measured volume per task pooled across every model family (removes provider differences in how reasoning tokens are counted); 'framework' = every task uses calls x task-type shapes, the same for every model. Unmapped tasks always keep the framework shapes.",
+   "closed_share_override_openai": "Manual overlay for scenario C (OpenAI basket), same meaning, used only when split_mode is 'manual'. The two overlays are independent.",
+   "renter_roic": "The return a host earns renting a GPU at the rate above and serving an open-weight model on it: the realisation factor of every open model is set so that its GPU-hour earns rate x (1 + renter_roic). 0.10 = a 10% return on the rent paid; the GPU-hour earns $4.73 at a $4.30 spot rate. 0 reproduces the pure arbitrage condition (the GPU-hour earns exactly the rent). The frontier basket inherits the reference model's factor, so it scales with this too.",
+   "training_share": "Share of the fleet's capacity given to training in the token-selling scenarios B and C (dial, 0-100%): token revenue falls linearly with it (the serving GPUs are the rest of the fleet), power does not (training GPUs run at least as hard). D, E and the AWS scenario keep 0%. Default 50% (set by Lev 2026-09-24: a frontier lab that owns its fleet trains on about half of it); it was 0% before that date, so ROIC history rows up to 2026-09-23 are on a 0% basis."
+  },
+  "basket": "anthropic",
+  "frontier_realisation": "reference",
+  "implied_rate": "near",
+  "throughput_scope": "measured",
+  "volumes": "traces",
+  "closed_share_override_openai": null,
+  "renter_roic": 0.1,
+  "training_share": 0.5
+ },
+ "aws": {
+  "rev_share": 0.25,
+  "note": "Scenario F, 'AWS ROIC': the Anthropic token scenario (B) re-monetised the way a hyperscaler landlord earns it, with 0% training. The GPUs B allocates to Anthropic's frontier tokens are rented to Anthropic at the rental scenario's rate path and rental utilisation (the base rental fee, same as A), and the fleet owner also takes rev_share of every Anthropic-model token dollar those GPUs generate (B's frontier token revenue at token utilisation and the frontier realisation factor). The rest of the fleet serves open-weight tokens exactly as in B. Power and other opex as in B (the owner runs the whole site)."
+ },
+ "frontier_rule": {
+  "formula": "frontier_share = clamp((max(reasoning, consequence) - 2) / 3, 0, 1)",
+  "note": "Which share of a task's tokens needs frontier intelligence. Tasks rated 2 or below on both reasoning depth and consequence run entirely on open weights; a 5 on either runs entirely on the frontier basket; 3 and 4 give a third and two thirds. A task may carry an explicit 'frontier' value that overrides the rule."
+ },
+ "finance": {
+  "life_years": 5,
+  "compute_life_years": 5,
+  "shell_life_years": 20,
+  "compute_residual": 0.0,
+  "shell_residual": 0.0,
+  "tax_rate": 0.0,
+  "rental_rate_decline_per_year": 0.0,
+  "token_price_decline_per_year": 0.0,
+  "note": "Pre-tax. Cash flows: -capex at t0, then EBITDA for life_years (the analysis horizon), plus the book value still on the books at the end of the horizon as a terminal inflow in the last year (assets recovered at book). Depreciation is straight-line in two pools, both dials on the page: compute (GPUs + racks, the mastersheet's rack cost x racks) over compute_life_years to compute_residual, and the powered shell / mechanical / electrical (the mastersheet's shell cost) over shell_life_years to shell_residual. A pool whose life exceeds the horizon is only partly depreciated within it and the rest is recovered as terminal value. ROIC = (average annual EBITDA over the horizon - average annual depreciation over the horizon) / capex, with year-1 ROIC beside it. Defaults: 5-year horizon, 5-year GPU/compute life and 20-year shell life, no residual (set by Lev 2026-09-24; builds up to 2026-09-23 had the shell on 5 years. data/roic_history.csv keeps each day as built; the ROIC history page and data/roic_history_restated.csv restate every day on today's assumptions, see engine/restate.py). They are the dashboard's own assumption, not the mastersheet's, which carries no depreciation life: hyperscalers depreciate servers over 5-6 years (Amazon 5 for its newer fleet since 2025, Microsoft and Alphabet 6, Meta 5.5; CoreWeave 6) and data-centre shells over 20-30 years with electrical and mechanical plant at 10-20, so 20 years sits within the range for the shell. The two decline dials apply a compounding annual fall to the rental rate and to token prices."
+ },
+ "workload_profile": {
+  "heads": 250,
+  "note": "Number of knowledge workers is a scaling constant: the 1 GW fleet is supply-bound, so only the shape of demand (which task types, which models, what input:output ratio) affects the return. 'runs' are per head per working day."
+ },
+ "task_types": {
+  "_note": "OpenRouter's 29 task tags with a per-call token shape (tin = input tokens, tout = output tokens per model call). The shapes are stated assumptions used only to weight task types against each other and to derive the billed input:output ratio; the OpenRouter tag is what links each type to measured model usage.",
+  "code_generation": {
+   "name": "Code generation",
+   "tag": "code:general_impl",
+   "tin": 3000,
+   "tout": 800
+  },
+  "debugging": {
+   "name": "Debugging",
+   "tag": "code:debugging",
+   "tin": 5000,
+   "tout": 600
+  },
+  "code_review": {
+   "name": "Code review",
+   "tag": "code:review_security",
+   "tin": 6000,
+   "tout": 700
+  },
+  "sql_database": {
+   "name": "SQL and database",
+   "tag": "code:sql_database",
+   "tin": 1800,
+   "tout": 350
+  },
+  "frontend_ui": {
+   "name": "Frontend and UI",
+   "tag": "code:frontend_ui",
+   "tin": 3200,
+   "tout": 1200
+  },
+  "devops_config": {
+   "name": "DevOps config",
+   "tag": "code:devops_config",
+   "tin": 2200,
+   "tout": 500
+  },
+  "shell_execution": {
+   "name": "Shell execution",
+   "tag": "code:shell_execution",
+   "tin": 1200,
+   "tout": 150
+  },
+  "file_io": {
+   "name": "File I/O",
+   "tag": "code:file_read_write",
+   "tin": 1500,
+   "tout": 200
+  },
+  "repo_scanning": {
+   "name": "Repo scanning",
+   "tag": "code:repo_scan",
+   "tin": 15000,
+   "tout": 350
+  },
+  "multi_step_planning": {
+   "name": "Multi-step planning",
+   "tag": "agent:multi_step_planning",
+   "tin": 3000,
+   "tout": 700
+  },
+  "tool_dispatch": {
+   "name": "Tool dispatch",
+   "tag": "agent:tool_dispatch",
+   "tin": 1800,
+   "tout": 150
+  },
+  "workflow_execution": {
+   "name": "Workflow execution",
+   "tag": "agent:workflow_execution",
+   "tin": 2400,
+   "tout": 280
+  },
+  "web_search": {
+   "name": "Web search",
+   "tag": "agent:web_search",
+   "tin": 3500,
+   "tout": 400
+  },
+  "memory_extraction": {
+   "name": "Memory extraction",
+   "tag": "agent:memory_extraction",
+   "tin": 2000,
+   "tout": 200
+  },
+  "devops_agent": {
+   "name": "DevOps agent",
+   "tag": "devops",
+   "tin": 2800,
+   "tout": 400
+  },
+  "data_extraction": {
+   "name": "Data extraction",
+   "tag": "data:extraction",
+   "tin": 2200,
+   "tout": 300
+  },
+  "data_transformation": {
+   "name": "Data transformation",
+   "tag": "data:transformation",
+   "tin": 2000,
+   "tout": 500
+  },
+  "classification": {
+   "name": "Classification",
+   "tag": "classification_tagging",
+   "tin": 800,
+   "tout": 60
+  },
+  "summarization": {
+   "name": "Summarisation",
+   "tag": "summarization",
+   "tin": 4000,
+   "tout": 350
+  },
+  "translation": {
+   "name": "Translation",
+   "tag": "translation",
+   "tin": 1200,
+   "tout": 1200
+  },
+  "math": {
+   "name": "Math",
+   "tag": "math",
+   "tin": 1000,
+   "tout": 700
+  },
+  "content_writing": {
+   "name": "Content writing",
+   "tag": "content_writing",
+   "tin": 1200,
+   "tout": 900
+  },
+  "research_reports": {
+   "name": "Research and reports",
+   "tag": "research_report",
+   "tin": 8000,
+   "tout": 1200
+  },
+  "qa_knowledge": {
+   "name": "Q&A and knowledge",
+   "tag": "qa_knowledge",
+   "tin": 1800,
+   "tout": 350
+  },
+  "conversation": {
+   "name": "Conversation",
+   "tag": "conversational_reply",
+   "tin": 1400,
+   "tout": 250
+  },
+  "customer_support": {
+   "name": "Customer support",
+   "tag": "customer_support",
+   "tin": 1800,
+   "tout": 300
+  },
+  "roleplay_fiction": {
+   "name": "Roleplay and fiction",
+   "tag": "roleplay_fiction",
+   "tin": 2000,
+   "tout": 800
+  },
+  "finance_trading": {
+   "name": "Finance and trading",
+   "tag": "finance_trading",
+   "tin": 3000,
+   "tout": 600
+  },
+  "security_audit": {
+   "name": "Security audit",
+   "tag": "security_audit",
+   "tin": 6000,
+   "tout": 800
+  }
+ },
+ "tasks": [
+  {
+   "name": "Email triage and prioritisation",
+   "group": "Communication",
+   "runs": 40,
+   "calls": 1,
+   "reasoning": 2,
+   "consequence": 2,
+   "mix": {
+    "classification": 0.45,
+    "summarization": 0.25,
+    "data_extraction": 0.15,
+    "qa_knowledge": 0.15
+   },
+   "trace_family": null
+  },
+  {
+   "name": "Routine email drafting and replies",
+   "group": "Communication",
+   "runs": 25,
+   "calls": 1,
+   "reasoning": 2,
+   "consequence": 3,
+   "mix": {
+    "content_writing": 0.5,
+    "qa_knowledge": 0.2,
+    "conversation": 0.2,
+    "summarization": 0.1
+   },
+   "trace_family": null
+  },
+  {
+   "name": "Chat and thread catch-up",
+   "group": "Communication",
+   "runs": 15,
+   "calls": 1,
+   "reasoning": 2,
+   "consequence": 2,
+   "mix": {
+    "summarization": 0.55,
+    "memory_extraction": 0.2,
+    "classification": 0.15,
+    "qa_knowledge": 0.1
+   },
+   "trace_family": null
+  },
+  {
+   "name": "Meeting notes to summary and actions",
+   "group": "Communication",
+   "runs": 4,
+   "calls": 2,
+   "reasoning": 3,
+   "consequence": 3,
+   "mix": {
+    "summarization": 0.5,
+    "data_extraction": 0.25,
+    "content_writing": 0.15,
+    "classification": 0.1
+   },
+   "trace_family": null
+  },
+  {
+   "name": "Calendar and scheduling coordination",
+   "group": "Communication",
+   "runs": 6,
+   "calls": 2,
+   "reasoning": 2,
+   "consequence": 2,
+   "mix": {
+    "tool_dispatch": 0.4,
+    "workflow_execution": 0.25,
+    "classification": 0.2,
+    "conversation": 0.15
+   },
+   "trace_family": "appworld"
+  },
+  {
+   "name": "Client and customer response drafting",
+   "group": "Communication",
+   "runs": 10,
+   "calls": 1,
+   "reasoning": 2,
+   "consequence": 4,
+   "mix": {
+    "customer_support": 0.45,
+    "content_writing": 0.25,
+    "qa_knowledge": 0.15,
+    "summarization": 0.15
+   },
+   "trace_family": "tau2"
+  },
+  {
+   "name": "Knowledge-base search, grounded answers",
+   "group": "Knowledge",
+   "runs": 12,
+   "calls": 2,
+   "reasoning": 2,
+   "consequence": 3,
+   "mix": {
+    "web_search": 0.35,
+    "qa_knowledge": 0.3,
+    "summarization": 0.2,
+    "data_extraction": 0.15
+   },
+   "trace_family": null
+  },
+  {
+   "name": "Document drafting: memo, proposal, brief",
+   "group": "Knowledge",
+   "runs": 3,
+   "calls": 2,
+   "reasoning": 3,
+   "consequence": 3,
+   "mix": {
+    "content_writing": 0.55,
+    "research_reports": 0.2,
+    "summarization": 0.15,
+    "qa_knowledge": 0.1
+   },
+   "trace_family": null
+  },
+  {
+   "name": "Editing, proofreading and tone rewrite",
+   "group": "Knowledge",
+   "runs": 6,
+   "calls": 1,
+   "reasoning": 2,
+   "consequence": 2,
+   "mix": {
+    "content_writing": 0.6,
+    "qa_knowledge": 0.2,
+    "translation": 0.1,
+    "summarization": 0.1
+   },
+   "trace_family": null
+  },
+  {
+   "name": "Long-document summarisation",
+   "group": "Knowledge",
+   "runs": 3,
+   "calls": 2,
+   "reasoning": 3,
+   "consequence": 3,
+   "mix": {
+    "summarization": 0.65,
+    "data_extraction": 0.15,
+    "research_reports": 0.1,
+    "classification": 0.1
+   },
+   "trace_family": null
+  },
+  {
+   "name": "Translation and localisation",
+   "group": "Knowledge",
+   "runs": 3,
+   "calls": 1,
+   "reasoning": 2,
+   "consequence": 3,
+   "mix": {
+    "translation": 0.8,
+    "content_writing": 0.1,
+    "qa_knowledge": 0.1
+   },
+   "trace_family": null
+  },
+  {
+   "name": "Slide deck outline and build",
+   "group": "Knowledge",
+   "runs": 1.5,
+   "calls": 3,
+   "reasoning": 3,
+   "consequence": 2,
+   "mix": {
+    "content_writing": 0.4,
+    "research_reports": 0.2,
+    "summarization": 0.2,
+    "data_transformation": 0.1,
+    "frontend_ui": 0.1
+   },
+   "trace_family": null
+  },
+  {
+   "name": "Structured extraction into CRM or tickets",
+   "group": "Data",
+   "runs": 14,
+   "calls": 1,
+   "reasoning": 1,
+   "consequence": 2,
+   "mix": {
+    "data_extraction": 0.5,
+    "classification": 0.25,
+    "data_transformation": 0.15,
+    "tool_dispatch": 0.1
+   },
+   "trace_family": "appworld"
+  },
+  {
+   "name": "Spreadsheet formulas and data cleanup",
+   "group": "Data",
+   "runs": 5,
+   "calls": 2,
+   "reasoning": 3,
+   "consequence": 2,
+   "mix": {
+    "data_transformation": 0.4,
+    "sql_database": 0.25,
+    "math": 0.2,
+    "data_extraction": 0.15
+   },
+   "trace_family": null
+  },
+  {
+   "name": "Data analysis and chart interpretation",
+   "group": "Data",
+   "runs": 3,
+   "calls": 3,
+   "reasoning": 4,
+   "consequence": 3,
+   "mix": {
+    "data_transformation": 0.3,
+    "math": 0.25,
+    "summarization": 0.2,
+    "data_extraction": 0.15,
+    "content_writing": 0.1
+   },
+   "trace_family": null
+  },
+  {
+   "name": "Research and competitive synthesis",
+   "group": "Data",
+   "runs": 2,
+   "calls": 5,
+   "reasoning": 4,
+   "consequence": 3,
+   "mix": {
+    "research_reports": 0.35,
+    "web_search": 0.25,
+    "summarization": 0.2,
+    "data_extraction": 0.1,
+    "content_writing": 0.1
+   },
+   "trace_family": "browsecompplus"
+  },
+  {
+   "name": "Code and script authoring",
+   "group": "Engineering",
+   "runs": 8,
+   "calls": 3,
+   "reasoning": 4,
+   "consequence": 3,
+   "mix": {
+    "code_generation": 0.45,
+    "debugging": 0.2,
+    "file_io": 0.1,
+    "shell_execution": 0.1,
+    "sql_database": 0.075,
+    "devops_config": 0.075
+   },
+   "trace_family": "swebench"
+  },
+  {
+   "name": "Code review, debugging and PR triage",
+   "group": "Engineering",
+   "runs": 5,
+   "calls": 2,
+   "reasoning": 4,
+   "consequence": 3,
+   "mix": {
+    "code_review": 0.4,
+    "debugging": 0.3,
+    "repo_scanning": 0.15,
+    "code_generation": 0.15
+   },
+   "trace_family": "swebench"
+  },
+  {
+   "name": "Contract, policy and compliance review",
+   "group": "Governance",
+   "runs": 1.2,
+   "calls": 3,
+   "reasoning": 5,
+   "consequence": 5,
+   "mix": {
+    "summarization": 0.3,
+    "qa_knowledge": 0.25,
+    "research_reports": 0.2,
+    "data_extraction": 0.15,
+    "security_audit": 0.1
+   },
+   "trace_family": null
+  },
+  {
+   "name": "Financial modelling and forecast review",
+   "group": "Governance",
+   "runs": 1,
+   "calls": 3,
+   "reasoning": 5,
+   "consequence": 5,
+   "mix": {
+    "finance_trading": 0.35,
+    "math": 0.25,
+    "data_transformation": 0.2,
+    "research_reports": 0.1,
+    "summarization": 0.1
+   },
+   "trace_family": null
+  }
+ ],
+ "frontier_baskets": {
+  "anthropic": {
+   "label": "Anthropic",
+   "models": [
+    "claude-fable-5.1",
+    "claude-fable-5",
+    "claude-opus-5",
+    "claude-opus-5.5",
+    "claude-sonnet-5"
+   ],
+   "weights": "openrouter_tokens",
+   "note": "Anthropic's current models, split in proportion to their measured OpenRouter token volume for the week (prompt + completion). Haiku is not included: the basket is the frontier tier, not the small tier. Claude Opus 5.5 (on OpenRouter since 2026-09-21, $4/$20 list) added 2026-09-28 at Lev's request; ROIC history rows up to that date are on the four-model basket (Fable 5.1, Fable 5, Opus 5, Sonnet 5)."
+  },
+  "openai": {
+   "label": "OpenAI",
+   "models": [
+    "gpt-5.6-sol",
+    "gpt-5.6-terra"
+   ],
+   "weights": "openrouter_tokens",
+   "note": "OpenAI's current flagship and mid-tier models (Sol = Opus/Fable class, Terra = Sonnet class), split by measured OpenRouter token volume. Luna, the small tier, is excluded for the same reason Haiku is; Sol Pro (0.1% of tokens) is excluded because OpenAI publishes no price for it."
+  }
+ },
+ "trace_mapping_note": "Each task with a trace_family takes its per-run token volumes (input, output, LLM calls, cacheable share), by model family, from data/traces.json (Exgentic agent-llm-traces-v2): swebench = SWE-bench software-engineering runs, browsecompplus = BrowseComp-Plus deep research, appworld = AppWorld multi-app assistant tasks, tau2 = tau2-bench customer-service. Tasks without one keep the framework's per-call shapes (calls x task-type tin/tout) for every model. The 'volumes' dial switches between measured-where-available and framework-only."
+}

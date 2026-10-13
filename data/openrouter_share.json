@@ -1,0 +1,3660 @@
+{
+ "note": "OpenRouter's closed-weight share of tokens. 'weeks' come from OpenRouter's weekly Top Models chart (all tokens, prompt + completion): closed / open = that week's named top models by published weights, others = the chart's 'Others' bucket, which OpenRouter does not split, so the week's closed share lies between closed/total and (closed + others)/total. 'reads' are this project's reads of OpenRouter's full weekly ranking (every model, trailing seven days), classified model by model: the complete split on the days it was read. Open = weights published (registry flag where the model is mapped, else a non-empty hf_slug in OpenRouter's catalog). OpenRouter rankings are CC BY 4.0.",
+ "source": {
+  "chart": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+  "ranking": "https://openrouter.ai/api/frontend/v1/rankings/models?view=week",
+  "catalog": "https://openrouter.ai/api/frontend/v1/catalog/models"
+ },
+ "license": "OpenRouter rankings, CC BY 4.0",
+ "weeks": {
+  "2025-10-13": {
+   "total": 3914762940580,
+   "closed": 2221463240468,
+   "open": 165204910123,
+   "others": 1528094789989,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.56746,
+   "closed_max": 0.9578,
+   "models": [
+    [
+     "xAI: Grok Code Fast 1",
+     991991212622,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     442774402192,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     263918037529,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4",
+     140192875042,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Pro",
+     130257650581,
+     "closed"
+    ],
+    [
+     "xAI: Grok 4 Fast",
+     127208101498,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.0 Flash",
+     125120961004,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3 0324",
+     97351853884,
+     "open"
+    ],
+    [
+     "TNG: DeepSeek R1T2 Chimera",
+     67853056239,
+     "open"
+    ]
+   ]
+  },
+  "2025-10-20": {
+   "total": 4886312194357,
+   "closed": 2820291274519,
+   "open": 110948549313,
+   "others": 1955072370525,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.57718,
+   "closed_max": 0.97729,
+   "models": [
+    [
+     "xAI: Grok Code Fast 1",
+     1269863180383,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     523625493331,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     291420258676,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Pro",
+     173406076510,
+     "closed"
+    ],
+    [
+     "xAI: Grok 4 Fast",
+     156196047559,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4",
+     154890504849,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.0 Flash",
+     145820284204,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3 0324",
+     110948549313,
+     "open"
+    ],
+    [
+     "Google: Gemini 2.5 Flash Lite",
+     105069429007,
+     "closed"
+    ]
+   ]
+  },
+  "2025-10-27": {
+   "total": 5511159006188,
+   "closed": 3208847888502,
+   "open": 241892814799,
+   "others": 2060418302887,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.58225,
+   "closed_max": 0.95611,
+   "models": [
+    [
+     "xAI: Grok Code Fast 1",
+     1465574805684,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     653674107181,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     318701012078,
+     "closed"
+    ],
+    [
+     "MiniMax: MiniMax M2",
+     241892814799,
+     "open"
+    ],
+    [
+     "Google: Gemini 2.5 Pro",
+     203556853438,
+     "closed"
+    ],
+    [
+     "xAI: Grok 4 Fast",
+     152263600638,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.0 Flash",
+     149671845769,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4",
+     141237783344,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash Lite",
+     124167880370,
+     "closed"
+    ]
+   ]
+  },
+  "2025-11-03": {
+   "total": 5828207285497,
+   "closed": 3224165102925,
+   "open": 337514431030,
+   "others": 2266527751542,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.5532,
+   "closed_max": 0.94209,
+   "models": [
+    [
+     "xAI: Grok Code Fast 1",
+     1363139013136,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     670493182017,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     377479159403,
+     "closed"
+    ],
+    [
+     "MiniMax: MiniMax M2",
+     337514431030,
+     "open"
+    ],
+    [
+     "xAI: Grok 4 Fast",
+     202893389453,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Pro",
+     187964172337,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.0 Flash",
+     150860448168,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash Lite",
+     136243531723,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4",
+     135092206688,
+     "closed"
+    ]
+   ]
+  },
+  "2025-11-10": {
+   "total": 5927714421614,
+   "closed": 3292214824053,
+   "open": 231658460278,
+   "others": 2403841137283,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.55539,
+   "closed_max": 0.96092,
+   "models": [
+    [
+     "xAI: Grok Code Fast 1",
+     1453950804266,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     604026625556,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     371226039396,
+     "closed"
+    ],
+    [
+     "MiniMax: MiniMax M2",
+     231658460278,
+     "open"
+    ],
+    [
+     "xAI: Grok 4 Fast",
+     219424205307,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Pro",
+     183796880820,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.0 Flash",
+     167907765355,
+     "closed"
+    ],
+    [
+     "Polaris Alpha",
+     149977367605,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash Lite",
+     141905135748,
+     "closed"
+    ]
+   ]
+  },
+  "2025-11-17": {
+   "total": 6271832101668,
+   "closed": 3173092406735,
+   "open": 201220890639,
+   "others": 2897518804294,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.50593,
+   "closed_max": 0.96792,
+   "models": [
+    [
+     "xAI: Grok Code Fast 1",
+     1248210121244,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     497244811773,
+     "closed"
+    ],
+    [
+     "xAI: Grok 4.1 Fast",
+     389775237316,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     367058142757,
+     "closed"
+    ],
+    [
+     "MiniMax: MiniMax M2",
+     201220890639,
+     "open"
+    ],
+    [
+     "Google: Gemini 2.0 Flash",
+     187434340816,
+     "closed"
+    ],
+    [
+     "xAI: Grok 4 Fast",
+     164001941616,
+     "closed"
+    ],
+    [
+     "Sherlock Think Alpha",
+     162963573231,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Pro",
+     156404237982,
+     "closed"
+    ]
+   ]
+  },
+  "2025-11-24": {
+   "total": 7184885909341,
+   "closed": 4041027142863,
+   "open": 175044596604,
+   "others": 2968814169874,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.56243,
+   "closed_max": 0.97564,
+   "models": [
+    [
+     "xAI: Grok 4.1 Fast",
+     1579566240397,
+     "closed"
+    ],
+    [
+     "xAI: Grok Code Fast 1",
+     978467289633,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     428078631214,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     377447209398,
+     "closed"
+    ],
+    [
+     "xAI: Grok 4.1 Fast",
+     203047614149,
+     "closed"
+    ],
+    [
+     "MiniMax: MiniMax M2",
+     175044596604,
+     "open"
+    ],
+    [
+     "Google: Gemini 2.0 Flash",
+     168291362347,
+     "closed"
+    ],
+    [
+     "Google: Gemini 3 Pro Preview",
+     154705440509,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash Lite",
+     151423355216,
+     "closed"
+    ]
+   ]
+  },
+  "2025-12-01": {
+   "total": 6183689082546,
+   "closed": 3159955374678,
+   "open": 0,
+   "others": 3023733707868,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.51101,
+   "closed_max": 1.0,
+   "models": [
+    [
+     "xAI: Grok Code Fast 1",
+     878555435971,
+     "closed"
+    ],
+    [
+     "xAI: Grok 4.1 Fast",
+     585015423470,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     429159402329,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     398751131821,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.5",
+     208814771437,
+     "closed"
+    ],
+    [
+     "Google: Gemini 3 Pro Preview",
+     170461362641,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.0 Flash",
+     165256172246,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Pro",
+     162065233898,
+     "closed"
+    ],
+    [
+     "xAI: Grok 4 Fast",
+     161876440865,
+     "closed"
+    ]
+   ]
+  },
+  "2025-12-08": {
+   "total": 5772746635719,
+   "closed": 2387256079968,
+   "open": 323018614438,
+   "others": 3062471941313,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.41354,
+   "closed_max": 0.94404,
+   "models": [
+    [
+     "xAI: Grok Code Fast 1",
+     618469718813,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     453242014019,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     430777771586,
+     "closed"
+    ],
+    [
+     "OpenAI: gpt-oss-120b",
+     323018614438,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 4.5",
+     211974303282,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.0 Flash",
+     189082856905,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash Lite",
+     168402695203,
+     "closed"
+    ],
+    [
+     "xAI: Grok 4 Fast",
+     159985083087,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Pro",
+     155321637073,
+     "closed"
+    ]
+   ]
+  },
+  "2025-12-15": {
+   "total": 5840500610903,
+   "closed": 1948425462337,
+   "open": 596472207918,
+   "others": 3295602940648,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.33361,
+   "closed_max": 0.89787,
+   "models": [
+    [
+     "xAI: Grok Code Fast 1",
+     517261241082,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     438708651368,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     416299356874,
+     "closed"
+    ],
+    [
+     "OpenAI: gpt-oss-120b",
+     220245506891,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 4.5",
+     209253116284,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     205450473114,
+     "open"
+    ],
+    [
+     "Google: Gemini 2.0 Flash",
+     184561836303,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash Lite",
+     182341260426,
+     "closed"
+    ],
+    [
+     "Xiaomi: MiMo-V2-Flash",
+     170776227913,
+     "open"
+    ]
+   ]
+  },
+  "2025-12-22": {
+   "total": 5664949208500,
+   "closed": 1990030450310,
+   "open": 706106471851,
+   "others": 2968812286339,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.35129,
+   "closed_max": 0.87536,
+   "models": [
+    [
+     "xAI: Grok Code Fast 1",
+     481948335409,
+     "closed"
+    ],
+    [
+     "Xiaomi: MiMo-V2-Flash",
+     378754384454,
+     "open"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     377291061962,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     360764900500,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     327352087397,
+     "open"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     229832776027,
+     "closed"
+    ],
+    [
+     "xAI: Grok 4.1 Fast",
+     199151935829,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.5",
+     183314603079,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash Lite",
+     157726837504,
+     "closed"
+    ]
+   ]
+  },
+  "2025-12-29": {
+   "total": 5566541388683,
+   "closed": 1943472395624,
+   "open": 703198112166,
+   "others": 2919870880893,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.34913,
+   "closed_max": 0.87367,
+   "models": [
+    [
+     "xAI: Grok Code Fast 1",
+     409114561828,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     352492796625,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     352169109488,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     351575566114,
+     "closed"
+    ],
+    [
+     "Xiaomi: MiMo-V2-Flash",
+     351029002678,
+     "open"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     291279272785,
+     "closed"
+    ],
+    [
+     "xAI: Grok 4.1 Fast",
+     196109774226,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.5",
+     177921941194,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash Lite",
+     164978482852,
+     "closed"
+    ]
+   ]
+  },
+  "2026-01-05": {
+   "total": 6419683711082,
+   "closed": 2558919376212,
+   "open": 708607396271,
+   "others": 3152156938599,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.39861,
+   "closed_max": 0.88962,
+   "models": [
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     530610171817,
+     "closed"
+    ],
+    [
+     "xAI: Grok Code Fast 1",
+     412784694715,
+     "closed"
+    ],
+    [
+     "Xiaomi: MiMo-V2-Flash",
+     397319307841,
+     "open"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     386510445663,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.5",
+     370078653644,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     364169867941,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     311288088430,
+     "open"
+    ],
+    [
+     "Google: Gemini 2.5 Flash Lite",
+     253468096928,
+     "closed"
+    ],
+    [
+     "xAI: Grok 4.1 Fast",
+     241297445504,
+     "closed"
+    ]
+   ]
+  },
+  "2026-01-12": {
+   "total": 7643272557692,
+   "closed": 3202178819966,
+   "open": 901038740283,
+   "others": 3540054997443,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.41895,
+   "closed_max": 0.88211,
+   "models": [
+    [
+     "Anthropic: Claude Opus 4.5",
+     622642470552,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     615133712040,
+     "closed"
+    ],
+    [
+     "Xiaomi: MiMo-V2-Flash",
+     546049737672,
+     "open"
+    ],
+    [
+     "xAI: Grok Code Fast 1",
+     467821616715,
+     "closed"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     447747464062,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Pro",
+     388791936375,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     376492238774,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     354989002611,
+     "open"
+    ],
+    [
+     "xAI: Grok 4.1 Fast",
+     283549381448,
+     "closed"
+    ]
+   ]
+  },
+  "2026-01-19": {
+   "total": 7493679593018,
+   "closed": 3068257138317,
+   "open": 970692537236,
+   "others": 3454729917465,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.40945,
+   "closed_max": 0.87047,
+   "models": [
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     713132098351,
+     "closed"
+    ],
+    [
+     "Xiaomi: MiMo-V2-Flash",
+     575094656309,
+     "open"
+    ],
+    [
+     "xAI: Grok Code Fast 1",
+     539747530096,
+     "closed"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     537303435247,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     395597880927,
+     "open"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     364622244963,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.5",
+     363860628252,
+     "closed"
+    ],
+    [
+     "xAI: Grok 4.1 Fast",
+     282628544406,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash Lite",
+     266962657002,
+     "closed"
+    ]
+   ]
+  },
+  "2026-01-26": {
+   "total": 8249934351918,
+   "closed": 2985240343764,
+   "open": 1171079536977,
+   "others": 4093614471177,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.36185,
+   "closed_max": 0.85805,
+   "models": [
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     774547335543,
+     "closed"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     688836171168,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     507333780688,
+     "open"
+    ],
+    [
+     "xAI: Grok Code Fast 1",
+     421626971930,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     405901304680,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.5",
+     377870999007,
+     "closed"
+    ],
+    [
+     "MoonshotAI: Kimi K2.5",
+     359303717844,
+     "open"
+    ],
+    [
+     "xAI: Grok 4.1 Fast",
+     316457561436,
+     "closed"
+    ],
+    [
+     "OpenAI: gpt-oss-120b",
+     304442038445,
+     "open"
+    ]
+   ]
+  },
+  "2026-02-02": {
+   "total": 9804326929861,
+   "closed": 2956932684571,
+   "open": 2265174367798,
+   "others": 4582219877492,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.30159,
+   "closed_max": 0.76896,
+   "models": [
+    [
+     "MoonshotAI: Kimi K2.5",
+     1158732930908,
+     "open"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     763783933324,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     705481897429,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     664682565362,
+     "open"
+    ],
+    [
+     "MiniMax: MiniMax M2.1",
+     441758871528,
+     "open"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     429501787066,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.5",
+     369782947073,
+     "closed"
+    ],
+    [
+     "xAI: Grok 4.1 Fast",
+     344786863728,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash Lite",
+     343595255951,
+     "closed"
+    ]
+   ]
+  },
+  "2026-02-09": {
+   "total": 13014630127221,
+   "closed": 2933113147344,
+   "open": 4119001453500,
+   "others": 5962515526377,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.22537,
+   "closed_max": 0.68351,
+   "models": [
+    [
+     "MiniMax: MiniMax M2.5",
+     1438446017172,
+     "open"
+    ],
+    [
+     "MoonshotAI: Kimi K2.5",
+     1295857489162,
+     "open"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     775913082169,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     756298773017,
+     "open"
+    ],
+    [
+     "Z.ai: GLM 5",
+     628399174149,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     626327358310,
+     "closed"
+    ],
+    [
+     "xAI: Grok 4.1 Fast",
+     556795772174,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.6",
+     523687912384,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     450389022307,
+     "closed"
+    ]
+   ]
+  },
+  "2026-02-16": {
+   "total": 13947727801492,
+   "closed": 2704544719987,
+   "open": 5604149931115,
+   "others": 5639033150390,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.19391,
+   "closed_max": 0.5982,
+   "models": [
+    [
+     "MiniMax: MiniMax M2.5",
+     2570426255378,
+     "open"
+    ],
+    [
+     "MoonshotAI: Kimi K2.5",
+     1036388353348,
+     "open"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     858773075468,
+     "closed"
+    ],
+    [
+     "Z.ai: GLM 5",
+     803177700976,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     744867056791,
+     "open"
+    ],
+    [
+     "xAI: Grok 4.1 Fast",
+     668806105669,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.6",
+     642879385684,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     534086153166,
+     "closed"
+    ],
+    [
+     "Arcee AI: Trinity Large Preview",
+     449290564622,
+     "open"
+    ]
+   ]
+  },
+  "2026-02-23": {
+   "total": 13615671189056,
+   "closed": 3420593960578,
+   "open": 3654297138013,
+   "others": 6540780090465,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.25122,
+   "closed_max": 0.73161,
+   "models": [
+    [
+     "MiniMax: MiniMax M2.5",
+     1625442992101,
+     "open"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     1027301048775,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     799864437550,
+     "open"
+    ],
+    [
+     "MoonshotAI: Kimi K2.5",
+     691882843163,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.6",
+     635674078354,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.6",
+     633827272042,
+     "closed"
+    ],
+    [
+     "xAI: Grok 4.1 Fast",
+     594741811287,
+     "closed"
+    ],
+    [
+     "Arcee AI: Trinity Large Preview",
+     537106865199,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.5",
+     529049750120,
+     "closed"
+    ]
+   ]
+  },
+  "2026-03-02": {
+   "total": 14788910154996,
+   "closed": 3107677420536,
+   "open": 4712078821414,
+   "others": 6969153913046,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.21014,
+   "closed_max": 0.68138,
+   "models": [
+    [
+     "MiniMax: MiniMax M2.5",
+     1863862322159,
+     "open"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     1042788149999,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     831497917353,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 4.6",
+     770658476799,
+     "closed"
+    ],
+    [
+     "StepFun: Step 3.5 Flash",
+     747289037389,
+     "open"
+    ],
+    [
+     "MoonshotAI: Kimi K2.5",
+     743063515801,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.6",
+     679687926923,
+     "closed"
+    ],
+    [
+     "xAI: Grok 4.1 Fast",
+     614542866815,
+     "closed"
+    ],
+    [
+     "Arcee AI: Trinity Large Preview",
+     526366028712,
+     "open"
+    ]
+   ]
+  },
+  "2026-03-09": {
+   "total": 16874474880619,
+   "closed": 3953185726570,
+   "open": 4683150519778,
+   "others": 8238138634271,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.23427,
+   "closed_max": 0.72247,
+   "models": [
+    [
+     "MiniMax: MiniMax M2.5",
+     1747235642978,
+     "open"
+    ],
+    [
+     "StepFun: Step 3.5 Flash",
+     1340325199219,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     1036108388599,
+     "open"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     1015611794315,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.6",
+     889263434264,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.6",
+     821171425089,
+     "closed"
+    ],
+    [
+     "Hunter Alpha",
+     665677892611,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     561461180291,
+     "closed"
+    ],
+    [
+     "MoonshotAI: Kimi K2.5",
+     559481288982,
+     "open"
+    ]
+   ]
+  },
+  "2026-03-16": {
+   "total": 20296794834531,
+   "closed": 6381624882497,
+   "open": 3910692405696,
+   "others": 10004477546338,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.31442,
+   "closed_max": 0.80732,
+   "models": [
+    [
+     "Xiaomi: MiMo-V2-Pro",
+     1490889230665,
+     "closed"
+    ],
+    [
+     "StepFun: Step 3.5 Flash",
+     1478698121257,
+     "open"
+    ],
+    [
+     "MiniMax: MiniMax M2.5",
+     1298293090489,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     1133701193950,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.6",
+     1036832500557,
+     "closed"
+    ],
+    [
+     "Z.ai: GLM 5 Turbo",
+     1027523143002,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.6",
+     973536759725,
+     "closed"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     936992864996,
+     "closed"
+    ],
+    [
+     "Hunter Alpha",
+     915850383552,
+     "closed"
+    ]
+   ]
+  },
+  "2026-03-23": {
+   "total": 22639924441575,
+   "closed": 7905804226263,
+   "open": 4912680194750,
+   "others": 9821440020562,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.3492,
+   "closed_max": 0.78301,
+   "models": [
+    [
+     "Xiaomi: MiMo-V2-Pro",
+     3946528663437,
+     "closed"
+    ],
+    [
+     "StepFun: Step 3.5 Flash",
+     1484868226097,
+     "open"
+    ],
+    [
+     "MiniMax: MiniMax M2.7",
+     1284321949429,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     1237642391651,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.6",
+     1034472500959,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.6",
+     991680817696,
+     "closed"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     968332980979,
+     "closed"
+    ],
+    [
+     "Z.ai: GLM 5 Turbo",
+     964789263192,
+     "closed"
+    ],
+    [
+     "MiniMax: MiniMax M2.5",
+     905847627573,
+     "open"
+    ]
+   ]
+  },
+  "2026-03-30": {
+   "total": 27005556400914,
+   "closed": 12345107534747,
+   "open": 3637540327369,
+   "others": 11022908538798,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.45713,
+   "closed_max": 0.8653,
+   "models": [
+    [
+     "Qwen: Qwen3.6 Plus",
+     4600778695301,
+     "closed"
+    ],
+    [
+     "Xiaomi: MiMo-V2-Pro",
+     3075697429178,
+     "closed"
+    ],
+    [
+     "Qwen: Qwen3.6 Plus Preview",
+     1640268925383,
+     "closed"
+    ],
+    [
+     "StepFun: Step 3.5 Flash",
+     1256799449929,
+     "open"
+    ],
+    [
+     "MiniMax: MiniMax M2.7",
+     1192741302894,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     1187999574546,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.6",
+     1032269887695,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.6",
+     1016536598150,
+     "closed"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     979555999040,
+     "closed"
+    ]
+   ]
+  },
+  "2026-04-06": {
+   "total": 20990845815775,
+   "closed": 5686605733630,
+   "open": 4214051729067,
+   "others": 11090188353078,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.27091,
+   "closed_max": 0.79924,
+   "models": [
+    [
+     "Qwen: Qwen3.6 Plus",
+     1663454147264,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     1266925587296,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 4.6",
+     1193340329942,
+     "closed"
+    ],
+    [
+     "MiniMax: MiniMax M2.7",
+     1187954408629,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.6",
+     1161420928974,
+     "closed"
+    ],
+    [
+     "MiniMax: MiniMax M2.5",
+     1100417113407,
+     "open"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     1062679747314,
+     "closed"
+    ],
+    [
+     "NVIDIA: Nemotron 3 Super",
+     658754619735,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2-Pro",
+     605710580136,
+     "closed"
+    ]
+   ]
+  },
+  "2026-04-13": {
+   "total": 20469273117201,
+   "closed": 6056476926317,
+   "open": 3288351107308,
+   "others": 11124445083576,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.29588,
+   "closed_max": 0.83935,
+   "models": [
+    [
+     "Anthropic: Claude Sonnet 4.6",
+     1380904443289,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     1279545315597,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 4.6",
+     1218729940297,
+     "closed"
+    ],
+    [
+     "Xiaomi: MiMo-V2-Pro",
+     1148465936210,
+     "closed"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     1142369944786,
+     "closed"
+    ],
+    [
+     "MiniMax: MiniMax M2.5",
+     1049049106930,
+     "open"
+    ],
+    [
+     "MiniMax: MiniMax M2.7",
+     959756684781,
+     "open"
+    ],
+    [
+     "Google: Gemini 2.5 Flash Lite",
+     593873833207,
+     "closed"
+    ],
+    [
+     "xAI: Grok 4.1 Fast",
+     572132828528,
+     "closed"
+    ]
+   ]
+  },
+  "2026-04-20": {
+   "total": 21883269650188,
+   "closed": 4973519487415,
+   "open": 4364736803105,
+   "others": 12545013359668,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.22727,
+   "closed_max": 0.80054,
+   "models": [
+    [
+     "MoonshotAI: Kimi K2.6",
+     1580692059875,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.6",
+     1355844165448,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     1274992880096,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 4.7",
+     1149277337287,
+     "closed"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     1038118400206,
+     "closed"
+    ],
+    [
+     "MiniMax: MiniMax M2.7",
+     788933709936,
+     "open"
+    ],
+    [
+     "xAI: Grok 4.1 Fast",
+     745771584900,
+     "closed"
+    ],
+    [
+     "StepFun: Step 3.5 Flash",
+     720118153198,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 4.6",
+     684507999574,
+     "closed"
+    ]
+   ]
+  },
+  "2026-04-27": {
+   "total": 23797756813570,
+   "closed": 3248486904754,
+   "open": 7930802986138,
+   "others": 12618466922678,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.1365,
+   "closed_max": 0.66674,
+   "models": [
+    [
+     "Tencent: Hy3 preview",
+     3031227447921,
+     "open"
+    ],
+    [
+     "MoonshotAI: Kimi K2.6",
+     1811791095354,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.6",
+     1344034901583,
+     "closed"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     971001280950,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.7",
+     933450722221,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     905974225998,
+     "open"
+    ],
+    [
+     "StepFun: Step 3.5 Flash",
+     750526540997,
+     "open"
+    ],
+    [
+     "MiniMax: MiniMax M2.7",
+     727960465614,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     703323210254,
+     "open"
+    ]
+   ]
+  },
+  "2026-05-04": {
+   "total": 25731788579578,
+   "closed": 3760928063339,
+   "open": 7940307477805,
+   "others": 14030553038434,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.14616,
+   "closed_max": 0.69142,
+   "models": [
+    [
+     "Tencent: Hy3 preview",
+     2676587886276,
+     "open"
+    ],
+    [
+     "MoonshotAI: Kimi K2.6",
+     1613682885848,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.6",
+     1451951786344,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.7",
+     1234510369345,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     1110849801720,
+     "open"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     1074465907650,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     867229931231,
+     "open"
+    ],
+    [
+     "Tencent: Hy3 preview",
+     856331701786,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Pro 0423",
+     815625270944,
+     "open"
+    ]
+   ]
+  },
+  "2026-05-11": {
+   "total": 26905682372472,
+   "closed": 5127102315510,
+   "open": 7690461257959,
+   "others": 14088118799003,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.19056,
+   "closed_max": 0.71417,
+   "models": [
+    [
+     "Tencent: Hy3 preview",
+     2655590909703,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     2062273457044,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.6",
+     1545920378055,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.7",
+     1535373262384,
+     "closed"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     1151021632335,
+     "closed"
+    ],
+    [
+     "MoonshotAI: Kimi K2.6",
+     1054473801545,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     1025365344299,
+     "open"
+    ],
+    [
+     "Owl Alpha",
+     894787042736,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Pro 0423",
+     892757745368,
+     "open"
+    ]
+   ]
+  },
+  "2026-05-18": {
+   "total": 28920204910828,
+   "closed": 6075146408684,
+   "open": 9213711165256,
+   "others": 13631347336888,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.21007,
+   "closed_max": 0.68141,
+   "models": [
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     3425801372074,
+     "open"
+    ],
+    [
+     "Tencent: Hy3 preview",
+     3070579522313,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 4.7",
+     1938029560451,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.6",
+     1884633047298,
+     "closed"
+    ],
+    [
+     "Owl Alpha",
+     1151443392690,
+     "closed"
+    ],
+    [
+     "Google: Gemini 3 Flash Preview (batch)",
+     1101040408245,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Pro 0423",
+     1075466495844,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     979400603857,
+     "open"
+    ],
+    [
+     "StepFun: Step 3.5 Flash",
+     662463171168,
+     "open"
+    ]
+   ]
+  },
+  "2026-05-25": {
+   "total": 31807747787522,
+   "closed": 5910987313111,
+   "open": 11135343038016,
+   "others": 14761417436395,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.18583,
+   "closed_max": 0.64992,
+   "models": [
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     3108137494077,
+     "open"
+    ],
+    [
+     "Tencent: Hy3 preview",
+     3026675656298,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 4.7",
+     2323905161870,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.6",
+     1923927592793,
+     "closed"
+    ],
+    [
+     "Owl Alpha",
+     1663154558448,
+     "closed"
+    ],
+    [
+     "Xiaomi: MiMo-V2.5",
+     1462547058328,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Pro 0423",
+     1253518790688,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.5-Pro",
+     1243780903758,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     1040683134867,
+     "open"
+    ]
+   ]
+  },
+  "2026-06-01": {
+   "total": 36126105262907,
+   "closed": 5144296794060,
+   "open": 14178620957227,
+   "others": 16803187511620,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.1424,
+   "closed_max": 0.60752,
+   "models": [
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     3684392865603,
+     "open"
+    ],
+    [
+     "Tencent: Hy3 preview",
+     2942430891368,
+     "open"
+    ],
+    [
+     "MiniMax: MiniMax M3",
+     2498675822874,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.5",
+     2188272406586,
+     "open"
+    ],
+    [
+     "Owl Alpha",
+     1948290142797,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.6",
+     1756586892000,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Pro 0423",
+     1697215087209,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 4.7",
+     1439419759263,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V3.2",
+     1167633883587,
+     "open"
+    ]
+   ]
+  },
+  "2026-06-08": {
+   "total": 44605812022870,
+   "closed": 8180369254417,
+   "open": 18418549408316,
+   "others": 18006893360137,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.18339,
+   "closed_max": 0.58708,
+   "models": [
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     4412513967312,
+     "open"
+    ],
+    [
+     "MiniMax: MiniMax M3",
+     4323092389266,
+     "open"
+    ],
+    [
+     "Tencent: Hy3 preview",
+     4136427003731,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.5",
+     3589670551250,
+     "open"
+    ],
+    [
+     "Owl Alpha",
+     2470965986095,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.7",
+     2338546427753,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.6",
+     2125470610419,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Pro 0423",
+     1956845496757,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 4.8",
+     1245386230150,
+     "closed"
+    ]
+   ]
+  },
+  "2026-06-15": {
+   "total": 46647905566215,
+   "closed": 8315322779312,
+   "open": 18807493807272,
+   "others": 19525088979631,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.17826,
+   "closed_max": 0.59682,
+   "models": [
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     4934471373992,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.5",
+     3941404557942,
+     "open"
+    ],
+    [
+     "MiniMax: MiniMax M3",
+     3771225109466,
+     "open"
+    ],
+    [
+     "Tencent: Hy3 preview",
+     3626628644428,
+     "open"
+    ],
+    [
+     "Owl Alpha",
+     2561996364122,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Pro 0423",
+     2533764121444,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 4.7",
+     2524757915175,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.8",
+     1692328166904,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Sonnet 4.6",
+     1536240333111,
+     "closed"
+    ]
+   ]
+  },
+  "2026-06-22": {
+   "total": 46720348192435,
+   "closed": 7717420376243,
+   "open": 20394686385588,
+   "others": 18608241430604,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.16518,
+   "closed_max": 0.56347,
+   "models": [
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     4658198982371,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.5",
+     4482079077718,
+     "open"
+    ],
+    [
+     "MiniMax: MiniMax M3",
+     3744275964225,
+     "open"
+    ],
+    [
+     "Owl Alpha",
+     3474837878336,
+     "closed"
+    ],
+    [
+     "Tencent: Hy3 preview",
+     3361303115530,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 4.7",
+     2336449491943,
+     "closed"
+    ],
+    [
+     "Z.ai: GLM 5.2",
+     2107624510576,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Pro 0423",
+     2041204735168,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 4.8",
+     1906133005964,
+     "closed"
+    ]
+   ]
+  },
+  "2026-06-29": {
+   "total": 46719738264038,
+   "closed": 4282798225186,
+   "open": 23453161372775,
+   "others": 18983778666077,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.09167,
+   "closed_max": 0.498,
+   "models": [
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     5339678745733,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.5",
+     4381056827095,
+     "open"
+    ],
+    [
+     "MiniMax: MiniMax M3",
+     4112339614972,
+     "open"
+    ],
+    [
+     "Tencent: Hy3 preview",
+     3127455657682,
+     "open"
+    ],
+    [
+     "Z.ai: GLM 5.2",
+     2578159576426,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Pro 0423",
+     2360347086471,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 4.7",
+     2190998016200,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.8",
+     2091800208986,
+     "closed"
+    ],
+    [
+     "StepFun: Step 3.7 Flash",
+     1554123864396,
+     "open"
+    ]
+   ]
+  },
+  "2026-07-06": {
+   "total": 52619668699308,
+   "closed": 4286636386163,
+   "open": 29621198101237,
+   "others": 18711834211908,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.08146,
+   "closed_max": 0.43707,
+   "models": [
+    [
+     "Tencent: Hy3",
+     6133686335963,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.5",
+     5947323873332,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     5223444016292,
+     "open"
+    ],
+    [
+     "MiniMax: MiniMax M3",
+     4259266710205,
+     "open"
+    ],
+    [
+     "Z.ai: GLM 5.2",
+     3191558656919,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Pro 0423",
+     2825136023209,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 4.7",
+     2255204782563,
+     "closed"
+    ],
+    [
+     "NVIDIA: Nemotron 3 Ultra",
+     2040782485317,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 4.8",
+     2031431603600,
+     "closed"
+    ]
+   ]
+  },
+  "2026-07-13": {
+   "total": 62773944339618,
+   "closed": 4241544202180,
+   "open": 39563054702220,
+   "others": 18969345435218,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.06757,
+   "closed_max": 0.36975,
+   "models": [
+    [
+     "Tencent: Hy3",
+     11516528897206,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.5",
+     9319513129034,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     5384952769104,
+     "open"
+    ],
+    [
+     "MiniMax: MiniMax M3",
+     3814204694267,
+     "open"
+    ],
+    [
+     "Z.ai: GLM 5.2",
+     3671677452839,
+     "open"
+    ],
+    [
+     "NVIDIA: Nemotron 3 Ultra",
+     3145685021734,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Pro 0423",
+     2710492738036,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 4.7",
+     2171127937003,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 4.8",
+     2070416265177,
+     "closed"
+    ]
+   ]
+  },
+  "2026-07-20": {
+   "total": 58041497415980,
+   "closed": 0,
+   "open": 35304209620088,
+   "others": 22737287795892,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.0,
+   "closed_max": 0.39174,
+   "models": [
+    [
+     "Xiaomi: MiMo-V2.5",
+     10463362117544,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     6370682795644,
+     "open"
+    ],
+    [
+     "Tencent: Hy3",
+     3944653512792,
+     "open"
+    ],
+    [
+     "Z.ai: GLM 5.2",
+     3287642816286,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Pro 0423",
+     3171917263266,
+     "open"
+    ],
+    [
+     "NVIDIA: Nemotron 3 Ultra",
+     2339405617885,
+     "open"
+    ],
+    [
+     "MiniMax: MiniMax M3",
+     2048490367495,
+     "open"
+    ],
+    [
+     "StepFun: Step 3.7 Flash",
+     1918581048619,
+     "open"
+    ],
+    [
+     "Tencent: Hy3",
+     1759474080557,
+     "open"
+    ]
+   ]
+  },
+  "2026-07-27": {
+   "total": 56788588911921,
+   "closed": 1945077160070,
+   "open": 30558901452398,
+   "others": 24284610299453,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.03425,
+   "closed_max": 0.46188,
+   "models": [
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     7220350124001,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.5",
+     6304949281665,
+     "open"
+    ],
+    [
+     "Tencent: Hy3",
+     4824580734626,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Pro 0423",
+     3278258267278,
+     "open"
+    ],
+    [
+     "Z.ai: GLM 5.2",
+     2890093349264,
+     "open"
+    ],
+    [
+     "NVIDIA: Nemotron 3 Ultra",
+     2427355339353,
+     "open"
+    ],
+    [
+     "MiniMax: MiniMax M3",
+     1957494046128,
+     "open"
+    ],
+    [
+     "OpenAI: GPT-5.6 Luna (batch)",
+     1945077160070,
+     "closed"
+    ],
+    [
+     "StepFun: Step 3.7 Flash",
+     1655820310083,
+     "open"
+    ]
+   ]
+  },
+  "2026-08-03": {
+   "total": 69046537847932,
+   "closed": 6763583383872,
+   "open": 36655269836847,
+   "others": 25627684627213,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.09796,
+   "closed_max": 0.46912,
+   "models": [
+    [
+     "DeepSeek: DeepSeek V4 Flash 0731",
+     8826076422544,
+     "open"
+    ],
+    [
+     "Tencent: Hy3",
+     8050128586848,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     5880433122513,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.5",
+     5392889601768,
+     "open"
+    ],
+    [
+     "OpenAI: GPT-5.6 Luna (batch)",
+     4434794606781,
+     "closed"
+    ],
+    [
+     "Z.ai: GLM 5.2",
+     3486952924752,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Pro 0423",
+     2611842929533,
+     "open"
+    ],
+    [
+     "NVIDIA: Nemotron 3 Ultra",
+     2406946248889,
+     "open"
+    ],
+    [
+     "Google: Gemini 3.6 Flash (batch)",
+     2328788777091,
+     "closed"
+    ]
+   ]
+  },
+  "2026-08-10": {
+   "total": 75340581084831,
+   "closed": 10261535575547,
+   "open": 36819663663288,
+   "others": 28259381845996,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.1362,
+   "closed_max": 0.51129,
+   "models": [
+    [
+     "DeepSeek: DeepSeek V4 Flash 0731",
+     11180297061770,
+     "open"
+    ],
+    [
+     "Tencent: Hy3",
+     9953312056288,
+     "open"
+    ],
+    [
+     "OpenAI: GPT-5.6 Luna (batch)",
+     5311298774780,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     4830210441044,
+     "open"
+    ],
+    [
+     "Z.ai: GLM 5.2",
+     4328860989331,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.5",
+     3791573036238,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Pro 0423",
+     2735410078617,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 5",
+     2666233498928,
+     "closed"
+    ],
+    [
+     "Google: Gemini 3.6 Flash (batch)",
+     2284003301839,
+     "closed"
+    ]
+   ]
+  },
+  "2026-08-17": {
+   "total": 93377577206324,
+   "closed": 16477743404242,
+   "open": 45194721534855,
+   "others": 31705112267227,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.17646,
+   "closed_max": 0.516,
+   "models": [
+    [
+     "DeepSeek: DeepSeek V4 Flash 0731",
+     11575903419310,
+     "open"
+    ],
+    [
+     "Ox Alpha",
+     11568381011704,
+     "closed"
+    ],
+    [
+     "Xiaomi: MiMo-V2.5",
+     9939125656206,
+     "open"
+    ],
+    [
+     "Tencent: Hy3",
+     8206166005262,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     5458793250920,
+     "open"
+    ],
+    [
+     "OpenAI: GPT-5.6 Luna (batch)",
+     4909362392538,
+     "closed"
+    ],
+    [
+     "NVIDIA: Nemotron 3 Ultra",
+     4747004837950,
+     "open"
+    ],
+    [
+     "Z.ai: GLM 5.2",
+     3417049669494,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Pro 0423",
+     1850678695713,
+     "open"
+    ]
+   ]
+  },
+  "2026-08-24": {
+   "total": 112996824136069,
+   "closed": 27421092791109,
+   "open": 44787251623752,
+   "others": 40788479721208,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.24267,
+   "closed_max": 0.60364,
+   "models": [
+    [
+     "Ox Alpha",
+     15680990601876,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0731",
+     12306317505933,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.5",
+     9136732539589,
+     "open"
+    ],
+    [
+     "OpenAI: GPT-5.6 Luna (batch)",
+     7791983372133,
+     "closed"
+    ],
+    [
+     "Tencent: Hy3",
+     6656447538448,
+     "open"
+    ],
+    [
+     "Z.ai: GLM 5.3 Flash (batch)",
+     6158210203791,
+     "open"
+    ],
+    [
+     "NVIDIA: Nemotron 3 Ultra",
+     5326068933306,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     5203474902685,
+     "open"
+    ],
+    [
+     "Google: Gemini 3.7 Flash (batch)",
+     3948118817100,
+     "closed"
+    ]
+   ]
+  },
+  "2026-08-31": {
+   "total": 115463303706156,
+   "closed": 12937740557751,
+   "open": 60282344235049,
+   "others": 42243218913356,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.11205,
+   "closed_max": 0.47791,
+   "models": [
+    [
+     "Tencent: Hy4 preview",
+     14673075368091,
+     "open"
+    ],
+    [
+     "OpenAI: GPT-5.6 Luna (batch)",
+     12937740557751,
+     "closed"
+    ],
+    [
+     "Z.ai: GLM 5.3 Flash (batch)",
+     12393672516492,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0731",
+     12359858671538,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     5187916825483,
+     "open"
+    ],
+    [
+     "MiniMax: MiniMax M3",
+     5016395567383,
+     "open"
+    ],
+    [
+     "Tencent: Hy3",
+     3992205549751,
+     "open"
+    ],
+    [
+     "NVIDIA: Nemotron 3 Ultra",
+     3635736020240,
+     "open"
+    ],
+    [
+     "Z.ai: GLM 5.3 (batch)",
+     3023483716071,
+     "open"
+    ]
+   ]
+  },
+  "2026-09-07": {
+   "total": 126763022044183,
+   "closed": 18180069685336,
+   "open": 64693890233745,
+   "others": 43889062125102,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.14342,
+   "closed_max": 0.48965,
+   "models": [
+    [
+     "OpenAI: GPT-5.6 Luna (batch)",
+     18180069685336,
+     "closed"
+    ],
+    [
+     "Tencent: Hy4 preview",
+     16816059139299,
+     "open"
+    ],
+    [
+     "Z.ai: GLM 5.3 Flash (batch)",
+     11889774258650,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0731",
+     11562877018745,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.5",
+     7771681918558,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4.1 Flash (batch)",
+     4937738614053,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     4357735509201,
+     "open"
+    ],
+    [
+     "Tencent: Hy3",
+     3797478551822,
+     "open"
+    ],
+    [
+     "NVIDIA: Nemotron 3 Ultra",
+     3560545223417,
+     "open"
+    ]
+   ]
+  },
+  "2026-09-14": {
+   "total": 128895269979077,
+   "closed": 9719171027551,
+   "open": 71911665037767,
+   "others": 47264433913759,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.0754,
+   "closed_max": 0.44209,
+   "models": [
+    [
+     "DeepSeek: DeepSeek V4.1 Flash (batch)",
+     15768633499918,
+     "open"
+    ],
+    [
+     "Z.ai: GLM 5.3 Flash (batch)",
+     14071219856176,
+     "open"
+    ],
+    [
+     "Tencent: Hy4 preview",
+     12517195032750,
+     "open"
+    ],
+    [
+     "OpenAI: GPT-5.6 Luna (batch)",
+     9719171027551,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0731",
+     9440513550264,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.5",
+     7066449271754,
+     "open"
+    ],
+    [
+     "Tencent: Hy3",
+     4780910580939,
+     "open"
+    ],
+    [
+     "NVIDIA: Nemotron 3 Ultra",
+     4493945596793,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     3772797649173,
+     "open"
+    ]
+   ]
+  },
+  "2026-09-21": {
+   "total": 145845105335054,
+   "closed": 22385505792550,
+   "open": 67889095713497,
+   "others": 55570503829007,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.15349,
+   "closed_max": 0.53451,
+   "models": [
+    [
+     "DeepSeek: DeepSeek V4.1 Flash (batch)",
+     19575670827452,
+     "open"
+    ],
+    [
+     "Z.ai: GLM 5.3 Flash (batch)",
+     16316686693493,
+     "open"
+    ],
+    [
+     "Space Bunny Alpha",
+     13858497514441,
+     "closed"
+    ],
+    [
+     "Tencent: Hy4 preview",
+     9642024295349,
+     "open"
+    ],
+    [
+     "OpenAI: GPT-5.6 Luna (batch)",
+     8527008278109,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0731",
+     7824085408364,
+     "open"
+    ],
+    [
+     "NVIDIA: Nemotron 3 Ultra",
+     5674549227811,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.6-Flash",
+     5505234830438,
+     "open"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0423",
+     3350844430590,
+     "open"
+    ]
+   ]
+  },
+  "2026-09-28": {
+   "total": 165856038005319,
+   "closed": 49216241411654,
+   "open": 63117684315925,
+   "others": 53522112277740,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.29674,
+   "closed_max": 0.61944,
+   "models": [
+    [
+     "Space Bunny Alpha",
+     38661199699827,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V4.1 Flash (batch)",
+     25609444658511,
+     "open"
+    ],
+    [
+     "Z.ai: GLM 5.3 Flash (batch)",
+     9733199290942,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.6-Flash",
+     9625490726409,
+     "open"
+    ],
+    [
+     "Tencent: Hy4 preview",
+     6509715185518,
+     "open"
+    ],
+    [
+     "OpenAI: GPT-6 Luna (batch)",
+     6180526500332,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0731",
+     5990763579941,
+     "open"
+    ],
+    [
+     "NVIDIA: Nemotron 3 Ultra",
+     5649070874604,
+     "open"
+    ],
+    [
+     "OpenAI: GPT-5.6 Luna (batch)",
+     4374515211495,
+     "closed"
+    ]
+   ]
+  },
+  "2026-10-05": {
+   "total": 171842501724714,
+   "closed": 20934411767221,
+   "open": 84734549411687,
+   "others": 66173540545806,
+   "partial": false,
+   "read_on": "2026-10-13",
+   "closed_min": 0.12182,
+   "closed_max": 0.50691,
+   "models": [
+    [
+     "DeepSeek: DeepSeek V4.1 Flash (batch)",
+     40972763531010,
+     "open"
+    ],
+    [
+     "Z.ai: GLM 5.3 Flash (batch)",
+     12235607464492,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.6-Flash",
+     11457378265672,
+     "open"
+    ],
+    [
+     "StepFun: Step 5 Preview",
+     8836310984404,
+     "closed"
+    ],
+    [
+     "Tencent: Hy4 preview",
+     8279453201884,
+     "open"
+    ],
+    [
+     "OpenAI: GPT-6 Luna (batch)",
+     7079365865386,
+     "closed"
+    ],
+    [
+     "NVIDIA: Nemotron 3 Ultra",
+     6873214466397,
+     "open"
+    ],
+    [
+     "Anthropic: Claude Opus 5.5",
+     5018734917431,
+     "closed"
+    ],
+    [
+     "DeepSeek: DeepSeek V4 Flash 0731",
+     4916132482232,
+     "open"
+    ]
+   ]
+  },
+  "2026-10-12": {
+   "total": 29791396203652,
+   "closed": 5275094965599,
+   "open": 13877325740102,
+   "others": 10638975497951,
+   "partial": true,
+   "read_on": "2026-10-13",
+   "closed_min": 0.17707,
+   "closed_max": 0.53418,
+   "models": [
+    [
+     "DeepSeek: DeepSeek V4.1 Flash (batch)",
+     6552798398267,
+     "open"
+    ],
+    [
+     "StepFun: Step 5 Preview",
+     3424577585404,
+     "closed"
+    ],
+    [
+     "Z.ai: GLM 5.3 Flash (batch)",
+     2270077308919,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.6-Flash",
+     1782425226800,
+     "open"
+    ],
+    [
+     "NVIDIA: Nemotron 3 Ultra",
+     1278551242218,
+     "open"
+    ],
+    [
+     "Tencent: Hy4 preview",
+     1268914501284,
+     "open"
+    ],
+    [
+     "OpenAI: GPT-6 Luna (batch)",
+     959237626686,
+     "closed"
+    ],
+    [
+     "Anthropic: Claude Opus 5.5",
+     891279753509,
+     "closed"
+    ],
+    [
+     "Z.ai: GLM 5.3 (batch)",
+     724559062614,
+     "open"
+    ]
+   ]
+  }
+ },
+ "reads": {
+  "2026-09-04": {
+   "read_on": "2026-09-04",
+   "data_through": "2026-09-03",
+   "source": "archive (project files of 3-8 Sep): top 76 models of the weekly ranking",
+   "rows": 76,
+   "tokens": {
+    "closed": [
+     28614326322812,
+     754395063111
+    ],
+    "open": [
+     72411788097751,
+     1846137857111
+    ],
+    "unknown": [
+     0,
+     0
+    ]
+   },
+   "closed_share_all": 0.28341,
+   "closed_share_out": 0.29009,
+   "unknown_share": 0.0,
+   "total_tokens": 103626647340785,
+   "top": {
+    "closed": [
+     [
+      "OpenAI: GPT-5.6 Luna (batch)",
+      0.112
+     ],
+     [
+      "Google: Gemini 3.7 Flash (batch)",
+      0.0275
+     ],
+     [
+      "OpenAI: GPT-5.6 Sol (batch)",
+      0.0172
+     ],
+     [
+      "Anthropic: Claude Opus 5",
+      0.0131
+     ],
+     [
+      "Anthropic: Claude Sonnet 5",
+      0.0122
+     ],
+     [
+      "Google: Gemini 2.5 Flash Lite",
+      0.0085
+     ]
+    ],
+    "open": [
+     [
+      "Z.ai: GLM 5.3 Flash (batch)",
+      0.1104
+     ],
+     [
+      "DeepSeek: DeepSeek V4 Flash 0731",
+      0.1098
+     ],
+     [
+      "Tencent: Hy4 preview",
+      0.0771
+     ],
+     [
+      "Xiaomi: MiMo-V2.5",
+      0.0589
+     ],
+     [
+      "MiniMax: MiniMax M3",
+      0.0581
+     ],
+     [
+      "Tencent: Hy3",
+      0.0539
+     ]
+    ]
+   }
+  },
+  "2026-09-28": {
+   "read_on": "2026-09-28",
+   "data_through": "2026-09-27",
+   "source": "snapshot 2026-09-28.json.gz: top 250 models of the weekly ranking",
+   "rows": 250,
+   "tokens": {
+    "closed": [
+     52114951730848,
+     1611797036070
+    ],
+    "open": [
+     90026697088598,
+     1967645802222
+    ],
+    "unknown": [
+     0,
+     0
+    ]
+   },
+   "closed_share_all": 0.3687,
+   "closed_share_out": 0.45029,
+   "unknown_share": 0.0,
+   "total_tokens": 145721091657738,
+   "top": {
+    "closed": [
+     [
+      "Space Bunny Alpha",
+      0.0951
+     ],
+     [
+      "OpenAI: GPT-5.6 Luna (batch)",
+      0.0586
+     ],
+     [
+      "OpenAI: GPT-6 Luna (batch)",
+      0.0198
+     ],
+     [
+      "TypeSafe: Jev 1.13",
+      0.0177
+     ],
+     [
+      "Google: Gemini 3.8 Flash (batch)",
+      0.0148
+     ],
+     [
+      "OpenAI: GPT-5.6 Sol (batch)",
+      0.0115
+     ]
+    ],
+    "open": [
+     [
+      "DeepSeek: DeepSeek V4.1 Flash (batch)",
+      0.1343
+     ],
+     [
+      "Z.ai: GLM 5.3 Flash (batch)",
+      0.112
+     ],
+     [
+      "Tencent: Hy4 preview",
+      0.0662
+     ],
+     [
+      "DeepSeek: DeepSeek V4 Flash 0731",
+      0.0537
+     ],
+     [
+      "NVIDIA: Nemotron 3 Ultra",
+      0.0391
+     ],
+     [
+      "Xiaomi: MiMo-V2.6-Flash",
+      0.0378
+     ]
+    ]
+   }
+  },
+  "2026-10-01": {
+   "read_on": "2026-10-01",
+   "data_through": "2026-09-30",
+   "source": "snapshot 2026-10-01.json.gz: top 250 models of the weekly ranking",
+   "rows": 250,
+   "tokens": {
+    "closed": [
+     67709518450505,
+     2322685661910
+    ],
+    "open": [
+     85852807424078,
+     1942842415834
+    ],
+    "unknown": [
+     0,
+     0
+    ]
+   },
+   "closed_share_all": 0.44373,
+   "closed_share_out": 0.54452,
+   "unknown_share": 0.0,
+   "total_tokens": 157827853952327,
+   "top": {
+    "closed": [
+     [
+      "Space Bunny Alpha",
+      0.1801
+     ],
+     [
+      "OpenAI: GPT-5.6 Luna (batch)",
+      0.0491
+     ],
+     [
+      "OpenAI: GPT-6 Luna (batch)",
+      0.0325
+     ],
+     [
+      "TypeSafe: Jev 1.13",
+      0.0188
+     ],
+     [
+      "Google: Gemini 3.8 Flash (batch)",
+      0.0134
+     ],
+     [
+      "Anthropic: Claude Opus 5.5",
+      0.0123
+     ]
+    ],
+    "open": [
+     [
+      "DeepSeek: DeepSeek V4.1 Flash (batch)",
+      0.1439
+     ],
+     [
+      "Z.ai: GLM 5.3 Flash (batch)",
+      0.0674
+     ],
+     [
+      "Xiaomi: MiMo-V2.6-Flash",
+      0.0577
+     ],
+     [
+      "Tencent: Hy4 preview",
+      0.0474
+     ],
+     [
+      "DeepSeek: DeepSeek V4 Flash 0731",
+      0.0446
+     ],
+     [
+      "NVIDIA: Nemotron 3 Ultra",
+      0.0386
+     ]
+    ]
+   }
+  },
+  "2026-10-05": {
+   "read_on": "2026-10-05",
+   "data_through": "2026-10-04",
+   "source": "snapshot 2026-10-05.json.gz: top 250 models of the weekly ranking",
+   "rows": 250,
+   "tokens": {
+    "closed": [
+     75834154531200,
+     2486042914591
+    ],
+    "open": [
+     85292199316142,
+     2102503607433
+    ],
+    "unknown": [
+     0,
+     0
+    ]
+   },
+   "closed_share_all": 0.47262,
+   "closed_share_out": 0.54179,
+   "unknown_share": 0.0,
+   "total_tokens": 165714900369366,
+   "top": {
+    "closed": [
+     [
+      "Space Bunny Alpha",
+      0.2333
+     ],
+     [
+      "OpenAI: GPT-6 Luna (batch)",
+      0.0376
+     ],
+     [
+      "OpenAI: GPT-5.6 Luna (batch)",
+      0.0264
+     ],
+     [
+      "TypeSafe: Jev 1.13",
+      0.0187
+     ],
+     [
+      "Anthropic: Claude Opus 5.5",
+      0.0149
+     ],
+     [
+      "Google: Gemini 3.8 Flash (batch)",
+      0.0132
+     ]
+    ],
+    "open": [
+     [
+      "DeepSeek: DeepSeek V4.1 Flash (batch)",
+      0.1546
+     ],
+     [
+      "Z.ai: GLM 5.3 Flash (batch)",
+      0.0588
+     ],
+     [
+      "Xiaomi: MiMo-V2.6-Flash",
+      0.0581
+     ],
+     [
+      "Tencent: Hy4 preview",
+      0.0393
+     ],
+     [
+      "DeepSeek: DeepSeek V4 Flash 0731",
+      0.0362
+     ],
+     [
+      "NVIDIA: Nemotron 3 Ultra",
+      0.0342
+     ]
+    ]
+   }
+  },
+  "2026-10-06": {
+   "read_on": "2026-10-06",
+   "data_through": "2026-10-05",
+   "source": "snapshot 2026-10-06.json.gz: top 250 models of the weekly ranking",
+   "rows": 250,
+   "tokens": {
+    "closed": [
+     75036304165429,
+     2442549316247
+    ],
+    "open": [
+     87972204659552,
+     2201497273859
+    ],
+    "unknown": [
+     0,
+     0
+    ]
+   },
+   "closed_share_all": 0.46214,
+   "closed_share_out": 0.52595,
+   "unknown_share": 0.0,
+   "total_tokens": 167652555415087,
+   "top": {
+    "closed": [
+     [
+      "Space Bunny Alpha",
+      0.2299
+     ],
+     [
+      "OpenAI: GPT-6 Luna (batch)",
+      0.0373
+     ],
+     [
+      "OpenAI: GPT-5.6 Luna (batch)",
+      0.0201
+     ],
+     [
+      "TypeSafe: Jev 1.13",
+      0.0192
+     ],
+     [
+      "Anthropic: Claude Opus 5.5",
+      0.0155
+     ],
+     [
+      "Google: Gemini 3.8 Flash (batch)",
+      0.0131
+     ]
+    ],
+    "open": [
+     [
+      "DeepSeek: DeepSeek V4.1 Flash (batch)",
+      0.1693
+     ],
+     [
+      "Z.ai: GLM 5.3 Flash (batch)",
+      0.0598
+     ],
+     [
+      "Xiaomi: MiMo-V2.6-Flash",
+      0.058
+     ],
+     [
+      "Tencent: Hy4 preview",
+      0.038
+     ],
+     [
+      "DeepSeek: DeepSeek V4 Flash 0731",
+      0.0352
+     ],
+     [
+      "NVIDIA: Nemotron 3 Ultra",
+      0.0331
+     ]
+    ]
+   }
+  },
+  "2026-10-11": {
+   "read_on": "2026-10-11",
+   "data_through": "2026-10-10",
+   "source": "snapshot 2026-10-11.json.gz: top 250 models of the weekly ranking",
+   "rows": 250,
+   "tokens": {
+    "closed": [
+     61651699238900,
+     1942824600690
+    ],
+    "open": [
+     103068846789296,
+     2457365627864
+    ],
+    "unknown": [
+     0,
+     0
+    ]
+   },
+   "closed_share_all": 0.37603,
+   "closed_share_out": 0.44153,
+   "unknown_share": 0.0,
+   "total_tokens": 169120736256750,
+   "top": {
+    "closed": [
+     [
+      "Space Bunny Alpha",
+      0.1002
+     ],
+     [
+      "OpenAI: GPT-6 Luna (batch)",
+      0.0412
+     ],
+     [
+      "Anthropic: Claude Opus 5.5",
+      0.0256
+     ],
+     [
+      "TypeSafe: Jev 1.13",
+      0.0196
+     ],
+     [
+      "StepFun: Step 5 Preview",
+      0.019
+     ],
+     [
+      "Google: Gemini 3.8 Flash (batch)",
+      0.0121
+     ]
+    ],
+    "open": [
+     [
+      "DeepSeek: DeepSeek V4.1 Flash (batch)",
+      0.2223
+     ],
+     [
+      "Z.ai: GLM 5.3 Flash (batch)",
+      0.0662
+     ],
+     [
+      "Xiaomi: MiMo-V2.6-Flash",
+      0.0646
+     ],
+     [
+      "Tencent: Hy4 preview",
+      0.0471
+     ],
+     [
+      "NVIDIA: Nemotron 3 Ultra",
+      0.0379
+     ],
+     [
+      "DeepSeek: DeepSeek V4 Flash 0731",
+      0.0308
+     ]
+    ]
+   }
+  },
+  "2026-10-12": {
+   "read_on": "2026-10-12",
+   "data_through": "2026-10-11",
+   "source": "snapshot 2026-10-12.json.gz: top 250 models of the weekly ranking",
+   "rows": 250,
+   "tokens": {
+    "closed": [
+     57920172731903,
+     1693306524897
+    ],
+    "open": [
+     109384678447054,
+     2657377132701
+    ],
+    "unknown": [
+     0,
+     0
+    ]
+   },
+   "closed_share_all": 0.34729,
+   "closed_share_out": 0.3892,
+   "unknown_share": 0.0,
+   "total_tokens": 171655534836555,
+   "top": {
+    "closed": [
+     [
+      "StepFun: Step 5 Preview",
+      0.0515
+     ],
+     [
+      "OpenAI: GPT-6 Luna (batch)",
+      0.0414
+     ],
+     [
+      "Anthropic: Claude Opus 5.5",
+      0.0293
+     ],
+     [
+      "Space Bunny Alpha",
+      0.0244
+     ],
+     [
+      "TypeSafe: Jev 1.13",
+      0.0196
+     ],
+     [
+      "Anthropic: Claude Sonnet 5.5",
+      0.0141
+     ]
+    ],
+    "open": [
+     [
+      "DeepSeek: DeepSeek V4.1 Flash (batch)",
+      0.2387
+     ],
+     [
+      "Z.ai: GLM 5.3 Flash (batch)",
+      0.0713
+     ],
+     [
+      "Xiaomi: MiMo-V2.6-Flash",
+      0.0667
+     ],
+     [
+      "Tencent: Hy4 preview",
+      0.0482
+     ],
+     [
+      "NVIDIA: Nemotron 3 Ultra",
+      0.0403
+     ],
+     [
+      "DeepSeek: DeepSeek V4 Flash 0731",
+      0.0286
+     ]
+    ]
+   }
+  },
+  "2026-10-13": {
+   "read_on": "2026-10-13",
+   "data_through": "2026-10-12",
+   "source": "live: every model in the weekly ranking (657)",
+   "rows": 657,
+   "tokens": {
+    "closed": [
+     58419234509479,
+     1595249116760
+    ],
+    "open": [
+     110194597290339,
+     2704731685742
+    ],
+    "unknown": [
+     3700097,
+     67898
+    ]
+   },
+   "closed_share_all": 0.34708,
+   "closed_share_out": 0.37099,
+   "unknown_share": 0.0,
+   "total_tokens": 172913816370315,
+   "top": {
+    "closed": [
+     [
+      "StepFun: Step 5 Preview",
+      0.0699
+     ],
+     [
+      "OpenAI: GPT-6 Luna (batch)",
+      0.0412
+     ],
+     [
+      "Anthropic: Claude Opus 5.5",
+      0.031
+     ],
+     [
+      "TypeSafe: Jev 1.13",
+      0.0191
+     ],
+     [
+      "Anthropic: Claude Sonnet 5.5",
+      0.0153
+     ],
+     [
+      "Meta: Muse Spark 1.3 Contributor",
+      0.0146
+     ]
+    ],
+    "open": [
+     [
+      "DeepSeek: DeepSeek V4.1 Flash (batch)",
+      0.2344
+     ],
+     [
+      "Z.ai: GLM 5.3 Flash (batch)",
+      0.0733
+     ],
+     [
+      "Xiaomi: MiMo-V2.6-Flash",
+      0.0667
+     ],
+     [
+      "Tencent: Hy4 preview",
+      0.0481
+     ],
+     [
+      "NVIDIA: Nemotron 3 Ultra",
+      0.0417
+     ],
+     [
+      "DeepSeek: DeepSeek V4 Flash 0731",
+      0.027
+     ]
+    ]
+   }
+  }
+ },
+ "refreshed_at": "2026-10-13T14:20:00",
+ "backfill": "Built on 2026-10-13: weeks from OpenRouter's Top Models chart as read that day (53 weeks, 13 Oct 2025 to 12 Oct 2026); reads from the weekly rankings this project saved (4 Sep archive, top 76 models; daily snapshots from 28 Sep, top 250 models) classified with OpenRouter's catalog of 13 Oct 2026 and the registry, and the full ranking read on 13 Oct."
+}

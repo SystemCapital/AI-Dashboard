@@ -1,0 +1,41 @@
+{
+ "_comment": [
+  "Vendor- or community-reported Blackwell throughput measurements for models InferenceX has not benchmarked. Shown on the page next to the",
+  "estimate for that model as a cross-check; NOT used in the arithmetic (single configurations, single sources, different caching and",
+  "harness conditions). Units: output tokens/s per GPU system-wide, at the stated interactivity."
+ ],
+ "points": [
+  {
+   "model": "deepseek-v4-flash",
+   "name": "DeepSeek V4 Flash",
+   "hw": "B300",
+   "gpus": 1,
+   "framework": "vLLM 0.25.0",
+   "precision": "FP4/FP8 weights, FP8 KV",
+   "shape": "4,096 in, output unspecified",
+   "conc": 8,
+   "cache": "prefix caching off",
+   "inter_tok_s_user": 212,
+   "out_tps_per_gpu": 1695,
+   "src": "CODEXIS AI blog, 2026-08-09",
+   "url": "https://blog.codexis.ai/en/2026-08-09-deepseek-v4-flash-b300/",
+   "note": "Single-GPU run; the 1,024-input point at concurrency 16 gave 1,030. No methodology or raw data published."
+  },
+  {
+   "model": "nemotron-3-ultra-550b-a55b",
+   "name": "Nemotron 3 Ultra",
+   "hw": "B200",
+   "gpus": 4,
+   "framework": "NVIDIA Dynamo, TRT-LLM, NVFP4 + MTP",
+   "precision": "NVFP4",
+   "shape": "8k/1k chat trace, 70% KV-cache hit",
+   "conc": null,
+   "cache": "70% KV-cache hit (caching on)",
+   "inter_tok_s_user": 52,
+   "out_tps_per_gpu": 201,
+   "src": "NVIDIA Dynamo recipe docs v1.4.1",
+   "url": "https://docs.nvidia.com/dynamo/v1.4.1/recipes/nemotron-3-ultra",
+   "note": "NVIDIA benchmarking its own model; agentic 64k/400 trace with 90% cache hit gave 311 at 81 tok/s/user. Caching on, so not comparable to InferenceX's caching-off ceiling."
+  }
+ ]
+}

@@ -1,0 +1,782 @@
+{
+ "_comment": [
+  "Model registry. One row per model that can appear in the serving mix, plus reference rows.",
+  "weights: 'open' = downloadable weights (a published HF repo); 'closed' = API only.",
+  "tier: 'frontier' = a lab model that can sit in a frontier basket (assumptions.json names the baskets);",
+  "'other-closed' = closed model shown for reference only; 'excluded' = stealth/unknown; open rows have no tier.",
+  "aliases: every OpenRouter spelling (slug; dated permaslugs and :free/:batch variants are stripped by the collector).",
+  "inferencex: the display-model name InferenceX's public API accepts for THIS model (its own runs). Only rows with an",
+  "inferencex name can carry serving tokens: no family curves and no parameter proxies stand in for a missing benchmark.",
+  "A row whose name has runs only under another workload (e.g. agentic traces) is excluded under the 8k/1k workload.",
+  "Parameter counts (total_b, active_b) come from each lab's Hugging Face model card (url); they are shown, not used",
+  "in the arithmetic. read_on is when the row was last checked.",
+  "inferencex_family: for the 'estimated' throughput scope only, the benchmark-only registry row whose InferenceX curve stands in",
+  "for this model (same architecture). Rows with tier 'benchmark-only' are not routable; they exist for the parameter fit and",
+  "as family curves. trace_family: which model family in data/traces.json supplies this model's per-task token volumes",
+  "(anthropic = claude-opus-4-5, openai = gpt-5.2, deepseek = DeepSeek-V3.2, kimi = Kimi-K2.5, open_avg = run-weighted mean of",
+  "the open-weight families)."
+ ],
+ "models": [
+  {
+   "id": "claude-fable-5.1",
+   "name": "Claude Fable 5.1",
+   "lab": "Anthropic",
+   "weights": "closed",
+   "tier": "frontier",
+   "aliases": [
+    "anthropic/claude-fable-5.1"
+   ],
+   "total_b": null,
+   "active_b": null,
+   "note": "GA 2026-09-01. Parameters undisclosed; served by the lab. Throughput is proxied from the largest measured open model x frontier derate.",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "anthropic"
+  },
+  {
+   "id": "claude-fable-5",
+   "name": "Claude Fable 5",
+   "lab": "Anthropic",
+   "weights": "closed",
+   "tier": "frontier",
+   "aliases": [
+    "anthropic/claude-fable-5",
+    "anthropic/claude-5-fable"
+   ],
+   "total_b": null,
+   "active_b": null,
+   "note": "Released 2026-06-09. Same list price as Fable 5.1; cache-read is $1.00 not $0.25.",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "anthropic"
+  },
+  {
+   "id": "claude-opus-5",
+   "name": "Claude Opus 5",
+   "lab": "Anthropic",
+   "weights": "closed",
+   "tier": "frontier",
+   "aliases": [
+    "anthropic/claude-opus-5"
+   ],
+   "total_b": null,
+   "active_b": null,
+   "note": "Released 2026-07-24.",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "anthropic"
+  },
+  {
+   "id": "claude-opus-5.5",
+   "name": "Claude Opus 5.5",
+   "lab": "Anthropic",
+   "weights": "closed",
+   "tier": "frontier",
+   "aliases": [
+    "anthropic/claude-opus-5.5"
+   ],
+   "total_b": null,
+   "active_b": null,
+   "note": "On OpenRouter since 2026-09-21 (permaslug claude-opus-5.5-20260921) at $4/$20 list, cache reads at 0.05x input; added to the Anthropic basket 2026-09-28 at Lev's request.",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "read_on": "2026-09-28",
+   "inferencex": null,
+   "trace_family": "anthropic"
+  },
+  {
+   "id": "claude-sonnet-5",
+   "name": "Claude Sonnet 5",
+   "lab": "Anthropic",
+   "weights": "closed",
+   "tier": "frontier",
+   "aliases": [
+    "anthropic/claude-sonnet-5"
+   ],
+   "total_b": null,
+   "active_b": null,
+   "note": "Released 2026-06-30 at $2/$10, a cut from Sonnet 4.6's $3/$15.",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "anthropic"
+  },
+  {
+   "id": "deepseek-v4-flash-0731",
+   "name": "DeepSeek V4 Flash 0731",
+   "lab": "DeepSeek",
+   "weights": "open",
+   "aliases": [
+    "deepseek/deepseek-v4-flash-0731"
+   ],
+   "total_b": 284,
+   "active_b": 13,
+   "arch": "moe",
+   "license": "MIT",
+   "url": "https://openrouter.ai/deepseek/deepseek-v4-flash-0731",
+   "read_on": "2026-09-03",
+   "note": "No published Blackwell curve; proxied by active-parameter scaling.",
+   "inferencex": null,
+   "trace_family": "deepseek"
+  },
+  {
+   "id": "deepseek-v4-flash",
+   "name": "DeepSeek V4 Flash 0423",
+   "lab": "DeepSeek",
+   "weights": "open",
+   "aliases": [
+    "deepseek/deepseek-v4-flash"
+   ],
+   "total_b": 284,
+   "active_b": 13,
+   "arch": "moe",
+   "license": "MIT",
+   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "deepseek"
+  },
+  {
+   "id": "deepseek-v4-pro",
+   "name": "DeepSeek V4 Pro 0423",
+   "lab": "DeepSeek",
+   "weights": "open",
+   "aliases": [
+    "deepseek/deepseek-v4-pro"
+   ],
+   "total_b": 1600,
+   "active_b": 49,
+   "arch": "moe",
+   "license": "MIT",
+   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+   "read_on": "2026-09-03",
+   "inferencex": "DeepSeek-V4-Pro",
+   "trace_family": "deepseek"
+  },
+  {
+   "id": "deepseek-v4-pro-0813",
+   "name": "DeepSeek V4 Pro 0813",
+   "lab": "DeepSeek",
+   "weights": "open",
+   "aliases": [
+    "deepseek/deepseek-v4-pro-0813"
+   ],
+   "total_b": 1600,
+   "active_b": 49,
+   "arch": "moe",
+   "license": "MIT",
+   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813",
+   "read_on": "2026-09-03",
+   "note": "Same structure as V4 Pro plus a DSpark speculative-decoding module; InferenceX AgentX runs are on this release.",
+   "inferencex": "DeepSeek-V4-Pro",
+   "inferencex_note": "dated re-release of DeepSeek V4 Pro; same InferenceX display model",
+   "trace_family": "deepseek"
+  },
+  {
+   "id": "deepseek-v3.2",
+   "name": "DeepSeek V3.2",
+   "lab": "DeepSeek",
+   "weights": "open",
+   "aliases": [
+    "deepseek/deepseek-v3.2"
+   ],
+   "total_b": 671,
+   "active_b": 37,
+   "arch": "moe",
+   "license": "MIT",
+   "url": "https://fe-static.deepseek.com/chat/transparency/deepseek-v3.2-model-card-0414-EN.pdf",
+   "read_on": "2026-09-03",
+   "note": "Same 671B/37B shape as R1; uses the R1 curve.",
+   "inferencex": null,
+   "inferencex_note": "no InferenceX run under this name (InferenceX benchmarks R1-0528, not V3.2); excluded from the mix",
+   "inferencex_family": "deepseek-r1-0528",
+   "family_note": "same 671B/37B architecture as R1",
+   "trace_family": "deepseek"
+  },
+  {
+   "id": "glm-5.3-flash",
+   "name": "GLM 5.3 Flash",
+   "lab": "Z.ai",
+   "weights": "open",
+   "aliases": [
+    "z-ai/glm-5.3-flash"
+   ],
+   "total_b": 320,
+   "active_b": 18,
+   "arch": "moe",
+   "license": "MIT",
+   "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "glm-5.3",
+   "name": "GLM 5.3",
+   "lab": "Z.ai",
+   "weights": "open",
+   "aliases": [
+    "z-ai/glm-5.3"
+   ],
+   "total_b": 753,
+   "active_b": 40,
+   "arch": "moe",
+   "license": "glm-5.3 (custom)",
+   "url": "https://huggingface.co/zai-org/GLM-5.3",
+   "read_on": "2026-09-03",
+   "note": "Active count inherited from GLM 5.2 (identical architecture); not restated on the card.",
+   "inferencex": null,
+   "inferencex_note": "no InferenceX run under this name (InferenceX has GLM-5 and GLM-5.2 runs, none under GLM-5.3); excluded from the mix",
+   "inferencex_family": "glm-5",
+   "family_note": "same 744B/40B architecture as GLM 5",
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "glm-5.2",
+   "name": "GLM 5.2",
+   "lab": "Z.ai",
+   "weights": "open",
+   "aliases": [
+    "z-ai/glm-5.2"
+   ],
+   "total_b": 753,
+   "active_b": 40,
+   "arch": "moe",
+   "license": "MIT",
+   "url": "https://huggingface.co/zai-org/GLM-5.2",
+   "read_on": "2026-09-03",
+   "note": "~40B active is third-party reported (config: 256 experts, 8 routed + 1 shared).",
+   "inferencex": "GLM-5.2",
+   "inferencex_note": "InferenceX has GLM-5.2 runs on agentic traces only (no 8k/1k); excluded under the 8k/1k workload",
+   "inferencex_family": "glm-5",
+   "family_note": "same 744B/40B architecture as GLM 5",
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "mimo-v2.5",
+   "name": "MiMo-V2.5",
+   "lab": "Xiaomi",
+   "weights": "open",
+   "aliases": [
+    "xiaomi/mimo-v2.5"
+   ],
+   "total_b": 310,
+   "active_b": 15,
+   "arch": "moe",
+   "license": "MIT",
+   "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "mimo-v2.5-pro",
+   "name": "MiMo-V2.5-Pro",
+   "lab": "Xiaomi",
+   "weights": "open",
+   "aliases": [
+    "xiaomi/mimo-v2.5-pro"
+   ],
+   "total_b": 1020,
+   "active_b": 42,
+   "arch": "moe",
+   "license": "MIT",
+   "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "hy3",
+   "name": "Hy3",
+   "lab": "Tencent",
+   "weights": "open",
+   "aliases": [
+    "tencent/hy3"
+   ],
+   "total_b": 295,
+   "active_b": 21,
+   "arch": "moe",
+   "license": "Apache-2.0",
+   "url": "https://huggingface.co/tencent/Hy3",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "hy4-preview",
+   "name": "Hy4 preview",
+   "lab": "Tencent",
+   "weights": "open",
+   "aliases": [
+    "tencent/hy4-preview"
+   ],
+   "total_b": 770,
+   "active_b": 49,
+   "arch": "moe",
+   "license": "Apache-2.0",
+   "url": "https://huggingface.co/tencent/Hy4-preview",
+   "read_on": "2026-09-03",
+   "note": "Weights published 2026-08-28 (Apache-2.0) although OpenRouter's catalogue had no HF link when read; treated as open.",
+   "inferencex": null,
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "minimax-m3",
+   "name": "MiniMax M3",
+   "lab": "MiniMax",
+   "weights": "open",
+   "aliases": [
+    "minimax/minimax-m3"
+   ],
+   "total_b": 428,
+   "active_b": 23,
+   "arch": "moe",
+   "license": "minimax-community",
+   "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+   "read_on": "2026-09-03",
+   "inferencex": "MiniMax-M3",
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "minimax-m2.7",
+   "name": "MiniMax M2.7",
+   "lab": "MiniMax",
+   "weights": "open",
+   "aliases": [
+    "minimax/minimax-m2.7"
+   ],
+   "total_b": 229,
+   "active_b": 10,
+   "arch": "moe",
+   "license": "MiniMax custom",
+   "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "inferencex_note": "no InferenceX run under this name (InferenceX benchmarks MiniMax-M2.5 and M3, not M2.7); excluded from the mix",
+   "inferencex_family": "minimax-m2.5",
+   "family_note": "same 229B/10B architecture as MiniMax M2.5",
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "nemotron-3-ultra-550b-a55b",
+   "name": "Nemotron 3 Ultra",
+   "lab": "NVIDIA",
+   "weights": "open",
+   "aliases": [
+    "nvidia/nemotron-3-ultra-550b-a55b"
+   ],
+   "total_b": 550,
+   "active_b": 55,
+   "arch": "moe",
+   "license": "OpenMDW-1.1",
+   "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "nemotron-3.5-lightning",
+   "name": "Nemotron 3.5 Lightning",
+   "lab": "NVIDIA",
+   "weights": "open",
+   "aliases": [
+    "nvidia/nemotron-3.5-lightning"
+   ],
+   "total_b": 30,
+   "active_b": 3,
+   "arch": "moe",
+   "license": "OpenMDW-1.1",
+   "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "nemotron-3-super-120b-a12b",
+   "name": "Nemotron 3 Super",
+   "lab": "NVIDIA",
+   "weights": "open",
+   "aliases": [
+    "nvidia/nemotron-3-super-120b-a12b"
+   ],
+   "total_b": 120,
+   "active_b": 12,
+   "arch": "moe",
+   "license": "NVIDIA Open Model",
+   "url": "https://openrouter.ai/nvidia/nemotron-3-super-120b-a12b",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "kimi-k3",
+   "name": "Kimi K3",
+   "lab": "Moonshot AI",
+   "weights": "open",
+   "aliases": [
+    "moonshotai/kimi-k3"
+   ],
+   "total_b": 2800,
+   "active_b": 104,
+   "arch": "moe",
+   "license": "kimi-k3 (custom)",
+   "url": "https://huggingface.co/moonshotai/Kimi-K3",
+   "read_on": "2026-09-03",
+   "inferencex": "Kimi-K3",
+   "inferencex_note": "InferenceX has Kimi-K3 runs on agentic traces only (no 8k/1k); excluded under the 8k/1k workload",
+   "trace_family": "kimi"
+  },
+  {
+   "id": "kimi-k2.6",
+   "name": "Kimi K2.6",
+   "lab": "Moonshot AI",
+   "weights": "open",
+   "aliases": [
+    "moonshotai/kimi-k2.6"
+   ],
+   "total_b": 1000,
+   "active_b": 32,
+   "arch": "moe",
+   "license": "Modified MIT",
+   "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "inferencex_note": "no InferenceX run under this name (InferenceX availability lists kimik2.6 B200 runs but the public endpoint does not expose them; Kimi-K2.5 is a different model); excluded from the mix",
+   "inferencex_family": "kimi-k2.5",
+   "family_note": "same 1T/32B architecture as Kimi K2.5",
+   "trace_family": "kimi"
+  },
+  {
+   "id": "laguna-s-2.1",
+   "name": "Laguna S 2.1",
+   "lab": "Poolside",
+   "weights": "open",
+   "aliases": [
+    "poolside/laguna-s-2.1"
+   ],
+   "total_b": 118,
+   "active_b": 8,
+   "arch": "moe",
+   "license": "OpenMDW-1.1",
+   "url": "https://openrouter.ai/poolside/laguna-s-2.1",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "step-3.7-flash",
+   "name": "Step 3.7 Flash",
+   "lab": "StepFun",
+   "weights": "open",
+   "aliases": [
+    "stepfun/step-3.7-flash"
+   ],
+   "total_b": 198,
+   "active_b": 11,
+   "arch": "moe",
+   "license": "Apache-2.0",
+   "url": "https://huggingface.co/stepfun-ai/Step-3.7-Flash",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "gpt-oss-120b",
+   "name": "gpt-oss-120b",
+   "lab": "OpenAI",
+   "weights": "open",
+   "aliases": [
+    "openai/gpt-oss-120b"
+   ],
+   "total_b": 117,
+   "active_b": 5.1,
+   "arch": "moe",
+   "license": "Apache-2.0",
+   "url": "https://huggingface.co/openai/gpt-oss-120b",
+   "read_on": "2026-09-03",
+   "inferencex": "gpt-oss-120b",
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "gpt-oss-20b",
+   "name": "gpt-oss-20b",
+   "lab": "OpenAI",
+   "weights": "open",
+   "aliases": [
+    "openai/gpt-oss-20b"
+   ],
+   "total_b": 21,
+   "active_b": 3.6,
+   "arch": "moe",
+   "license": "Apache-2.0",
+   "url": "https://openrouter.ai/openai/gpt-oss-20b",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "qwen3.5-397b-a17b",
+   "name": "Qwen3.5 397B-A17B",
+   "lab": "Alibaba",
+   "weights": "open",
+   "aliases": [
+    "qwen/qwen3.5-397b-a17b"
+   ],
+   "total_b": 397,
+   "active_b": 17,
+   "arch": "moe",
+   "license": "Apache-2.0",
+   "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+   "read_on": "2026-09-03",
+   "inferencex": "Qwen-3.5-397B-A17B",
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "qwen3.8-flash",
+   "name": "Qwen3.8 Flash",
+   "lab": "Alibaba",
+   "weights": "open",
+   "aliases": [
+    "qwen/qwen3.8-flash"
+   ],
+   "total_b": 125,
+   "active_b": 6,
+   "arch": "moe",
+   "license": "qwen-community-1.0",
+   "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+   "read_on": "2026-09-03",
+   "note": "Hosted model is 'based on' the open Qwen3.8-Flash-Next (125B/6B active + 51B n-gram embedding).",
+   "inferencex": "Qwen3.8-Flash-Next",
+   "inferencex_note": "InferenceX has Qwen3.8-Flash-Next runs on B300 agentic traces only; excluded under the 8k/1k workload",
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "qwen3.8-27b",
+   "name": "Qwen3.8 27B",
+   "lab": "Alibaba",
+   "weights": "open",
+   "aliases": [
+    "qwen/qwen3.8-27b"
+   ],
+   "total_b": 27,
+   "active_b": 27,
+   "arch": "dense",
+   "license": "Apache-2.0",
+   "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "gemma-4-31b-it",
+   "name": "Gemma 4 31B",
+   "lab": "Google",
+   "weights": "open",
+   "aliases": [
+    "google/gemma-4-31b-it"
+   ],
+   "total_b": 30.7,
+   "active_b": 30.7,
+   "arch": "dense",
+   "license": "Apache-2.0",
+   "url": "https://openrouter.ai/google/gemma-4-31b-it",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "google"
+  },
+  {
+   "id": "gemma-4-26b-a4b-it",
+   "name": "Gemma 4 26B A4B",
+   "lab": "Google",
+   "weights": "open",
+   "aliases": [
+    "google/gemma-4-26b-a4b-it"
+   ],
+   "total_b": 25.2,
+   "active_b": 3.8,
+   "arch": "moe",
+   "license": "Apache-2.0",
+   "url": "https://openrouter.ai/google/gemma-4-26b-a4b-it",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "google"
+  },
+  {
+   "id": "ox-alpha",
+   "name": "Ox Alpha (stealth)",
+   "lab": "undisclosed",
+   "weights": "closed",
+   "tier": "excluded",
+   "aliases": [
+    "stealth/ox-alpha"
+   ],
+   "total_b": null,
+   "active_b": null,
+   "note": "Anonymous cloaked preview model on OpenRouter since 2026-08-20; lab, size and weights undisclosed. Excluded from every mix.",
+   "url": "https://openrouter.ai/stealth/ox-alpha",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "gpt-5.6-luna",
+   "name": "GPT-5.6 Luna",
+   "lab": "OpenAI",
+   "weights": "closed",
+   "tier": "other-closed",
+   "aliases": [
+    "openai/gpt-5.6-luna"
+   ],
+   "total_b": null,
+   "active_b": null,
+   "note": "OpenAI small model, $0.20/$1.20 list: the largest closed model on OpenRouter by tokens. Not in the OpenAI basket (the Anthropic basket likewise excludes Haiku); reference only.",
+   "url": "https://openai.com/api/pricing/",
+   "read_on": "2026-09-04",
+   "inferencex": null,
+   "trace_family": "openai"
+  },
+  {
+   "id": "gpt-5.6-sol",
+   "name": "GPT-5.6 Sol",
+   "lab": "OpenAI",
+   "weights": "closed",
+   "tier": "frontier",
+   "aliases": [
+    "openai/gpt-5.6-sol"
+   ],
+   "total_b": null,
+   "active_b": null,
+   "note": "OpenAI flagship (2026-07-09). In the OpenAI frontier basket.",
+   "url": "https://developers.openai.com/api/docs/pricing",
+   "read_on": "2026-09-04",
+   "inferencex": null,
+   "trace_family": "openai"
+  },
+  {
+   "id": "gpt-5.6-terra",
+   "name": "GPT-5.6 Terra",
+   "lab": "OpenAI",
+   "weights": "closed",
+   "tier": "frontier",
+   "aliases": [
+    "openai/gpt-5.6-terra"
+   ],
+   "total_b": null,
+   "active_b": null,
+   "note": "OpenAI mid-tier (2026-07-09), $2/$12 list, the Sonnet-class row of the OpenAI basket.",
+   "url": "https://developers.openai.com/api/docs/pricing",
+   "read_on": "2026-09-04",
+   "inferencex": null,
+   "trace_family": "openai"
+  },
+  {
+   "id": "gemini-3.7-flash",
+   "name": "Gemini 3.7 Flash",
+   "lab": "Google",
+   "weights": "closed",
+   "tier": "other-closed",
+   "aliases": [
+    "google/gemini-3.7-flash"
+   ],
+   "total_b": null,
+   "active_b": null,
+   "note": "Reference only.",
+   "url": "https://ai.google.dev/gemini-api/docs/pricing",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "google"
+  },
+  {
+   "id": "solar-pro4",
+   "name": "Solar Pro 4",
+   "lab": "Upstage",
+   "weights": "closed",
+   "tier": "other-closed",
+   "aliases": [
+    "upstage/solar-pro4"
+   ],
+   "total_b": null,
+   "active_b": null,
+   "note": "API-only; parameters undisclosed.",
+   "url": "https://www.upstage.ai/blog/en/solar-pro-4",
+   "read_on": "2026-09-03",
+   "inferencex": null,
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "glm-5",
+   "name": "GLM 5",
+   "lab": "Z.ai",
+   "weights": "open",
+   "tier": "benchmark-only",
+   "aliases": [
+    "z-ai/glm-5"
+   ],
+   "total_b": 744,
+   "active_b": 40,
+   "arch": "moe",
+   "url": "https://huggingface.co/zai-org/GLM-5",
+   "read_on": "2026-09-07",
+   "inferencex": "GLM-5",
+   "note": "Superseded on OpenRouter; kept for the throughput fit and as the family curve for GLM 5.2 / 5.3.",
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "kimi-k2.5",
+   "name": "Kimi K2.5",
+   "lab": "Moonshot",
+   "weights": "open",
+   "tier": "benchmark-only",
+   "aliases": [
+    "moonshotai/kimi-k2.5"
+   ],
+   "total_b": 1000,
+   "active_b": 32,
+   "arch": "moe",
+   "url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+   "read_on": "2026-09-07",
+   "inferencex": "Kimi-K2.5",
+   "note": "Superseded on OpenRouter; kept for the throughput fit and as the family curve for Kimi K2.6 / K3.",
+   "trace_family": "kimi"
+  },
+  {
+   "id": "minimax-m2.5",
+   "name": "MiniMax M2.5",
+   "lab": "MiniMax",
+   "weights": "open",
+   "tier": "benchmark-only",
+   "aliases": [
+    "minimax/minimax-m2.5"
+   ],
+   "total_b": 229,
+   "active_b": 10,
+   "arch": "moe",
+   "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5",
+   "read_on": "2026-09-07",
+   "inferencex": "MiniMax-M2.5",
+   "note": "Superseded on OpenRouter; kept for the throughput fit and as the family curve for MiniMax M2.7.",
+   "trace_family": "open_avg"
+  },
+  {
+   "id": "deepseek-r1-0528",
+   "name": "DeepSeek R1 0528",
+   "lab": "DeepSeek",
+   "weights": "open",
+   "tier": "benchmark-only",
+   "aliases": [
+    "deepseek/deepseek-r1-0528"
+   ],
+   "total_b": 671,
+   "active_b": 37,
+   "arch": "moe",
+   "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528",
+   "read_on": "2026-09-07",
+   "inferencex": "DeepSeek-R1-0528",
+   "note": "Kept for the throughput fit and as the family curve for DeepSeek V3.2 (same 671B/37B architecture).",
+   "trace_family": "deepseek"
+  }
+ ]
+}
