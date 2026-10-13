@@ -61,6 +61,7 @@ blackwell-roic-tracker/
   AI mastersheet.xlsx   copy of the workbook the fleet size, capital and power come from (assumptions.json
                         mastersheet.path points at it; save a new version over it to update the capital picture)
   .gitignore, .nojekyll keep caches and machine-specific files out of git; serve the folder as-is on GitHub Pages
+  ROUTINE_PROMPT.md     the claude.ai cloud routine that runs the daily update and republishes the dashboard artifact
   infographic/          the presentation view: infographic.html and the files that build it (its README)
   tools/                run_cached.py and pull2.py: run update.py from browser-fetched responses where the machine
                         has no direct internet (tools/README.md)
@@ -324,6 +325,10 @@ git add -A
 git commit -m "Daily update"
 git push
 ```
+
+For this repository that routine is a claude.ai cloud routine, "AI Dashboard daily update", which does the above
+every morning (Sydney time), pushes to `main` and republishes `dashboard.html` to a private claude.ai artifact.
+`ROUTINE_PROMPT.md` holds its schedule and the exact instructions it runs.
 
 A run rewrites `dashboard.html`, `index.html`, `infographic/infographic.html`, `update.log` and the files in
 `data/`, and adds the day's market snapshot `data/snapshots/<date>.json.gz`. Commit all of it: `data/history.jsonl`
