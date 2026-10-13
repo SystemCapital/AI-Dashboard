@@ -1110,9 +1110,28 @@
    "first_seen": "2026-10-12",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "Axe Compute Rings Nasdaq Bell With $3.45 Billion Neocloud GPU Contract Backlog",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOVFNKUTFRQTc4M01sdlhXX3VNMzZZTHhwS1pDamc0cXEtSWQwdjc4U2xKM09mcUlJYnZBRXJFNGdPaHAxQmVHNWl4aDlzR2dxa2ZNOXk0TGJFMDdoTWlKVlE2NjI3ckpDSGUtS1FiamJ3S1RWdDJ6N3BTQUlGWUUyV1locHQwQUlPZHJFU3pYRU90ZnNhY3lWa1U0b0tyelJ5QWNaZWxwS2ZxaXZCZmVIRk9MS1hEMEZpcF83S3RWakZfRU11?oc=5",
+   "source": "Tech Times",
+   "published": "2026-10-13",
+   "channel": "news",
+   "value_usd_b": 3.45,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "Axe Compute"
+   ],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-10-14",
+   "status": "new",
+   "matched_contract": null
   }
  ],
- "scanned_on": "2026-10-13",
+ "scanned_on": "2026-10-14",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
