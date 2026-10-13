@@ -24,6 +24,7 @@ Standard library only. Python 3.8+.
 """
 import json, re, sys, time, datetime, urllib.request, urllib.error, urllib.parse
 from pathlib import Path
+from engine import net
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -36,8 +37,7 @@ DATE_RE = re.compile(r"-\d{8}$")
 
 def get_json(url, timeout=60):
     req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.loads(r.read().decode("utf-8"))
+    return json.loads(net.read(req, timeout).decode("utf-8"))
 
 
 def strip_variant(permaslug):

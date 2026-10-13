@@ -7,7 +7,8 @@ Steps, in order (a failing step never stops the run; the page shows what is stal
                   speed / cache-hit / activity stats                                     (network)
   2. orshare      OpenRouter's closed- vs open-weight share of tokens: the weekly Top Models chart (53 weeks) and
                   a classified read of every model in the weekly ranking -> data/openrouter_share.json  (network)
-  3. labprices    Anthropic / OpenAI list prices checked against OpenRouter's lab endpoint rows  (uses step 1)
+  3. labprices    Anthropic and OpenAI list prices, applied on every change: OpenAI's from its own API pricing page
+                  (Standard tier), Anthropic's from OpenRouter's Anthropic endpoint rows (step 1)        (network)
   4. inferencex   published Blackwell throughput curves from SemiAnalysis InferenceX's API  (network)
   5. rentals      every provider's published rental quotes (Oracle, Azure incl. spot, AWS spot feed and Capacity
                   Blocks, Google spot page, CoreWeave, Nebius, Lambda, Verda, Together, Hyperbolic, Vultr API,
@@ -80,41 +81,59 @@ def do_orshare():
 
 
 def do_labprices():
-    """Anthropic rows: the 'Anthropic' provider row on OpenRouter carries the list price; overwrite on a change.
-    OpenAI rows: OpenRouter's OpenAI endpoints come in flex / standard / fast tiers and the standard row has
-    disagreed with OpenAI's own pages, so a difference is logged, not applied (edit data/lab_prices.json by hand)."""
+    """The labs' list prices in data/lab_prices.json, applied whenever they change.
+    OpenAI rows: OpenAI's own API pricing page, Standard tier (engine/collect_labprices.py). OpenRouter's OpenAI rows are
+    not used for these because its tier labels have not matched OpenAI's: on 2026-10-14 its 'standard' row for GPT-5.6
+    Sol carried OpenAI's Flex / Batch price ($2 / $10) while OpenAI's Standard tab said $4 / $20.
+    Anthropic rows: the 'Anthropic' provider row on OpenRouter (step 1's snapshot), which carries the list price.
+    A row marked "confirm": "manual" is left as it is. A price that moves more than 3x in one read is kept and logged as
+    a likely misread; a row whose source could not be read keeps its price and its old read_on, so the page shows its age."""
+    from engine import collect_labprices as cl
     p = ROOT / "data" / "lab_prices.json"
     lab = json.load(open(p, encoding="utf-8"))
     snap = json.load(open(ROOT / "data" / "openrouter.json", encoding="utf-8"))
-    today = (snap.get("read_on") or datetime.date.today().isoformat())      # the check is only as fresh as the OpenRouter snapshot it reads
-    n = 0
-    for mid, m in lab["models"].items():
-        ep = snap["endpoints"].get(m["slug"])
-        if not ep:
+    or_day = (snap.get("read_on") or datetime.date.today().isoformat())      # an OpenRouter row is only as fresh as the snapshot it reads
+    rows = [m for m in lab["models"].values() if m.get("confirm") != "manual"]
+    oa = None
+    if any((m.get("lab") or "").lower() == "openai" for m in rows):
+        try:
+            oa = cl.openai_prices()
+        except Exception as ex:
+            log("   OpenAI pricing page not read (%s): OpenAI rows keep their prices" % str(ex)[:120])
+    n = moved = 0
+    for m in rows:
+        if (m.get("lab") or "Anthropic").lower() == "openai":
+            if oa is None:
+                continue
+            row = oa.get(m.get("page_name") or m["slug"].split("/")[-1])
+            if not row or not row["in"] or not row["out"]:
+                log("   %s: not on OpenAI's pricing page (Standard tier); price kept at $%s / $%s" % (m["name"], m["in"], m["out"]))
+                continue
+            new, day, via = row, datetime.date.today().isoformat(), "OpenAI API pricing page, Standard tier"
+        else:
+            ep = snap["endpoints"].get(m["slug"])
+            lab_name = (m.get("lab") or "Anthropic").lower()
+            hosts = [h for h in (ep or {}).get("hosts", []) if h[0].lower().startswith(lab_name) and h[2]]
+            if not hosts:
+                continue
+            h = sorted(hosts, key=lambda r: r[2])[0]
+            new, day, via = {"in": h[1], "out": h[2], "cache_read": h[3]}, or_day, "OpenRouter endpoint row for provider %s" % m["lab"]
+        if any(not new[k] or max(new[k], m[k]) / min(new[k], m[k]) > 3 for k in ("in", "out")):
+            log("   %s: read $%s in / $%s out against $%s / $%s, more than a 3x move: kept as a likely misread (edit lab_prices.json if it is real)" % (m["name"], new["in"], new["out"], m["in"], m["out"]))
             continue
-        lab_name = (m.get("lab") or "Anthropic").lower()
-        rows = [h for h in ep["hosts"] if h[0].lower().startswith(lab_name) and h[2] and (lab_name != "openai" or (h[7] or "") == "openai")]
-        if not rows:
-            continue
-        h = sorted(rows, key=lambda r: r[2])[0]
-        changed = (abs(h[1] - m["in"]) > 1e-9) or (abs(h[2] - m["out"]) > 1e-9)
-        if m.get("confirm", "overwrite") == "log":
-            if changed:
-                log("   %s: OpenRouter's %s standard-tier row shows $%s in / $%s out; list kept at $%s / $%s (edit lab_prices.json to change)" % (m["name"], m["lab"], h[1], h[2], m["in"], m["out"]))
-            else:
-                m["read_on"] = today
-            n += 1
-            continue
-        m["in"], m["out"] = h[1], h[2]
-        if h[3] is not None:
-            m["cache_read"] = h[3]
-        m["read_on"] = today
-        m["confirmed_via"] = "OpenRouter endpoint row for provider %s" % m["lab"]
+        before = (m["in"], m["out"], m.get("cache_read"), m.get("cache_write"))
+        m["in"], m["out"] = new["in"], new["out"]
+        for k in ("cache_read", "cache_write"):
+            if new.get(k) is not None:
+                m[k] = new[k]
+        m["read_on"], m["confirmed_via"] = day, via
         n += 1
-        if changed:
-            log("   %s list price moved: now $%s in / $%s out" % (m["name"], h[1], h[2]))
+        if (m["in"], m["out"], m.get("cache_read"), m.get("cache_write")) != before:
+            moved += 1
+            log("   %s list price moved: $%s in / $%s out (cache read $%s) -> $%s / $%s (cache read $%s), applied (%s)" % (
+                m["name"], before[0], before[1], before[2], m["in"], m["out"], m.get("cache_read"), via))
     json.dump(lab, open(p, "w", encoding="utf-8"), indent=1)
-    log("   %d lab prices checked" % n)
+    log("   %d lab prices checked, %d moved and applied" % (n, moved))
 
 
 def do_inferencex():
@@ -295,7 +314,7 @@ def main(argv):
         return schedule(at, remove="--unschedule" in argv)
     only = argv[argv.index("--only") + 1] if "--only" in argv else None
     offline = "--offline" in argv
-    steps = [("openrouter", do_openrouter, True), ("orshare", do_orshare, True), ("labprices", do_labprices, False), ("inferencex", do_inferencex, True), ("rentals", do_rentals, True), ("history", do_history, True), ("deals", do_deals, True), ("build", do_build, False), ("infographic", do_infographic, False)]
+    steps = [("openrouter", do_openrouter, True), ("orshare", do_orshare, True), ("labprices", do_labprices, True), ("inferencex", do_inferencex, True), ("rentals", do_rentals, True), ("history", do_history, True), ("deals", do_deals, True), ("build", do_build, False), ("infographic", do_infographic, False)]
     results = {}
     log("run: %s" % (" ".join(argv) or "full"))
     for name, fn, needs_net in steps:

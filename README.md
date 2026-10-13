@@ -70,7 +70,7 @@ blackwell-roic-tracker/
                         effective price / delivered speed / cache-hit / activity stats   (fetched daily)
     openrouter_share.json  OpenRouter's closed- vs open-weight share of tokens: its weekly Top Models chart (53 weeks,
                         accumulating) and a model-by-model classified read of the full weekly ranking each run
-    lab_prices.json     Anthropic and OpenAI list prices                                  (checked daily via OpenRouter)
+    lab_prices.json     Anthropic and OpenAI list prices, any change applied (daily: OpenAI's own pricing page, Anthropic via OpenRouter)
     rental_rates.json   every provider's published quote (on-demand, spot, capacity block, reserved, indices), the log of
                         price changes, pricing notices on vendors' pages, price news, curated price actions, and every
                         public multi-year AI compute contract, classified (quotes refreshed daily; contracts curated)
@@ -90,7 +90,8 @@ blackwell-roic-tracker/
   engine/
     model.py            the arithmetic (prepare + compute); template.html carries its JavaScript twin
     build.py            injects inputs and the Python result into the template, writes dashboard.html
-    collect_openrouter.py, collect_or_share.py, collect_inferencex.py, collect_rentals.py, collect_history.py, collect_traces.py, read_mastersheet.py
+    collect_openrouter.py, collect_or_share.py, collect_labprices.py, collect_inferencex.py, collect_rentals.py, collect_history.py, collect_traces.py, read_mastersheet.py
+    net.py              every collector's GET, retried twice when a connection drops before the step keeps its last good data
     collect_deals.py    the daily deal scout (Google News RSS + SEC EDGAR full-text search); tests/test_deals.py runs it offline
     restate.py          puts every history row on one set of assumptions (restateRow() in template.html is its twin);
                         tests/test_restate.py checks it reproduces every as-built row at that row's own assumptions
@@ -343,8 +344,9 @@ Hosts the update reads (allow them if the routine's network is restricted): `ope
 `inferencex.semianalysis.com`, `portal.silicondata.com`, `www.silicondata.com`, `api.ornnai.com`, `data.ornn.com`,
 `getdeploying.com`, `news.google.com`, `prices.azure.com`, `azure.microsoft.com`, `website.spot.ec2.aws.a2z.com`,
 `aws.amazon.com`, `apexapps.oracle.com`, `cloud.google.com`, `www.coreweave.com`, `nebius.com`, `lambda.ai`,
-`verda.com`, `www.together.ai`, `www.hyperbolic.ai`, `api.vultr.com`, `www.vultr.com`, and `efts.sec.gov` /
-`www.sec.gov` only if `deals.sec_user_agent` is set. A step that cannot reach its host keeps the last good data
+`verda.com`, `www.together.ai`, `www.hyperbolic.ai`, `api.vultr.com`, `www.vultr.com`, `developers.openai.com`, and
+`efts.sec.gov` / `www.sec.gov` only if `deals.sec_user_agent` is set. A dropped connection (a reset, a TLS stream cut
+off, a 429 or 50x) is retried twice a few seconds apart; a step that still cannot reach its host keeps the last good data
 and `update.log` ends with `failed: <step>`: check that line after the routine's first run. (The scheduled runs
 inside the desktop's sandbox on 8, 10 and 13 Oct 2026 reached none of these hosts, through a proxy that refused
 them, so those days carried the previous readings; `tools/README.md` describes the browser-fed fallback used
@@ -361,7 +363,7 @@ since.) If you set `deals.sec_user_agent` (your name and email, for SEC EDGAR), 
 | Open vs closed weights | OpenRouter `catalog/models` (published HF repo) + `data/models.json` | daily |
 | Closed- vs open-weight share of OpenRouter tokens | OpenRouter `rankings/model-rankings-chart` (weekly Top Models chart: 53 weeks of named top models plus an unsplit 'Others') and `rankings/models?view=week` (every model, trailing seven days), classified as above | daily, accumulating |
 | Open-weight prices, every host | OpenRouter `models/<slug>/endpoints` | daily |
-| Frontier prices | Anthropic pricing page; OpenAI developer pricing docs; checked via OpenRouter lab rows | daily |
+| Frontier prices | OpenAI: its API pricing page, Standard tier (developers.openai.com/api/docs/pricing). Anthropic: the Anthropic pricing page's list price as carried by OpenRouter's 'Anthropic' endpoint rows. Any change is applied the day it is read; a move of more than 3x in one read is kept and logged as a likely misread | daily |
 | Rental quotes, every provider and tier | vendor pages and price APIs (URL per row): CoreWeave, Nebius, Lambda, Verda, Together AI, Hyperbolic, Vultr (plan API), Oracle (price-list API), Azure (Retail Prices API incl. Spot meters), AWS (Capacity Blocks page, public EC2 Spot feed), Google (Spot VM page) | daily where machine-readable |
 | Price changes, announcements, notices | the daily read (change log), dated columns and announcements on vendors' pages, a notice scan of the same pages, Google News (headlines, unverified), and a curated list of disclosures with sources (`data/rental_rates.json`) | daily; disclosures curated |
 | Contract rates | every public multi-year AI compute contract Jan 2025 - Sep 2026 (URL, source quality and classification per row); $/GPU-hr = value / (term x 8,760 x GPUs) where all three are disclosed, per-MW rates likewise | curated; new announcements queued daily by the deal scout |
@@ -382,7 +384,8 @@ since.) If you set `deals.sec_user_agent` (your name and email, for SEC EDGAR), 
 `build.py` embeds the Python result in the page; on load the page recomputes from the same inputs in
 JavaScript and prints the worst relative gap across all six scenarios (it should read `0.0e+0` or
 float noise). `python engine/tests/test_rental_history.py` checks that today's year-1 rate from `data/rental_rates.json` equals the one rebuilt from the rate history, the rate-in-force rule, and that every list-price change is logged. `python engine/tests/test_deals.py` exercises the deal scout offline against feed samples
-captured on 2026-09-09. If the two ever disagree the page says so in red.
+captured on 2026-09-09. `python engine/tests/test_labprices.py` reads OpenAI's Standard tier from a 2026-10-14 sample of its
+pricing page and checks that a moved list price is applied, a 10x jump is kept as a misread and an unreadable page keeps every price. If the two ever disagree the page says so in red.
 
 ## What changed on 13 Oct 2026: median rental rate, token lines, OpenRouter share, one folder
 

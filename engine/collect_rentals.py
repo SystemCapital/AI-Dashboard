@@ -39,6 +39,7 @@ records each day's readings in data/rate_history.json. Standard library only.
 """
 import json, re, sys, datetime, urllib.request, urllib.parse, html as htmllib
 from pathlib import Path
+from engine import net
 
 ROOT = Path(__file__).resolve().parent.parent
 PATH = ROOT / "data" / "rental_rates.json"
@@ -68,8 +69,7 @@ def fetch(url, timeout=45):
     if url in _cache:
         return _cache[url]
     req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        body = r.read().decode("utf-8", "ignore")
+    body = net.read(req, timeout).decode("utf-8", "ignore")
     _cache[url] = body
     return body
 

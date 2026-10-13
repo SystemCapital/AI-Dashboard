@@ -21,6 +21,7 @@ Test offline:  python engine/tests/test_deals.py
 import json, re, time, datetime, html as htmllib, urllib.request, urllib.parse
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from engine import net
 
 ROOT = Path(__file__).resolve().parent.parent
 PATH = ROOT / "data" / "deal_candidates.json"
@@ -46,8 +47,7 @@ UA_DEFAULT = "Mozilla/5.0 (compatible; blackwell-roic/1.0; research dashboard)"
 
 def fetch(url, ua=UA_DEFAULT, timeout=45):
     req = urllib.request.Request(url, headers={"User-Agent": ua, "Accept": "application/rss+xml, application/xml, application/json, text/xml, text/html, */*"})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read().decode("utf-8", "ignore")
+    return net.read(req, timeout).decode("utf-8", "ignore")
 
 
 # ------------------------------------------------------------------ extractors (headline or filing text -> figures)

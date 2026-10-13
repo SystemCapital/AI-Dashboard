@@ -27,6 +27,7 @@ Writes data/throughput.json. Reference points and the comment block are preserve
 """
 import json, math, datetime, urllib.request, urllib.parse
 from pathlib import Path
+from engine import net
 
 ROOT = Path(__file__).resolve().parent.parent
 PATH = ROOT / "data" / "throughput.json"
@@ -42,8 +43,7 @@ COLUMNS = ["model", "hw", "workload", "n", "date", "precisions", "frameworks", "
 
 def get_json(url, timeout=120):
     req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.loads(r.read().decode("utf-8"))
+    return json.loads(net.read(req, timeout).decode("utf-8"))
 
 
 def fetch_rows(name, timeout=120):

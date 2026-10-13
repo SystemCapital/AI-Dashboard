@@ -3,13 +3,16 @@
   "Published list prices for each lab's own models, US dollars per million tokens. This is the price a serving",
   "scenario earns on frontier tokens under the 'list' price basis: the lab sells its own models at its own list price.",
   "(The default 'effective' basis uses OpenRouter's traffic-weighted effective price for the same models instead.)",
-  "Anthropic rows: seeded from the Anthropic pricing page; update.py confirms each daily from OpenRouter's public",
-  "endpoint feed, where the 'Anthropic' provider row carries the same list price, and overwrites on a change.",
-  "OpenAI rows: seeded from the OpenAI developer pricing docs (standard tier, short context). OpenRouter's OpenAI",
-  "endpoints come in flex / standard / fast tiers; update.py compares the standard-tier row and LOGS a difference",
-  "rather than overwriting, because on 2026-09-04 that row ($2/$10 for Sol) disagreed with both OpenAI pages",
-  "($4/$20 developer docs, promotional through at least 2026-11-21; $5/$30 openai.com marketing page).",
-  "Batch API is 50% off list at both labs; 'realisation' in assumptions.json is where a discount to list is applied."
+  "Every run of update.py re-reads these and APPLIES any change (the move is logged in update.log as well):",
+  "OpenAI rows ('confirm': 'openai_page'): OpenAI's own API pricing page, developers.openai.com/api/docs/pricing,",
+  "Standard tab (short context): input, cached input, cache writes, output. OpenRouter's OpenAI rows are not used",
+  "for these: on 2026-10-14 the row OpenRouter labels standard for GPT-5.6 Sol showed $2/$10, which is OpenAI's",
+  "Flex / Batch price, against $4/$20 on OpenAI's Standard tab.",
+  "Anthropic rows ('confirm': 'openrouter'): OpenRouter's public endpoint feed, where the 'Anthropic' provider row",
+  "carries the Anthropic pricing page's list price.",
+  "A row set to 'confirm': 'manual' is never overwritten. A read that moves a price more than 3x is kept and logged",
+  "as a likely misread. Batch API is 50% off list at both labs; 'realisation' in assumptions.json is where a",
+  "discount to list is applied."
  ],
  "unit": "USD per million tokens",
  "models": {
@@ -24,11 +27,11 @@
    "context": 1000000,
    "ga": "2026-09-01",
    "url": "https://platform.claude.com/docs/en/about-claude/pricing",
-   "read_on": "2026-10-13",
+   "read_on": "2026-10-14",
    "note": "Cache reads at 0.025x input (footnote on the pricing page); 1M context at standard pricing.",
    "confirmed_via": "OpenRouter endpoint row for provider Anthropic",
    "lab": "Anthropic",
-   "confirm": "overwrite"
+   "confirm": "openrouter"
   },
   "claude-fable-5": {
    "name": "Claude Fable 5",
@@ -41,11 +44,11 @@
    "context": 1000000,
    "ga": "2026-06-09",
    "url": "https://platform.claude.com/docs/en/about-claude/pricing",
-   "read_on": "2026-10-13",
+   "read_on": "2026-10-14",
    "note": "Cache reads at 0.1x input.",
    "confirmed_via": "OpenRouter endpoint row for provider Anthropic",
    "lab": "Anthropic",
-   "confirm": "overwrite"
+   "confirm": "openrouter"
   },
   "claude-opus-5": {
    "name": "Claude Opus 5",
@@ -58,11 +61,11 @@
    "context": 1000000,
    "ga": "2026-07-24",
    "url": "https://platform.claude.com/docs/en/about-claude/pricing",
-   "read_on": "2026-10-13",
+   "read_on": "2026-10-14",
    "note": "Fast mode (research preview) $10/$50.",
    "confirmed_via": "OpenRouter endpoint row for provider Anthropic",
    "lab": "Anthropic",
-   "confirm": "overwrite"
+   "confirm": "openrouter"
   },
   "claude-opus-5.5": {
    "name": "Claude Opus 5.5",
@@ -75,11 +78,11 @@
    "context": 1000000,
    "ga": "2026-09-21",
    "url": "https://platform.claude.com/docs/en/about-claude/pricing",
-   "read_on": "2026-10-13",
+   "read_on": "2026-10-14",
    "note": "Anthropic pricing page 2026-09-28: $4 / $20 per MTok, 5-minute cache write $5, 1-hour cache write $8, cache read $0.20 (0.05x input); batch $2 / $10; fast mode (research preview) $8 / $40. 'ga' is the OpenRouter listing date.",
    "confirmed_via": "OpenRouter endpoint row for provider Anthropic",
    "lab": "Anthropic",
-   "confirm": "overwrite"
+   "confirm": "openrouter"
   },
   "claude-sonnet-5": {
    "name": "Claude Sonnet 5",
@@ -92,11 +95,11 @@
    "context": 1000000,
    "ga": "2026-06-30",
    "url": "https://platform.claude.com/docs/en/about-claude/pricing",
-   "read_on": "2026-10-13",
+   "read_on": "2026-10-14",
    "note": "",
    "confirmed_via": "OpenRouter endpoint row for provider Anthropic",
    "lab": "Anthropic",
-   "confirm": "overwrite"
+   "confirm": "openrouter"
   },
   "claude-haiku-4.5": {
    "name": "Claude Haiku 4.5",
@@ -109,11 +112,11 @@
    "context": 200000,
    "ga": "2025-10-01",
    "url": "https://platform.claude.com/docs/en/about-claude/pricing",
-   "read_on": "2026-10-13",
+   "read_on": "2026-10-14",
    "note": "Not in the frontier basket; listed for reference.",
    "confirmed_via": "OpenRouter endpoint row for provider Anthropic",
    "lab": "Anthropic",
-   "confirm": "overwrite"
+   "confirm": "openrouter"
   },
   "gpt-5.6-sol": {
    "name": "GPT-5.6 Sol",
@@ -127,10 +130,10 @@
    "context": 1050000,
    "ga": "2026-07-09",
    "url": "https://developers.openai.com/api/docs/pricing",
-   "read_on": "2026-09-04",
-   "note": "Standard tier, short context (<270K). Promotional: 'available at least through November 21, 2026'. Long context $8/$30. openai.com/api/pricing shows $5/$30; Azure lists $5/$30, Bedrock $4.40/$22; OpenRouter's OpenAI standard-tier row showed $2/$10 on 2026-09-04.",
-   "confirmed_via": "OpenAI developer docs; OpenRouter OpenAI standard-tier row differs (logged, not applied)",
-   "confirm": "log"
+   "read_on": "2026-10-14",
+   "note": "Standard tier, short context (<270K). Promotional: 'available at least through November 21, 2026'. Long context $8/$30. openai.com/api/pricing shows $5/$30; Azure lists $5/$30, Bedrock $4.40/$22. OpenRouter's OpenAI row labelled standard shows $2/$10, OpenAI's Flex / Batch price.",
+   "confirmed_via": "OpenAI API pricing page, Standard tier",
+   "confirm": "openai_page"
   },
   "gpt-5.6-terra": {
    "name": "GPT-5.6 Terra",
@@ -144,10 +147,10 @@
    "context": 1050000,
    "ga": "2026-07-09",
    "url": "https://developers.openai.com/api/docs/pricing",
-   "read_on": "2026-10-13",
-   "note": "Standard tier, short context. Long context $4/$18. Matches OpenRouter's OpenAI standard-tier row.",
-   "confirmed_via": "OpenAI developer docs; OpenRouter OpenAI standard-tier row",
-   "confirm": "log"
+   "read_on": "2026-10-14",
+   "note": "Standard tier, short context. Long context $4/$18.",
+   "confirmed_via": "OpenAI API pricing page, Standard tier",
+   "confirm": "openai_page"
   },
   "gpt-5.6-luna": {
    "name": "GPT-5.6 Luna",
@@ -161,10 +164,10 @@
    "context": 1050000,
    "ga": "2026-07-09",
    "url": "https://developers.openai.com/api/docs/pricing",
-   "read_on": "2026-10-13",
-   "note": "Not in the OpenAI basket (small tier); listed for reference. Matches OpenRouter's OpenAI standard-tier row.",
-   "confirmed_via": "OpenAI developer docs; OpenRouter OpenAI standard-tier row",
-   "confirm": "log"
+   "read_on": "2026-10-14",
+   "note": "Not in the OpenAI basket (small tier); listed for reference.",
+   "confirmed_via": "OpenAI API pricing page, Standard tier",
+   "confirm": "openai_page"
   }
  },
  "reference": {

@@ -23,6 +23,7 @@ its date. Standard library only.
 """
 import datetime, json, re, urllib.request
 from pathlib import Path
+from engine import net
 
 BASE = "https://openrouter.ai"
 URLS = {
@@ -44,8 +45,7 @@ NOTE = ("OpenRouter's closed-weight share of tokens. 'weeks' come from OpenRoute
 
 def get_json(url, timeout=60):
     req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.loads(r.read().decode("utf-8"))
+    return json.loads(net.read(req, timeout).decode("utf-8"))
 
 
 def strip_variant(p):
