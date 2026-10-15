@@ -707,10 +707,11 @@
     "claude-fable-5",
     "claude-opus-5",
     "claude-opus-5.5",
-    "claude-sonnet-5"
+    "claude-sonnet-5",
+    "claude-sonnet-5.5"
    ],
    "weights": "openrouter_tokens",
-   "note": "Anthropic's current models, split in proportion to their measured OpenRouter token volume for the week (prompt + completion). Haiku is not included: the basket is the frontier tier, not the small tier. Claude Opus 5.5 (on OpenRouter since 2026-09-21, $4/$20 list) added 2026-09-28 at Lev's request; ROIC history rows up to that date are on the four-model basket (Fable 5.1, Fable 5, Opus 5, Sonnet 5)."
+   "note": "Anthropic's current models, split in proportion to their measured OpenRouter token volume for the week (prompt + completion). Haiku is not included: the basket is the frontier tier, not the small tier. Claude Opus 5.5 (on OpenRouter since 2026-09-21, $4/$20 list) added 2026-09-28 at Lev's request; ROIC history rows up to that date are on the four-model basket (Fable 5.1, Fable 5, Opus 5, Sonnet 5). Claude Sonnet 5.5 (on OpenRouter since 2026-09-28, $2/$10 list) added 2026-10-15 at Lev's request; ROIC history rows up to that date are on the five-model basket (Fable 5.1, Fable 5, Opus 5, Opus 5.5, Sonnet 5)."
   },
   "openai": {
    "label": "OpenAI",

@@ -104,6 +104,23 @@
    "trace_family": "anthropic"
   },
   {
+   "id": "claude-sonnet-5.5",
+   "name": "Claude Sonnet 5.5",
+   "lab": "Anthropic",
+   "weights": "closed",
+   "tier": "frontier",
+   "aliases": [
+    "anthropic/claude-sonnet-5.5"
+   ],
+   "total_b": null,
+   "active_b": null,
+   "note": "On OpenRouter since 2026-09-28 (permaslug claude-sonnet-5.5-20260928) at $2/$10 list, cache reads $0.10 (0.05x input); added to the Anthropic basket 2026-10-15 at Lev's request.",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "read_on": "2026-10-15",
+   "inferencex": null,
+   "trace_family": "anthropic"
+  },
+  {
    "id": "deepseek-v4-flash-0731",
    "name": "DeepSeek V4 Flash 0731",
    "lab": "DeepSeek",

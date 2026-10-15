@@ -101,6 +101,23 @@
    "lab": "Anthropic",
    "confirm": "openrouter"
   },
+  "claude-sonnet-5.5": {
+   "name": "Claude Sonnet 5.5",
+   "slug": "anthropic/claude-sonnet-5.5",
+   "in": 2.0,
+   "out": 10.0,
+   "cache_write": 2.5,
+   "cache_read": 0.1,
+   "batch_discount": 0.5,
+   "context": 1000000,
+   "ga": "2026-09-28",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "read_on": "2026-10-15",
+   "note": "Anthropic pricing page 2026-10-15: $2 / $10 per MTok, 5-minute cache write $2.50, 1-hour cache write $4, cache read $0.10 (0.05x input). 'ga' is the OpenRouter listing date.",
+   "confirmed_via": "OpenRouter endpoint row for provider Anthropic",
+   "lab": "Anthropic",
+   "confirm": "openrouter"
+  },
   "claude-haiku-4.5": {
    "name": "Claude Haiku 4.5",
    "slug": "anthropic/claude-haiku-4.5",
