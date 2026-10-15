@@ -683,8 +683,8 @@
    "tier": "spot",
    "instance": "p6-b300.48xlarge EC2 Spot, us-east-1 (Linux)",
    "gpus": 8,
-   "price_hr": 67.0075,
-   "per_gpu_hr": 8.3759,
+   "price_hr": 66.0901,
+   "per_gpu_hr": 8.2613,
    "url": "https://aws.amazon.com/ec2/spot/pricing/",
    "read_on": "2026-10-15",
    "note": "AWS's published EC2 Spot price (public feed behind the Spot pricing page); interruptible capacity. Hyperscaler spot row in the near-term median.",
@@ -696,7 +696,7 @@
    },
    "hyperscaler": true,
    "pricing": "dynamic",
-   "logged_value": 9.2888
+   "logged_value": 8.2613
   },
   {
    "vendor": "AWS",
@@ -704,8 +704,8 @@
    "tier": "spot",
    "instance": "p6-b200.48xlarge EC2 Spot, us-east-1 (Linux)",
    "gpus": 8,
-   "price_hr": 81.9179,
-   "per_gpu_hr": 10.2397,
+   "price_hr": 81.8688,
+   "per_gpu_hr": 10.2336,
    "url": "https://aws.amazon.com/ec2/spot/pricing/",
    "read_on": "2026-10-15",
    "note": "AWS's published EC2 Spot price; interruptible capacity. B200, so a market-history series only (the near-term median is GB300/B300).",
@@ -3429,7 +3429,7 @@
    "read_on": "2026-09-09"
   }
  ],
- "refreshed_at": "2026-10-15T08:56:27",
+ "refreshed_at": "2026-10-15T16:40:15",
  "price_actions": [
   {
    "date": "2026-01-04",
@@ -3913,6 +3913,22 @@
    "kind": "observed",
    "pricing": "dynamic",
    "url": "https://verda.com/pricing",
+   "note": ""
+  },
+  {
+   "date": "2026-10-15",
+   "key": "aws_b300_spot",
+   "vendor": "AWS",
+   "chip": "B300",
+   "tier": "spot",
+   "instance": "p6-b300.48xlarge EC2 Spot, us-east-1 (Linux)",
+   "old": 9.2888,
+   "new": 8.2613,
+   "pct": -0.1106,
+   "prev_read": "2026-10-15",
+   "kind": "observed",
+   "pricing": "dynamic",
+   "url": "https://aws.amazon.com/ec2/spot/pricing/",
    "note": ""
   }
  ],

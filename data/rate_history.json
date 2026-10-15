@@ -1019,7 +1019,7 @@
    }
   }
  },
- "refreshed_at": "2026-10-15T08:56:29",
+ "refreshed_at": "2026-10-15T16:40:17",
  "quotes": {
   "note": "One series per published rental quote in data/rental_rates.json (vendor, chip, tier), $/GPU-hour: 'values' = what the vendor showed on the day it was read; 'stated' = dated price changes documented by the vendor's own announcement or several reports; 'announced' = published future prices; 'corrections' = readings the collector got wrong (values hold the corrected figure); 'ended' = the vendor stopped publishing the rate. Backfilled on 2026-10-12 from the project's own records: the archived data files of 3, 4 and 8 Sep 2026, the spot readings in this file, every refresh in update.log from 17 Sep and the daily snapshots in data/snapshots/. Every run of update.py appends the day's readings.",
   "series": {
@@ -1082,7 +1082,7 @@
      "2026-10-12": 10.0855,
      "2026-10-13": 10.4564,
      "2026-10-14": 10.409,
-     "2026-10-15": 10.2397
+     "2026-10-15": 10.2336
     },
     "instance": "p6-b200.48xlarge EC2 Spot, us-east-1 (Linux)",
     "url": "https://aws.amazon.com/ec2/spot/pricing/",
@@ -1149,7 +1149,7 @@
      "2026-10-12": 9.0101,
      "2026-10-13": 8.7996,
      "2026-10-14": 8.6962,
-     "2026-10-15": 8.3759
+     "2026-10-15": 8.2613
     },
     "instance": "p6-b300.48xlarge EC2 Spot, us-east-1 (Linux)",
     "url": "https://aws.amazon.com/ec2/spot/pricing/",

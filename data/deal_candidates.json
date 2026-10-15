@@ -1180,6 +1180,23 @@
    "first_seen": "2026-10-15",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "Alpha Compute Signs Binding GPU Contract, Leasing ALPHA-03 cluster under Four-Year, $81.7 Million Agreement in its Missouri Superintelligence Factory",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPM01RNGNsSDNudlJLRTliQm1GT2J5MC1MX1NzVWZmeWx0aFJteXNTeVN3WndLNzVMMFdHRGdkRHZzdGhNNkZsbWN4dWdZVDYwQjRSX3dkV0sySG1oMk1JMWRtNm16ZHU3dEd4Z0lKbW9kYVE4ZTJyU01qb2RBaVJFeXVKSkRDcDZ4V2JzQm84YjlCNGh5Rk1uZS10OA?oc=5",
+   "source": "Yahoo Finance",
+   "published": "2026-10-14",
+   "channel": "news",
+   "value_usd_b": 0.082,
+   "term_years": 4,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-10-15",
+   "status": "new",
+   "matched_contract": null
   }
  ],
  "scanned_on": "2026-10-15",
