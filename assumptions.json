@@ -715,11 +715,14 @@
   "openai": {
    "label": "OpenAI",
    "models": [
+    "gpt-6.1-sol",
+    "gpt-6-sol",
+    "gpt-6-astra",
     "gpt-5.6-sol",
     "gpt-5.6-terra"
    ],
    "weights": "openrouter_tokens",
-   "note": "OpenAI's current flagship and mid-tier models (Sol = Opus/Fable class, Terra = Sonnet class), split by measured OpenRouter token volume. Luna, the small tier, is excluded for the same reason Haiku is; Sol Pro (0.1% of tokens) is excluded because OpenAI publishes no price for it."
+   "note": "OpenAI's current flagship and mid-tier models, split by measured OpenRouter token volume: GPT-6.1 Sol, GPT-6 Sol and GPT-5.6 Sol (Opus/Fable class), GPT-6 Astra (the top tier, $10/$50) and GPT-5.6 Terra (Sonnet class). Luna, the small tier (GPT-6 and GPT-5.6), is excluded for the same reason Haiku is; the Pro variants are excluded because OpenAI publishes no price for them. The GPT-6 models (6.1 Sol, 6 Sol, 6 Astra) were added 2026-10-15 at Lev's request; ROIC history rows up to that date are on the two-model basket (GPT-5.6 Sol, GPT-5.6 Terra)."
   }
  },
  "trace_mapping_note": "Each task with a trace_family takes its per-run token volumes (input, output, LLM calls, cacheable share), by model family, from data/traces.json (Exgentic agent-llm-traces-v2): swebench = SWE-bench software-engineering runs, browsecompplus = BrowseComp-Plus deep research, appworld = AppWorld multi-app assistant tasks, tau2 = tau2-bench customer-service. Tasks without one keep the framework's per-call shapes (calls x task-type tin/tout) for every model. The 'volumes' dial switches between measured-where-available and framework-only."

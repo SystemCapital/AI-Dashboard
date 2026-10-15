@@ -673,6 +673,74 @@
    "trace_family": "openai"
   },
   {
+   "id": "gpt-6.1-sol",
+   "name": "GPT-6.1 Sol",
+   "lab": "OpenAI",
+   "weights": "closed",
+   "tier": "frontier",
+   "aliases": [
+    "openai/gpt-6.1-sol"
+   ],
+   "total_b": null,
+   "active_b": null,
+   "note": "OpenAI flagship (on OpenRouter since 2026-09-29), $2/$10 list. In the OpenAI frontier basket since 2026-10-15 (added at Lev's request).",
+   "url": "https://developers.openai.com/api/docs/pricing",
+   "read_on": "2026-10-15",
+   "inferencex": null,
+   "trace_family": "openai"
+  },
+  {
+   "id": "gpt-6-sol",
+   "name": "GPT-6 Sol",
+   "lab": "OpenAI",
+   "weights": "closed",
+   "tier": "frontier",
+   "aliases": [
+    "openai/gpt-6-sol"
+   ],
+   "total_b": null,
+   "active_b": null,
+   "note": "OpenAI flagship, GPT-6 generation (on OpenRouter since 2026-09-22), $2/$10 list. In the OpenAI frontier basket since 2026-10-15 (added at Lev's request).",
+   "url": "https://developers.openai.com/api/docs/pricing",
+   "read_on": "2026-10-15",
+   "inferencex": null,
+   "trace_family": "openai"
+  },
+  {
+   "id": "gpt-6-astra",
+   "name": "GPT-6 Astra",
+   "lab": "OpenAI",
+   "weights": "closed",
+   "tier": "frontier",
+   "aliases": [
+    "openai/gpt-6-astra"
+   ],
+   "total_b": null,
+   "active_b": null,
+   "note": "OpenAI's top GPT-6 tier (on OpenRouter since 2026-09-03), $10/$50 list, the Fable-class row of the OpenAI basket. In the basket since 2026-10-15 (added at Lev's request).",
+   "url": "https://developers.openai.com/api/docs/pricing",
+   "read_on": "2026-10-15",
+   "inferencex": null,
+   "trace_family": "openai"
+  },
+  {
+   "id": "gpt-6-luna",
+   "name": "GPT-6 Luna",
+   "lab": "OpenAI",
+   "weights": "closed",
+   "tier": "other-closed",
+   "aliases": [
+    "openai/gpt-6-luna"
+   ],
+   "total_b": null,
+   "active_b": null,
+   "note": "OpenAI small model, GPT-6 generation (on OpenRouter since 2026-09-22), $0.10/$0.50 list: the largest OpenAI model on OpenRouter by tokens. Not in the OpenAI basket (the small tiers, Haiku and Luna, are outside both baskets); reference only.",
+   "url": "https://developers.openai.com/api/docs/pricing",
+   "read_on": "2026-10-15",
+   "inferencex": null,
+   "trace_family": "openai"
+  },
+  {
    "id": "gemini-3.7-flash",
    "name": "Gemini 3.7 Flash",
    "lab": "Google",

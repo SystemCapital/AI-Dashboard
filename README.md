@@ -174,9 +174,10 @@ log-log fit of output tokens/s per GPU on active parameters across every benchma
 model's interactivity; each row is flagged, the fit's slope, n and R² are printed, and any vendor-reported
 measurement (NVIDIA's Dynamo figure for Nemotron 3 Ultra, CODEXIS's for V4 Flash) is shown beside the
 estimate as a cross-check, not used. Frontier tokens go to the lab's current models (Anthropic: Fable 5.1,
-Fable 5, Opus 5, Opus 5.5, Sonnet 5; OpenAI: GPT-5.6 Sol, Terra) in proportion to their measured OpenRouter volume;
-the small tiers (Haiku, Luna) are outside both baskets. Opus 5.5 joined the Anthropic basket on 28 September
-2026; the ROIC history records each day's basket and tags the change.
+Fable 5, Opus 5, Opus 5.5, Sonnet 5; OpenAI: GPT-6.1 Sol, GPT-6 Sol, GPT-6 Astra, GPT-5.6 Sol, Terra) in proportion to
+their measured OpenRouter volume; the small tiers (Haiku, Luna) are outside both baskets. Opus 5.5 joined the Anthropic
+basket on 28 September 2026 and the GPT-6 models the OpenAI basket on 15 October 2026; the ROIC history records each
+day's basket and tags the change.
 
 **Prices are what the market actually paid this week.** For every model OpenRouter publishes the
 traffic-weighted effective price its customers paid per input and output token across all hosts, with
