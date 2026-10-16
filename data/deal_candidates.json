@@ -1248,9 +1248,28 @@
    "first_seen": "2026-10-16",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "Fermi secures AMD backing for 222 MW Texas AI project",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPWmZpSG9oYXVhb3FJejBXTFhYUWRpVTdITDJTZ3I5cGdUbW9ueTl6RHRJZmtUSEkwZzVibmlTazV3dktUYUJhRnlBdUU3UHBtZFJoOVpza3pXXzJtdU9BSlMwZUdCeW9zNzlWLUMwaXVTbEJNcktndUhDQ0lQREZGMDA2ajZ0X2I5bGRuS1NBNTFKRmNCWWNiZEVaV0JMVkdWMy1TanpYUzgwUQ?oc=5",
+   "source": "scanx.trade",
+   "published": "2026-10-13",
+   "channel": "news",
+   "value_usd_b": null,
+   "term_years": null,
+   "gpus": null,
+   "mw": 222.0,
+   "chip": null,
+   "parties": [
+    "AMD"
+   ],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-10-17",
+   "status": "new",
+   "matched_contract": null
   }
  ],
- "scanned_on": "2026-10-16",
+ "scanned_on": "2026-10-17",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
