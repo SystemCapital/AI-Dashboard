@@ -1305,9 +1305,48 @@
    "first_seen": "2026-10-19",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "Germany Confirms Its Nvidia AI Deal: Will Any of Huang\u2019s $2 Billion Europe Pledge Land in Berlin?",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPcGphMF9ITjBJTUI1MGY2V25VRjNVZ3JzdG9zaDdyNUZXTmxnelVLN216QmtvU2tHNjBtUDdRS3pZbnVqbzFZZmwtV0ZuR0FheWxLa0xabjkxRzFqb3YwcDUzZVRJdDNEeFVyNG5RZ0FvQXV3UzNWZUFOVUxUNFJiRkVWYnRoZVNYd1dLZzNvY3lfRy1xdzl3RTlqTjdQSTU3Z002UGl3S19wXzV2XzZYMU9uV3NrYXVFMzNB?oc=5",
+   "source": "TIKR.com",
+   "published": "2026-10-16",
+   "channel": "news",
+   "value_usd_b": 2.0,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "Nvidia"
+   ],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-10-20",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "Nscale's SEC filing confirms a $44.6 billion Anthropic compute deal",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPOGhrVHVMN0hNaUltOWxqOTcyTjEzcXpvS1ozRElMaHotVG1KSEZGNWc3bFhsLU9SbkZtY1VxZm5BckJWRklHOWJKQ0pEQ1diMjltdVFoT0IwcVZmbmN2a0ZkWmhXVEpiUVNGOTFNZGxDQ3UzQnE0eWwxQlg2TmVwRkx6NEljaEppNW9RcXhza0VhMW5CYXUw?oc=5",
+   "source": "Startup Fortune",
+   "published": "2026-10-19",
+   "channel": "news",
+   "value_usd_b": 44.6,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "Nscale",
+    "Anthropic"
+   ],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-10-20",
+   "status": "new",
+   "matched_contract": "Nscale - Anthropic (Monarch campus, West Virginia)"
   }
  ],
- "scanned_on": "2026-10-19",
+ "scanned_on": "2026-10-20",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
