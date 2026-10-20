@@ -1344,9 +1344,26 @@
    "first_seen": "2026-10-20",
    "status": "new",
    "matched_contract": "Nscale - Anthropic (Monarch campus, West Virginia)"
+  },
+  {
+   "title": "A lease for an AI data center in Norway is worth about $4.7 billion over 16 years.",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMmlUVVg0S3hlTmVYT04yOHFTWGhxZk1TYnpHMkk2OUQtTmp2UzAxdE9ldFRsSXVhSGZsUU1Ldm1WSjJTbVA4XzB2WnN6UmNPZGpmM2NURnZuZ0RBVXA2Z3RDWFFFazctX2NhZlRmM2ZyaTJVOXVQSGg1ZHRRalZEaENwMlJHZjU3NHEwaV9OalktMkZUQU5PV2tfUGlkNmU2bHpvWHdpTEVDajNnLVczUF8wYw?oc=5",
+   "source": "Stock Titan",
+   "published": "2026-10-19",
+   "channel": "news",
+   "value_usd_b": 4.7,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-10-21",
+   "status": "new",
+   "matched_contract": null
   }
  ],
- "scanned_on": "2026-10-20",
+ "scanned_on": "2026-10-21",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
