@@ -1361,9 +1361,28 @@
    "first_seen": "2026-10-21",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "SharonAI: The $8.8 Billion Contract Book Mostly Pays For Its Own GPUs (NASDAQ:SHAZ)",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNVDJydm1vZHRLODMzdkxuQVFrQzgyQU9SUWJ6ZV8zU2R3NkoxazRFclRCUXBfSzRtQnFDZ3d1aXF6dVgyM3NmUnJkVnJvTmhkd1V5dlRRYkhiX3RQWXBzWktzM1Y2R1A4U2ZqVWVHeTJPT1JLWUU1eXZITXpEY1ZwOFBJMno2WExKMVE1N05JUy0tYnlRRXVYSFRGMklwQnpkLVRhZHA3R2lpX0Jv?oc=5",
+   "source": "Seeking Alpha",
+   "published": "2026-10-21",
+   "channel": "news",
+   "value_usd_b": 8.8,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "SharonAI"
+   ],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-10-22",
+   "status": "new",
+   "matched_contract": null
   }
  ],
- "scanned_on": "2026-10-21",
+ "scanned_on": "2026-10-22",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
