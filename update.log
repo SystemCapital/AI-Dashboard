@@ -3729,3 +3729,96 @@
 2026-10-22 08:56:16  == infographic
 2026-10-22 08:56:16     infographic.html written: capex $44.8B, ROIC rent 21.3% / lab 39.6% / open 48.2% / AWS 54.8% at default dials
 2026-10-22 08:56:16  done. all steps clean
+2026-10-23 08:53:15  run: --scheduled
+2026-10-23 08:53:15  == openrouter
+2026-10-23 08:54:20     29 task types, 250 model rows, 56 models priced, 56 with stats, week of 2026-10-21 00:00:00
+2026-10-23 08:54:20  == orshare
+2026-10-23 08:54:21     openrouter share: 53 weeks from the Top Models chart (2025-10-20 to 2026-10-19); read of 656 models: closed 33.6% of all tokens, 40.1% of output tokens; week of 2026-10-12: named closed 7.6%, named open 51.3%, unsplit 'Others' 41.1%
+2026-10-23 08:54:21  == labprices
+2026-10-23 08:54:21     14 lab prices checked, 0 moved and applied
+2026-10-23 08:54:21  == inferencex
+2026-10-23 08:54:21     InferenceX also publishes: DeepSeek-V4.1-Flash, Llama-3.3-70B-Instruct-FP8, Muse-Spark-Open, Qwen3.8-27B, Qwen3.8-27B-Eager (not mapped in data/models.json)
+2026-10-23 08:54:22     DeepSeek-R1-0528        1310 rows ->  8 curves (newest 2026-10-20)
+2026-10-23 08:54:22     DeepSeek-V4-Pro          915 rows -> 12 curves (newest 2026-10-21)
+2026-10-23 08:54:23     GLM-5                    512 rows ->  8 curves (newest 2026-09-14)
+2026-10-23 08:54:23     GLM-5.2                  118 rows ->  4 curves (newest 2026-10-22)
+2026-10-23 08:54:23     Kimi-K2.5                372 rows ->  8 curves (newest 2026-08-07)
+2026-10-23 08:54:24     Kimi-K3                  112 rows ->  4 curves (newest 2026-10-21)
+2026-10-23 08:54:24     MiniMax-M2.5             704 rows ->  8 curves (newest 2026-06-13)
+2026-10-23 08:54:25     MiniMax-M3              1252 rows -> 12 curves (newest 2026-10-14)
+2026-10-23 08:54:25     Qwen-3.5-397B-A17B      1027 rows -> 12 curves (newest 2026-10-22)
+2026-10-23 08:54:25     Qwen3.8-Flash-Next        35 rows ->  3 curves (newest 2026-10-21)
+2026-10-23 08:54:26     gpt-oss-120b             429 rows ->  4 curves (newest 2026-05-31)
+2026-10-23 08:54:26  inferencex: 11 models refreshed, 0 failed, 83 curves -> throughput.json
+2026-10-23 08:54:26  == rentals
+2026-10-23 08:54:26     CoreWeave              GB200  on-demand      $10.50/GPU-hr
+2026-10-23 08:54:26     CoreWeave              GB300  on-demand      not published (the vendor shows 'Contact sales' for this row (no published )
+2026-10-23 08:54:26     CoreWeave              B200   on-demand      $8.60/GPU-hr
+2026-10-23 08:54:26     CoreWeave              H100   on-demand      $6.16/GPU-hr
+2026-10-23 08:54:26     CoreWeave              B300   spot           $4.48/GPU-hr
+2026-10-23 08:54:26     CoreWeave              B200   spot           $4.26/GPU-hr
+2026-10-23 08:54:26     AWS                    GB200  capacity-block $10.58/GPU-hr
+2026-10-23 08:54:26     AWS                    B200   capacity-block $14.21/GPU-hr
+2026-10-23 08:54:26     AWS                    B300   capacity-block $16.15/GPU-hr
+2026-10-23 08:54:33     Microsoft Azure        GB200  on-demand      $27.04/GPU-hr
+2026-10-23 08:54:33     Microsoft Azure        H200   on-demand      $10.60/GPU-hr
+2026-10-23 08:54:34     Oracle OCI             GB300  on-demand      $18.00/GPU-hr
+2026-10-23 08:54:34     Oracle OCI             GB200  on-demand      $16.00/GPU-hr
+2026-10-23 08:54:35     Oracle OCI             B300   on-demand      $15.00/GPU-hr
+2026-10-23 08:54:36     Oracle OCI             B200   on-demand      $14.00/GPU-hr
+2026-10-23 08:54:36     Nebius                 B300   on-demand      FAILED (parsed $0.99/GPU-hr, more than 3x away from the recorded $9.50; kept the old val) - kept 9.5 from 2026-10-20
+2026-10-23 08:54:36     Nebius                 B200   on-demand      FAILED (parsed $0.99/GPU-hr, more than 3x away from the recorded $8.50; kept the old val) - kept 8.5 from 2026-10-20
+2026-10-23 08:54:37     Lambda                 B200   on-demand      $6.69/GPU-hr
+2026-10-23 08:54:37     Lambda                 B200   reserved       $8.87/GPU-hr
+2026-10-23 08:54:37     Verda (ex-DataCrunch)  GB300  on-demand      $12.17/GPU-hr
+2026-10-23 08:54:37     Verda (ex-DataCrunch)  B300   on-demand      $10.58/GPU-hr
+2026-10-23 08:54:37     Verda (ex-DataCrunch)  B200   on-demand      $8.27/GPU-hr
+2026-10-23 08:54:37     Verda (ex-DataCrunch)  GB300  spot           $6.08/GPU-hr
+2026-10-23 08:54:37     Verda (ex-DataCrunch)  B300   spot           $5.29/GPU-hr
+2026-10-23 08:54:37     Verda (ex-DataCrunch)  B200   spot           $4.14/GPU-hr
+2026-10-23 08:54:37     Together AI            B200   on-demand      $8.19/GPU-hr
+2026-10-23 08:54:37     Together AI            B300   on-demand      $9.99/GPU-hr
+2026-10-23 08:54:38     Hyperbolic             B200   on-demand      $5.99/GPU-hr
+2026-10-23 08:54:38     Vultr                  B200   on-demand      $8.50/GPU-hr
+2026-10-23 08:54:38     AWS                    B300   spot           $7.37/GPU-hr
+2026-10-23 08:54:38     AWS                    B200   spot           $10.35/GPU-hr
+2026-10-23 08:54:46     Google Cloud           B200   spot           $4.95/GPU-hr
+2026-10-23 08:54:46     Microsoft Azure        GB200  spot           $27.04/GPU-hr
+2026-10-23 08:54:47     Silicon Data           B200   index          FAILED (payload for b200 carried no dated values) - kept 6.14 from 2026-10-20
+2026-10-23 08:54:48     Silicon Data           H100   index          FAILED (payload for h100 carried no dated values) - kept 2.85 from 2026-10-21
+2026-10-23 08:54:48     Silicon Data           H200   index          FAILED (payload for h200 carried no dated values) - kept 3.53 from 2026-10-21
+2026-10-23 08:54:48     Ornn                   B200   index          $9.32/GPU-hr (index as of 2026-10-22)
+2026-10-23 08:54:49     Ornn                   H100   index          $3.15/GPU-hr (index as of 2026-10-22)
+2026-10-23 08:54:49     Ornn                   H200   index          $6.02/GPU-hr (index as of 2026-10-22)
+2026-10-23 08:54:49     GetDeploying           B300   index          $8.99/GPU-hr (index as of 2026-10-19)
+2026-10-23 08:54:49     GetDeploying           B300   index          $5.72/GPU-hr (index as of 2026-10-19)
+2026-10-23 08:54:50     GetDeploying           B200   index          $7.68/GPU-hr (index as of 2026-10-19)
+2026-10-23 08:56:24     price news: 100 headlines read, 20 new about tracked providers (54 kept, last 60 days)
+2026-10-23 08:56:24  rentals: 37 refreshed, 5 failed (old values kept), 3 manual rows; 0 price changes, 0 new pricing notices
+2026-10-23 08:56:24  == history
+2026-10-23 08:56:24     Silicon Data B200 (SDB200RT)          FAILED (payload for b200 carried no dated values) - kept 47 values to 2026-10-19
+2026-10-23 08:56:24     Silicon Data H200                     FAILED (payload for h200 carried no dated values) - kept 48 values to 2026-10-20
+2026-10-23 08:56:24     Silicon Data H100 neo-cloud (SDH100RT) FAILED (payload for h100 carried no dated values) - kept 48 values to 2026-10-20
+2026-10-23 08:56:25     Silicon Data H100 hyperscaler         FAILED (payload for h100 carried no dated values) - kept 48 values to 2026-10-20
+2026-10-23 08:56:25     Ornn         Ornn B200                2026-10-22 = $9.32  (1 new daily values)
+2026-10-23 08:56:25     Ornn         Ornn H200                2026-10-22 = $6.02  (1 new daily values)
+2026-10-23 08:56:25     Ornn         Ornn H100 SXM            2026-10-22 = $3.15  (1 new daily values)
+2026-10-23 08:56:25     SD tokens    LLM Token Expenditure Index (SDLLMTK) FAILED (no token-index payload on https://portal.silicondata.com/token-indexes-chart?sta) - kept 48 values to 2026-10-19
+2026-10-23 08:56:26     SD tokens    Open LLM Token Expenditure Index FAILED (no token-index payload on https://portal.silicondata.com/token-indexes-chart?sta) - kept 48 values to 2026-10-19
+2026-10-23 08:56:26     SD tokens    Proprietary LLM Token Expenditure Index FAILED (no token-index payload on https://portal.silicondata.com/token-indexes-chart?sta) - kept 46 values to 2026-10-17
+2026-10-23 08:56:26     GetDeploying GetDeploying B300 on-demand 2026-10-19 = $8.99  (0 new daily values)
+2026-10-23 08:56:26     GetDeploying GetDeploying B300 spot   2026-10-19 = $5.72  (0 new daily values)
+2026-10-23 08:56:26     GetDeploying GetDeploying B200 on-demand 2026-10-19 = $7.68  (1 new daily values)
+2026-10-23 08:56:26     GetDeploying GetDeploying B200 spot   2026-10-19 = $4.39  (1 new daily values)
+2026-10-23 08:56:27     GetDeploying GetDeploying GB200 on-demand 2026-10-19 = $16.00  (0 new daily values)
+2026-10-23 08:56:27  history: 8 index series refreshed (5 new values), 7 failed; 30 provider rate readings recorded
+2026-10-23 08:56:27  == deals
+2026-10-23 08:56:28     deals: EDGAR pass skipped (set assumptions.json -> deals.sec_user_agent to your name and email, as the SEC requires)
+2026-10-23 08:56:28  deals: 62 items scanned, 0 new candidates queued (74 awaiting review)
+2026-10-23 08:56:28  == build
+2026-10-23 08:56:28  roic history: roic_history.csv now holds 31 daily rows (2026-09-08 to 2026-10-23)
+2026-10-23 08:56:29  roic history restated on today's assumptions: 31 rows (21 re-run from snapshots) -> roic_history_restated.csv
+2026-10-23 08:56:29  build: dashboard.html  rent $4.58/GPU-hr (ROIC 21.3%, y1 51.0%)  serve/anthropic $6.78 (ROIC 40.6%)  serve/openai $6.26 (ROIC 36.1%)  serve/open-only $7.65 (ROIC 48.2%)  serve/open-peak $10.57 (ROIC 73.6%)  serve/aws $8.49 (ROIC 55.6%)  frontier 27% of tokens; 97% of open traffic unbenchmarked
+2026-10-23 08:56:29  == infographic
+2026-10-23 08:56:29     infographic.html written: capex $44.8B, ROIC rent 21.3% / lab 40.6% / open 48.2% / AWS 55.6% at default dials
+2026-10-23 08:56:29  done. all steps clean
