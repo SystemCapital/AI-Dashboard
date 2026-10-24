@@ -1414,9 +1414,45 @@
    "first_seen": "2026-10-24",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "BlockchAIn Digital Infrastructure Unveils $1B+ Nebius Data Center Lease Strategy",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOb1FsV2ZyeVk5Z0xPZVp4dzVJQWNmV0lGakR0MlNSWUdibnFsNkNoU1Q3bWZLb2t3bURrQWJEb0tIQ1FhRmxvRHhoRVdONURYWmdiYVhueW03cV9YRGZycC1hTnlZUUM0N2VtZTdXUlhoZERRemRXcktlU0NsYzhFWFl4Q21IZ3R5aG1uTk1nQ01jNUYzbzJKeGxlczVMOVdtajVLRHNuSnh4R1o1?oc=5",
+   "source": "Yahoo Finance",
+   "published": "2026-10-24",
+   "channel": "news",
+   "value_usd_b": 1.0,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "Nebius"
+   ],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-10-25",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "Era Media Sejahtera signs MoUs for 2 GW solar, 1.6 GW AI data center projects",
+   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQT21xX1l5dG1yTTQtdlhzUzFIZ1JEV1h1OUFhSHYyVDNfQURUTVlRVW1iZnNVd2oxQ1VoekVTWHJNUktoTUttYm8tbVJSYnZyNDVnNHU5aXRWVV9rb1psOGloam1Bd3htUkptdF85dzlUd3BxSXRVUHIxWFM3Vk9ULXpoOGF2RllSUUVXNmJmdVVBWlByQlNiSTRsc282eG5JSF9rX0dwUWdwUnVwV20wYlI1d2M1RmZKVjNaY3BRTlNzM3paeDdJeXh3Q3Y4LWZs?oc=5",
+   "source": "Indonesia Business Post",
+   "published": "2026-10-24",
+   "channel": "news",
+   "value_usd_b": null,
+   "term_years": null,
+   "gpus": null,
+   "mw": 2000.0,
+   "chip": null,
+   "parties": [],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-10-25",
+   "status": "new",
+   "matched_contract": null
   }
  ],
- "scanned_on": "2026-10-24",
+ "scanned_on": "2026-10-25",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
