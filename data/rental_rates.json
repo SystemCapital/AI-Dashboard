@@ -685,8 +685,8 @@
    "tier": "spot",
    "instance": "p6-b300.48xlarge EC2 Spot, us-east-1 (Linux)",
    "gpus": 8,
-   "price_hr": 68.248,
-   "per_gpu_hr": 8.531,
+   "price_hr": 68.2849,
+   "per_gpu_hr": 8.5356,
    "url": "https://aws.amazon.com/ec2/spot/pricing/",
    "read_on": "2026-10-26",
    "note": "AWS's published EC2 Spot price (public feed behind the Spot pricing page); interruptible capacity. Hyperscaler spot row in the near-term median.",
@@ -3434,7 +3434,7 @@
    "read_on": "2026-09-09"
   }
  ],
- "refreshed_at": "2026-10-26T08:55:52",
+ "refreshed_at": "2026-10-26T09:38:38",
  "price_actions": [
   {
    "date": "2026-01-04",
