@@ -1452,7 +1452,7 @@
    "matched_contract": null
   }
  ],
- "scanned_on": "2026-10-25",
+ "scanned_on": "2026-10-26",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
