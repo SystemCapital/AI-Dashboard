@@ -608,7 +608,9 @@ def resolve_tps(inputs, dials):
             ref = M[largest]
             o, i, clamped, c = read(ref, chip, inter)
             d = dials["frontier_derate"]
+            od, _, _, _ = read(ref, chip, fixed)            # the same curve at the design speed, for the measured-speed realisation
             out[mid] = {"tps": o * d, "tps_in": i * d, "io": (i / o if o else None), "inter": inter, "inter_basis": ib, "hw": chip, "kind": "proxy",
+                        "tps_design": (od * d if od else None),
                         "est": True, "clamped": clamped, "ref": largest, "url": c["url"], "n": c["n"], "date": c["date"],
                         "basis": "proxy: %s curve on %s x %.2f derate" % (ref["name"], chip, d)}
         else:
@@ -795,8 +797,20 @@ def compute(inputs, dials):
         f_frontier, f_frontier_basis = f_ref, "reference model's factor"
     elif fr == "median":
         f_frontier, f_frontier_basis = f_open_median, "open-weight token-weighted median"
+    elif fr == "speed":
+        f_frontier, f_frontier_basis = None, "measured delivery speed"    # per model; the summary is the basket's token-weighted mean
     else:
         f_frontier, f_frontier_basis = float(fr), "manual"
+
+    def speed_factor(row):
+        """'speed': the reference curve at the design speed (dials['interactivity'], tok/s per user) x this model's measured
+        OpenRouter delivery speed / that design speed - hosts run the benchmark's batch and deliver tokens at the speed
+        OpenRouter measures - and never more than the curve at the delivered speed, so the factor is at most 1. It reads no
+        price, so an open-weight price move cannot shift it."""
+        T, s = tps[row["id"]], (M[row["id"]].get("measured") or {}).get("tps_user")
+        if not s or not T.get("tps") or not T.get("tps_design"):
+            return f_ref, "reference model's factor (no measured delivery speed)"
+        return min(1.0, (s / dials["interactivity"]) * T["tps_design"] / T["tps"]), "measured delivery speed"
 
     def factor(row):
         if f_mode == "benchmark":
@@ -804,7 +818,7 @@ def compute(inputs, dials):
         if f_mode != "market":
             return f_mode, "manual"
         if row["tier"] == "frontier":
-            return f_frontier, f_frontier_basis
+            return speed_factor(row) if fr == "speed" else (f_frontier, f_frontier_basis)
         return open_f[row["id"]], "market-implied"
 
     def power_cost(util):
@@ -964,6 +978,8 @@ def compute(inputs, dials):
         inter_w = sum(r["share"] * r["inter"] for r in rows if r.get("inter")) / (sum(r["share"] for r in rows if r.get("inter")) or 1.0)
         io_w = sum(r["share"] * r["io"] for r in rows) / (sum(r["share"] for r in rows) or 1.0)
         f_w = (sum(r["gpus"] * r["f"] for r in rows) / serving_gpus) if serving_gpus else 0.0
+        fsh = sum(r["share"] for r in frontier_rows)
+        f_fr = f_frontier if f_frontier is not None else ((sum(r["share"] * r["f"] for r in frontier_rows) / fsh) if fsh else f_ref)
         sv = returns([rev_yr * (1 - dials["token_decline"]) ** t for t in range(life)], util_s)
         fg = sum(r["gpus"] for r in frontier_rows)
         og = sum(r["gpus"] for r in open_rows)
@@ -1010,7 +1026,7 @@ def compute(inputs, dials):
                    "frontier_share_of_gpus": (fg / gpus if gpus else 0),
                    "frontier_rev_per_gpu_hr": (sum(r["revenue_hr"] for r in frontier_rows) / fg if fg else 0),
                    "open_rev_per_gpu_hr": (sum(r["revenue_hr"] for r in open_rows) / og if og else 0),
-                   "tps_realisation_basis": f_basis, "f_gpu_weighted": f_w, "f_frontier": (f_frontier if f_mode == "market" else (1.0 if f_mode == "benchmark" else f_mode)),
+                   "tps_realisation_basis": f_basis, "f_gpu_weighted": f_w, "f_frontier": (f_fr if f_mode == "market" else (1.0 if f_mode == "benchmark" else f_mode)),
                    "f_frontier_basis": f_frontier_basis, "f_open_median": f_open_median, "n_implied": len(open_f), "rate_f": rate_f, "implied_rate": dials["implied_rate"],
                    "rate_f_base": rate_f_base, "rate_f_label": rate_f_label, "renter_roic": renter_roic,
                    "rev_bench_per_gpu_hr": (sum(r["rev_bench_per_gpu_hr"] * r["gpus"] for r in rows) / gpus if gpus else 0),

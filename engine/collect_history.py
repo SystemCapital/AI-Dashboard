@@ -1,13 +1,15 @@
 """
 Rate history: the series behind the 'Market history' page (data/rate_history.json).
 
-  Silicon Data indices   portal.silicondata.com serves a public, embeddable chart page per index whose server-rendered
-                         payload carries the last seven daily index values:
-                           https://portal.silicondata.com/gpu-index-chart?standalone=true&gpu=<b200|h200|h100|a100|mi300x>&mainTab=<neo-cloud|hyperscaler>
-                         Every run reads the configured series and merges the new dates in, so a run at least weekly
-                         keeps an unbroken daily series (the portal always answers with h100 for a GPU it does not index,
-                         so the GPU echoed in the payload is checked). Older points that Silicon Data stated in its own
-                         monthly index posts are kept under 'stated' with the post's URL; they are drawn as hollow markers.
+  Silicon Data indices   Silicon Data's public index overview page, https://www.silicondata.com/products/silicon-index,
+                         server-renders one card per index (key 'b200-neo', 'h100-hs', 'expenditure', ...) carrying its
+                         last 30 daily values. Every run reads it once and merges the configured series' new dates in, so a
+                         run at least monthly keeps an unbroken daily series. Until 2026-10-19 the series came from the
+                         embeddable chart pages (portal.silicondata.com/gpu-index-chart?standalone=true&gpu=..&mainTab=..,
+                         last seven values); since then those load their data from an API that needs a login and render
+                         empty, so they are only a fallback. The two sources agree on every overlapping day. Older points
+                         that Silicon Data stated in its own monthly index posts are kept under 'stated' with the post's URL;
+                         they are drawn as hollow markers.
   Ornn indices           Ornn's Compute Price Index (OCPI, data.ornn.com; Bloomberg-listed) has a public, keyless API:
                            https://api.ornnai.com/api/gpu/<B200|H200|H100 SXM|A100 SXM4|RTX 5090>/index-history   trailing three months, daily
                            https://api.ornnai.com/api/daily-index/all                                              latest settled value per GPU
@@ -15,9 +17,9 @@ Rate history: the series behind the 'Market history' page (data/rate_history.jso
                          file keeps the full series beyond the API's window.
   Token indices          Silicon Data's LLM Token Expenditure Index family (broad market = Bloomberg SDLLMTK, open-weight
                          models, proprietary models): USD per million tokens, usage-weighted across routing gateways and
-                         inference networks, input/output blended at the observed mix. Same public chart-page mechanism:
-                           https://portal.silicondata.com/token-indexes-chart?standalone=true&token=<expenditure|open_expenditure|closed_expenditure>
-                         carries the last seven daily values; merged the same way.
+                         inference networks, input/output blended at the observed mix. Read from the same overview page
+                         (cards 'expenditure', 'open_expenditure', 'closed_expenditure'), with the token chart pages
+                         (portal.silicondata.com/token-indexes-chart?standalone=true&token=..) as the fallback; merged the same way.
   GetDeploying           an aggregator's public price dataset (CC-BY-4.0): getdeploying.com/dataset/gpu-prices/<gpu>.json
                          carries every week since the GPU was first listed - for each billing type the median of each
                          provider's median price, and the number of providers. Each run merges the weeks in (B300 and B200
@@ -35,6 +37,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PATH = ROOT / "data" / "rate_history.json"
 PORTAL = "https://portal.silicondata.com/gpu-index-chart?standalone=true&gpu=%s&mainTab=%s"
+SILICON_SITE = "https://www.silicondata.com/products/silicon-index"
+MONTHS = {m: i for i, m in enumerate(("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"), 1)}
 ORNN_HISTORY = "https://api.ornnai.com/api/gpu/%s/index-history"
 ORNN_LATEST = "https://api.ornnai.com/api/daily-index/all"
 GD_SERIES = [("b300_on_demand", "nvidia-b300", "B300", "ON_DEMAND", "B300 on-demand"), ("b300_spot", "nvidia-b300", "B300", "SPOT", "B300 spot"),
@@ -59,11 +63,38 @@ def ornn_series(gpu, fetch=None):
     return values, max(values), url
 
 
-def silicon_series(gpu, tab="neo-cloud", fetch=None):
-    """The last seven daily values of one Silicon Data index from its public chart page.
-    Returns (values {date: rate}, ending_date, url). Raises if the page does not carry the requested GPU."""
+def silicon_cards(fetch=None):
+    """Every index card on Silicon Data's public overview page: {key: {"title", "unit", "as_of", "values" {date: value}}}.
+    The page is Next.js; each card sits in its server-rendered payload as {"key":..,"group":..,..,"asOf":"As of Oct 25,
+    2026","points":[{"date":"2026-09-26","price":5.87},..]} (30 daily points)."""
     if fetch is None:
         from engine.collect_rentals import fetch
+    body = fetch(SILICON_SITE).replace('\\"', '"')
+    cards = {}
+    for m in re.finditer(r'\{"key":"([a-z0-9_-]+)","group":"([a-z]+)"(.*?)"points":\[(.*?)\]', body):
+        values = {d: float(v) for d, v in re.findall(r'"date":"(\d{4}-\d{2}-\d{2})","price":([0-9.]+)', m.group(4))}
+        if not values:
+            continue
+        a = re.search(r'"asOf":"As of ([A-Z][a-z]{2})[a-z]* (\d{1,2}), (\d{4})"', m.group(3))
+        as_of = "%s-%02d-%02d" % (a.group(3), MONTHS[a.group(1)], int(a.group(2))) if a and a.group(1) in MONTHS else max(values)
+        t = re.search(r'"title":"([^"]*)"', m.group(3))
+        u = re.search(r'"unit":"([^"]*)"', m.group(3))
+        cards.setdefault(m.group(1), {"title": t.group(1) if t else m.group(1), "unit": u.group(1) if u else "", "as_of": as_of, "values": values})
+    return cards
+
+
+def silicon_series(gpu, tab="neo-cloud", fetch=None):
+    """The latest daily values of one Silicon Data GPU index: the overview page's card ('<gpu>-neo' or '<gpu>-hs',
+    30 values), else the old embeddable chart page (seven values). Returns (values {date: rate}, ending_date, url).
+    Raises if neither carries the requested GPU."""
+    if fetch is None:
+        from engine.collect_rentals import fetch
+    try:
+        card = silicon_cards(fetch).get("%s-%s" % (gpu, "hs" if tab == "hyperscaler" else "neo"))
+    except Exception:
+        card = None
+    if card:
+        return card["values"], card["as_of"], SILICON_SITE
     url = PORTAL % (gpu, tab)
     body = fetch(url).replace('\\"', '"')
     m = re.search(r'"gpu":"([a-z0-9]+)","indexes":\{([^}]*)\}', body)
@@ -89,6 +120,12 @@ def silicon_token_series(token, fetch=None):
     (an unknown token name silently falls back to the broad index)."""
     if fetch is None:
         from engine.collect_rentals import fetch
+    try:
+        card = silicon_cards(fetch).get(token)
+    except Exception:
+        card = None
+    if card:
+        return card["values"], card["as_of"], SILICON_SITE
     url = TOKEN_PORTAL % token
     body = fetch(url).replace('\\"', '"')
     m = re.search(r'"token":"([a-z_]+)","starting_date":"[^"]*","ending_date":"(\d{4}-\d{2}-\d{2})","indexes":\{([^}]*)\},"index_name":"([^"]*)"', body)

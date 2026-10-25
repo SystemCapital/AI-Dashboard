@@ -207,7 +207,13 @@ rented GPUs, and it means every benchmarked open model earns the year-1 rate plu
 by construction; the model's job is then to say what the frontier tokens earn on top. The rate the factor
 is built on can be switched to the spot median or the rental scenario's long-term basis. The frontier basket, which no lab benchmarks, borrows the largest measured open
 model's curve at a stated derate and that model's realisation factor (the one proxy in the model, labelled
-wherever it appears). `data/anchors.json` holds the public evidence to judge the factors against.
+wherever it appears). Because that factor is solved from an open-weight model's price, an open-weight price cut
+raises it: on 25-26 October 2026 DeepSeek-V4-Pro's price fell about half and the factor went from 0.57 to its cap of 1,
+lifting the frontier scenarios with no change in their own prices. The frontier dial therefore also offers
+**measured delivery speed**, which reads no price: each frontier model gets its own factor, the borrowed curve at the
+100 tok/s design speed scaled by that model's OpenRouter delivery speed / 100 (hosts run the benchmark's batch and
+deliver tokens at the measured speed), never above the curve at the delivered speed. `data/anchors.json` holds the
+public evidence to judge the factors against.
 
 **Returns.** EBITDA = revenue − power − other opex. Depreciation is straight-line in two pools, each with
 its own dial: compute (GPUs + racks, the mastersheet's rack cost × racks, $28.6B since the 24 September mastersheet; $26.4B before) over a compute life to a
@@ -374,9 +380,9 @@ since.) If you set `deals.sec_user_agent` (your name and email, for SEC EDGAR), 
 | Realisation anchors (DeepSeek fleet disclosure, Z.ai / MiniMax margins) | `data/anchors.json` (URL per row) | curated |
 | Parameter counts (shown; used only by the fit under "gaps estimated") | Hugging Face model cards (URL per model) | curated |
 | Token volumes, calls, cacheable share and success per task family and model family | Exgentic agent-llm-traces-v2 on Hugging Face, aggregated with the DuckDB query in `engine/collect_traces.py` | curated, reproducible |
-| Silicon Data rental indices (B200, H200, H100 neo-cloud and hyperscaler), daily history | portal.silicondata.com public chart page per index (last seven daily values per read); older points from Silicon Data's monthly index posts | daily, accumulating |
+| Silicon Data rental indices (B200, H200, H100 neo-cloud and hyperscaler), daily history | Silicon Data's public index overview page, www.silicondata.com/products/silicon-index (one card per index, last 30 daily values per read; until 19 Oct 2026 the portal's chart pages, which now load their data behind a login); older points from Silicon Data's monthly index posts | daily, accumulating |
 | Ornn Compute Price Index (B200, H200, H100 SXM), daily history | api.ornnai.com public keyless API (trailing three months per read; volume-weighted transacted rates, settled daily 20:00 UTC, Bloomberg-listed) | daily, accumulating |
-| Silicon Data LLM Token Expenditure indices (broad SDLLMTK, open-weight, proprietary), daily history | portal.silicondata.com public chart page per series (last seven daily values per read); usage-weighted $ per M tokens, input/output blended at the observed mix | daily, accumulating |
+| Silicon Data LLM Token Expenditure indices (broad SDLLMTK, open-weight, proprietary), daily history | the same overview page's token cards (last 30 daily values per read; until 19 Oct 2026 the portal's chart pages); usage-weighted $ per M tokens, input/output blended at the observed mix | daily, accumulating |
 | Provider rental rate history (every quote above) | each run's readings by read date, backfilled from 3 Sep 2026 from the project's own records; documented price changes at their effective dates | daily, accumulating |
 | GetDeploying weekly medians across providers (B300, B200 on-demand and spot; GB200 on-demand) | getdeploying.com public price dataset (CC-BY-4.0) | weekly, from Nov 2025 |
 
@@ -386,7 +392,8 @@ since.) If you set `deals.sec_user_agent` (your name and email, for SEC EDGAR), 
 JavaScript and prints the worst relative gap across all six scenarios (it should read `0.0e+0` or
 float noise). `python engine/tests/test_rental_history.py` checks that today's year-1 rate from `data/rental_rates.json` equals the one rebuilt from the rate history, the rate-in-force rule, and that every list-price change is logged. `python engine/tests/test_deals.py` exercises the deal scout offline against feed samples
 captured on 2026-09-09. `python engine/tests/test_labprices.py` reads OpenAI's Standard tier from a 2026-10-14 sample of its
-pricing page and checks that a moved list price is applied, a 10x jump is kept as a misread and an unreadable page keeps every price. If the two ever disagree the page says so in red.
+pricing page and checks that a moved list price is applied, a 10x jump is kept as a misread and an unreadable page keeps every price. `python engine/tests/test_sources.py` reads Silicon Data's index cards and Nebius's
+price table from 2026-10-26 samples (Nebius's on-demand rate past the 'from $0.99' preemptible floor). If the two ever disagree the page says so in red.
 
 ## What changed on 13 Oct 2026: median rental rate, token lines, OpenRouter share, one folder
 

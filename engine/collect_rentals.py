@@ -16,7 +16,8 @@ price change visible.
                   announced one side by side ('GPU-hour (Effective October 1, 2026)'): before that date the row takes
                   the first column and records the second as announced; from that date it takes the second column.
                   'announce' reads a dated announcement elsewhere on the page ('Effective October 7, 2026, hourly rates
-                  per accelerator ... P6-B300 at $16.146') the same way. Brittle by nature, so a parse that fails or
+                  per accelerator ... P6-B300 at $16.146') the same way. 'skip_floor' ignores figures written 'from $X'
+                  (a floor, not a rate: Nebius's preemptible column since October 2026). Brittle by nature, so a parse that fails or
                   moves by more than 3x keeps the old value and says why.
   kind 'silicon'  a Silicon Data index: the public chart page behind it (engine/collect_history.silicon_series)
   kind 'ornn'     an Ornn Compute Price Index: the public keyless API (engine/collect_history.ornn_series)
@@ -158,13 +159,14 @@ def getdeploying_series(gpu, billing="ON_DEMAND", months=None, fetch=None):
     return vals, cnt, url
 
 
-def html_rate(url, label, after=None, stop=None, nth=1, span=600):
+def html_rate(url, label, after=None, stop=None, nth=1, span=600, skip_floor=False):
     """First (or nth) dollar figure after `label` on the page. `after`: a sub-label that must follow the label
     (e.g. 'Spot Price:'), the figure is taken after it. `stop`: the window ends at the next occurrence of this
     string (e.g. the next row's 'GPU Count'), so a row with no price cannot borrow the next row's. A page often
     carries the label several times (structured-data blocks, menus, a table the browser fills later), so every
     occurrence is tried in order and the first whose window yields the figure wins. A window that reads 'Contact
-    sales' / 'Contact us' before any figure raises NotPublished."""
+    sales' / 'Contact us' before any figure raises NotPublished. `skip_floor`: figures written 'from $X' are floors,
+    not rates, and are not counted."""
     text = page_text(url)
     i, tried, last, contact = text.find(label), 0, None, False
     if i < 0:
@@ -184,7 +186,7 @@ def html_rate(url, label, after=None, stop=None, nth=1, span=600):
             c = re.search(r"[Cc]ontact (?:sales|us)", window)
             contact_first = bool(c and (not m or c.start() < m.start()))
             contact = contact or contact_first
-            figs = re.findall(r"\$\s?([0-9]{1,3}(?:,[0-9]{3})*(?:\.[0-9]+)?)", window)
+            figs = re.findall((r"(?<![Ff]rom )" if skip_floor else "") + r"\$\s?([0-9]{1,3}(?:,[0-9]{3})*(?:\.[0-9]+)?)", window)
             if len(figs) >= nth and not contact_first:
                 return float(figs[nth - 1].replace(",", "")), url
             last = "no dollar figure #%d after %r%s" % (nth, label, (" / " + after) if after else "")
@@ -322,13 +324,13 @@ def refresh(log=print, only=None, today=None):
                 if spec.get("effective_header"):
                     nth, eff, hdr = effective_column(q["url"], spec, today)
                     if eff and today < eff:
-                        nv, _ = html_rate(q["url"], spec["label"], spec.get("after"), spec.get("stop"), spec.get("effective_nth", 2), spec.get("span", 600))
+                        nv, _ = html_rate(q["url"], spec["label"], spec.get("after"), spec.get("stop"), spec.get("effective_nth", 2), spec.get("span", 600), spec.get("skip_floor", False))
                         q["announced"] = {"effective": eff.isoformat(), "value": round(nv / spec["gpus"], 4), "seen_on": (q.get("announced") or {}).get("seen_on", ts),
                                           "text": hdr, "url": q["url"]}
                     elif eff:
                         q.pop("announced", None)
                         note = "price from the column headed %r (in force since %s)" % (hdr, eff.isoformat())
-                price_hr, url = html_rate(q["url"], spec["label"], spec.get("after"), spec.get("stop"), nth, spec.get("span", 600))
+                price_hr, url = html_rate(q["url"], spec["label"], spec.get("after"), spec.get("stop"), nth, spec.get("span", 600), spec.get("skip_floor", False))
                 per_gpu = price_hr / spec["gpus"]
                 if spec.get("announce"):
                     a = announcement(q["url"], spec)
