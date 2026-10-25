@@ -1450,6 +1450,25 @@
    "first_seen": "2026-10-25",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "SpaceX Closes $40B GPU Deal as Musk Warns AI Firms Could Fail",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPdmpJM3dNajlTcVc5aG9PRWR2Tnl5cDZEekVmREFGYlJBNlhXNDV1cmdLVF90ZDA2WkpkQ0RiNUNjVjZfbG9wMldMTTV3VlRTcGFncmF2c1AtenkwcTJyaUNTMUxmU1gzbTdtOUtpS2JhLUNvcXBLSDRWM1ZxQ1Y2a3E4bXVmZWlCYkVHRFJCeUFQMFl5?oc=5",
+   "source": "TipRanks",
+   "published": "2026-10-25",
+   "channel": "news",
+   "value_usd_b": 40.0,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "SpaceX"
+   ],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-10-26",
+   "status": "new",
+   "matched_contract": "SpaceX/xAI - Anthropic (Colossus 1, Memphis)"
   }
  ],
  "scanned_on": "2026-10-26",

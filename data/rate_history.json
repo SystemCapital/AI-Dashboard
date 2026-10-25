@@ -18,7 +18,7 @@
   "engine/collect_history.py maintains this file; it is never edited by the model."
  ],
  "silicon_index": {
-  "source": "https://portal.silicondata.com/gpu-index-chart?standalone=true&gpu={gpu}&mainTab={tab}",
+  "source": "https://www.silicondata.com/products/silicon-index (index cards, 30 daily values each; until 2026-10-19 https://portal.silicondata.com/gpu-index-chart?standalone=true&gpu={gpu}&mainTab={tab})",
   "landing": "https://www.silicondata.com/products/silicon-index",
   "read_on": "2026-10-26",
   "series": {
@@ -76,11 +76,17 @@
      "2026-10-16": 6.01,
      "2026-10-17": 6.12,
      "2026-10-18": 6.26,
-     "2026-10-19": 6.14
+     "2026-10-19": 6.14,
+     "2026-10-20": 6.14,
+     "2026-10-21": 6.14,
+     "2026-10-22": 6.29,
+     "2026-10-23": 6.45,
+     "2026-10-24": 6.45,
+     "2026-10-25": 6.6
     },
-    "as_of": "2026-10-19",
-    "read_on": "2026-10-20",
-    "url": "https://portal.silicondata.com/gpu-index-chart?standalone=true&gpu=b200&mainTab=neo-cloud",
+    "as_of": "2026-10-25",
+    "read_on": "2026-10-26",
+    "url": "https://www.silicondata.com/products/silicon-index",
     "stated": [
      [
       "2026-01-01",
@@ -124,8 +130,7 @@
      ]
     ],
     "stated_source": "https://www.silicondata.com/blog/b200-rental-price-march-2026-update",
-    "stated_note": "Silicon Data, 'B200 Index Price March 2026 Update' (30 Mar 2026); the index blends neo-cloud and hyperscaler observations",
-    "refresh_error": "2026-10-26: payload for b200 carried no dated values"
+    "stated_note": "Silicon Data, 'B200 Index Price March 2026 Update' (30 Mar 2026); the index blends neo-cloud and hyperscaler observations"
    },
    "h200": {
     "label": "H200",
@@ -182,11 +187,16 @@
      "2026-10-17": 3.51,
      "2026-10-18": 3.51,
      "2026-10-19": 3.45,
-     "2026-10-20": 3.53
+     "2026-10-20": 3.53,
+     "2026-10-21": 3.47,
+     "2026-10-22": 3.51,
+     "2026-10-23": 3.49,
+     "2026-10-24": 3.48,
+     "2026-10-25": 3.47
     },
-    "as_of": "2026-10-20",
-    "read_on": "2026-10-21",
-    "url": "https://portal.silicondata.com/gpu-index-chart?standalone=true&gpu=h200&mainTab=neo-cloud",
+    "as_of": "2026-10-25",
+    "read_on": "2026-10-26",
+    "url": "https://www.silicondata.com/products/silicon-index",
     "stated": [
      [
       "2026-05-04",
@@ -240,8 +250,7 @@
      ]
     ],
     "stated_source": "https://www.silicondata.com/blog/h200-vs-h100-rental-prices-may-july-2026",
-    "stated_note": "Silicon Data, 'H200 vs H100 Rental Prices, May to July 2026' (4 Aug 2026), neo-cloud tier",
-    "refresh_error": "2026-10-26: payload for h200 carried no dated values"
+    "stated_note": "Silicon Data, 'H200 vs H100 Rental Prices, May to July 2026' (4 Aug 2026), neo-cloud tier"
    },
    "h100": {
     "label": "H100 neo-cloud (SDH100RT)",
@@ -298,11 +307,16 @@
      "2026-10-17": 2.82,
      "2026-10-18": 2.83,
      "2026-10-19": 2.84,
-     "2026-10-20": 2.85
+     "2026-10-20": 2.85,
+     "2026-10-21": 2.86,
+     "2026-10-22": 2.88,
+     "2026-10-23": 2.9,
+     "2026-10-24": 2.88,
+     "2026-10-25": 2.89
     },
-    "as_of": "2026-10-20",
-    "read_on": "2026-10-21",
-    "url": "https://portal.silicondata.com/gpu-index-chart?standalone=true&gpu=h100&mainTab=neo-cloud",
+    "as_of": "2026-10-25",
+    "read_on": "2026-10-26",
+    "url": "https://www.silicondata.com/products/silicon-index",
     "stated": [
      [
       "2026-04-01",
@@ -356,8 +370,7 @@
      ]
     ],
     "stated_source": "https://www.silicondata.com/blog/h100-index-may-2026-two-tiers-two-regimes",
-    "stated_note": "Silicon Data, 'H100 Index, May 2026: Same Chip, Two Tiers, Two Regimes' (16 Jun 2026) and the H200 vs H100 post (4 Aug 2026), neo-cloud tier",
-    "refresh_error": "2026-10-26: payload for h100 carried no dated values"
+    "stated_note": "Silicon Data, 'H100 Index, May 2026: Same Chip, Two Tiers, Two Regimes' (16 Jun 2026) and the H200 vs H100 post (4 Aug 2026), neo-cloud tier"
    },
    "h100_hs": {
     "label": "H100 hyperscaler",
@@ -414,11 +427,16 @@
      "2026-10-17": 7.15,
      "2026-10-18": 7.15,
      "2026-10-19": 7.14,
-     "2026-10-20": 7.14
+     "2026-10-20": 7.14,
+     "2026-10-21": 7.17,
+     "2026-10-22": 7.17,
+     "2026-10-23": 7.17,
+     "2026-10-24": 7.17,
+     "2026-10-25": 7.17
     },
-    "as_of": "2026-10-20",
-    "read_on": "2026-10-21",
-    "url": "https://portal.silicondata.com/gpu-index-chart?standalone=true&gpu=h100&mainTab=hyperscaler",
+    "as_of": "2026-10-25",
+    "read_on": "2026-10-26",
+    "url": "https://www.silicondata.com/products/silicon-index",
     "stated": [
      [
       "2026-04-01",
@@ -442,8 +460,7 @@
      ]
     ],
     "stated_source": "https://www.silicondata.com/blog/h100-index-may-2026-two-tiers-two-regimes",
-    "stated_note": "Silicon Data, 'H100 Index, May 2026' (16 Jun 2026), hyperscaler tier",
-    "refresh_error": "2026-10-26: payload for h100 carried no dated values"
+    "stated_note": "Silicon Data, 'H100 Index, May 2026' (16 Jun 2026), hyperscaler tier"
    }
   }
  },
@@ -912,7 +929,7 @@
   }
  },
  "token_index": {
-  "source": "https://portal.silicondata.com/token-indexes-chart?standalone=true&token={token}",
+  "source": "https://www.silicondata.com/products/silicon-index (token cards; until 2026-10-19 https://portal.silicondata.com/token-indexes-chart?standalone=true&token={token})",
   "landing": "https://www.silicondata.com/products/silicon-index/llm-token-expenditure-index",
   "note": "Silicon Data LLM Token Expenditure Index family: the usage-weighted price of one million tokens across a defined LLM universe, blending active provider pricing with real consumption volume observed across multi-provider routing gateways and inference networks, normalised for input/output mix and context window, published daily. Broad market (Bloomberg SDLLMTK), open-weight models (200+ tracked) and proprietary models (120+ tracked). Units: USD per million tokens, input and output blended at the observed mix. Seeded 2026-09-09 from the public chart pages (seven daily values each); each run merges the new dates in.",
   "unit": "USD per million tokens (input + output, blended at observed mix)",
@@ -971,12 +988,16 @@
      "2026-10-16": 0.9588,
      "2026-10-17": 0.9419,
      "2026-10-18": 0.9432,
-     "2026-10-19": 0.9523
+     "2026-10-19": 0.9523,
+     "2026-10-20": 0.9552,
+     "2026-10-21": 0.9447,
+     "2026-10-22": 0.948,
+     "2026-10-23": 0.9348,
+     "2026-10-24": 0.9364
     },
-    "as_of": "2026-10-19",
-    "read_on": "2026-10-21",
-    "url": "https://portal.silicondata.com/token-indexes-chart?standalone=true&token=expenditure",
-    "refresh_error": "2026-10-26: no token-index payload on https://portal.silicondata.com/token-indexes-chart?standalone=true&token=expenditure"
+    "as_of": "2026-10-24",
+    "read_on": "2026-10-26",
+    "url": "https://www.silicondata.com/products/silicon-index"
    },
    "open": {
     "label": "Open LLM Token Expenditure Index",
@@ -1031,12 +1052,16 @@
      "2026-10-16": 0.4925,
      "2026-10-17": 0.4955,
      "2026-10-18": 0.496,
-     "2026-10-19": 0.4952
+     "2026-10-19": 0.4952,
+     "2026-10-20": 0.4961,
+     "2026-10-21": 0.4982,
+     "2026-10-22": 0.4985,
+     "2026-10-23": 0.5008,
+     "2026-10-24": 0.5034
     },
-    "as_of": "2026-10-19",
-    "read_on": "2026-10-21",
-    "url": "https://portal.silicondata.com/token-indexes-chart?standalone=true&token=open_expenditure",
-    "refresh_error": "2026-10-26: no token-index payload on https://portal.silicondata.com/token-indexes-chart?standalone=true&token=open_expenditure"
+    "as_of": "2026-10-24",
+    "read_on": "2026-10-26",
+    "url": "https://www.silicondata.com/products/silicon-index"
    },
    "proprietary": {
     "label": "Proprietary LLM Token Expenditure Index",
@@ -1089,16 +1114,22 @@
      "2026-10-14": 2.3718,
      "2026-10-15": 2.3806,
      "2026-10-16": 2.3539,
-     "2026-10-17": 2.2573
+     "2026-10-17": 2.2573,
+     "2026-10-18": 2.2522,
+     "2026-10-19": 2.2611,
+     "2026-10-20": 2.2933,
+     "2026-10-21": 2.2375,
+     "2026-10-22": 2.235,
+     "2026-10-23": 2.279,
+     "2026-10-24": 2.3769
     },
-    "as_of": "2026-10-17",
-    "read_on": "2026-10-19",
-    "url": "https://portal.silicondata.com/token-indexes-chart?standalone=true&token=closed_expenditure",
-    "refresh_error": "2026-10-26: no token-index payload on https://portal.silicondata.com/token-indexes-chart?standalone=true&token=closed_expenditure"
+    "as_of": "2026-10-24",
+    "read_on": "2026-10-26",
+    "url": "https://www.silicondata.com/products/silicon-index"
    }
   }
  },
- "refreshed_at": "2026-10-26T09:38:40",
+ "refreshed_at": "2026-10-26T10:12:06",
  "quotes": {
   "note": "One series per published rental quote in data/rental_rates.json (vendor, chip, tier), $/GPU-hour: 'values' = what the vendor showed on the day it was read; 'stated' = dated price changes documented by the vendor's own announcement or several reports; 'announced' = published future prices; 'corrections' = readings the collector got wrong (values hold the corrected figure); 'ended' = the vendor stopped publishing the rate. Backfilled on 2026-10-12 from the project's own records: the archived data files of 3, 4 and 8 Sep 2026, the spot readings in this file, every refresh in update.log from 17 Sep and the daily snapshots in data/snapshots/. Every run of update.py appends the day's readings.",
   "series": {
@@ -1745,7 +1776,8 @@
      "2026-10-17": 8.5,
      "2026-10-18": 8.5,
      "2026-10-19": 8.5,
-     "2026-10-20": 8.5
+     "2026-10-20": 8.5,
+     "2026-10-26": 8.5
     },
     "instance": "HGX B200 (per GPU)",
     "url": "https://nebius.com/prices",
@@ -1823,7 +1855,8 @@
      "2026-10-17": 9.5,
      "2026-10-18": 9.5,
      "2026-10-19": 9.5,
-     "2026-10-20": 9.5
+     "2026-10-20": 9.5,
+     "2026-10-26": 9.5
     },
     "instance": "HGX B300 (per GPU)",
     "url": "https://nebius.com/prices",

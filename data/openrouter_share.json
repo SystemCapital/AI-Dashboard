@@ -3029,23 +3029,23 @@
    ]
   },
   "2026-10-19": {
-   "total": 185683982601230,
-   "closed": 16366053214918,
-   "open": 98112127930444,
-   "others": 71205801455868,
+   "total": 186775915706863,
+   "closed": 16475611056954,
+   "open": 98702883855718,
+   "others": 71597420794191,
    "partial": false,
    "read_on": "2026-10-26",
-   "closed_min": 0.08814,
-   "closed_max": 0.47162,
+   "closed_min": 0.08821,
+   "closed_max": 0.47154,
    "models": [
     [
      "DeepSeek: DeepSeek V4.1 Flash 1017",
-     32833331028524,
+     33172338411991,
      "open"
     ],
     [
      "DeepSeek: DeepSeek V4.1 Flash (batch)",
-     17827692595369,
+     17905684180493,
      "open"
     ],
     [
@@ -3055,32 +3055,32 @@
     ],
     [
      "Z.ai: GLM 5.3 Flash",
-     13013059660493,
+     13126146653434,
      "open"
     ],
     [
      "Tencent: Hy4 preview",
-     8916081942243,
+     8935220447251,
      "open"
     ],
     [
-     "Anthropic: Claude Opus 5.5",
-     8183497590973,
+     "OpenAI: GPT-6 Luna (batch)",
+     8252482659805,
      "closed"
     ],
     [
-     "OpenAI: GPT-6 Luna (batch)",
-     8182555623945,
+     "Anthropic: Claude Opus 5.5",
+     8223128397149,
      "closed"
     ],
     [
      "Xiaomi: MiMo-V2.6-Flash",
-     6038722756844,
+     6054956058071,
      "open"
     ],
     [
      "NVIDIA: Nemotron 3 Ultra",
-     5804856925868,
+     5830155083375,
      "open"
     ]
    ]
@@ -4726,6 +4726,6 @@
    }
   }
  },
- "refreshed_at": "2026-10-26T09:36:48",
+ "refreshed_at": "2026-10-26T10:10:17",
  "backfill": "Built on 2026-10-13: weeks from OpenRouter's Top Models chart as read that day (53 weeks, 13 Oct 2025 to 12 Oct 2026); reads from the weekly rankings this project saved (4 Sep archive, top 76 models; daily snapshots from 28 Sep, top 250 models) classified with OpenRouter's catalog of 13 Oct 2026 and the registry, and the full ranking read on 13 Oct."
 }

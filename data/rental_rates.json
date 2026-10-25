@@ -337,8 +337,8 @@
    "price_hr": 9.5,
    "per_gpu_hr": 9.5,
    "url": "https://nebius.com/prices",
-   "read_on": "2026-10-20",
-   "note": "Nebius's table carries an 'On-demand, GPU-hour' column and, from 2026-09-23, a 'GPU-hour (Effective October 1, 2026)' column. The collector takes the dated column once its date has passed (before that it records it as announced). $7.85 until 30 Sep 2026, $9.50 from 1 Oct 2026; readings of 1-12 Oct taken from the old column were corrected on 12 Oct. GB200/GB300 NVL72: contact us.",
+   "read_on": "2026-10-26",
+   "note": "Nebius's table carries an 'On-demand, GPU-hour' column and, from 2026-09-23, a 'GPU-hour (Effective October 1, 2026)' column. The collector takes the dated column once its date has passed (before that it records it as announced). $7.85 until 30 Sep 2026, $9.50 from 1 Oct 2026; readings of 1-12 Oct taken from the old column were corrected on 12 Oct. GB200/GB300 NVL72: contact us. From 2026-10-21 the table puts a 'Preemptible, GPU-hour' column quoting only a floor ('from $0.99') before the on-demand column and the dated column is gone; the row skips 'from' figures (skip_floor).",
    "refresh": {
     "kind": "html",
     "label": "HGX B300",
@@ -346,11 +346,11 @@
     "nth": 1,
     "gpus": 1,
     "effective_header": "GPU-hour \\(Effective ((?:January|February|March|April|May|June|July|August|September|October|November|December) \\d{1,2},? 20\\d\\d)\\)",
-    "effective_nth": 2
+    "effective_nth": 2,
+    "skip_floor": true
    },
    "hyperscaler": false,
-   "pricing": "list",
-   "refresh_error": "2026-10-26: parsed $0.99/GPU-hr, more than 3x away from the recorded $9.50; kept the old value"
+   "pricing": "list"
   },
   {
    "vendor": "Nebius",
@@ -361,8 +361,8 @@
    "price_hr": 8.5,
    "per_gpu_hr": 8.5,
    "url": "https://nebius.com/prices",
-   "read_on": "2026-10-20",
-   "note": "Nebius's table carries an 'On-demand, GPU-hour' column and, from 2026-09-23, a 'GPU-hour (Effective October 1, 2026)' column. The collector takes the dated column once its date has passed (before that it records it as announced). $7.15 until 30 Sep 2026, $8.50 from 1 Oct 2026; readings of 1-12 Oct taken from the old column were corrected on 12 Oct. GB200/GB300 NVL72: contact us.",
+   "read_on": "2026-10-26",
+   "note": "Nebius's table carries an 'On-demand, GPU-hour' column and, from 2026-09-23, a 'GPU-hour (Effective October 1, 2026)' column. The collector takes the dated column once its date has passed (before that it records it as announced). $7.15 until 30 Sep 2026, $8.50 from 1 Oct 2026; readings of 1-12 Oct taken from the old column were corrected on 12 Oct. GB200/GB300 NVL72: contact us. From 2026-10-21 the table puts a 'Preemptible, GPU-hour' column quoting only a floor ('from $0.99') before the on-demand column and the dated column is gone; the row skips 'from' figures (skip_floor).",
    "refresh": {
     "kind": "html",
     "label": "HGX B200",
@@ -370,11 +370,11 @@
     "nth": 1,
     "gpus": 1,
     "effective_header": "GPU-hour \\(Effective ((?:January|February|March|April|May|June|July|August|September|October|November|December) \\d{1,2},? 20\\d\\d)\\)",
-    "effective_nth": 2
+    "effective_nth": 2,
+    "skip_floor": true
    },
    "hyperscaler": false,
-   "pricing": "list",
-   "refresh_error": "2026-10-26: parsed $0.99/GPU-hr, more than 3x away from the recorded $8.50; kept the old value"
+   "pricing": "list"
   },
   {
    "vendor": "Nebius",
@@ -770,10 +770,10 @@
    "tier": "index",
    "instance": "SDB200RT B200 Rental Price Index",
    "gpus": 1,
-   "price_hr": 6.14,
-   "per_gpu_hr": 6.14,
+   "price_hr": 6.6,
+   "per_gpu_hr": 6.6,
    "url": "https://www.silicondata.com/products/silicon-index/b200",
-   "read_on": "2026-10-20",
+   "read_on": "2026-10-26",
    "note": "Daily index of observed B200 rental rates (Bloomberg ticker SDB200RT), weighted across ~80% of the rental market; no GB200/GB300/B300 index exists. Shown as the market reference line on the page.",
    "refresh": {
     "kind": "silicon",
@@ -781,9 +781,8 @@
     "tab": "neo-cloud"
    },
    "hyperscaler": false,
-   "as_of": "2026-10-19",
-   "pricing": "index",
-   "refresh_error": "2026-10-26: payload for b200 carried no dated values"
+   "as_of": "2026-10-25",
+   "pricing": "index"
   },
   {
    "vendor": "Silicon Data",
@@ -791,10 +790,10 @@
    "tier": "index",
    "instance": "SDH100RT H100 Rental Price Index",
    "gpus": 1,
-   "price_hr": 2.85,
-   "per_gpu_hr": 2.85,
+   "price_hr": 2.89,
+   "per_gpu_hr": 2.89,
    "url": "https://www.silicondata.com/products/silicon-index/h100",
-   "read_on": "2026-10-21",
+   "read_on": "2026-10-26",
    "note": "Context only.",
    "refresh": {
     "kind": "silicon",
@@ -802,9 +801,8 @@
     "tab": "neo-cloud"
    },
    "hyperscaler": false,
-   "as_of": "2026-10-20",
-   "pricing": "index",
-   "refresh_error": "2026-10-26: payload for h100 carried no dated values"
+   "as_of": "2026-10-25",
+   "pricing": "index"
   },
   {
    "vendor": "Silicon Data",
@@ -812,11 +810,11 @@
    "tier": "index",
    "instance": "H200 Rental Price Index (no Bloomberg ticker yet)",
    "gpus": 1,
-   "price_hr": 3.53,
-   "per_gpu_hr": 3.53,
+   "price_hr": 3.47,
+   "per_gpu_hr": 3.47,
    "url": "https://www.silicondata.com/products/silicon-index/h200",
-   "read_on": "2026-10-21",
-   "as_of": "2026-10-20",
+   "read_on": "2026-10-26",
+   "as_of": "2026-10-25",
    "note": "Context only (Hopper).",
    "refresh": {
     "kind": "silicon",
@@ -824,8 +822,7 @@
     "tab": "neo-cloud"
    },
    "hyperscaler": false,
-   "pricing": "index",
-   "refresh_error": "2026-10-26: payload for h200 carried no dated values"
+   "pricing": "index"
   },
   {
    "vendor": "Ornn",
@@ -3434,7 +3431,7 @@
    "read_on": "2026-09-09"
   }
  ],
- "refreshed_at": "2026-10-26T09:38:38",
+ "refreshed_at": "2026-10-26T10:12:05",
  "price_actions": [
   {
    "date": "2026-01-04",
