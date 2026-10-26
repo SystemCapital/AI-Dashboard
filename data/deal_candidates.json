@@ -1469,9 +1469,62 @@
    "first_seen": "2026-10-26",
    "status": "new",
    "matched_contract": "SpaceX/xAI - Anthropic (Colossus 1, Memphis)"
+  },
+  {
+   "title": "Musk\u2019s AI Lending Warning After $40B GPU Deal [2026]",
+   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPd3NqcVQ4alVqT2RpVG04bzJIYmU0SjlfcUN1c19ad3VxQko1X05jTXlTMDNsanpOUVJOWlVjOEdQX09EX0RiYVdFbEhXcEI3QzU0dHVGaU5TM3dHYjRwWFRmOGpBQlppMGxldjZVMTIyeDl6elVlVkhaWERxeEM3T191ZGw?oc=5",
+   "source": "shattered.io",
+   "published": "2026-10-26",
+   "channel": "news",
+   "value_usd_b": 40.0,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-10-27",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "SPCX Rises Overnight: Musk Confirms $40B GPU Deal, Warns On Neoclouds \u2014 Dan Ives Sees \u2018Game Of Thrones\u2019 Compute War",
+   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOaU14MnlPTl9pTmNrU2Y0UEdDeGdxRUgtcHpaWFoyclpBVFk4VGhod3lnNWFWU1F4dFZCdmN5LU4tUU1VS190UHE4OXhqOHc2T1dyNmRaeGx4MGhwMXphenltNlBiZU5aeV9ySFc1eUo4NmtpN1ItdXpXUXpfMGNPZGpMVGhPcTZCT1V3MzNIVEpfdkRfUlMtSnlvLWFxM2pzd0pyYjAwOWhZcEVyVVp6c2NDYUIzRmE1RXJDLVVOdVdfdHlVSkhpRG9nOA?oc=5",
+   "source": "Stocktwits",
+   "published": "2026-10-26",
+   "channel": "news",
+   "value_usd_b": 40.0,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-10-27",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "Broadcom secures $63 billion from banks to finance AI compute sales to Anthropic",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPZVUtaWYtNlBHY0ZRUFF4emIyUWJZeFZPNTJJYUNxakRyX1BkZHhHdEQwTHVCMS1BUUVvTXZXc0VUZ2lWZDZVR2o1VEF3NDNIUi1fRzVVNzh2QWNaSEQ2cGhNTHc4ZDVuNDZ3WkhKeEpYMzRkdVc1NzBQS2lRMWdxZS1sLTh6NTNabTlGR0t2UDNMNnpNSFhISUY3bzhiZw?oc=5",
+   "source": "Yahoo Finance",
+   "published": "2026-10-26",
+   "channel": "news",
+   "value_usd_b": 63.0,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "Anthropic"
+   ],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-10-27",
+   "status": "new",
+   "matched_contract": null
   }
  ],
- "scanned_on": "2026-10-26",
+ "scanned_on": "2026-10-27",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
