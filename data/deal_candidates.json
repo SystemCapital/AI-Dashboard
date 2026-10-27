@@ -1522,9 +1522,26 @@
    "first_seen": "2026-10-27",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "Argentum AI Seeks $5 Billion Private Credit Deal for Chips as Neocloud Funding Tightens",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1YcHNBbXIzVGVUY2xvTktKZWpEdjUzaUVIeXNJQ0d6MGFmOWljWnBlSFRFcUwzamw0cXNxdWJVUWdYbmE3S0FqS05HaFBjUW40eGVaMjJJdHJ0aTZ2Yk4yYWx1YWlKMi1xTnJEZDBYUmUzckZyS0E?oc=5",
+   "source": "BigGo Finance",
+   "published": "2026-10-27",
+   "channel": "news",
+   "value_usd_b": 5.0,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-10-28",
+   "status": "new",
+   "matched_contract": null
   }
  ],
- "scanned_on": "2026-10-27",
+ "scanned_on": "2026-10-28",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
