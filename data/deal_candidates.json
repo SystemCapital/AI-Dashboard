@@ -1539,9 +1539,45 @@
    "first_seen": "2026-10-28",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "Galaxy\u2019s AI data centers bring $79 million in lease revenue and a small net loss",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPNHNZNWlvVGpSTFZROExraTNmWjJPaE9nWW01U3ZmX01qcng1SVBGZ0Zqc2RfX255UE5pOEY2QlNqVmRJbm9pMU5Pb0Fyb2Nhbk1xeWFKSTJRSGZGSWlzRWE0M1FKU21iZkY3eHNoU1l0QV9feUxLeWtGRUx5ZDJKeVI2VVd6WXltaXRVTjNTWHl5NEtwUEU1UTFyS0RtWkVDN2Q3WGF3?oc=5",
+   "source": "CryptoSlate",
+   "published": "2026-10-28",
+   "channel": "news",
+   "value_usd_b": 0.079,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "Galaxy"
+   ],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-10-29",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "OneQode Secures 14 MW of Chennai AI Capacity in AdaniConneX Agreement",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNREtHNndqX0ktbzlmb0x0VUw2SEJCSlFaLWxDLUxpWld1d3N3YmJiVGlMN1lPTThJMk1NZWxHZi1TQk5vN3hfZHh2dmQya1E5SFh4MkFJcUw0R2ljWElOZ2JsNGFMRmRzOFFuOTd3N1lKRHRNemNCS2s5dnEyc2hEVG50cjhqUEJtbG95Y3cxSmNnZG1FNVE?oc=5",
+   "source": "Unite.AI",
+   "published": "2026-10-28",
+   "channel": "news",
+   "value_usd_b": null,
+   "term_years": null,
+   "gpus": null,
+   "mw": 14.0,
+   "chip": null,
+   "parties": [],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-10-29",
+   "status": "new",
+   "matched_contract": null
   }
  ],
- "scanned_on": "2026-10-28",
+ "scanned_on": "2026-10-29",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",

@@ -34,7 +34,7 @@
    "price_hr": 42.0,
    "per_gpu_hr": 10.5,
    "url": "https://www.coreweave.com/pricing",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Inference single-GPU column also $10.50. Reserved capacity 'up to 60% off'.",
    "refresh": {
     "kind": "html",
@@ -54,7 +54,7 @@
    "price_hr": null,
    "per_gpu_hr": null,
    "url": "https://www.coreweave.com/pricing",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "CoreWeave publishes no GB300 price ('Contact sales'); the row is read every day so a published price shows up the day it appears.",
    "refresh": {
     "kind": "html",
@@ -76,7 +76,7 @@
    "price_hr": 68.8,
    "per_gpu_hr": 8.6,
    "url": "https://www.coreweave.com/pricing",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Spot $34.11 = $4.26/GPU-hr.",
    "refresh": {
     "kind": "html",
@@ -96,7 +96,7 @@
    "price_hr": 49.24,
    "per_gpu_hr": 6.155,
    "url": "https://www.coreweave.com/pricing",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Context only.",
    "refresh": {
     "kind": "html",
@@ -116,7 +116,7 @@
    "price_hr": 35.84,
    "per_gpu_hr": 4.48,
    "url": "https://www.coreweave.com/pricing",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Interruptible spot capacity; on-demand B300 is 'contact sales'.",
    "refresh": {
     "kind": "html",
@@ -137,7 +137,7 @@
    "price_hr": 34.11,
    "per_gpu_hr": 4.2637,
    "url": "https://www.coreweave.com/pricing",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Interruptible spot capacity.",
    "refresh": {
     "kind": "html",
@@ -158,7 +158,7 @@
    "price_hr": 761.904,
    "per_gpu_hr": 10.582,
    "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Capacity Blocks only (no on-demand). US East (Dallas) Local Zone. Unchanged by AWS's 1 Jul and 7 Oct repricings.",
    "refresh": {
     "kind": "html",
@@ -177,7 +177,7 @@
    "price_hr": 113.666,
    "per_gpu_hr": 14.2082,
    "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "US regions (first row of AWS's table). Repriced to $12.355 on 1 Jul 2026 and to $14.208 on 7 Oct 2026 (AWS's own notice on the page). On-demand via price API: $113.93 = $14.24/GPU-hr (unchanged).",
    "refresh": {
     "kind": "html",
@@ -201,7 +201,7 @@
    "price_hr": 129.168,
    "per_gpu_hr": 16.146,
    "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "US regions (first row of AWS's table). Repriced to $14.04 on 1 Jul 2026 and to $16.146 on 7 Oct 2026 (AWS's own notice on the page); AWS says the next update is scheduled for January 2027.",
    "refresh": {
     "kind": "html",
@@ -225,7 +225,7 @@
    "price_hr": 108.16,
    "per_gpu_hr": 27.04,
    "url": "https://prices.azure.com/api/retail/prices?$filter=armSkuName%20eq%20%27Standard_ND128isr_NDR_GB200_v6%27%20and%20priceType%20eq%20%27Consumption%27",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Azure Retail Prices API, East US, Linux consumption. Hyperscaler list price, well above neocloud rates.",
    "refresh": {
     "kind": "azure",
@@ -245,7 +245,7 @@
    "price_hr": 84.8,
    "per_gpu_hr": 10.6,
    "url": "https://prices.azure.com/api/retail/prices?$filter=armSkuName%20eq%20%27Standard_ND96isr_H200_v5%27",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Context only.",
    "refresh": {
     "kind": "azure",
@@ -265,7 +265,7 @@
    "price_hr": 72.0,
    "per_gpu_hr": 18.0,
    "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?partNumber=B112140&currencyCode=USD",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Oracle public price-list API, metric 'GPU Per Hour'. The oracle.com HTML price list shows blank cells.",
    "refresh": {
     "kind": "oracle",
@@ -283,7 +283,7 @@
    "price_hr": 64.0,
    "per_gpu_hr": 16.0,
    "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?partNumber=B110979&currencyCode=USD",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "",
    "refresh": {
     "kind": "oracle",
@@ -301,7 +301,7 @@
    "price_hr": 120.0,
    "per_gpu_hr": 15.0,
    "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?partNumber=B112237&currencyCode=USD",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "",
    "refresh": {
     "kind": "oracle",
@@ -319,7 +319,7 @@
    "price_hr": 112.0,
    "per_gpu_hr": 14.0,
    "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?partNumber=B110978&currencyCode=USD",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "",
    "refresh": {
     "kind": "oracle",
@@ -337,7 +337,7 @@
    "price_hr": 9.5,
    "per_gpu_hr": 9.5,
    "url": "https://nebius.com/prices",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Nebius's table carries an 'On-demand, GPU-hour' column and, from 2026-09-23, a 'GPU-hour (Effective October 1, 2026)' column. The collector takes the dated column once its date has passed (before that it records it as announced). $7.85 until 30 Sep 2026, $9.50 from 1 Oct 2026; readings of 1-12 Oct taken from the old column were corrected on 12 Oct. GB200/GB300 NVL72: contact us. From 2026-10-21 the table puts a 'Preemptible, GPU-hour' column quoting only a floor ('from $0.99') before the on-demand column and the dated column is gone; the row skips 'from' figures (skip_floor).",
    "refresh": {
     "kind": "html",
@@ -361,7 +361,7 @@
    "price_hr": 8.5,
    "per_gpu_hr": 8.5,
    "url": "https://nebius.com/prices",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Nebius's table carries an 'On-demand, GPU-hour' column and, from 2026-09-23, a 'GPU-hour (Effective October 1, 2026)' column. The collector takes the dated column once its date has passed (before that it records it as announced). $7.15 until 30 Sep 2026, $8.50 from 1 Oct 2026; readings of 1-12 Oct taken from the old column were corrected on 12 Oct. GB200/GB300 NVL72: contact us. From 2026-10-21 the table puts a 'Preemptible, GPU-hour' column quoting only a floor ('from $0.99') before the on-demand column and the dated column is gone; the row skips 'from' figures (skip_floor).",
    "refresh": {
     "kind": "html",
@@ -419,7 +419,7 @@
    "price_hr": 6.69,
    "per_gpu_hr": 6.69,
    "url": "https://lambda.ai/pricing",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "1-Click Cluster reserved: $9.86 (16 GPUs) to $8.87 (256+).",
    "refresh": {
     "kind": "html",
@@ -438,7 +438,7 @@
    "price_hr": 8.87,
    "per_gpu_hr": 8.87,
    "url": "https://lambda.ai/pricing",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "16 GPUs $9.86, 64 GPUs $9.36, 256+ GPUs $8.87; 1 year+: talk to sales. First read 2026-10-12.",
    "refresh": {
     "kind": "html",
@@ -455,10 +455,10 @@
    "tier": "on-demand",
    "instance": "GB300 SXM6 288GB 1x",
    "gpus": 1,
-   "price_hr": 12.67,
-   "per_gpu_hr": 12.67,
+   "price_hr": 12.8,
+   "per_gpu_hr": 12.8,
    "url": "https://verda.com/pricing",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Single-GPU instance, not an NVL72 rack. Spot $4.31.",
    "refresh": {
     "kind": "html",
@@ -477,10 +477,10 @@
    "tier": "on-demand",
    "instance": "B300 SXM6 1x",
    "gpus": 1,
-   "price_hr": 11.02,
-   "per_gpu_hr": 11.02,
+   "price_hr": 11.13,
+   "per_gpu_hr": 11.13,
    "url": "https://verda.com/pricing",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Spot $3.75.",
    "refresh": {
     "kind": "html",
@@ -499,10 +499,10 @@
    "tier": "on-demand",
    "instance": "B200 SXM6 1x",
    "gpus": 1,
-   "price_hr": 8.608,
-   "per_gpu_hr": 8.608,
+   "price_hr": 8.694,
+   "per_gpu_hr": 8.694,
    "url": "https://verda.com/pricing",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Spot $3.06.",
    "refresh": {
     "kind": "html",
@@ -521,10 +521,10 @@
    "tier": "spot",
    "instance": "GB300 SXM6 288GB 1x spot",
    "gpus": 1,
-   "price_hr": 6.337,
-   "per_gpu_hr": 6.337,
+   "price_hr": 6.4,
+   "per_gpu_hr": 6.4,
    "url": "https://verda.com/pricing",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Spot price of the single-GPU instance (not an NVL72 rack).",
    "refresh": {
     "kind": "html",
@@ -543,10 +543,10 @@
    "tier": "spot",
    "instance": "B300 SXM6 1x spot",
    "gpus": 1,
-   "price_hr": 5.51,
-   "per_gpu_hr": 5.51,
+   "price_hr": 5.565,
+   "per_gpu_hr": 5.565,
    "url": "https://verda.com/pricing",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Spot price.",
    "refresh": {
     "kind": "html",
@@ -565,10 +565,10 @@
    "tier": "spot",
    "instance": "B200 SXM6 1x spot",
    "gpus": 1,
-   "price_hr": 4.304,
-   "per_gpu_hr": 4.304,
+   "price_hr": 4.347,
+   "per_gpu_hr": 4.347,
    "url": "https://verda.com/pricing",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Spot price.",
    "refresh": {
     "kind": "html",
@@ -590,7 +590,7 @@
    "price_hr": 8.19,
    "per_gpu_hr": 8.19,
    "url": "https://www.together.ai/gpu-clusters",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Reserved from $6.79. GB200/GB300 NVL72: contact us.",
    "refresh": {
     "kind": "html",
@@ -611,7 +611,7 @@
    "price_hr": 9.99,
    "per_gpu_hr": 9.99,
    "url": "https://www.together.ai/gpu-clusters",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Reserved: contact us. First read 2026-10-12 (the row was added that day).",
    "refresh": {
     "kind": "html",
@@ -632,7 +632,7 @@
    "price_hr": 5.99,
    "per_gpu_hr": 5.99,
    "url": "https://www.hyperbolic.ai/marketplace",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Marketplace 'starting from' rate; the vendor refreshes it weekly from its suppliers' best rates.",
    "refresh": {
     "kind": "html",
@@ -653,7 +653,7 @@
    "price_hr": 68.0,
    "per_gpu_hr": 8.5,
    "url": "https://www.vultr.com/pricing/",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "From Vultr's public plan API (api.vultr.com/v2/plans-metal), hourly price of the 8-GPU bare-metal plan. First read 2026-10-12.",
    "refresh": {
     "kind": "vultr",
@@ -685,10 +685,10 @@
    "tier": "spot",
    "instance": "p6-b300.48xlarge EC2 Spot, us-east-1 (Linux)",
    "gpus": 8,
-   "price_hr": 74.6298,
-   "per_gpu_hr": 9.3287,
+   "price_hr": 77.3746,
+   "per_gpu_hr": 9.6718,
    "url": "https://aws.amazon.com/ec2/spot/pricing/",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "AWS's published EC2 Spot price (public feed behind the Spot pricing page); interruptible capacity. Hyperscaler spot row in the near-term median.",
    "refresh": {
     "kind": "aws_spot",
@@ -706,10 +706,10 @@
    "tier": "spot",
    "instance": "p6-b200.48xlarge EC2 Spot, us-east-1 (Linux)",
    "gpus": 8,
-   "price_hr": 83.7929,
-   "per_gpu_hr": 10.4741,
+   "price_hr": 83.7053,
+   "per_gpu_hr": 10.4632,
    "url": "https://aws.amazon.com/ec2/spot/pricing/",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "AWS's published EC2 Spot price; interruptible capacity. B200, so a market-history series only (the near-term median is GB300/B300).",
    "refresh": {
     "kind": "aws_spot",
@@ -730,7 +730,7 @@
    "price_hr": 39.6336,
    "per_gpu_hr": 4.9542,
    "url": "https://cloud.google.com/spot-vms/pricing",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Google's published Spot VM price for the A4 (8x B200) machine type, the page's default region; Spot prices change at most once a day. No A4X (GB200) or B300 Spot price is published. B200, so a market-history series only.",
    "refresh": {
     "kind": "html",
@@ -751,7 +751,7 @@
    "price_hr": 108.16,
    "per_gpu_hr": 27.04,
    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Azure Retail Prices API, Spot meter. On 2026-09-14 the spot price equalled pay-as-you-go in every region (no discount: the SKU is capacity-constrained). GB200, so a reference row only.",
    "refresh": {
     "kind": "azure",
@@ -773,7 +773,7 @@
    "price_hr": 6.47,
    "per_gpu_hr": 6.47,
    "url": "https://www.silicondata.com/products/silicon-index/b200",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Daily index of observed B200 rental rates (Bloomberg ticker SDB200RT), weighted across ~80% of the rental market; no GB200/GB300/B300 index exists. Shown as the market reference line on the page.",
    "refresh": {
     "kind": "silicon",
@@ -781,7 +781,7 @@
     "tab": "neo-cloud"
    },
    "hyperscaler": false,
-   "as_of": "2026-10-27",
+   "as_of": "2026-10-28",
    "pricing": "index"
   },
   {
@@ -790,10 +790,10 @@
    "tier": "index",
    "instance": "SDH100RT H100 Rental Price Index",
    "gpus": 1,
-   "price_hr": 2.89,
-   "per_gpu_hr": 2.89,
+   "price_hr": 2.9,
+   "per_gpu_hr": 2.9,
    "url": "https://www.silicondata.com/products/silicon-index/h100",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Context only.",
    "refresh": {
     "kind": "silicon",
@@ -801,7 +801,7 @@
     "tab": "neo-cloud"
    },
    "hyperscaler": false,
-   "as_of": "2026-10-27",
+   "as_of": "2026-10-28",
    "pricing": "index"
   },
   {
@@ -813,8 +813,8 @@
    "price_hr": 3.47,
    "per_gpu_hr": 3.47,
    "url": "https://www.silicondata.com/products/silicon-index/h200",
-   "read_on": "2026-10-28",
-   "as_of": "2026-10-27",
+   "read_on": "2026-10-29",
+   "as_of": "2026-10-28",
    "note": "Context only (Hopper).",
    "refresh": {
     "kind": "silicon",
@@ -830,11 +830,11 @@
    "tier": "index",
    "instance": "Ornn Compute Price Index (OCPI) B200",
    "gpus": 1,
-   "price_hr": 9.66,
-   "per_gpu_hr": 9.66,
+   "price_hr": 9.83,
+   "per_gpu_hr": 9.83,
    "url": "https://data.ornn.com/preview",
-   "read_on": "2026-10-28",
-   "as_of": "2026-10-27",
+   "read_on": "2026-10-29",
+   "as_of": "2026-10-28",
    "note": "Blackwell reference (transacted rates, volume-weighted, Bloomberg-listed); no GB200/GB300/B300 index exists.",
    "refresh": {
     "kind": "ornn",
@@ -849,11 +849,11 @@
    "tier": "index",
    "instance": "Ornn Compute Price Index (OCPI) H100 SXM",
    "gpus": 1,
-   "price_hr": 3.57,
-   "per_gpu_hr": 3.57,
+   "price_hr": 2.96,
+   "per_gpu_hr": 2.96,
    "url": "https://data.ornn.com/preview",
-   "read_on": "2026-10-28",
-   "as_of": "2026-10-27",
+   "read_on": "2026-10-29",
+   "as_of": "2026-10-28",
    "note": "Context only (Hopper).",
    "refresh": {
     "kind": "ornn",
@@ -868,11 +868,11 @@
    "tier": "index",
    "instance": "Ornn Compute Price Index (OCPI) H200",
    "gpus": 1,
-   "price_hr": 6.42,
-   "per_gpu_hr": 6.42,
+   "price_hr": 6.6,
+   "per_gpu_hr": 6.6,
    "url": "https://data.ornn.com/preview",
-   "read_on": "2026-10-28",
-   "as_of": "2026-10-27",
+   "read_on": "2026-10-29",
+   "as_of": "2026-10-28",
    "note": "Context only (Hopper).",
    "refresh": {
     "kind": "ornn",
@@ -887,10 +887,10 @@
    "tier": "index",
    "instance": "B300 on-demand, median across providers (weekly)",
    "gpus": 1,
-   "price_hr": 9.175,
-   "per_gpu_hr": 9.175,
+   "price_hr": 9.15,
+   "per_gpu_hr": 9.15,
    "url": "https://getdeploying.com/gpus/nvidia-b300",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Aggregator reference (CC-BY-4.0, GetDeploying): each provider's median price, then the median across providers, by week. Not a provider rate, so in no basis.",
    "refresh": {
     "kind": "getdeploying",
@@ -908,10 +908,10 @@
    "tier": "index",
    "instance": "B300 spot, median across providers (weekly)",
    "gpus": 1,
-   "price_hr": 5.3874,
-   "per_gpu_hr": 5.3874,
+   "price_hr": 5.3875,
+   "per_gpu_hr": 5.3875,
    "url": "https://getdeploying.com/gpus/nvidia-b300",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Aggregator reference (CC-BY-4.0, GetDeploying): each provider's median price, then the median across providers, by week. Not a provider rate, so in no basis.",
    "refresh": {
     "kind": "getdeploying",
@@ -929,10 +929,10 @@
    "tier": "index",
    "instance": "B200 on-demand, median across providers (weekly)",
    "gpus": 1,
-   "price_hr": 7.975,
-   "per_gpu_hr": 7.975,
+   "price_hr": 7.99,
+   "per_gpu_hr": 7.99,
    "url": "https://getdeploying.com/gpus/nvidia-b200",
-   "read_on": "2026-10-28",
+   "read_on": "2026-10-29",
    "note": "Aggregator reference (CC-BY-4.0, GetDeploying): each provider's median price, then the median across providers, by week. Not a provider rate, so in no basis.",
    "refresh": {
     "kind": "getdeploying",
@@ -942,7 +942,7 @@
    "hyperscaler": false,
    "pricing": "index",
    "as_of": "2026-10-26",
-   "providers": 18
+   "providers": 19
   }
  ],
  "contracts": [
@@ -3431,7 +3431,7 @@
    "read_on": "2026-09-09"
   }
  ],
- "refreshed_at": "2026-10-28T08:56:45",
+ "refreshed_at": "2026-10-29T08:56:54",
  "price_actions": [
   {
    "date": "2026-01-04",
@@ -4106,7 +4106,7 @@
    "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
    "text": "The current prices are scheduled to be updated next in January, 2027",
    "first_seen": "2026-10-12",
-   "last_seen": "2026-10-28"
+   "last_seen": "2026-10-29"
   }
  ],
  "price_news": [
