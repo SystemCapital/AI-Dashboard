@@ -155,6 +155,13 @@ def build(log=print):
     meta = {RHX.key_of(q): q for q in inputs["rental"]["quotes"] if q.get("tier") != "index"}
     start = RHX.coverage_start(hist, set(inputs["rental"]["chips_for_average"]))
     inputs["rental"]["near_history"] = RHX.near_history(hist, A_rental, inputs["rental"]["max_quote_age_days"], start=start, end=today["date"], meta=meta)
+    # weekly token revenue on OpenRouter (display only; not a model input)
+    from engine import collect_token_revenue as TR
+    try:
+        inputs["token_revenue"] = TR.page_view(TR.load(ROOT)) if (ROOT / "data" / "token_revenue.json").exists() else None
+    except Exception as ex:
+        log("build: token revenue not embedded (%s)" % ex)
+        inputs["token_revenue"] = None
     slim = {k: res[k] for k in ("rent", "serve", "serves", "serve_open", "serve_open_peak", "tmeta", "capex", "depreciation", "dep", "gpus", "unmeasured_share_of_open")}
     tpl = (ROOT / "engine" / "template.html").read_text(encoding="utf-8")
     marker = "/*__DATA__*/\nconst INPUTS = {};\nconst PY = {};"

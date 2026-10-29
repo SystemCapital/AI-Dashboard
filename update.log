@@ -4673,3 +4673,17 @@
 2026-10-29 08:56:58  == infographic
 2026-10-29 08:56:58     infographic.html written: capex $44.8B, ROIC rent 21.3% / lab 37.4% / open 48.6% / AWS 53.7% at default dials
 2026-10-29 08:56:58  done. all steps clean
+2026-10-29 16:36:14  run: --only tokrev
+2026-10-29 16:36:14  == tokrev
+2026-10-29 16:36:21     token revenue: 185 models read (99.5% of 30-day tokens), 0 new effective / 0 list price points; week of 2026-10-19: $33.5M on 188.0T tokens ($0.178/M, full); chart estimate $33.2M; 14 weeks (4 full, 10 chart)
+2026-10-29 16:36:21  done. all steps clean
+2026-10-29 16:36:21  run: --only build
+2026-10-29 16:36:21  == build
+2026-10-29 16:36:21  roic history: roic_history.csv now holds 37 daily rows (2026-09-08 to 2026-10-29)
+2026-10-29 16:36:22  roic history restated on today's assumptions: 37 rows (27 re-run from snapshots) -> roic_history_restated.csv
+2026-10-29 16:36:23  build: dashboard.html  rent $4.58/GPU-hr (ROIC 21.3%, y1 51.0%)  serve/anthropic $6.40 (ROIC 37.4%)  serve/openai $5.71 (ROIC 31.3%)  serve/open-only $7.69 (ROIC 48.6%)  serve/open-peak $10.95 (ROIC 76.9%)  serve/aws $8.29 (ROIC 53.7%)  frontier 27% of tokens; 97% of open traffic unbenchmarked
+2026-10-29 16:36:23  done. all steps clean
+2026-10-29 16:36:23  run: --only infographic
+2026-10-29 16:36:23  == infographic
+2026-10-29 16:36:23     infographic.html written: capex $44.8B, ROIC rent 21.3% / lab 37.4% / open 48.6% / AWS 53.7% at default dials
+2026-10-29 16:36:23  done. all steps clean

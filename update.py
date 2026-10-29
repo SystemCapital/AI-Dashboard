@@ -7,6 +7,8 @@ Steps, in order (a failing step never stops the run; the page shows what is stal
                   speed / cache-hit / activity stats                                     (network)
   2. orshare      OpenRouter's closed- vs open-weight share of tokens: the weekly Top Models chart (53 weeks) and
                   a classified read of every model in the weekly ranking -> data/openrouter_share.json  (network)
+  2b. tokrev      what OpenRouter's traffic paid for tokens, week by week: every model's daily tokens (31-day window)
+                  times its effective price, older weeks from the weekly charts -> data/token_revenue.json  (network)
   3. labprices    Anthropic and OpenAI list prices, applied on every change: OpenAI's from its own API pricing page
                   (Standard tier), Anthropic's from OpenRouter's Anthropic endpoint rows (step 1)        (network)
   4. inferencex   published Blackwell throughput curves from SemiAnalysis InferenceX's API  (network)
@@ -26,7 +28,7 @@ Steps, in order (a failing step never stops the run; the page shows what is stal
 
 Flags:
   --offline            skip the fetches; rebuild from what is on disk
-  --only STEP          run one step (openrouter | orshare | labprices | inferencex | rentals | history | deals | build | infographic)
+  --only STEP          run one step (openrouter | orshare | tokrev | labprices | inferencex | rentals | history | deals | build | infographic)
   --status             how old is each input? changes nothing
   --schedule [--at HH:MM]   run daily via Task Scheduler (Windows) or cron (macOS/Linux), e.g. --schedule --at 11:00; --unschedule to stop
   --scheduled          what the scheduled task passes: a full run with no "Press Enter" prompt
@@ -77,6 +79,12 @@ def do_openrouter():
 
 def do_orshare():
     from engine import collect_or_share as c
+    c.refresh(ROOT, log=log)
+
+
+def do_tokrev():
+    """What OpenRouter's traffic paid for tokens, week by week (engine/collect_token_revenue.py -> data/token_revenue.json)."""
+    from engine import collect_token_revenue as c
     c.refresh(ROOT, log=log)
 
 
@@ -314,7 +322,7 @@ def main(argv):
         return schedule(at, remove="--unschedule" in argv)
     only = argv[argv.index("--only") + 1] if "--only" in argv else None
     offline = "--offline" in argv
-    steps = [("openrouter", do_openrouter, True), ("orshare", do_orshare, True), ("labprices", do_labprices, True), ("inferencex", do_inferencex, True), ("rentals", do_rentals, True), ("history", do_history, True), ("deals", do_deals, True), ("build", do_build, False), ("infographic", do_infographic, False)]
+    steps = [("openrouter", do_openrouter, True), ("orshare", do_orshare, True), ("tokrev", do_tokrev, True), ("labprices", do_labprices, True), ("inferencex", do_inferencex, True), ("rentals", do_rentals, True), ("history", do_history, True), ("deals", do_deals, True), ("build", do_build, False), ("infographic", do_infographic, False)]
     results = {}
     log("run: %s" % (" ".join(argv) or "full"))
     for name, fn, needs_net in steps:

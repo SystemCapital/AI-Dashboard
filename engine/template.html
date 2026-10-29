@@ -141,6 +141,7 @@ summary{cursor:pointer;font-size:13px;color:var(--ink2)}
   <button class="pbtn" data-p="market">Rental market &middot; history, evidence, contracts</button>
   <button class="pbtn" data-p="roic">ROIC history &middot; daily builds</button>
   <button class="pbtn" data-p="tokens">Token prices &middot; indices vs model</button>
+  <button class="pbtn" data-p="revenue">Token revenue &middot; OpenRouter weekly</button>
 </nav>
 
 <section class="page" id="page_compare">
@@ -342,6 +343,33 @@ summary{cursor:pointer;font-size:13px;color:var(--ink2)}
 <div class="panel">
   <h2>Daily record <span class="small" style="font-weight:400">&mdash; newest first; index days and build days on one calendar; the dashboard columns are in <span id="tokBasisLabel"></span> and are also in data/roic_history.csv</span></h2>
   <div class="scroll"><table id="tokTable"></table></div>
+</div>
+</section>
+
+<section class="page" id="page_revenue" hidden>
+<div class="panel" style="margin-bottom:14px;padding:12px 18px">
+  <div class="hrow">
+    <div><span class="small" style="font-weight:600">Chart</span> <span class="seg" id="segRevMetric"><button class="btn" data-v="rev">Revenue</button><button class="btn" data-v="tok">Tokens</button><button class="btn" data-v="perm">$ per M tokens</button></span>
+      <span class="small" style="font-weight:600;margin-left:12px">Segment by</span> <span class="seg" id="segRevBy"><button class="btn" data-v="lab">Lab</button><button class="btn" data-v="model">Model</button></span></div>
+    <div class="small" id="revStatus"></div>
+  </div>
+  <div class="hint" id="revHint" style="font-size:12px;color:var(--ink3);margin-top:6px"></div>
+</div>
+<div class="panel" style="margin-bottom:14px">
+  <h2>Token revenue on OpenRouter, week by week <span class="small" style="font-weight:400">&mdash; each model's input and output tokens &times; the price its traffic paid; weeks start Monday (UTC); hover a bar</span></h2>
+  <div class="kpis" id="revKpis" style="grid-template-columns:repeat(4,1fr)"></div>
+  <div id="revChart" style="margin-top:10px"></div>
+  <div class="legend" id="revLegend"></div>
+  <p class="note" id="revNote"></p>
+</div>
+<div class="panel" style="margin-bottom:14px">
+  <h2>Weekly totals and the segments <span class="small" style="font-weight:400" id="revTableSub"></span></h2>
+  <div class="scroll"><table id="revTable"></table></div>
+</div>
+<div class="panel">
+  <h2>Model by model <select id="revWeek" class="btn" style="margin-left:8px"></select> <span class="small" style="font-weight:400" id="revWeekSub"></span></h2>
+  <p class="note" id="revModelNote"></p>
+  <div class="scroll"><table id="revModels"></table></div>
 </div>
 </section>
 
@@ -628,7 +656,7 @@ const TAGC = {anthropic:'f', openai:'f2'};
 // ============================================================================================ rendering
 let D = defaultDials(INPUTS);
 let PAGE = 'compare';
-const PAGES = ['compare','anthropic','openai','market','roic','tokens'];
+const PAGES = ['compare','anthropic','openai','market','roic','tokens','revenue'];
 const LETTER = {anthropic:'B', openai:'C'};
 function scenarioSkeleton(k){
   const B=INPUTS.baskets[k]; const cls = k==='anthropic' ? 'serve' : 'serve2';
@@ -1180,6 +1208,115 @@ function renderOrShare(){
   $('orReadTable').innerHTML=u;
 }
 
+// ============================================================================================ token revenue (OpenRouter)
+// Display only: data/token_revenue.json as engine/collect_token_revenue.py wrote it. Nothing here feeds the model.
+const REV = {metric:'rev', by:'lab', week:null};
+const LABC = {anthropic:'#eb6834', openai:'#8a4fd6', google:'#2a78d6', deepseek:'#3b4fd8', 'z-ai':'#1baf7a', moonshotai:'#0f8b8d', minimax:'#c2417a', tencent:'#d9a300', xiaomi:'#ff9a4a', 'x-ai':'#3a3a3a', qwen:'#7f6bf0', stepfun:'#5bb6e8', nvidia:'#76b900', 'meta-llama':'#9db8e8', mistralai:'#e8a37f'};
+const REVPAL = ['#2a78d6','#eb6834','#8a4fd6','#1baf7a','#c2417a','#0f8b8d','#d9a300','#3b4fd8','#ff9a4a','#76b900'];
+const fmtM = v => v===null||v===undefined||isNaN(v) ? '—' : (Math.abs(v)>=1e9 ? '$'+(v/1e9).toFixed(2)+'B' : Math.abs(v)>=1e6 ? '$'+(v/1e6).toFixed(Math.abs(v)>=1e8?0:1)+'M' : Math.abs(v)>=1e3 ? '$'+(v/1e3).toFixed(0)+'k' : '$'+v.toFixed(0));
+function revWeeks(){ const T=INPUTS.token_revenue; return T && T.weeks ? Object.entries(T.weeks).sort((a,b)=>a[0]<b[0]?-1:1).map(([d,x])=>Object.assign({d},x)) : []; }
+function revLab(lab){ const N=(INPUTS.token_revenue||{}).lab_names||{}; return N[lab] || lab; }
+// the segments of one week: [key, label, revenue, tokens]; 'tail' = tokens below the per-model reads (or the market-share chart's 'others')
+function revSegments(w, by){
+  const out = {};
+  const add=(k,l,r,t)=>{ const x=out[k]||(out[k]={k,l,r:0,t:0}); x.r+=r; x.t+=t; };
+  if (by==='lab'){ for (const [lab,v] of Object.entries(w.labs||{})) add(lab, revLab(lab), v[1], v[0]); }
+  else { for (const m of (w.models||[])) add(m[0], m[1], m[12], m[5]+(m[6]||0));
+         for (const [lab,v] of Object.entries(w.other_models||{})) add('rest|'+lab, 'Other '+revLab(lab)+' models', v[2], v[0]); }
+  if (w.tail && w.tail[0]>0) add('tail', by==='lab' ? 'Labs below the market-share chart' : 'Models below the reads', w.tail[2], w.tail[0]);
+  return out;
+}
+function renderRevenue(){
+  const T=INPUTS.token_revenue, W=revWeeks();
+  if (!T || !W.length){ $('revChart').innerHTML='<div class="small" style="padding:20px 0">No token revenue history yet. Run <span class="mono">python update.py --only tokrev</span>, then rebuild.</div>'; ['revKpis','revLegend','revNote','revTable','revModels'].forEach(id=>$(id).innerHTML=''); return; }
+  document.querySelectorAll('#segRevMetric .btn').forEach(el=> el.classList.toggle('on', el.dataset.v===REV.metric));
+  document.querySelectorAll('#segRevBy .btn').forEach(el=> el.classList.toggle('on', el.dataset.v===REV.by));
+  const done=W.filter(w=>!w.partial), last=done[done.length-1], prev=done[done.length-2], first=done[0], run=W.find(w=>w.partial);
+  const full=W.filter(w=>w.basis==='full'), chartW=W.filter(w=>w.basis==='chart');
+  $('revStatus').innerHTML = `OpenRouter read ${esc(T.read_on||'')} &middot; ${T.models_read} models read one by one (${fmt.pct(T.coverage_30d,1)} of the last 30 days' tokens)${(T.errors||[]).length?` &middot; <span style="color:var(--bad)">${T.errors.length} reads failed</span>`:''}`;
+  $('revHint').innerHTML = `<b>Per-model weeks</b> (${full.length}): every model's daily input / output tokens from OpenRouter's per-model activity, which goes back 31 days${T.activity_window?` (${esc(T.activity_window[0])} to ${esc(T.activity_window[1])})`:''}. <b>Chart weeks</b> (${chartW.length}, marked <span class="tag est">est.</span>): OpenRouter's weekly Top Models chart names about nine models; the rest of each lab's tokens comes from its weekly market-share chart and is priced at that lab's measured rate for its other models. Complete per-model weeks are kept as they age out of the 31 days, so the per-model history lengthens with every daily run.`;
+  // KPIs
+  const pct=(a,b)=> (a!=null && b) ? (a/b-1) : null, sg=v=> v==null?'':(v>=0?'+':'−')+fmt.pct(Math.abs(v),1);
+  const k1=pct(last.revenue, prev&&prev.revenue), k2=pct(last.revenue, first.revenue);
+  $('revKpis').innerHTML = kpi(`Week of ${esc(last.d)}`, fmtM(last.revenue), `${sg(k1)} on the week before &middot; ${fmt.tok(last.total_tokens)} tokens${last.basis==='chart'?' &middot; est.':''}`)
+    + kpi('Annualised', fmtM(last.revenue*52), `that week &times; 52`)
+    + kpi('Blended price', '$'+fmt.num(last.per_m,3)+'/M', `per M tokens, input + output; ${fmt.pct(last.output_tokens/last.total_tokens,1)} of tokens are output`)
+    + kpi(`Since the week of ${esc(first.d)}`, sg(k2), `${fmtM(first.revenue)} &rarr; ${fmtM(last.revenue)}; tokens ${sg(pct(last.total_tokens, first.total_tokens))}`);
+  // segments: the largest across the weeks shown, the rest pooled
+  const segW=W.map(w=>revSegments(w, REV.by));
+  const tot={}; segW.forEach(s=> Object.values(s).forEach(x=>{ if (x.k!=='tail' && !x.k.startsWith('rest|')) tot[x.k]=(tot[x.k]||{l:x.l,r:0,t:0}), tot[x.k].r+=x.r, tot[x.k].t+=x.t; }));
+  const nTop = REV.by==='lab' ? 9 : 10;
+  const top=Object.entries(tot).sort((a,b)=> (REV.metric==='tok'? b[1].t-a[1].t : b[1].r-a[1].r)).slice(0,nTop).map(([k,v])=>({k,l:v.l}));
+  const colour={}; let pi=0; for (const s of top) colour[s.k] = (REV.by==='lab' && LABC[s.k]) || REVPAL[pi++ % REVPAL.length];
+  const OTHER='#cfcec8';
+  const val=x=> REV.metric==='tok' ? x.t : x.r;
+  const bars=W.map((w,i)=>{ const s=segW[i]; const parts=top.map(t=>({k:t.k,l:t.l,v: s[t.k]? val(s[t.k]) : 0, c:colour[t.k]}));
+    const used=new Set(top.map(t=>t.k)); let o=0; for (const x of Object.values(s)) if (!used.has(x.k)) o+=val(x);
+    parts.push({k:'other', l: REV.by==='lab'?'Other labs':'Other models', v:o, c:OTHER});
+    return {w, parts, total: REV.metric==='tok'? w.total_tokens : w.revenue}; });
+  const Wd=980, H=320, pl=58, pr=16, pt=14, pb=44;
+  const ymax = REV.metric==='perm' ? Math.max(...W.map(w=>w.per_m||0))*1.15 : Math.max(...bars.map(b=>b.total))*1.08;
+  const n=W.length, gap=6, bw=(Wd-pl-pr-gap*(n-1))/n;
+  const X=i=> pl+i*(bw+gap), Y=v=> pt+(H-pt-pb)*(1-v/ymax);
+  const yl = v => REV.metric==='tok' ? fmt.tok(v) : (REV.metric==='perm' ? '$'+v.toFixed(2) : fmtM(v));
+  let svg=`<svg viewBox="0 0 ${Wd} ${H}" width="100%" style="font-family:inherit"><defs><pattern id="revHatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="#fff" stroke-width="1.6" opacity=".55"/></pattern></defs>`;
+  const step = (()=>{ const raw=ymax/5, p=Math.pow(10, Math.floor(Math.log10(raw))); for (const m of [1,2,2.5,5,10]) if (m*p>=raw) return m*p; return 10*p; })();
+  for (let v=0; v<=ymax+1e-9; v+=step) svg+=`<line x1="${pl}" y1="${Y(v)}" x2="${Wd-pr}" y2="${Y(v)}" stroke="${v<1e-9?'#cfcfcb':'#eeede9'}"/><text x="${pl-6}" y="${Y(v)+3}" font-size="10" text-anchor="end" fill="#8a8985">${yl(v)}</text>`;
+  const hits=[];
+  bars.forEach((b,i)=>{ const w=b.w, x=X(i), op=w.partial?0.45:1;
+    if (REV.metric==='perm'){ svg+=`<rect x="${x}" y="${Y(w.per_m)}" width="${bw}" height="${Y(0)-Y(w.per_m)}" fill="#2a78d6" opacity="${op}"/>${w.basis==='chart'?`<rect x="${x}" y="${Y(w.per_m)}" width="${bw}" height="${Y(0)-Y(w.per_m)}" fill="url(#revHatch)"/>`:''}<text x="${x+bw/2}" y="${Y(w.per_m)-4}" font-size="10" text-anchor="middle" fill="#52514e">$${w.per_m.toFixed(3)}</text>`; }
+    else { let acc=0; for (const p of b.parts){ if (p.v<=0) continue; const y0=Y(acc), y1=Y(acc+p.v); svg+=`<rect x="${x}" y="${y1}" width="${bw}" height="${Math.max(0,y0-y1)}" fill="${p.c}" opacity="${op}"/>`; acc+=p.v; }
+      if (w.basis==='chart') svg+=`<rect x="${x}" y="${Y(acc)}" width="${bw}" height="${Y(0)-Y(acc)}" fill="url(#revHatch)"/>`;
+      svg+=`<text x="${x+bw/2}" y="${Y(acc)-4}" font-size="10" text-anchor="middle" fill="#52514e">${yl(b.total)}</text>`; }
+    const dt=new Date(w.d+'T00:00:00Z');
+    svg+=`<text x="${x+bw/2}" y="${H-pb+14}" font-size="10" text-anchor="middle" fill="#8a8985">${dt.toLocaleDateString('en-GB',{day:'numeric',month:'short',timeZone:'UTC'})}</text><text x="${x+bw/2}" y="${H-pb+27}" font-size="9" text-anchor="middle" fill="${w.basis==='chart'?'#9a6b00':'#0c5a3c'}">${w.partial?`${w.days} days`:(w.basis==='chart'?'est.':'per model')}</text>`;
+    const rows=b.parts.filter(p=>p.v>0).sort((a,c)=>c.v-a.v).map(p=>`<span style="color:${p.c==='#cfcec8'?'#8a8985':p.c}">&#9632;</span> ${esc(p.l)}: <b>${REV.metric==='tok'?fmt.tok(p.v):fmtM(p.v)}</b> (${fmt.pct(p.v/b.total,1)})`).join('<br>');
+    const tip=`<b>Week of ${esc(w.d)}</b>${w.partial?` (running: ${w.days} days so far)`:''} &middot; ${w.basis==='chart'?'estimated from the weekly charts':'every model read one by one'}<br>revenue <b>${fmtM(w.revenue)}</b> on ${fmt.tok(w.total_tokens)} tokens, $${fmt.num(w.per_m,3)}/M${w.chart_estimate?`<br>the chart method would have said ${fmtM(w.chart_estimate)}`:''}${REV.metric==='perm'?'':'<br><br>'+rows}`;
+    hits.push(`<rect class="mhit" x="${x}" y="${pt}" width="${bw}" height="${H-pt-pb}" fill="transparent" data-tip="${esc(tip).replace(/"/g,'&quot;')}"/>`); });
+  svg+=hits.join('')+'</svg>';
+  $('revChart').innerHTML=svg;
+  document.querySelectorAll('#revChart .mhit').forEach(el=> hover(el, el.dataset.tip));
+  $('revLegend').innerHTML = REV.metric==='perm' ? `<span style="--c:#2a78d6">revenue &divide; tokens, every model, input + output</span><span class="small" style="--c:transparent">hatched = estimated from the weekly charts &middot; faded = week still running</span>`
+    : top.map(t=>`<span style="--c:${colour[t.k]}">${esc(t.l)}</span>`).join('') + `<span style="--c:${OTHER}">${REV.by==='lab'?'other labs':'other models (incl. the rest of each lab below the chart)'}</span><span class="small" style="--c:transparent">hatched = estimated from the weekly charts &middot; faded = week still running</span>`;
+  // method and checks
+  const cmp=full.filter(w=>w.chart_estimate && !w.partial), err=cmp.map(w=>w.chart_estimate/w.revenue-1);
+  const fr=W.reduce((s,w)=>s+(w.free_tokens||0),0)/W.reduce((s,w)=>s+w.total_tokens,0);
+  const tr=T.tail_rates||{}, trs=Object.entries(tr).slice(0,6).map(([k,v])=>`${esc(revLab(k))} $${fmt.num(v,2)}`).join(', ');
+  $('revNote').innerHTML = `Revenue = each model's prompt (input) tokens &times; its effective input price + its completion (output) tokens &times; its effective output price. The effective prices are OpenRouter's traffic-weighted prices across every host serving the model, with cache hits inside the input price, so this is what the traffic paid rather than what list prices would charge; a model OpenRouter gives no effective price for is priced at its list price, cached tokens at the cache-read price. Free variants (${fmt.pct(fr,1)} of the tokens shown) earn nothing. Each week is priced at the price read in force on its last day; weeks before the first read (the dashboard's basket models from 28 Sep, every other model from ${esc((T.activity_window||[''])[0]||T.read_on||'')}) use the first read, so the earlier weeks carry later prices.`
+    + (cmp.length? ` <b>Check on the estimate:</b> on the ${cmp.length} complete per-model weeks the chart method lands ${err.map(e=>(e>=0?'+':'−')+fmt.pct(Math.abs(e),1)).join(', ')} from the per-model count (in-sample: its lab rates are measured on those same weeks). Lab rates below the chart, $/M tokens: ${trs}.` : '')
+    + ` OpenRouter is one route to the models: it leans towards developers and open-weight models, and traffic on the labs' own APIs (Anthropic, OpenAI, Google) and on the clouds does not pass through it, so these are OpenRouter's weekly token sales, not a lab's revenue. Bring-your-own-key traffic is included at the same prices (its users pay the host directly). OpenRouter data CC BY 4.0.`;
+  // weekly table
+  const cols=top.slice(0, REV.by==='lab'?8:6);
+  $('revTableSub').innerHTML = `&mdash; newest first; segment columns in ${REV.metric==='tok'?'tokens':'revenue'}, the ${REV.by==='lab'?'labs':'models'} with the most ${REV.metric==='tok'?'tokens':'revenue'} across the weeks shown`;
+  let t=`<tr><th class="t">Week of</th><th class="t">Basis</th><th>Tokens</th><th>Output share</th><th>Revenue</th><th>Week on week</th><th>$ per M tokens</th>${cols.map(c=>`<th>${esc(c.l)}</th>`).join('')}<th>Other</th></tr>`;
+  [...W].reverse().forEach((w)=>{ const i=W.indexOf(w), s=segW[i], pw=W[i-1], ch=pw && !w.partial ? w.revenue/pw.revenue-1 : null;
+    let o=REV.metric==='tok'? w.total_tokens : w.revenue; const cells=cols.map(c=>{ const x=s[c.k]; const v=x? val(x):0; o-=v; return `<td>${v? (REV.metric==='tok'?fmt.tok(v):fmtM(v)) : '—'}</td>`; }).join('');
+    t+=`<tr><td class="t">${esc(w.d)}${w.partial?` <span class="tag est">${w.days} days</span>`:''}</td><td class="t">${w.basis==='chart'?'<span class="tag est">est.</span> charts':'<span class="tag meas">per model</span>'}</td><td>${fmt.tok(w.total_tokens)}</td><td>${fmt.pct(w.output_tokens/w.total_tokens,1)}</td><td><b>${fmtM(w.revenue)}</b></td><td>${ch===null?'—':`<span class="${signClass(ch)}">${(ch>=0?'+':'−')+fmt.pct(Math.abs(ch),1)}</span>`}</td><td>$${fmt.num(w.per_m,3)}</td>${cells}<td>${REV.metric==='tok'?fmt.tok(Math.max(0,o)):fmtM(Math.max(0,o))}</td></tr>`; });
+  $('revTable').innerHTML=t;
+  // week selector and the model table
+  const sel=$('revWeek'); if (!REV.week || !T.weeks[REV.week]) REV.week=(last||W[W.length-1]).d;
+  sel.innerHTML=[...W].reverse().map(w=>`<option value="${esc(w.d)}" ${w.d===REV.week?'selected':''}>Week of ${esc(w.d)}${w.partial?' (running)':''}${w.basis==='chart'?' (est.)':''}</option>`).join('');
+  renderRevModels();
+}
+function renderRevModels(){
+  const T=INPUTS.token_revenue, w=Object.assign({d:REV.week}, T.weeks[REV.week]);
+  $('revWeekSub').innerHTML = `&mdash; ${fmtM(w.revenue)} on ${fmt.tok(w.total_tokens)} tokens${w.partial?`, ${w.days} days so far`:''}; ${w.basis==='chart'?'estimated from the weekly charts':'every model read one by one'}`;
+  $('revModelNote').innerHTML = w.basis==='chart'
+    ? `This week is older than OpenRouter's 31-day per-model window. The models named in that week's Top Models chart are priced individually; their input / output split is each model's own over the last 31 days (the lab's where the model has gone). The rest of each lab's tokens (its market-share chart line less its named models) is priced at the lab's measured rate for its models below the chart, or over all its models when none is named; the labs below the market-share chart at the rate measured for them.`
+    : `Every model with traffic, from OpenRouter's daily per-model activity; the ${KEEP_REV} with the most revenue are listed, the rest summed by lab. Prices are the effective prices in force on the week's last day (or the first read, if later), in $ per M tokens; 'input' includes cache hits at their discounted price.`;
+  let t=`<tr><th class="t">Model</th><th class="t">Lab</th><th class="t">Weights</th><th>Input tokens</th><th>Output tokens</th><th>Cached share of input</th><th>Input $/M</th><th>Output $/M</th><th class="t">Price</th><th>Revenue</th><th>Share</th><th>$/M tokens</th></tr>`;
+  const rows=(w.models||[]).map(m=>({name:m[1], lab:m[2], wts:m[3], variant:m[4], p:m[5], c:m[6], ca:m[7], pin:m[8], pout:m[9], basis:m[10], on:m[11], rev:m[12]}));
+  for (const [lab,v] of Object.entries(w.other_models||{})) rows.push({name:`Other ${revLab(lab)} models (${v[3]})`, lab, wts:'', variant:'', p:v[0]-v[1], c:v[1], ca:null, pin:null, pout:null, basis:'summed', on:null, rev:v[2]});
+  if (w.tail && w.tail[0]>0) rows.push({name: w.basis==='chart' ? 'Labs below the market-share chart' : 'Models below the per-model reads', lab:'', wts:'', variant:'', p:w.tail[0], c:null, ca:null, pin:null, pout:null, basis:`$${fmt.num(w.tail[1],3)}/M`, on:null, rev:w.tail[2]});
+  for (const r of rows){ const tk=r.p+(r.c||0);
+    const pb = r.basis==='effective' ? `effective, ${esc(r.on||'')}` : r.basis==='list' ? `list, ${esc(r.on||'')}` : r.basis==='free' ? 'free' : r.basis==='lab rate' ? 'lab rate' : esc(r.basis||'');
+    const wt = r.wts==='open' ? '<span class="tag o">open</span>' : r.wts==='closed' ? '<span class="tag f">closed</span>' : (r.variant==='estimate'?'<span class="tag est">est.</span>':'');
+    t+=`<tr><td class="t">${esc(r.name)}</td><td class="t">${esc(revLab(r.lab))}</td><td class="t">${wt}</td><td>${fmt.tok(r.p)}</td><td>${r.c==null?'—':fmt.tok(r.c)}</td><td>${r.ca==null||!r.p?'—':fmt.pct(r.ca/r.p,0)}</td><td>${r.pin==null?'—':'$'+fmt.num(r.pin,3)}</td><td>${r.pout==null?'—':'$'+fmt.num(r.pout,2)}</td><td class="t small">${pb}</td><td><b>${fmtM(r.rev)}</b></td><td>${fmt.pct(r.rev/w.revenue,1)}</td><td>${tk?'$'+fmt.num(r.rev/tk*1e6,3):'—'}</td></tr>`; }
+  t+=`<tr class="sum"><td class="t">Total</td><td class="t"></td><td class="t"></td><td colspan="2">${fmt.tok(w.total_tokens)}</td><td></td><td></td><td></td><td></td><td>${fmtM(w.revenue)}</td><td>100%</td><td>$${fmt.num(w.per_m,3)}</td></tr>`;
+  $('revModels').innerHTML=t;
+}
+const KEEP_REV = 60;
+
 // ============================================================================================ market history
 const MKT = {res:'weekly', hidden:new Set()};
 const IDXCOL = {b200:'#2a78d6', h200:'#0f8b8d', h100:'#c2417a', h100_hs:'#8a8985', b300_on_demand:'#6250d6', b300_spot:'#9085e9', b200_on_demand:'#2a78d6'};
@@ -1671,7 +1808,10 @@ $('hbReset').addEventListener('click', ()=>{ hbReset(); renderRoicHistory(null);
 document.querySelectorAll('#segTokBasis .btn').forEach(el=> el.addEventListener('click', ()=>{ TOK.basis=el.dataset.v; renderTokens(compute(INPUTS,D)); }));
 document.querySelectorAll('#segScope .btn').forEach(el=> el.addEventListener('click', ()=>{ D.throughput_scope=el.dataset.v; renderAll(); }));
 document.querySelectorAll('#segVol .btn').forEach(el=> el.addEventListener('click', ()=>{ D.volumes=el.dataset.v; renderAll(); }));
-renderHeader(); renderControls(); renderMethod(); renderAnchors(); renderAll(); selfCheck();
+document.querySelectorAll('#segRevMetric .btn').forEach(el=> el.addEventListener('click', ()=>{ REV.metric=el.dataset.v; renderRevenue(); }));
+document.querySelectorAll('#segRevBy .btn').forEach(el=> el.addEventListener('click', ()=>{ REV.by=el.dataset.v; renderRevenue(); }));
+$('revWeek').addEventListener('change', e=>{ REV.week=e.target.value; renderRevModels(); });
+renderHeader(); renderControls(); renderMethod(); renderAnchors(); renderAll(); selfCheck(); renderRevenue();
 showPage(PAGES.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'compare');
 </script>
 </body>
