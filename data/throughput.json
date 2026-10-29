@@ -24,7 +24,7 @@
  ],
  "source": "SemiAnalysis InferenceX public API, https://inferencex.semianalysis.com/api/v1/benchmarks?model=<name>",
  "license": "Apache-2.0 (per the dataset metadata on every compare page)",
- "read_on": "2026-10-29",
+ "read_on": "2026-10-30",
  "columns": [
   "model",
   "hw",

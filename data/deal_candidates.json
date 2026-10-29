@@ -1575,9 +1575,62 @@
    "first_seen": "2026-10-29",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "PowerBank First Lease: 2 MW Ontario Data Center for ~500 NVIDIA GB300 GPUs - News and Statistics",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPZFZ5R3dHWG11ZjhSVU1abnVQNldyUmkwUkI0S05EQkpvdDliNnY1ejJvSFRYdkJwSWIzc3Y4cUVMc1draWFDRmNscDgyVmpPcXdoaFJJSWotSmJhMm8tY2tOR2RFU2tzcUpIRnJxa2l6TG9EQXZmQ3d2U2lrbTNKeVBPNGRFbVZSZVZHRHM3dVF6ZmJzaXgzaXdSUFMxNmFJZ2lZ?oc=5",
+   "source": "IndexBox",
+   "published": "2026-10-29",
+   "channel": "news",
+   "value_usd_b": null,
+   "term_years": null,
+   "gpus": null,
+   "mw": 2.0,
+   "chip": "GB300",
+   "parties": [
+    "NVIDIA"
+   ],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-10-30",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "PowerBank Announces First 2 MW Modular Data Center in Ontario with Potential Annual Lease Revenue of Approximately C$2 Million",
+   "link": "https://news.google.com/rss/articles/CBMitwJBVV95cUxNaTF4anlRb0c5QmxmN3Q4WTh6ODRlbF9lci1NVWVPbFF2aEcwdGNLNUpZZHI2Ny1iNXVILUVXSnIydW5SZGlhcG12cDQzVmFHT0ROczFkc0YyM1RFYXhtTjhOZVd4aWdRelhqQ1FIVlFWX0QySURZYVo2SjJ1ZjdBSFZSWW5YNFdBZm1HQ010OGpXSk5hQUlkRFNlZDF2eU51WnU0UE9QdE1TTmtUdWU5M1dwdUYwbkk2SE94ckdVbjZhaGF4a3ZaUkVRVDRuR3RtTHloVlhmZERfaGtmREJoX3lDMGQySzFoOW5jZzRUWG90RFpFU1U1UTdaWlVPNERxV0ZVTjVxeFFVOVVGZlBRUTI3Y1VYVDhXT0pybE1NV2VNNWt4ck1KSUNTZGJYZzlpcElhSi11WQ?oc=5",
+   "source": "The Globe and Mail",
+   "published": "2026-10-29",
+   "channel": "news",
+   "value_usd_b": 0.002,
+   "term_years": null,
+   "gpus": null,
+   "mw": 2.0,
+   "chip": null,
+   "parties": [],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-10-30",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "PowerBank Announces First 2 MW Modular Data Center in Ontario with Potential Annual Lease Revenue of Approximately C$2 Million",
+   "link": "https://news.google.com/rss/articles/CBMiswJBVV95cUxNSnpuMV9YZjFiUV9ZNWVRTnZMR2dyNHF0VVFjTHR0T2pBNFZfMGtiZzFpUDNfNUVkLUMxcmtVY3VGdlFtZnNFaVJwZWkzWlFEcVdFcTd1Z3NsT0tiWFJjdjh6V3lXRlFwb2N4Rlo5UjZrZk9abVFITTk3M3U4U0drNVVRSGdZb21VaEMtajJPQ0tvZWNPU01nVkl0YVhPRTJDVGV4SG8wZzZPeUEwcUJHMm5VdWlyUl9MckpIdXlLMHZ4bEpPaUcyZEU0YlFNWUpTZmZFTGYxVmI5eWx1TC0ydFJJcnV1YTBKUno5NTk1cWw4TjduaGxSYjMxUnhBZWQyWW1tN19yT3FjLUhqMXNxUzdiZ3V2RnRVMU94UEwzOEV4bkh6S3lsRG5PLXFmc3VPZjM4?oc=5",
+   "source": "The Globe and Mail",
+   "published": "2026-10-29",
+   "channel": "news",
+   "value_usd_b": 0.002,
+   "term_years": null,
+   "gpus": null,
+   "mw": 2.0,
+   "chip": null,
+   "parties": [],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-10-30",
+   "status": "new",
+   "matched_contract": null
   }
  ],
- "scanned_on": "2026-10-29",
+ "scanned_on": "2026-10-30",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
