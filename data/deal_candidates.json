@@ -1628,9 +1628,62 @@
    "first_seen": "2026-10-30",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "AIB Data Centers Lands Nebius Lease, Expands Contracted Power to 120 MW",
+   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPTWg0ZTQ5SnFCQ2h6T0E0WDJWN2V2eW4ybDhxaUdMdXhvWWY0WTMxZ1ZGWEh4cElMd3dlVjhobE9pZ2JDN29GWnBQcFRDV0NzVDJsa3U1eFpjNldSVDJEeXRsTVcwaGphVnhsXzlfWGVvMFlGMkgzYjVna3lWWnR3TXZFYzVRb2VhaGJKQWhXdHMxTUt3c3pjMkp1d2N4VjUyMTBfWk5CYkdRbTNqRmdHZlBrRzZZV0wzMkY5RzF0YjQ3ZmQxQXJvN3V4dw?oc=5",
+   "source": "TradingView",
+   "published": "2026-10-29",
+   "channel": "news",
+   "value_usd_b": null,
+   "term_years": null,
+   "gpus": null,
+   "mw": 120.0,
+   "chip": null,
+   "parties": [
+    "Nebius"
+   ],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-10-31",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "PowerBank partner signs first lease for US$ 7.16 million modular data center in Ontario",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQc3NVV3BjZzJic04wUm14Nk82RXI5SjhSbk1ncEtGMWVzdDc4SThtakVueU9UMEplcU9YRjhyczQwNXpKaWFpZzNTSEFFalNHS21LdS14amNiSVRMeDlpVm5lODcwa2VZdFFFbkoxSmlmb1ljWkR6Q0lDY1JJY2FhWEphdmlwR3Z3Tk9LOG1uRkw3M1I2SExVeUlEYXR1UXByWFI5RHpn?oc=5",
+   "source": "w.media",
+   "published": "2026-10-30",
+   "channel": "news",
+   "value_usd_b": 0.007,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-10-31",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "PowerBank Announces First 2 MW Modular Data Center in Ontario with Potential Annual Lease Revenue of Approximately C$2 Million",
+   "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQbTRCd1M5UzZsMGp0WEtKb3hLU2kzWHZlUjB4cDhiQnBsd0xxUWV5ekp0TXZseXUxc0dtMVA1aDNJSWR1V0tkY2w5LU5TdUFtbk5YVzdXemh2ZmR6bFhnQlVpWHZwZlp0dFFFUDFMQ1k0ZF9BVFctTjI5M1dVVzlBd3R1RVZFbFFXMkRrM3JMWGkxUnlwVzM4VnZsUlR1R1N0UjhOSDZBcE1tVUhLbi1Hd2VPWWFidXQ0VHRqUVhsaVdCZE96YkRhT3pUaGR0RzR0RzVLZDBTYW5IY3VZR29FMVBYN3ktUEU0U2ZCM2Jn?oc=5",
+   "source": "PowerBank Corporation",
+   "published": "2026-10-29",
+   "channel": "news",
+   "value_usd_b": 0.002,
+   "term_years": null,
+   "gpus": null,
+   "mw": 2.0,
+   "chip": null,
+   "parties": [],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-10-31",
+   "status": "new",
+   "matched_contract": null
   }
  ],
- "scanned_on": "2026-10-30",
+ "scanned_on": "2026-10-31",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
