@@ -1749,9 +1749,45 @@
    "first_seen": "2026-11-04",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "RIOT: A 910 MW AI lease transforms the contracted portfolio, with $2.2 billion of annual NOI targeted at full deployment",
+   "link": "https://news.google.com/rss/articles/CBMirAJBVV95cUxObVVlSnM5OWlnUWIzOXd4ZjR4dXVmT1BPT3A5UkZRS2VUcXhuVlI1azIteG45SnhKMGFNN1hzWENuZVVDcU9vU1cxekFGeGhhTHA3QTFxLURCdDlxRDgwTE9KamtmZkdZZVBkaElnb2VaYTI5UllqYnEzdFFlU2ZYcDAzUUVwcnludDNDOEk0YXZ4enhoNU84V0Q1bHhES1FhbVFUZzJ6RTVheVR6UndFVFBjM21aQmZleGVwX21uQUhHR1BJWFRfR1VVMWtqdXRyczhjLVdreHFrUzE4YVRva2RBM2tPb2VRR3ZBWERGb2lQMkh6dFgwbU8xclNUNnNCMFhiRmFfaWtsb0tQX01YcGNuMW85LUVVMzkta3otMGdVbjJoTmxVVTVEcXg?oc=5",
+   "source": "TradingView",
+   "published": "2026-11-04",
+   "channel": "news",
+   "value_usd_b": 2.2,
+   "term_years": null,
+   "gpus": null,
+   "mw": 910.0,
+   "chip": null,
+   "parties": [],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-11-05",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "Riot Platforms Signs $28 Billion, 15-Year AI Data Center Lease at Corsicana",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWXNUNG1rNVUwbHBtMUNodkpNQnB4TzYwcDRhN2wzb0RxRndjT3Vya0tCX1FMVG5FaU9ZTkMxczR0Q19jMldDMWdzR0pLS0FwVXUwbjR5b2ItX0gzS3RmNzh6WjlaQWt1dTZPcGkySm9ydjFzeUlHMDV1LWFZeUZVQVh4Z09JYnFMOWFHM1Y0M2d1WHJsTHZPZ2JveHhFN0ItaTNtaHNGdzVWZ2lwNDlVdjdzSmo?oc=5",
+   "source": "Minichart",
+   "published": "2026-11-04",
+   "channel": "news",
+   "value_usd_b": 28.0,
+   "term_years": 15,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "Riot"
+   ],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-11-05",
+   "status": "new",
+   "matched_contract": null
   }
  ],
- "scanned_on": "2026-11-04",
+ "scanned_on": "2026-11-05",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
