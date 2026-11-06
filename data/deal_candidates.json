@@ -1805,9 +1805,28 @@
    "first_seen": "2026-11-06",
    "status": "new",
    "matched_contract": "SpaceX/xAI - Reflection AI (Colossus 2)"
+  },
+  {
+   "title": "Microsoft Tightens Neocloud Oversight, Axes $3B Deal [2026]",
+   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQMXpTSkR0SnE1Ym52cm0wbFpaWk11SklZVlJXeC03aVg2ak1JLVM0UHhpaWJlcy1EeXltMHpBRm9lSXlkQlMyUGJOWXM2QWJPZ2FJWFVvbk9fWDFQQk52MGlHVTg4b0UwZlJLaHNWRHlpMDhQMklUbGhUVEpkYm9qSGVVZ2J3WUNRVjJJWDJxb2psUQ?oc=5",
+   "source": "https://tech-insider.org/",
+   "published": "2026-11-06",
+   "channel": "news",
+   "value_usd_b": 3.0,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "Microsoft"
+   ],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-11-07",
+   "status": "new",
+   "matched_contract": "IREN - Microsoft, NVIDIA, Perplexity, Figure AI, Together AI, Fluidstack, Fireworks, Fal, Hume + one unnamed (July-2026 batch)"
   }
  ],
- "scanned_on": "2026-11-06",
+ "scanned_on": "2026-11-07",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
