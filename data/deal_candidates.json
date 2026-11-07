@@ -1824,9 +1824,49 @@
    "first_seen": "2026-11-07",
    "status": "new",
    "matched_contract": "IREN - Microsoft, NVIDIA, Perplexity, Figure AI, Together AI, Fluidstack, Fireworks, Fal, Hume + one unnamed (July-2026 batch)"
+  },
+  {
+   "title": "Microsoft Won't Renew Oracle AI Compute Lease, Sounding Alarm on $664 Billion Contract Backlog",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE55b0dDN0RINldjbDNndXZtUGVfcldma0tlNUZYcWlhMVJHZEZfeTVrMnZzVmQtUEF1MTAwOFNhUkpOdEhacEJxTVpOSm9jdlFDR0N4RnRZSXloMk12Rkg0T2lFbW5VZ05WVjFhUjRlVm1mRUdHeWc?oc=5",
+   "source": "BigGo Finance",
+   "published": "2026-11-06",
+   "channel": "news",
+   "value_usd_b": 664.0,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "Microsoft",
+    "Oracle"
+   ],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-11-08",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "Microsoft Ends Oracle AI Compute Lease, Reassesses $80 Billion Cloud Partnerships",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPU1A1YUN5UmN1eUhIN1J4OUtzU0d0SmdINnFqdU04VjdVVkpNQWY5R05DQWpVNV9jQVFtcHphUjZaSlUyb3hGTXFqM0lVd3lmdko5SWF5TUJoRkZvYUl6MVZzVlNCSkFtMUR1dXA3QV9EYWhTSHotX0ZyUTVNUFJxanF4OVdnbGlwWUhsalZZelRxWElNbTNaRk5ObFZFczlUUEkwalRrMkVnbDJDM192cWo4dw?oc=5",
+   "source": "KuCoin",
+   "published": "2026-11-07",
+   "channel": "news",
+   "value_usd_b": 80.0,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "Microsoft",
+    "Oracle"
+   ],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-11-08",
+   "status": "new",
+   "matched_contract": null
   }
  ],
- "scanned_on": "2026-11-07",
+ "scanned_on": "2026-11-08",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
