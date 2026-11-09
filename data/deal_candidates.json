@@ -1864,9 +1864,28 @@
    "first_seen": "2026-11-08",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "Anthropic skips six-year waitlist with massive $3.4 billion gas turbine generator deal \u2014 firm takes over OnePWR's orders, secures 1.7GW of capacity to power AI data centers",
+   "link": "https://news.google.com/rss/articles/CBMiygJBVV95cUxQRE95eDJUVGprY1ltalIxbXh0TEcxamdqaUtfZEE4VUR2bnFCM19jVld2dmYtQTFnR01CNWY4RF9NMlljb0tGSWV3NGVQelJNSkdXSHJXTDFSVWV5THBVUEpUX2kzT0lCYjVORUZHNVN6bUxOOXVQOUNTamp6azRwRnl2NFdiaFNSSjFfNUY0RmRTd3dLYWFZNktZOWE4clRvSG9EYnE0b2RwMnVHdzkxUExPSGtlZlk2dDZBR3FaLUMtakhpTTN5bXFYYVNfajNMaWp2TWxoU3RpeXJiajFmTHo1ZkU0alFObVZkc1BTM3pMb3cxNjd3VWhxZGQ3SENzR2lnN0hiMWFiblBmZjdwaE9yaEEtSEZzOGZ2RnZoZkFDUXQ5NWs5RzdkVnFrRHlCY2htVnpvMGlsSTQ2d2IyLXdvTUV3QmFrcmc?oc=5",
+   "source": "Tom's Hardware",
+   "published": "2026-11-09",
+   "channel": "news",
+   "value_usd_b": 3.4,
+   "term_years": 6,
+   "gpus": null,
+   "mw": 1700.0,
+   "chip": null,
+   "parties": [
+    "Anthropic"
+   ],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-11-10",
+   "status": "new",
+   "matched_contract": null
   }
  ],
- "scanned_on": "2026-11-09",
+ "scanned_on": "2026-11-10",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
