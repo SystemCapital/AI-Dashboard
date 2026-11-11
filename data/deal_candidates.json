@@ -1883,9 +1883,28 @@
    "first_seen": "2026-11-10",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "Fervo Energy's Contracted Backlog Jumps to $11.9 Billion After Google Signs 396 MW Geothermal Deal",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9fM2h5WEFSVVNPV3NIa2xhd2F4S2NfWlRiWUVucFl5TlRMcnNYbkd3YVdjOEN6bFFGYnZ6TVFlRVlYYUJEbmRQQUEwS3lBc1dPYmIxdkxNaHFBenZQaEduSDN2bTVUdTFoeE5NbVlSQzd0cEJiQlE?oc=5",
+   "source": "BigGo Finance",
+   "published": "2026-11-09",
+   "channel": "news",
+   "value_usd_b": 11.9,
+   "term_years": null,
+   "gpus": null,
+   "mw": 396.0,
+   "chip": null,
+   "parties": [
+    "Google"
+   ],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-11-12",
+   "status": "new",
+   "matched_contract": null
   }
  ],
- "scanned_on": "2026-11-11",
+ "scanned_on": "2026-11-12",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
