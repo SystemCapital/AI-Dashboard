@@ -20,7 +20,7 @@
  "silicon_index": {
   "source": "https://www.silicondata.com/products/silicon-index (index cards, 30 daily values each; until 2026-10-19 https://portal.silicondata.com/gpu-index-chart?standalone=true&gpu={gpu}&mainTab={tab})",
   "landing": "https://www.silicondata.com/products/silicon-index",
-  "read_on": "2026-11-13",
+  "read_on": "2026-11-14",
   "series": {
    "b200": {
     "label": "B200 (SDB200RT)",
@@ -100,10 +100,11 @@
      "2026-11-09": 6.84,
      "2026-11-10": 6.97,
      "2026-11-11": 6.84,
-     "2026-11-12": 6.97
+     "2026-11-12": 6.97,
+     "2026-11-13": 6.87
     },
-    "as_of": "2026-11-12",
-    "read_on": "2026-11-13",
+    "as_of": "2026-11-13",
+    "read_on": "2026-11-14",
     "url": "https://www.silicondata.com/products/silicon-index",
     "stated": [
      [
@@ -228,10 +229,11 @@
      "2026-11-09": 3.48,
      "2026-11-10": 3.48,
      "2026-11-11": 3.47,
-     "2026-11-12": 3.52
+     "2026-11-12": 3.52,
+     "2026-11-13": 3.6
     },
-    "as_of": "2026-11-12",
-    "read_on": "2026-11-13",
+    "as_of": "2026-11-13",
+    "read_on": "2026-11-14",
     "url": "https://www.silicondata.com/products/silicon-index",
     "stated": [
      [
@@ -366,10 +368,11 @@
      "2026-11-09": 3.01,
      "2026-11-10": 3.06,
      "2026-11-11": 3.06,
-     "2026-11-12": 3.06
+     "2026-11-12": 3.06,
+     "2026-11-13": 3.1
     },
-    "as_of": "2026-11-12",
-    "read_on": "2026-11-13",
+    "as_of": "2026-11-13",
+    "read_on": "2026-11-14",
     "url": "https://www.silicondata.com/products/silicon-index",
     "stated": [
      [
@@ -504,10 +507,11 @@
      "2026-11-09": 7.1,
      "2026-11-10": 7.1,
      "2026-11-11": 7.1,
-     "2026-11-12": 7.1
+     "2026-11-12": 7.1,
+     "2026-11-13": 7.1
     },
-    "as_of": "2026-11-12",
-    "read_on": "2026-11-13",
+    "as_of": "2026-11-13",
+    "read_on": "2026-11-14",
     "url": "https://www.silicondata.com/products/silicon-index",
     "stated": [
      [
@@ -540,7 +544,7 @@
   "source": "https://api.ornnai.com/api/gpu/{gpu}/index-history (public, keyless, trailing three months); latest values at https://api.ornnai.com/api/daily-index/all",
   "landing": "https://data.ornn.com/preview",
   "note": "Ornn Compute Price Index (OCPI): a volume-weighted, winsorized average of transacted GPU rental prices across the market (actual transactions, not list prices), one global region, settled once daily by 20:00 UTC and listed on Bloomberg. The date is the settlement day. B200 is the only Blackwell index; H100 SXM and H200 are the Hopper indices. Seeded on 2026-09-08 with the API's full public window (from 2026-06-08).",
-  "read_on": "2026-11-13",
+  "read_on": "2026-11-14",
   "series": {
    "b200": {
     "label": "Ornn B200",
@@ -705,10 +709,11 @@
      "2026-11-08": 9.94,
      "2026-11-09": 9.9,
      "2026-11-10": 9.9,
-     "2026-11-11": 9.84
+     "2026-11-11": 9.84,
+     "2026-11-12": 9.78
     },
-    "as_of": "2026-11-11",
-    "read_on": "2026-11-13",
+    "as_of": "2026-11-12",
+    "read_on": "2026-11-14",
     "url": "https://api.ornnai.com/api/gpu/B200/index-history"
    },
    "h200": {
@@ -874,10 +879,11 @@
      "2026-11-08": 6.82,
      "2026-11-09": 7.17,
      "2026-11-10": 7.24,
-     "2026-11-11": 7.75
+     "2026-11-11": 7.75,
+     "2026-11-12": 7.12
     },
-    "as_of": "2026-11-11",
-    "read_on": "2026-11-13",
+    "as_of": "2026-11-12",
+    "read_on": "2026-11-14",
     "url": "https://api.ornnai.com/api/gpu/H200/index-history"
    },
    "h100": {
@@ -1043,10 +1049,11 @@
      "2026-11-08": 3.37,
      "2026-11-09": 3.3,
      "2026-11-10": 3.1,
-     "2026-11-11": 3.25
+     "2026-11-11": 3.25,
+     "2026-11-12": 3.39
     },
-    "as_of": "2026-11-11",
-    "read_on": "2026-11-13",
+    "as_of": "2026-11-12",
+    "read_on": "2026-11-14",
     "url": "https://api.ornnai.com/api/gpu/H100%20SXM/index-history"
    }
   }
@@ -1056,7 +1063,7 @@
   "landing": "https://www.silicondata.com/products/silicon-index/llm-token-expenditure-index",
   "note": "Silicon Data LLM Token Expenditure Index family: the usage-weighted price of one million tokens across a defined LLM universe, blending active provider pricing with real consumption volume observed across multi-provider routing gateways and inference networks, normalised for input/output mix and context window, published daily. Broad market (Bloomberg SDLLMTK), open-weight models (200+ tracked) and proprietary models (120+ tracked). Units: USD per million tokens, input and output blended at the observed mix. Seeded 2026-09-09 from the public chart pages (seven daily values each); each run merges the new dates in.",
   "unit": "USD per million tokens (input + output, blended at observed mix)",
-  "read_on": "2026-11-13",
+  "read_on": "2026-11-14",
   "series": {
    "llm": {
     "label": "LLM Token Expenditure Index (SDLLMTK)",
@@ -1134,10 +1141,11 @@
      "2026-11-08": 0.8252,
      "2026-11-09": 0.8209,
      "2026-11-10": 0.8132,
-     "2026-11-11": 0.8164
+     "2026-11-11": 0.8164,
+     "2026-11-12": 0.8059
     },
-    "as_of": "2026-11-11",
-    "read_on": "2026-11-13",
+    "as_of": "2026-11-12",
+    "read_on": "2026-11-14",
     "url": "https://www.silicondata.com/products/silicon-index"
    },
    "open": {
@@ -1216,10 +1224,11 @@
      "2026-11-08": 0.4904,
      "2026-11-09": 0.4996,
      "2026-11-10": 0.4985,
-     "2026-11-11": 0.4948
+     "2026-11-11": 0.4948,
+     "2026-11-12": 0.4934
     },
-    "as_of": "2026-11-11",
-    "read_on": "2026-11-13",
+    "as_of": "2026-11-12",
+    "read_on": "2026-11-14",
     "url": "https://www.silicondata.com/products/silicon-index"
    },
    "proprietary": {
@@ -1298,15 +1307,16 @@
      "2026-11-08": 1.9692,
      "2026-11-09": 1.9627,
      "2026-11-10": 1.9324,
-     "2026-11-11": 1.9586
+     "2026-11-11": 1.9586,
+     "2026-11-12": 1.9235
     },
-    "as_of": "2026-11-11",
-    "read_on": "2026-11-13",
+    "as_of": "2026-11-12",
+    "read_on": "2026-11-14",
     "url": "https://www.silicondata.com/products/silicon-index"
    }
   }
  },
- "refreshed_at": "2026-11-13T08:57:48",
+ "refreshed_at": "2026-11-14T09:03:15",
  "quotes": {
   "note": "One series per published rental quote in data/rental_rates.json (vendor, chip, tier), $/GPU-hour: 'values' = what the vendor showed on the day it was read; 'stated' = dated price changes documented by the vendor's own announcement or several reports; 'announced' = published future prices; 'corrections' = readings the collector got wrong (values hold the corrected figure); 'ended' = the vendor stopped publishing the rate. Backfilled on 2026-10-12 from the project's own records: the archived data files of 3, 4 and 8 Sep 2026, the spot readings in this file, every refresh in update.log from 17 Sep and the daily snapshots in data/snapshots/. Every run of update.py appends the day's readings.",
   "series": {
@@ -1358,7 +1368,8 @@
      "2026-11-10": 14.2082,
      "2026-11-11": 14.2082,
      "2026-11-12": 14.2082,
-     "2026-11-13": 14.2082
+     "2026-11-13": 14.2082,
+     "2026-11-14": 14.2082
     },
     "instance": "p6-b200.48xlarge",
     "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
@@ -1427,7 +1438,8 @@
      "2026-11-10": 9.6655,
      "2026-11-11": 9.3136,
      "2026-11-12": 9.1221,
-     "2026-11-13": 8.8945
+     "2026-11-13": 8.8945,
+     "2026-11-14": 8.6778
     },
     "instance": "p6-b200.48xlarge EC2 Spot, us-east-1 (Linux)",
     "url": "https://aws.amazon.com/ec2/spot/pricing/",
@@ -1483,7 +1495,8 @@
      "2026-11-10": 16.146,
      "2026-11-11": 16.146,
      "2026-11-12": 16.146,
-     "2026-11-13": 16.146
+     "2026-11-13": 16.146,
+     "2026-11-14": 16.146
     },
     "instance": "p6-b300.48xlarge",
     "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
@@ -1552,7 +1565,8 @@
      "2026-11-10": 8.8282,
      "2026-11-11": 8.3991,
      "2026-11-12": 7.9942,
-     "2026-11-13": 7.7267
+     "2026-11-13": 7.7267,
+     "2026-11-14": 7.5452
     },
     "instance": "p6-b300.48xlarge EC2 Spot, us-east-1 (Linux)",
     "url": "https://aws.amazon.com/ec2/spot/pricing/",
@@ -1608,7 +1622,8 @@
      "2026-11-10": 10.582,
      "2026-11-11": 10.582,
      "2026-11-12": 10.582,
-     "2026-11-13": 10.582
+     "2026-11-13": 10.582,
+     "2026-11-14": 10.582
     },
     "instance": "u-p6e-gb200x72 UltraServer",
     "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
@@ -1664,7 +1679,8 @@
      "2026-11-10": 8.6,
      "2026-11-11": 8.6,
      "2026-11-12": 8.6,
-     "2026-11-13": 8.6
+     "2026-11-13": 8.6,
+     "2026-11-14": 8.6
     },
     "instance": "HGX B200, North America",
     "url": "https://www.coreweave.com/pricing",
@@ -1720,7 +1736,8 @@
      "2026-11-10": 4.2637,
      "2026-11-11": 4.2637,
      "2026-11-12": 4.2637,
-     "2026-11-13": 4.2637
+     "2026-11-13": 4.2637,
+     "2026-11-14": 4.2637
     },
     "instance": "HGX B200 spot, North America",
     "url": "https://www.coreweave.com/pricing",
@@ -1776,7 +1793,8 @@
      "2026-11-10": 4.48,
      "2026-11-11": 4.48,
      "2026-11-12": 4.48,
-     "2026-11-13": 4.48
+     "2026-11-13": 4.48,
+     "2026-11-14": 4.48
     },
     "instance": "HGX B300 spot, North America",
     "url": "https://www.coreweave.com/pricing",
@@ -1832,7 +1850,8 @@
      "2026-11-10": 10.5,
      "2026-11-11": 10.5,
      "2026-11-12": 10.5,
-     "2026-11-13": 10.5
+     "2026-11-13": 10.5,
+     "2026-11-14": 10.5
     },
     "instance": "GB200 NVL72 (4-GPU slice), North America",
     "url": "https://www.coreweave.com/pricing",
@@ -1888,7 +1907,8 @@
      "2026-11-10": 6.155,
      "2026-11-11": 6.155,
      "2026-11-12": 6.155,
-     "2026-11-13": 6.155
+     "2026-11-13": 6.155,
+     "2026-11-14": 6.155
     },
     "instance": "HGX H100, North America",
     "url": "https://www.coreweave.com/pricing",
@@ -1943,7 +1963,8 @@
      "2026-11-10": 5.4496,
      "2026-11-11": 5.4496,
      "2026-11-12": 5.4496,
-     "2026-11-13": 5.4496
+     "2026-11-13": 5.4496,
+     "2026-11-14": 5.4496
     },
     "instance": "a4-highgpu-8g Spot VM, us-central1 (Iowa)",
     "url": "https://cloud.google.com/spot-vms/pricing",
@@ -1988,7 +2009,8 @@
      "2026-11-10": 5.99,
      "2026-11-11": 5.99,
      "2026-11-12": 5.99,
-     "2026-11-13": 5.99
+     "2026-11-13": 5.99,
+     "2026-11-14": 5.99
     },
     "instance": "B200 marketplace, lowest listed rate (per GPU)",
     "url": "https://www.hyperbolic.ai/marketplace",
@@ -2044,7 +2066,8 @@
      "2026-11-10": 7.79,
      "2026-11-11": 7.79,
      "2026-11-12": 7.79,
-     "2026-11-13": 7.79
+     "2026-11-13": 7.79,
+     "2026-11-14": 7.79
     },
     "instance": "B200 SXM6 (per GPU)",
     "url": "https://lambda.ai/pricing",
@@ -2099,7 +2122,8 @@
      "2026-11-10": 27.04,
      "2026-11-11": 27.04,
      "2026-11-12": 27.04,
-     "2026-11-13": 27.04
+     "2026-11-13": 27.04,
+     "2026-11-14": 27.04
     },
     "instance": "Standard_ND128isr_NDR_GB200_v6",
     "url": "https://prices.azure.com/api/retail/prices?$filter=armSkuName%20eq%20%27Standard_ND128isr_NDR_GB200_v6%27%20and%20priceType%20eq%20%27Consumption%27",
@@ -2154,7 +2178,8 @@
      "2026-11-10": 27.04,
      "2026-11-11": 27.04,
      "2026-11-12": 27.04,
-     "2026-11-13": 27.04
+     "2026-11-13": 27.04,
+     "2026-11-14": 27.04
     },
     "instance": "Standard_ND128isr_NDR_GB200_v6 Spot, eastus",
     "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/",
@@ -2209,7 +2234,8 @@
      "2026-11-10": 10.6,
      "2026-11-11": 10.6,
      "2026-11-12": 10.6,
-     "2026-11-13": 10.6
+     "2026-11-13": 10.6,
+     "2026-11-14": 10.6
     },
     "instance": "Standard_ND96isr_H200_v5",
     "url": "https://prices.azure.com/api/retail/prices?$filter=armSkuName%20eq%20%27Standard_ND96isr_H200_v5%27",
@@ -2260,7 +2286,8 @@
      "2026-11-10": 8.5,
      "2026-11-11": 8.5,
      "2026-11-12": 8.5,
-     "2026-11-13": 8.5
+     "2026-11-13": 8.5,
+     "2026-11-14": 8.5
     },
     "instance": "HGX B200 (per GPU)",
     "url": "https://nebius.com/prices",
@@ -2357,7 +2384,8 @@
      "2026-11-10": 9.5,
      "2026-11-11": 9.5,
      "2026-11-12": 9.5,
-     "2026-11-13": 9.5
+     "2026-11-13": 9.5,
+     "2026-11-14": 9.5
     },
     "instance": "HGX B300 (per GPU)",
     "url": "https://nebius.com/prices",
@@ -2458,7 +2486,8 @@
      "2026-11-10": 14.0,
      "2026-11-11": 14.0,
      "2026-11-12": 14.0,
-     "2026-11-13": 14.0
+     "2026-11-13": 14.0,
+     "2026-11-14": 14.0
     },
     "instance": "BM.GPU.B200.8 (SKU B110978)",
     "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?partNumber=B110978&currencyCode=USD",
@@ -2513,7 +2542,8 @@
      "2026-11-10": 15.0,
      "2026-11-11": 15.0,
      "2026-11-12": 15.0,
-     "2026-11-13": 15.0
+     "2026-11-13": 15.0,
+     "2026-11-14": 15.0
     },
     "instance": "BM.GPU.B300.8 (SKU B112237)",
     "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?partNumber=B112237&currencyCode=USD",
@@ -2568,7 +2598,8 @@
      "2026-11-10": 16.0,
      "2026-11-11": 16.0,
      "2026-11-12": 16.0,
-     "2026-11-13": 16.0
+     "2026-11-13": 16.0,
+     "2026-11-14": 16.0
     },
     "instance": "BM.GPU.GB200.4 (SKU B110979)",
     "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?partNumber=B110979&currencyCode=USD",
@@ -2623,7 +2654,8 @@
      "2026-11-10": 18.0,
      "2026-11-11": 18.0,
      "2026-11-12": 18.0,
-     "2026-11-13": 18.0
+     "2026-11-13": 18.0,
+     "2026-11-14": 18.0
     },
     "instance": "BM.GPU.GB300.4 (SKU B112140)",
     "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?partNumber=B112140&currencyCode=USD",
@@ -2669,7 +2701,8 @@
      "2026-11-10": 8.19,
      "2026-11-11": 8.19,
      "2026-11-12": 8.19,
-     "2026-11-13": 9.29
+     "2026-11-13": 9.29,
+     "2026-11-14": 9.29
     },
     "instance": "HGX B200 cluster, on-demand (per GPU)",
     "url": "https://www.together.ai/gpu-clusters",
@@ -2725,7 +2758,8 @@
      "2026-11-10": 9.138,
      "2026-11-11": 9.138,
      "2026-11-12": 9.229,
-     "2026-11-13": 9.321
+     "2026-11-13": 9.321,
+     "2026-11-14": 9.414
     },
     "instance": "B200 SXM6 1x",
     "url": "https://verda.com/pricing",
@@ -2781,7 +2815,8 @@
      "2026-11-10": 4.569,
      "2026-11-11": 4.569,
      "2026-11-12": 4.615,
-     "2026-11-13": 4.661
+     "2026-11-13": 4.661,
+     "2026-11-14": 4.707
     },
     "instance": "B200 SXM6 1x spot",
     "url": "https://verda.com/pricing",
@@ -2837,7 +2872,8 @@
      "2026-11-10": 11.81,
      "2026-11-11": 11.93,
      "2026-11-12": 12.05,
-     "2026-11-13": 12.17
+     "2026-11-13": 12.17,
+     "2026-11-14": 12.29
     },
     "instance": "B300 SXM6 1x",
     "url": "https://verda.com/pricing",
@@ -2893,7 +2929,8 @@
      "2026-11-10": 5.905,
      "2026-11-11": 5.965,
      "2026-11-12": 6.025,
-     "2026-11-13": 6.085
+     "2026-11-13": 6.085,
+     "2026-11-14": 6.145
     },
     "instance": "B300 SXM6 1x spot",
     "url": "https://verda.com/pricing",
@@ -2949,7 +2986,8 @@
      "2026-11-10": 13.58,
      "2026-11-11": 13.72,
      "2026-11-12": 13.86,
-     "2026-11-13": 14.0
+     "2026-11-13": 14.0,
+     "2026-11-14": 14.13
     },
     "instance": "GB300 SXM6 288GB 1x",
     "url": "https://verda.com/pricing",
@@ -3005,7 +3043,8 @@
      "2026-11-10": 6.791,
      "2026-11-11": 6.86,
      "2026-11-12": 6.929,
-     "2026-11-13": 6.998
+     "2026-11-13": 6.998,
+     "2026-11-14": 7.067
     },
     "instance": "GB300 SXM6 288GB 1x spot",
     "url": "https://verda.com/pricing",
@@ -3065,7 +3104,8 @@
      "2026-11-10": 8.87,
      "2026-11-11": 8.87,
      "2026-11-12": 8.87,
-     "2026-11-13": 8.87
+     "2026-11-13": 8.87,
+     "2026-11-14": 8.87
     },
     "instance": "1-Click Cluster, 256+ GPUs, 2 weeks to 1 year (per GPU)",
     "url": "https://lambda.ai/pricing",
@@ -3110,7 +3150,8 @@
      "2026-11-10": 9.99,
      "2026-11-11": 9.99,
      "2026-11-12": 9.99,
-     "2026-11-13": 11.49
+     "2026-11-13": 11.49,
+     "2026-11-14": 11.49
     },
     "instance": "HGX B300 cluster, on-demand (per GPU)",
     "url": "https://www.together.ai/gpu-clusters",
@@ -3155,7 +3196,8 @@
      "2026-11-10": 8.5,
      "2026-11-11": 8.5,
      "2026-11-12": 8.5,
-     "2026-11-13": 8.5
+     "2026-11-13": 8.5,
+     "2026-11-14": 8.5
     },
     "instance": "Bare Metal 8x B200 (vbm-256c-3072gb-8-b200-gpu)",
     "url": "https://www.vultr.com/pricing/",
@@ -3285,10 +3327,10 @@
      "2026-10-19": 15,
      "2026-10-26": 17,
      "2026-11-02": 14,
-     "2026-11-09": 16
+     "2026-11-09": 17
     },
     "as_of": "2026-11-09",
-    "read_on": "2026-11-13"
+    "read_on": "2026-11-14"
    },
    "b300_spot": {
     "gpu": "nvidia-b300",
@@ -3362,7 +3404,7 @@
      "2026-11-09": 6
     },
     "as_of": "2026-11-09",
-    "read_on": "2026-11-13"
+    "read_on": "2026-11-14"
    },
    "b200_on_demand": {
     "gpu": "nvidia-b200",
@@ -3429,7 +3471,7 @@
      "2026-10-19": 7.99,
      "2026-10-26": 7.99,
      "2026-11-02": 8.01,
-     "2026-11-09": 8.1178
+     "2026-11-09": 8.1006
     },
     "providers": {
      "2025-10-06": 10,
@@ -3492,7 +3534,7 @@
      "2026-11-09": 23
     },
     "as_of": "2026-11-09",
-    "read_on": "2026-11-13"
+    "read_on": "2026-11-14"
    },
    "b200_spot": {
     "gpu": "nvidia-b200",
@@ -3549,7 +3591,7 @@
      "2026-10-19": 4.2638,
      "2026-10-26": 4.3769,
      "2026-11-02": 4.5298,
-     "2026-11-09": 4.5325
+     "2026-11-09": 4.6031
     },
     "providers": {
      "2025-12-15": 1,
@@ -3599,10 +3641,10 @@
      "2026-10-19": 6,
      "2026-10-26": 7,
      "2026-11-02": 8,
-     "2026-11-09": 8
+     "2026-11-09": 7
     },
     "as_of": "2026-11-09",
-    "read_on": "2026-11-13"
+    "read_on": "2026-11-14"
    },
    "gb200_on_demand": {
     "gpu": "nvidia-gb200",
@@ -3732,9 +3774,9 @@
      "2026-11-09": 5
     },
     "as_of": "2026-11-09",
-    "read_on": "2026-11-13"
+    "read_on": "2026-11-14"
    }
   },
-  "read_on": "2026-11-13"
+  "read_on": "2026-11-14"
  }
 }
