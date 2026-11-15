@@ -1956,9 +1956,28 @@
    "first_seen": "2026-11-14",
    "status": "new",
    "matched_contract": "Lambda - Anthropic (Beacon Point, Texas)"
+  },
+  {
+   "title": "HIVE Digital Technologies signs $600 million in AI cloud contracts",
+   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPRUhIOVAtQXUwaTRoRGJjbE5fbmNGd0t6a3NIZHpEV0gxR1VGejFHTFFwaG1GcW4ybTRjb0tRalNhNGcyMWlmczhua05tREgtT0hoZHVOYnFSN1V1STRZNl83WXlpWG8weDJiTWx4SnB3UDZYNWFEY0xLZHNPT3BOdFJJTUQ3dVlScGZuNXkxYkJLb3pRZUVxWkZDSFhKcXFOYUQwaFpxbzZrWmNoWmR5QVBIWF9TX0o5MW9oeHBRWmlobjduVnhET253?oc=5",
+   "source": "TradingView",
+   "published": "2026-11-11",
+   "channel": "news",
+   "value_usd_b": 0.6,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "HIVE"
+   ],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-11-16",
+   "status": "new",
+   "matched_contract": null
   }
  ],
- "scanned_on": "2026-11-15",
+ "scanned_on": "2026-11-16",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
