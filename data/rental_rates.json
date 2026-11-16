@@ -34,7 +34,7 @@
    "price_hr": 42.0,
    "per_gpu_hr": 10.5,
    "url": "https://www.coreweave.com/pricing",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Inference single-GPU column also $10.50. Reserved capacity 'up to 60% off'.",
    "refresh": {
     "kind": "html",
@@ -54,7 +54,7 @@
    "price_hr": null,
    "per_gpu_hr": null,
    "url": "https://www.coreweave.com/pricing",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "CoreWeave publishes no GB300 price ('Contact sales'); the row is read every day so a published price shows up the day it appears.",
    "refresh": {
     "kind": "html",
@@ -76,7 +76,7 @@
    "price_hr": 68.8,
    "per_gpu_hr": 8.6,
    "url": "https://www.coreweave.com/pricing",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Spot $34.11 = $4.26/GPU-hr.",
    "refresh": {
     "kind": "html",
@@ -96,7 +96,7 @@
    "price_hr": 49.24,
    "per_gpu_hr": 6.155,
    "url": "https://www.coreweave.com/pricing",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Context only.",
    "refresh": {
     "kind": "html",
@@ -116,7 +116,7 @@
    "price_hr": 35.84,
    "per_gpu_hr": 4.48,
    "url": "https://www.coreweave.com/pricing",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Interruptible spot capacity; on-demand B300 is 'contact sales'.",
    "refresh": {
     "kind": "html",
@@ -137,7 +137,7 @@
    "price_hr": 34.11,
    "per_gpu_hr": 4.2637,
    "url": "https://www.coreweave.com/pricing",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Interruptible spot capacity.",
    "refresh": {
     "kind": "html",
@@ -158,7 +158,7 @@
    "price_hr": 761.904,
    "per_gpu_hr": 10.582,
    "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Capacity Blocks only (no on-demand). US East (Dallas) Local Zone. Unchanged by AWS's 1 Jul and 7 Oct repricings.",
    "refresh": {
     "kind": "html",
@@ -177,7 +177,7 @@
    "price_hr": 113.666,
    "per_gpu_hr": 14.2082,
    "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "US regions (first row of AWS's table). Repriced to $12.355 on 1 Jul 2026 and to $14.208 on 7 Oct 2026 (AWS's own notice on the page). On-demand via price API: $113.93 = $14.24/GPU-hr (unchanged).",
    "refresh": {
     "kind": "html",
@@ -201,7 +201,7 @@
    "price_hr": 129.168,
    "per_gpu_hr": 16.146,
    "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "US regions (first row of AWS's table). Repriced to $14.04 on 1 Jul 2026 and to $16.146 on 7 Oct 2026 (AWS's own notice on the page); AWS says the next update is scheduled for January 2027.",
    "refresh": {
     "kind": "html",
@@ -225,7 +225,7 @@
    "price_hr": 108.16,
    "per_gpu_hr": 27.04,
    "url": "https://prices.azure.com/api/retail/prices?$filter=armSkuName%20eq%20%27Standard_ND128isr_NDR_GB200_v6%27%20and%20priceType%20eq%20%27Consumption%27",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Azure Retail Prices API, East US, Linux consumption. Hyperscaler list price, well above neocloud rates.",
    "refresh": {
     "kind": "azure",
@@ -245,7 +245,7 @@
    "price_hr": 84.8,
    "per_gpu_hr": 10.6,
    "url": "https://prices.azure.com/api/retail/prices?$filter=armSkuName%20eq%20%27Standard_ND96isr_H200_v5%27",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Context only.",
    "refresh": {
     "kind": "azure",
@@ -265,7 +265,7 @@
    "price_hr": 72.0,
    "per_gpu_hr": 18.0,
    "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?partNumber=B112140&currencyCode=USD",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Oracle public price-list API, metric 'GPU Per Hour'. The oracle.com HTML price list shows blank cells.",
    "refresh": {
     "kind": "oracle",
@@ -283,7 +283,7 @@
    "price_hr": 64.0,
    "per_gpu_hr": 16.0,
    "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?partNumber=B110979&currencyCode=USD",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "",
    "refresh": {
     "kind": "oracle",
@@ -301,7 +301,7 @@
    "price_hr": 120.0,
    "per_gpu_hr": 15.0,
    "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?partNumber=B112237&currencyCode=USD",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "",
    "refresh": {
     "kind": "oracle",
@@ -319,7 +319,7 @@
    "price_hr": 112.0,
    "per_gpu_hr": 14.0,
    "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?partNumber=B110978&currencyCode=USD",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "",
    "refresh": {
     "kind": "oracle",
@@ -337,7 +337,7 @@
    "price_hr": 9.5,
    "per_gpu_hr": 9.5,
    "url": "https://nebius.com/prices",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Nebius's table carries an 'On-demand, GPU-hour' column and, from 2026-09-23, a 'GPU-hour (Effective October 1, 2026)' column. The collector takes the dated column once its date has passed (before that it records it as announced). $7.85 until 30 Sep 2026, $9.50 from 1 Oct 2026; readings of 1-12 Oct taken from the old column were corrected on 12 Oct. GB200/GB300 NVL72: contact us. From 2026-10-21 the table puts a 'Preemptible, GPU-hour' column quoting only a floor ('from $0.99') before the on-demand column and the dated column is gone; the row skips 'from' figures (skip_floor).",
    "refresh": {
     "kind": "html",
@@ -361,7 +361,7 @@
    "price_hr": 8.5,
    "per_gpu_hr": 8.5,
    "url": "https://nebius.com/prices",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Nebius's table carries an 'On-demand, GPU-hour' column and, from 2026-09-23, a 'GPU-hour (Effective October 1, 2026)' column. The collector takes the dated column once its date has passed (before that it records it as announced). $7.15 until 30 Sep 2026, $8.50 from 1 Oct 2026; readings of 1-12 Oct taken from the old column were corrected on 12 Oct. GB200/GB300 NVL72: contact us. From 2026-10-21 the table puts a 'Preemptible, GPU-hour' column quoting only a floor ('from $0.99') before the on-demand column and the dated column is gone; the row skips 'from' figures (skip_floor).",
    "refresh": {
     "kind": "html",
@@ -419,7 +419,7 @@
    "price_hr": 7.79,
    "per_gpu_hr": 7.79,
    "url": "https://lambda.ai/pricing",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "1-Click Cluster reserved: $9.86 (16 GPUs) to $8.87 (256+).",
    "refresh": {
     "kind": "html",
@@ -439,7 +439,7 @@
    "price_hr": 8.87,
    "per_gpu_hr": 8.87,
    "url": "https://lambda.ai/pricing",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "16 GPUs $9.86, 64 GPUs $9.36, 256+ GPUs $8.87; 1 year+: talk to sales. First read 2026-10-12.",
    "refresh": {
     "kind": "html",
@@ -456,10 +456,10 @@
    "tier": "on-demand",
    "instance": "GB300 SXM6 288GB 1x",
    "gpus": 1,
-   "price_hr": 14.27,
-   "per_gpu_hr": 14.27,
+   "price_hr": 14.41,
+   "per_gpu_hr": 14.41,
    "url": "https://verda.com/pricing",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Single-GPU instance, not an NVL72 rack. Spot $4.31.",
    "refresh": {
     "kind": "html",
@@ -470,7 +470,7 @@
    },
    "hyperscaler": false,
    "pricing": "dynamic",
-   "logged_value": 13.05
+   "logged_value": 14.41
   },
   {
    "vendor": "Verda (ex-DataCrunch)",
@@ -478,10 +478,10 @@
    "tier": "on-demand",
    "instance": "B300 SXM6 1x",
    "gpus": 1,
-   "price_hr": 12.41,
-   "per_gpu_hr": 12.41,
+   "price_hr": 12.53,
+   "per_gpu_hr": 12.53,
    "url": "https://verda.com/pricing",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Spot $3.75.",
    "refresh": {
     "kind": "html",
@@ -492,7 +492,7 @@
    },
    "hyperscaler": false,
    "pricing": "dynamic",
-   "logged_value": 11.35
+   "logged_value": 12.53
   },
   {
    "vendor": "Verda (ex-DataCrunch)",
@@ -500,10 +500,10 @@
    "tier": "on-demand",
    "instance": "B200 SXM6 1x",
    "gpus": 1,
-   "price_hr": 9.508,
-   "per_gpu_hr": 9.508,
+   "price_hr": 9.603,
+   "per_gpu_hr": 9.603,
    "url": "https://verda.com/pricing",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Spot $3.06.",
    "refresh": {
     "kind": "html",
@@ -522,10 +522,10 @@
    "tier": "spot",
    "instance": "GB300 SXM6 288GB 1x spot",
    "gpus": 1,
-   "price_hr": 7.136,
-   "per_gpu_hr": 7.136,
+   "price_hr": 7.205,
+   "per_gpu_hr": 7.205,
    "url": "https://verda.com/pricing",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Spot price of the single-GPU instance (not an NVL72 rack).",
    "refresh": {
     "kind": "html",
@@ -536,7 +536,7 @@
    },
    "hyperscaler": false,
    "pricing": "dynamic",
-   "logged_value": 6.526
+   "logged_value": 7.205
   },
   {
    "vendor": "Verda (ex-DataCrunch)",
@@ -544,10 +544,10 @@
    "tier": "spot",
    "instance": "B300 SXM6 1x spot",
    "gpus": 1,
-   "price_hr": 6.205,
-   "per_gpu_hr": 6.205,
+   "price_hr": 6.265,
+   "per_gpu_hr": 6.265,
    "url": "https://verda.com/pricing",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Spot price.",
    "refresh": {
     "kind": "html",
@@ -558,7 +558,7 @@
    },
    "hyperscaler": false,
    "pricing": "dynamic",
-   "logged_value": 5.675
+   "logged_value": 6.265
   },
   {
    "vendor": "Verda (ex-DataCrunch)",
@@ -566,10 +566,10 @@
    "tier": "spot",
    "instance": "B200 SXM6 1x spot",
    "gpus": 1,
-   "price_hr": 4.754,
-   "per_gpu_hr": 4.754,
+   "price_hr": 4.802,
+   "per_gpu_hr": 4.802,
    "url": "https://verda.com/pricing",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Spot price.",
    "refresh": {
     "kind": "html",
@@ -591,7 +591,7 @@
    "price_hr": 9.29,
    "per_gpu_hr": 9.29,
    "url": "https://www.together.ai/gpu-clusters",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Reserved from $6.79. GB200/GB300 NVL72: contact us.",
    "refresh": {
     "kind": "html",
@@ -613,7 +613,7 @@
    "price_hr": 11.49,
    "per_gpu_hr": 11.49,
    "url": "https://www.together.ai/gpu-clusters",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Reserved: contact us. First read 2026-10-12 (the row was added that day).",
    "refresh": {
     "kind": "html",
@@ -635,7 +635,7 @@
    "price_hr": 5.99,
    "per_gpu_hr": 5.99,
    "url": "https://www.hyperbolic.ai/marketplace",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Marketplace 'starting from' rate; the vendor refreshes it weekly from its suppliers' best rates.",
    "refresh": {
     "kind": "html",
@@ -656,7 +656,7 @@
    "price_hr": 68.0,
    "per_gpu_hr": 8.5,
    "url": "https://www.vultr.com/pricing/",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "From Vultr's public plan API (api.vultr.com/v2/plans-metal), hourly price of the 8-GPU bare-metal plan. First read 2026-10-12.",
    "refresh": {
     "kind": "vultr",
@@ -688,10 +688,10 @@
    "tier": "spot",
    "instance": "p6-b300.48xlarge EC2 Spot, us-east-1 (Linux)",
    "gpus": 8,
-   "price_hr": 68.6433,
-   "per_gpu_hr": 8.5804,
+   "price_hr": 70.6632,
+   "per_gpu_hr": 8.8329,
    "url": "https://aws.amazon.com/ec2/spot/pricing/",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "AWS's published EC2 Spot price (public feed behind the Spot pricing page); interruptible capacity. Hyperscaler spot row in the near-term median.",
    "refresh": {
     "kind": "aws_spot",
@@ -709,10 +709,10 @@
    "tier": "spot",
    "instance": "p6-b200.48xlarge EC2 Spot, us-east-1 (Linux)",
    "gpus": 8,
-   "price_hr": 68.0544,
-   "per_gpu_hr": 8.5068,
+   "price_hr": 67.4815,
+   "per_gpu_hr": 8.4352,
    "url": "https://aws.amazon.com/ec2/spot/pricing/",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "AWS's published EC2 Spot price; interruptible capacity. B200, so a market-history series only (the near-term median is GB300/B300).",
    "refresh": {
     "kind": "aws_spot",
@@ -733,7 +733,7 @@
    "price_hr": 43.5968,
    "per_gpu_hr": 5.4496,
    "url": "https://cloud.google.com/spot-vms/pricing",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Google's published Spot VM price for the A4 (8x B200) machine type, the page's default region; Spot prices change at most once a day. No A4X (GB200) or B300 Spot price is published. B200, so a market-history series only.",
    "refresh": {
     "kind": "html",
@@ -754,7 +754,7 @@
    "price_hr": 108.16,
    "per_gpu_hr": 27.04,
    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Azure Retail Prices API, Spot meter. On 2026-09-14 the spot price equalled pay-as-you-go in every region (no discount: the SKU is capacity-constrained). GB200, so a reference row only.",
    "refresh": {
     "kind": "azure",
@@ -773,10 +773,10 @@
    "tier": "index",
    "instance": "SDB200RT B200 Rental Price Index",
    "gpus": 1,
-   "price_hr": 6.87,
-   "per_gpu_hr": 6.87,
+   "price_hr": 6.94,
+   "per_gpu_hr": 6.94,
    "url": "https://www.silicondata.com/products/silicon-index/b200",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Daily index of observed B200 rental rates (Bloomberg ticker SDB200RT), weighted across ~80% of the rental market; no GB200/GB300/B300 index exists. Shown as the market reference line on the page.",
    "refresh": {
     "kind": "silicon",
@@ -784,7 +784,7 @@
     "tab": "neo-cloud"
    },
    "hyperscaler": false,
-   "as_of": "2026-11-15",
+   "as_of": "2026-11-16",
    "pricing": "index"
   },
   {
@@ -793,10 +793,10 @@
    "tier": "index",
    "instance": "SDH100RT H100 Rental Price Index",
    "gpus": 1,
-   "price_hr": 3.1,
-   "per_gpu_hr": 3.1,
+   "price_hr": 3.08,
+   "per_gpu_hr": 3.08,
    "url": "https://www.silicondata.com/products/silicon-index/h100",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Context only.",
    "refresh": {
     "kind": "silicon",
@@ -804,7 +804,7 @@
     "tab": "neo-cloud"
    },
    "hyperscaler": false,
-   "as_of": "2026-11-15",
+   "as_of": "2026-11-16",
    "pricing": "index"
   },
   {
@@ -813,11 +813,11 @@
    "tier": "index",
    "instance": "H200 Rental Price Index (no Bloomberg ticker yet)",
    "gpus": 1,
-   "price_hr": 3.5,
-   "per_gpu_hr": 3.5,
+   "price_hr": 3.57,
+   "per_gpu_hr": 3.57,
    "url": "https://www.silicondata.com/products/silicon-index/h200",
-   "read_on": "2026-11-16",
-   "as_of": "2026-11-15",
+   "read_on": "2026-11-17",
+   "as_of": "2026-11-16",
    "note": "Context only (Hopper).",
    "refresh": {
     "kind": "silicon",
@@ -836,8 +836,8 @@
    "price_hr": 9.66,
    "per_gpu_hr": 9.66,
    "url": "https://data.ornn.com/preview",
-   "read_on": "2026-11-16",
-   "as_of": "2026-11-14",
+   "read_on": "2026-11-17",
+   "as_of": "2026-11-15",
    "note": "Blackwell reference (transacted rates, volume-weighted, Bloomberg-listed); no GB200/GB300/B300 index exists.",
    "refresh": {
     "kind": "ornn",
@@ -852,11 +852,11 @@
    "tier": "index",
    "instance": "Ornn Compute Price Index (OCPI) H100 SXM",
    "gpus": 1,
-   "price_hr": 3.19,
-   "per_gpu_hr": 3.19,
+   "price_hr": 3.06,
+   "per_gpu_hr": 3.06,
    "url": "https://data.ornn.com/preview",
-   "read_on": "2026-11-16",
-   "as_of": "2026-11-14",
+   "read_on": "2026-11-17",
+   "as_of": "2026-11-15",
    "note": "Context only (Hopper).",
    "refresh": {
     "kind": "ornn",
@@ -871,11 +871,11 @@
    "tier": "index",
    "instance": "Ornn Compute Price Index (OCPI) H200",
    "gpus": 1,
-   "price_hr": 6.6,
-   "per_gpu_hr": 6.6,
+   "price_hr": 6.28,
+   "per_gpu_hr": 6.28,
    "url": "https://data.ornn.com/preview",
-   "read_on": "2026-11-16",
-   "as_of": "2026-11-14",
+   "read_on": "2026-11-17",
+   "as_of": "2026-11-15",
    "note": "Context only (Hopper).",
    "refresh": {
     "kind": "ornn",
@@ -893,7 +893,7 @@
    "price_hr": 9.5,
    "per_gpu_hr": 9.5,
    "url": "https://getdeploying.com/gpus/nvidia-b300",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Aggregator reference (CC-BY-4.0, GetDeploying): each provider's median price, then the median across providers, by week. Not a provider rate, so in no basis.",
    "refresh": {
     "kind": "getdeploying",
@@ -902,8 +902,8 @@
    },
    "hyperscaler": false,
    "pricing": "index",
-   "as_of": "2026-11-09",
-   "providers": 17
+   "as_of": "2026-11-16",
+   "providers": 20
   },
   {
    "vendor": "GetDeploying",
@@ -911,10 +911,10 @@
    "tier": "index",
    "instance": "B300 spot, median across providers (weekly)",
    "gpus": 1,
-   "price_hr": 5.7175,
-   "per_gpu_hr": 5.7175,
+   "price_hr": 6.2175,
+   "per_gpu_hr": 6.2175,
    "url": "https://getdeploying.com/gpus/nvidia-b300",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Aggregator reference (CC-BY-4.0, GetDeploying): each provider's median price, then the median across providers, by week. Not a provider rate, so in no basis.",
    "refresh": {
     "kind": "getdeploying",
@@ -923,8 +923,8 @@
    },
    "hyperscaler": false,
    "pricing": "index",
-   "as_of": "2026-11-09",
-   "providers": 6
+   "as_of": "2026-11-16",
+   "providers": 8
   },
   {
    "vendor": "GetDeploying",
@@ -932,10 +932,10 @@
    "tier": "index",
    "instance": "B200 on-demand, median across providers (weekly)",
    "gpus": 1,
-   "price_hr": 8.135,
-   "per_gpu_hr": 8.135,
+   "price_hr": 8.2772,
+   "per_gpu_hr": 8.2772,
    "url": "https://getdeploying.com/gpus/nvidia-b200",
-   "read_on": "2026-11-16",
+   "read_on": "2026-11-17",
    "note": "Aggregator reference (CC-BY-4.0, GetDeploying): each provider's median price, then the median across providers, by week. Not a provider rate, so in no basis.",
    "refresh": {
     "kind": "getdeploying",
@@ -944,8 +944,8 @@
    },
    "hyperscaler": false,
    "pricing": "index",
-   "as_of": "2026-11-09",
-   "providers": 23
+   "as_of": "2026-11-16",
+   "providers": 24
   }
  ],
  "contracts": [
@@ -3434,7 +3434,7 @@
    "read_on": "2026-09-09"
   }
  ],
- "refreshed_at": "2026-11-16T08:56:31",
+ "refreshed_at": "2026-11-17T08:55:20",
  "price_actions": [
   {
    "date": "2026-01-04",
@@ -4335,6 +4335,70 @@
    "pricing": "dynamic",
    "url": "https://aws.amazon.com/ec2/spot/pricing/",
    "note": ""
+  },
+  {
+   "date": "2026-11-17",
+   "key": "verda_ex_datacrunch_gb300_on_demand",
+   "vendor": "Verda (ex-DataCrunch)",
+   "chip": "GB300",
+   "tier": "on-demand",
+   "instance": "GB300 SXM6 288GB 1x",
+   "old": 13.05,
+   "new": 14.41,
+   "pct": 0.1042,
+   "prev_read": "2026-11-16",
+   "kind": "observed",
+   "pricing": "dynamic",
+   "url": "https://verda.com/pricing",
+   "note": ""
+  },
+  {
+   "date": "2026-11-17",
+   "key": "verda_ex_datacrunch_b300_on_demand",
+   "vendor": "Verda (ex-DataCrunch)",
+   "chip": "B300",
+   "tier": "on-demand",
+   "instance": "B300 SXM6 1x",
+   "old": 11.35,
+   "new": 12.53,
+   "pct": 0.104,
+   "prev_read": "2026-11-16",
+   "kind": "observed",
+   "pricing": "dynamic",
+   "url": "https://verda.com/pricing",
+   "note": ""
+  },
+  {
+   "date": "2026-11-17",
+   "key": "verda_ex_datacrunch_gb300_spot",
+   "vendor": "Verda (ex-DataCrunch)",
+   "chip": "GB300",
+   "tier": "spot",
+   "instance": "GB300 SXM6 288GB 1x spot",
+   "old": 6.526,
+   "new": 7.205,
+   "pct": 0.104,
+   "prev_read": "2026-11-16",
+   "kind": "observed",
+   "pricing": "dynamic",
+   "url": "https://verda.com/pricing",
+   "note": ""
+  },
+  {
+   "date": "2026-11-17",
+   "key": "verda_ex_datacrunch_b300_spot",
+   "vendor": "Verda (ex-DataCrunch)",
+   "chip": "B300",
+   "tier": "spot",
+   "instance": "B300 SXM6 1x spot",
+   "old": 5.675,
+   "new": 6.265,
+   "pct": 0.104,
+   "prev_read": "2026-11-16",
+   "kind": "observed",
+   "pricing": "dynamic",
+   "url": "https://verda.com/pricing",
+   "note": ""
   }
  ],
  "notices": [
@@ -4365,7 +4429,7 @@
    "url": "https://aws.amazon.com/ec2/capacityblocks/pricing/",
    "text": "The current prices are scheduled to be updated next in January, 2027",
    "first_seen": "2026-10-12",
-   "last_seen": "2026-11-16"
+   "last_seen": "2026-11-17"
   }
  ],
  "price_news": [
@@ -4376,17 +4440,6 @@
    "published": "2026-10-08",
    "providers": [
     "CoreWeave"
-   ],
-   "first_seen": "2026-10-12",
-   "status": "unverified"
-  },
-  {
-   "title": "Nebius hikes AI cloud prices again as demand for computing power soars",
-   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNVWxwOEZoX3psWkpROUJ4M0d0YW52N1BxdWZId0hsN3hfQ2hWMWJtRmZpWHdHd0dITUZGWGk3YWh3SW5MY2pwdXVTdmh2SXVscndoNkNhME1TMWNhR0VBUlM2ejFkZHktMXJNVFhMWGdGU0JIc1hYbU44WlREbzB3eHR0LW4ySVlnQ0JJbU5iZ1NiVWNMU09IZW1ZTW5JZWkwMTg4TkNVQUVkOTJMWF9Z?oc=5",
-   "source": "Reuters",
-   "published": "2026-09-17",
-   "providers": [
-    "Nebius"
    ],
    "first_seen": "2026-10-12",
    "status": "unverified"
@@ -4449,54 +4502,10 @@
    "status": "unverified"
   },
   {
-   "title": "Nebius Shares Jump 11.1% Following GPU Cloud Service Price Increases",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQMFRVRjl0dFkzNDVub1otVWk1WDNxLUpWemZaMnJMdnpPdjBtSVZodXg0dDJ6eTNpdDktNldRTUtOcGw0STNRTzFKWE54WDBxbDZmc3ZscGk3V3ZPOFdwNGtYTzNUT3JwVzNsZF81Rld3RE9DX09neUdkTFJMc0FGYTVHRTZxaERGUVZxS08yR0k?oc=5",
-   "source": "Yahoo Finance",
-   "published": "2026-09-17",
-   "providers": [
-    "Nebius"
-   ],
-   "first_seen": "2026-10-12",
-   "status": "unverified"
-  },
-  {
-   "title": "Nebius Group (NBIS) Raises AI Cloud Prices As Compute Demand Tests Customer Costs",
-   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxON3JKTmtVOHFfd25CRUpqckh6U3lxanV5Y2N1MzhXeEhlbE4xblJMaFhWV0FhMUhDVFA4NEJJM0V0U0cwM1g1ajhlbVJBMm5aSV9vaUdqMDN0WjNkQjdNODR5dXlEb3BQMEpDTUN5ci1STVVQa3NOd0d4aUhHRWI3SzNGR1drR0tSQ1Q0VXR1RFowaF96YVE?oc=5",
-   "source": "Yahoo Finance",
-   "published": "2026-09-17",
-   "providers": [
-    "Nebius"
-   ],
-   "first_seen": "2026-10-12",
-   "status": "unverified"
-  },
-  {
-   "title": "Nebius Stock Jumps 9% After Raising GPU Rates",
-   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNUGV0dlRNUlFlM09kcUo1ajdjTk95M0Q0QnJ5V2Zhci1IbGlKalFHRjBEa0l4bG9LVXNKMzh4NE5tdFl5SDVjZXBWMXBNM0xhazk3aDZpcjlVQ0FmNVh2NGEzbXREU0JxeDE0Znp1YWxBVWF2eW1qZm9CQnZfbVJ0cURzcnNpWThMQzVhRndlcmFXcDNST2tWYg?oc=5",
-   "source": "Yahoo Finance",
-   "published": "2026-09-17",
-   "providers": [
-    "Nebius"
-   ],
-   "first_seen": "2026-10-12",
-   "status": "unverified"
-  },
-  {
    "title": "Nebius Sees A Game-Changer With The Price Increases (NASDAQ:NBIS)",
    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNUTJ2SXlOS3lLNHZ1b0dBYTB3YVdtVXpkMTZyNGtNb0pDWk16R3ZkYjktd3lDSVlHOFhzVTZOX1F6Y19aNHNzTF9pNENBNDl3WENrUnd0S0VxTTd1cEJQODBTX3V2UjI3MERkTVQ5dmxaazhaN3l5dEtXU2JJb1V1RGJEWVBuZXJqLWRpQUdweDlIWU9RRDNr?oc=5",
    "source": "Seeking Alpha",
    "published": "2026-09-18",
-   "providers": [
-    "Nebius"
-   ],
-   "first_seen": "2026-10-12",
-   "status": "unverified"
-  },
-  {
-   "title": "Nebius: You Don't Raise Prices Into A Slowdown (NASDAQ:NBIS)",
-   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSXA3Ym9oUHhSaXdIcjdnVl9GeFVzanpScjc0cnlwcThVNzlsdTJVNzlCWTlDbzd6YTJ6YlFXanpoby1ma3VQN1YwQV9CS3Z4NnVPbTU2bW5CSnZyWTREOHhqQ1VvOXJWNjNxV0FDR2g0TF9wZlhZdVpZdmM0ZzVPeldQVXBPT2NoNmNRMFN3?oc=5",
-   "source": "Seeking Alpha",
-   "published": "2026-09-17",
    "providers": [
     "Nebius"
    ],
@@ -4515,54 +4524,10 @@
    "status": "unverified"
   },
   {
-   "title": "Nebius stock jumps on reported compute price hikes (NBIS:NASDAQ)",
-   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOUk9CYkRuTU1kd0J1SmR2bEVCU21QRUlKQ3N1dW0xeTBzS0VYWXhLVXlIRndDcVdfa1U5MjJpTGNpQi1uQUI1RVFEa29wU0dSRDlFZXRUNGlINGRpbkg4cVczZGFMb2FKNU9YUV9GS280Qkp3UjZXTmRGYU9VZDdfcWl6TXY0Z1VIa2l4TTJkS3pOUQ?oc=5",
-   "source": "Seeking Alpha",
-   "published": "2026-09-17",
-   "providers": [
-    "Nebius"
-   ],
-   "first_seen": "2026-10-12",
-   "status": "unverified"
-  },
-  {
-   "title": "Nebius Stock Jumps as NVIDIA GPU Rates Rise Up to 21% in October",
-   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQWFNLeERDTS10WWtsT2hWRnp2NUdwREhrVG1za256RmxfdmJoRTQ4ZkVndlFOTUF2RlZ2ZlFUNEd2QmZFVGRPbnNqalBzbE1ET29KZnR3R1lvOXZXaFEtSXY4dXVjSFBVUkh3TWVoNGRaLUZQN3Utd3NWbFR3THl0QWQzY3dKREZuaFlSYUxZdnFwaHEtejNSb0NVU2pEbG1adGtGTjk3TFJXeknSAbABQVVfeXFMUHctRU84aHRzVEd5LUlyaG1mQW94Vldidi1nT2dSSnJibUo3YUVjWVZPeE56RmZUQ1NKSFJGZzBrQXFCVW13cjVHWHFMYTczNHR4WGlBYlY5REh4QUVXWGdOOG1LOTl5STNxT2dsUjFkdzNTVDM4ZHFyOUNyVkJjN2VsSUhjRERtM3BDeGgzVzZoMk44NWU0ekhsQlVJVDhKWWFlTndDbFVuT08wMlRZcEE?oc=5",
-   "source": "The Coin Republic",
-   "published": "2026-09-17",
-   "providers": [
-    "Nebius"
-   ],
-   "first_seen": "2026-10-12",
-   "status": "unverified"
-  },
-  {
-   "title": "Anthropic calls for a slowdown, yet Nebius raises prices by ... - Futubull Community",
-   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNVk5c2plOWpacDkxWERwWDEzZjBJZjU0NUFuWU9wVnE5blg3TDlGdlVnSFNXOC1qc1dGTi1xN3AxTDlIMDJIMHRuOWpmRllDX1NjZmhDVHg3dEp0YVRTcmFVX21hemFsQkVoYzVLbGRBeTVqVmRSQ2MxNzluMW9MS0tOQXIyYzNj?oc=5",
-   "source": "\u5bcc\u9014\u725b\u725b",
-   "published": "2026-09-17",
-   "providers": [
-    "Nebius"
-   ],
-   "first_seen": "2026-10-12",
-   "status": "unverified"
-  },
-  {
    "title": "Nebius Group hikes Nvidia GPU prices again in O...",
    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPdUhlT3BaTEJaY2t4dGg3TmVLZ2FhSVFldTlOeVgybW1RX1NSc0l2UG92UlpaX3hOa0hoMTlSNE5Vd1IxTnJBdVA1LWp4SGxJVlFYMjV3SGZPei0zZ2p5aGFzajNGdHN6SEYtcnd3N3dVS3N4dk5fR2hUMXp0NTlEbkFfRzhxSnhkMHVPenVtN3psaVBqR0E?oc=5",
    "source": "Pluang",
    "published": "2026-09-23",
-   "providers": [
-    "Nebius"
-   ],
-   "first_seen": "2026-10-12",
-   "status": "unverified"
-  },
-  {
-   "title": "Nebius to increase prices for Nvidia GPU resources from October By Investing.com",
-   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQaVg2amk5Q1NHMmxCSmllUzU0Z3dZNnlkMzFmRjlOb0k2TzdOeHJkZGVobkZLSmJaS0JEekE5aDBfck8wUlk0OUlXdDVmbzlzQXFDU1ZkX19Zdk02RWNtcUtQOXZsc3pWT2I4LTVBSDZmN0dJNzdxODlqVVk4NUMzdzk0OS1kNU53YmM4ZGM1WUxDaXlPTlg1WWM1WjZHWHpjb25fRUVzQUhxRmR0QlloRFdyVUNYLVpWdWVkNW9jaFZGQQ?oc=5",
-   "source": "Investing.com UK",
-   "published": "2026-09-17",
    "providers": [
     "Nebius"
    ],
@@ -4637,28 +4602,6 @@
    "status": "unverified"
   },
   {
-   "title": "Nebius (NBIS) Stock Surges 9% Following AI Infrastructure Price Hike Announcement",
-   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWlpyNEZRcG1YeUlrYnJIVXBQdHJqQWpWMDJFSG9qRkw0d3A5ZG1MUmlySVpab1JMMm5xZUEzQnNidFR6SjhJUkpsSWUyS0s5VUFuQ3dGbFM3R3hHWlB2czZLNVJtSlpOMlNfdkp0dkt4NEY2LWdnaFE2TEJnejFxNGcwSElQRVJGVkdlRVZsaXBZM01aaHZzTFVhS2lvN1hOc3JPQQ?oc=5",
-   "source": "Blockonomi",
-   "published": "2026-09-17",
-   "providers": [
-    "Nebius"
-   ],
-   "first_seen": "2026-10-15",
-   "status": "unverified"
-  },
-  {
-   "title": "Nebius to increase prices for Nvidia GPU resources from October",
-   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPSkF1S1Bsd0o5V2JWNXM2d1dlS21hcFRWQjBoTzVvYTJXYnA4cUUteC1KamhIRzRrVTFvcml1akFzUGM4V0pBSW1xelRLVWdNS0U3bmNFckhJSkdPVkhKZXc1cU5RQ3FEQnNIdG5jUkdSWHZCZkE1U1R6NUNaMTkyNkdVNkNMdHdFS29fTlZNSDBkMlBuV2VkVmZmcTZ2TWUwOGUteWZBcEpNVndCTld2RVBpN3kyN3VOdjl2eTlEWlhmUnM?oc=5",
-   "source": "Investing.com",
-   "published": "2026-09-17",
-   "providers": [
-    "Nebius"
-   ],
-   "first_seen": "2026-10-16",
-   "status": "unverified"
-  },
-  {
    "title": "Nebius Raised Prices Again - Now $7.8 Billion Has To Earn Its Keep (NASDAQ:NBIS)",
    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxON3VGb3NGSzdVVUtKMnN0WHJRYlgtdW5lbjBJRFppZzQ2OGpXcXNCMEJXSEdSX2t4WU9aV1ZHRDRtTmtsN2tXaVY2TGlOdnFyb3VCRENoQkMyZUphZXpUa3plRS00Sy1IeV9VbTN1SUhjTmxGUzVjQmxONmpWeUJZWW80dXJIX0VFY1RidW1wbFA3aEUtNXN1WUJnMXlIZ3I2VXoxdGdHNA?oc=5",
    "source": "Seeking Alpha",
@@ -4692,17 +4635,6 @@
    "status": "unverified"
   },
   {
-   "title": "Nebius hikes prices for Nvidia GPUs and AMD CPU...",
-   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSTVLSG96VkZrcDZEbjVvckhiZldkVUZkc1JrNWhLcC1EYlNFRFFZeGVCTTdyT1hrLUZ1cWdJRzJvczZSdVQzZDNISGhOOGl6UkZ0QnZYTkZmQ2c2dl9fSzdKYlR0b1I5elEzRVlhNVVXM1dkZGM0eXhsOHdNdnk4YXQ2UmFHUWpYRTgyTw?oc=5",
-   "source": "Pluang",
-   "published": "2026-09-17",
-   "providers": [
-    "Nebius"
-   ],
-   "first_seen": "2026-10-17",
-   "status": "unverified"
-  },
-  {
    "title": "Nebius Group Raises Prices Amid Growing AI Demand and Financial Challenges",
    "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNbnVacGlKaE5namxwVWEtX1hnbngwWkg2QXVjLWd4QkxrQXYtVkdSVFVLQXpHLUVjS25GeVowU3g1MmI2TW1xM183TkktQVdIUVhYQUpnQnR6a1RsODBCb3d6TlFWaWlBRE1Gc1NPdU9sU01tSGJQS0lZb21rVndMMFFiaTlLbC1EUUdXZHVKM1JfcDV5d0FuUDNIQmVfa1gwQTlR?oc=5",
    "source": "SSBCrack",
@@ -4711,28 +4643,6 @@
     "Nebius"
    ],
    "first_seen": "2026-10-17",
-   "status": "unverified"
-  },
-  {
-   "title": "Nebius Stock Climbs 9% After GPU Price Hikes; List Rates Still Aren\u2019t Realized Revenue",
-   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZGVFQlZDdkotN082b291Ul9WeUg3UWcxNzBFUklRX3VvQ3FwM0VaZWdrU1Zia0RZTGJhRGRzdkx3aGtPQ2x2cHloT3k5MXBPaHZ1RmtiRE1RTDZzcmFSVEczX0llVzB5dUdScUo2c01PQ09NdzZyNnFlNEVfMnNUNFprMTd3WGFpSENIVmVFN0JSbjJSNzZTQklfX2pDc3pxVVVEdzdpVQ?oc=5",
-   "source": "TechStock\u00b2",
-   "published": "2026-09-17",
-   "providers": [
-    "Nebius"
-   ],
-   "first_seen": "2026-10-18",
-   "status": "unverified"
-  },
-  {
-   "title": "Nebius to increase prices for Nvidia GPU resources from October By Investing.com",
-   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPTGJNU0gwaDVSamFvN1hob0dxSFBjY1pOSDQyWUwtUjRnMld3Zk5QVU1RbVE0NllKbkI0WWpZZTQwUTJ0bmpLSjc4RGFtbUJfaGtIRGpHRnhBdnpfa2h4VmZTSTZtdkt6V0tKcEtRY21DUDBjSkRGSkdSbjVyNm0zZmtFSnc5cEY0dURLbWlJeV9vMlhTNzlOSlhsb2dVLXlKSmFJeV9vRWVKN3RlcVZnZ1g3SHUxV0kxVWtIelNzb0t1UQ?oc=5",
-   "source": "Investing.com India",
-   "published": "2026-09-17",
-   "providers": [
-    "Nebius"
-   ],
-   "first_seen": "2026-10-18",
    "status": "unverified"
   },
   {
@@ -4751,17 +4661,6 @@
    "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNMHhoOWZLdWRYaGRMcHpEdVBrWnNvaTk5Wk5XTmQtOTVhdnFzcE1uc1hrQTdwaTNMNlFiMDdaMGkwbGhQNllKRjNJa1NBZnRNQW5pUndOZHZTbkZGeGlmaTlhY2hfdmhGUUpZTUlsM2JjWVhKYUxmTHYyZk1sMVFqS0Z6ZmZRb1hEQi1feVhCQl96cjN2RmpieGdiWVhqS0J2XzJYTQ?oc=5",
    "source": "Seeking Alpha",
    "published": "2026-09-21",
-   "providers": [
-    "Nebius"
-   ],
-   "first_seen": "2026-10-19",
-   "status": "unverified"
-  },
-  {
-   "title": "Nebius Stock Jumps as NVIDIA GPU Rates Rise Up to 21% in October",
-   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNZnI4YWRlZUxvZ3B3MTlVQkU2Q2RueUFiU3NOVXRiTzV6VGZLMlJ0TVhYRWswVlY1b0pDSWgtYWxHQWhQc1IwOUdmRnpTOW9kX3BzNXl4S1lJVS11TG8xcm1RbldqSndoazRsVG03RVJIZWlBeElfZVVSMWhtM09GaEd0bmpJc1dxTklzSEFYRmVLNGFxbXd1N3ctd20yWVJBeVE4?oc=5",
-   "source": "CryptoRank",
-   "published": "2026-09-17",
    "providers": [
     "Nebius"
    ],
@@ -4824,43 +4723,10 @@
    "status": "unverified"
   },
   {
-   "title": "Nebius Stock Jumps On Cloud Computing Price Hikes",
-   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPTUNCVlZ2TDBHWHFSQTZjbGY5bkFpT09ZTFA5djdVWEkyX3hUTUI1V0cza2dWdDZQdEZ0ZkxsXzN5TVkwVkdod2Y0bGNWRTFnZ2NzWlg1NWR1al9tSEk3cW1vUlplVlE1cUxqdlVyVnVkZUVJc0JCanAtQzNGeWJ4eWRUOTZyQ19XdlJrYUFuMU5vNi1KcEM2bHU3MVlDR0Vra0E?oc=5",
-   "source": "Investor's Business Daily",
-   "published": "2026-09-17",
-   "providers": [
-    "Nebius"
-   ],
-   "first_seen": "2026-10-22",
-   "status": "unverified"
-  },
-  {
    "title": "Nebius Is Raising the Price of Its AI Compute on Oct. 1. Here's What That Says About the Shortage.",
    "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOZTNyVm1OOWF4aDFXd2dURE4tYTBrcThLOG5UbTFlQkJpS1VDTDdDLXMwZ0dSTGhudktIM0hlNlE0djFteHk5djRRMldrN0lQSlc2QnVGYUpqMU5wVEhvcFpuNUVqWVlqTkNzMWZpUEN2TUhaWUxlS2wtc0tLbkpyN29rUU03Vkxvb3hWcm9zYmkzbXFWMEJVdTFVYTFRUldNbVZHdkxwdWRGX0lPN0N3YUpsS1JMYXY3TTV3NmdGZ3k1SFNPTTRrcDRuOWs0MEIwSkFvcg?oc=5",
    "source": "The Motley Fool",
    "published": "2026-09-27",
-   "providers": [
-    "Nebius"
-   ],
-   "first_seen": "2026-10-23",
-   "status": "unverified"
-  },
-  {
-   "title": "Nebius Shares Jump Pre-Bell Following Price Increase Announcement",
-   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOSGpGNTZoX0ZHdzF2WWoxOW81alR3Q1Nyd0g0R3Y4cFBjYnEwLVZfemF0RHZPRHRvSkhZY2lVdXNiOXA2VzhsZk1TQTZkemlWWE53Wk9pNk91MnB3dElabDlBVnVqSHc3TVljandWRUFsR25MejNFZjRudzBzSGYyYUkzTi1qWmd1UFV0a29wZDhqWWlnRFNZ?oc=5",
-   "source": "Yahoo Finance",
-   "published": "2026-09-17",
-   "providers": [
-    "Nebius"
-   ],
-   "first_seen": "2026-10-23",
-   "status": "unverified"
-  },
-  {
-   "title": "Nebius hikes AI cloud prices again as demand for computing power soars By Reuters",
-   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPdXRhczJNcUpSUHFCZ1lyYTlSNzBVMnVLcndId0JjdnJTSHZvT3RRdTBObzg0d3JMUWRnWm1qREpDbnVDMEpiajM3U0EydUlVcVRxaW5sQTNSdXNxd1Z0TG45WkRkdkxuMnBTN3pTbXFGUV9qZ2RTVXJReFd6QmhvXzNaVk4yN2xpNWRORmJEdW9KeE5scU83TkY4UHVBVE1nalZlbkQyczUtMzU5dHZaRGc1eEItaVo4cVh4NFpKNThMUmpRZXc?oc=5",
-   "source": "Investing.com",
-   "published": "2026-09-17",
    "providers": [
     "Nebius"
    ],
@@ -4919,17 +4785,6 @@
    "published": "2026-10-16",
    "providers": [
     "CoreWeave"
-   ],
-   "first_seen": "2026-10-30",
-   "status": "unverified"
-  },
-  {
-   "title": "Nebius hikes AI cloud prices again as demand for computing power soars",
-   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRWViU2x0Z2dLX1U5M21DSmx6RFZsQi1HOGUxdzVmamlNZDFsc0xuZ0JZN2liV2tfMjNGQWtyaVhvaHBWZzlLNlpSV1BrazNCbkJtOE90STBuTEE2NENzY2ZlWFVwV3h4VVNOTVFRVFlkSDVlajNmMWIxeDJib3RQMTdpak5PQklxcElBRzFnVDZuVGpyY3IwVVd3MkxFOG9sNjZqbTNXUklsWlU?oc=5",
-   "source": "KSL News",
-   "published": "2026-09-17",
-   "providers": [
-    "Nebius"
    ],
    "first_seen": "2026-10-30",
    "status": "unverified"

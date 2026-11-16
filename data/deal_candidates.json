@@ -1975,9 +1975,68 @@
    "first_seen": "2026-11-16",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "Anthropic Compute Commitments Hit $900.9 Billion; SpaceX Can Cancel Deal Worth Up to $120.5 Billion",
+   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOVnNCNFA2QkgweTMzZ25tZFdjNTZFYzAybkdHN3Z0S3ZVWldfSXg1bzd1dEdiZEJHemFCZUZfX01OVG5FbU40eGp4eGFURFdEcFdRajJ5eWlSM2RxSE9rbHVJQlZOYXpCV09GZDVZdkNRWEpyb2Y0LUNUOV9RUjVuckZ5dTZRN3k0WkppbDU2UExqT1BxVk1PVXJOcHA4WVFCSGpmQ0Z0bmJsRDhleWZxVkh4czhQNVJoc1NOREMtMlpaTnN6T0ZDZDJ2NlRJSFVlSEYtQlktXzlpSjA?oc=5",
+   "source": "Tech Times",
+   "published": "2026-11-16",
+   "channel": "news",
+   "value_usd_b": 900.9,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "Anthropic",
+    "SpaceX"
+   ],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-11-17",
+   "status": "new",
+   "matched_contract": "SpaceX/xAI - Anthropic (Colossus 1, Memphis)"
+  },
+  {
+   "title": "Corvex Lands NT$3.4 Billion Blackwell Deal With Three-Year Take-or-Pay AI Compute Contract",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9IMXZydnlOTDhGMXVUeWg5UnJpU3FoZ0VYQVNwVHlVVzUwWGs3bHItODhQRjgtaVVQelRMWC1sTldZdnB5aW5ESnUxa1dOc2JPTzk0dEp2YkxEZWF0czg4NVZPM0lEdDZySG9UMElHT2RUT2Y5aUE?oc=5",
+   "source": "BigGo Finance",
+   "published": "2026-11-16",
+   "channel": "news",
+   "value_usd_b": 3.4,
+   "term_years": 3,
+   "gpus": null,
+   "mw": null,
+   "chip": "Blackwell",
+   "parties": [
+    "Corvex"
+   ],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-11-17",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "Core Scientific files for a $1.3 billion data center building near Dallas at the campus where AMD plans to lease 110 megawatts",
+   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPT0Z2X0poS2t4ZXNjQzlJbEZEby1UTkhEby0xbDlIMjJqTVBSdUZueGdWWkJlaXhjTk5icUQ1eHI3bm5PVFZsUlRaeGlhZnJ2SkxxeGhZSkhPMS13UnZNYkdzSkN2dDJtTDJ6MHE1SGluLW1TSGdHNkxvQklPMi13ZWxkR3p3NGVXQlNyMFNtSm42TUVWOFVya0xIQmtzTTNOVXh4OUYwNnduYnhnRERoZE5BelR3c3ZPemhyTVlxRDFmZ3F6Z2lRanB5dnlXc09ySkJvNUtvSHhHUkFUaUE?oc=5",
+   "source": "MLQ.ai",
+   "published": "2026-11-16",
+   "channel": "news",
+   "value_usd_b": 1.3,
+   "term_years": null,
+   "gpus": null,
+   "mw": 110.0,
+   "chip": null,
+   "parties": [
+    "Core Scientific",
+    "AMD"
+   ],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-11-17",
+   "status": "new",
+   "matched_contract": "Core Scientific - AMD"
   }
  ],
- "scanned_on": "2026-11-16",
+ "scanned_on": "2026-11-17",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
