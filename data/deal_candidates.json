@@ -2153,9 +2153,101 @@
    "first_seen": "2026-11-18",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "Giga\u2019s $1.67M per MW-Year Is 36% Above Cipher\u2019s AWS Lease",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTDh0LVRza0JHM1loZ0VrZ0hGQkM2TjFtdnVsR01jN0lERDJXYThsZzZNbEJ4UUE1aUl1OUJjcnlhS3hxZV84d201azNacGZOY0lXRHA1WURpNDQ5WmRwSTRnWXVEU3FlTjVDQVNvdEtJeVJRbi1EazdvWjlBWUttTXNjVm9CRHBi?oc=5",
+   "source": "FourWeekMBA",
+   "published": "2026-11-18",
+   "channel": "news",
+   "value_usd_b": 0.002,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "Cipher",
+    "AWS"
+   ],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-11-19",
+   "status": "new",
+   "matched_contract": "Cipher Mining - AWS (Black Pearl)"
+  },
+  {
+   "title": "Giga Energy signs $1 billion, 10-year lease for Project Marl AI data center",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOS2NrWnNJZlBXTXBmeHI2Wjl2NXhRek5hV21wdnQ5RFFMbkVIWG16aG41Q2djM3ZjcXdMenRpMk5IMlBCUnVfV3k4MTNiWTd1YlBlYzZxSGtGZV85UUJWeDJGZ0JFUjRJdmlnWWFUMUF4U2pEcG9ZQTU4R2hETExsZ29RRmhfNVhkZXRjVEczUWUweXNBaTc5SmJHZHFNSkly?oc=5",
+   "source": "energynews.pro",
+   "published": "2026-11-18",
+   "channel": "news",
+   "value_usd_b": 1.0,
+   "term_years": 10,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-11-19",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "ChronoScale Odessa Data Center: $7.5B AI Contract",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQeG9oVExRa3NQN0ItQVk1MV9lUXM3clVvZzBvaHQyVFhTRlBGcnJDS1JoLS0wdU5hc2w0NzNEWjQtUTJyanYyRmRQMm43cm80dm95clFRMWlwR2VUb1FtZ0pWUjBPRFdMcUl6VmpEODhVRUphUEtXTkNqWFB2dU1CSUkybXEzWXJpYjkyenJR?oc=5",
+   "source": "Construction Review",
+   "published": "2026-11-18",
+   "channel": "news",
+   "value_usd_b": 7.5,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "ChronoScale"
+   ],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-11-19",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "Sabey Data Centers signs 10-year Texas solar agreement covering 43.5 MW",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQRzdmNmpTV052MVNoalpHai1NT2VFdkl3QW12VkE4NXotRmFxMDNUNGUwN0NvSDZ1akg3ejMzWVUxSm05d1h1dzBaTTlVdzM3bEk5dUpGWFJucmRyWVNNQTVNWHpFNzNmRGlEemRiT010ZDc4X0YxaEQtV2lMMVZfN2VBcVVWbDluOGZ2Zk9SSmc2ZTRHam51ZkVFREplTGhrekZocXZ3dWw0ZHVWdGc?oc=5",
+   "source": "Construction Review",
+   "published": "2026-11-17",
+   "channel": "news",
+   "value_usd_b": null,
+   "term_years": 10,
+   "gpus": null,
+   "mw": 43.5,
+   "chip": null,
+   "parties": [],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-11-19",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "Blackstone\u2019s $5B AWS Shell Deal Values 647MW at $7.7M per MW",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQNVdKdlc0bTdROTA5bzctS0RnN2toMS1oUThWU0ZQelRhenhIbTB2UFZYSUdydHpGczJPUFJ4OUlaQ2VLOGt3TlN0RGd1TFZBZUtuUkZGdlltaXZXNEZTVnlwRWpXMDhaZi03aW5kZTRWd1psNE4tdDNfbjNWdC0td0ItU1phLXZiX21JX2tn?oc=5",
+   "source": "FourWeekMBA",
+   "published": "2026-11-17",
+   "channel": "news",
+   "value_usd_b": 5.0,
+   "term_years": null,
+   "gpus": null,
+   "mw": 647.0,
+   "chip": null,
+   "parties": [
+    "AWS"
+   ],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-11-19",
+   "status": "new",
+   "matched_contract": "Cipher Mining - AWS (Black Pearl)"
   }
  ],
- "scanned_on": "2026-11-18",
+ "scanned_on": "2026-11-19",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
