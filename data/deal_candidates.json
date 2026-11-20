@@ -2279,9 +2279,45 @@
    "first_seen": "2026-11-20",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "Giga Energy signs USD 1 billion, 10-year lease for 60MW AI data centre in Texas",
+   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQRWQ0bnBERzdOZHRwLWN5S0dXV3plRVZLM1JweW82NU1DZ0dVYm05cm9EaGY0UzFLVUkxMEJkb251bWtvLWxMT0VGN2JBeEpmcUQtVjJicTFGdXdIUDRzWk9EcHpHbFVZNUJrajlRV0hKYTQ0NlVNeE9ab3d4cVM0a2pDMmN3TWJjTnBpTDZqN0ZrS0liX1dTTHhxT1RPb2NjSF80WnYyaFZTRkFna1FaZjVIUEN3RmJjNHMyb3owRzJSclQ0UE1pX09n?oc=5",
+   "source": "Prop News Time",
+   "published": "2026-11-20",
+   "channel": "news",
+   "value_usd_b": 1.0,
+   "term_years": 10,
+   "gpus": null,
+   "mw": 60.0,
+   "chip": null,
+   "parties": [],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-11-21",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "Nebius adds 134 MW in Israel in a third data center lease with Mega Or",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQRkdlN2RrSmZaQnE3dnRrM19FQlQ5MjhBSk5IQ1FaUlNxbDNnQlI1eTZMM1hCemRBbElXSFF1QzFtTjNZNXVZdFFreWt3TW41Ui15dng4T2xpdTdiblRhMWNtUmRReWprTWJnNFRvVFBiZThRRjdCWmxyY0J3UEtFek1wRngzSDhSODFHcWR5TFh0ZjlZbXc?oc=5",
+   "source": "MLQ.ai",
+   "published": "2026-11-20",
+   "channel": "news",
+   "value_usd_b": null,
+   "term_years": null,
+   "gpus": null,
+   "mw": 134.0,
+   "chip": null,
+   "parties": [
+    "Nebius"
+   ],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-11-21",
+   "status": "new",
+   "matched_contract": null
   }
  ],
- "scanned_on": "2026-11-20",
+ "scanned_on": "2026-11-21",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
