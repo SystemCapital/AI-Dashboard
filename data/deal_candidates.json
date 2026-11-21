@@ -2315,9 +2315,49 @@
    "first_seen": "2026-11-21",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "AI Data Center Stocks Crater On Nebius Outlook And Nvidia Uncertainty, But Applied Digital's (NASDAQ: APLD) $36.2B Lease Book Remains Intact",
+   "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNUEZJQ0NSRnhyY3dzNXVGR0V4MEMtVGlxSkN3TDZUalV1UzhYQWJWdHFYYjF5RXh6bldfeXZib2xtTS1pRUJUNkQzLW90Ym5TOTBwR2cxaklLdWNpQjN2aTB6aXFMVWIyeEVLNmxTbDIwdHZCY29VcFYxUTlQdXRFWGtyYUxaVkRlaXhGNV9EYmFDM0l5bTgweHRQU3hwbXc3V0RDTkUxb0QzcUhzcGJ0ZTVHcnJzTkZLaUI2b0FvTE1kVi00bHdQeEFwSzNBaGZOckVkM0ZtUjN6LXM5TVg4VGhYaHpEVjQwci1ieG9XbG5teVk4bENTN1BqVzZiQ3E0TEFsT0l3Y19VX2FnS05uaQ?oc=5",
+   "source": "Foreign Policy Journal",
+   "published": "2026-11-15",
+   "channel": "news",
+   "value_usd_b": 36.2,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "Nebius",
+    "Applied Digital",
+    "Nvidia"
+   ],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-11-22",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "Anthropic Direct: $900B TPU Lease Explained (2026)",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPWFBlbVl3VHo2RG1SclFGbGNodlp4X19MMTdtcllSdnhiY1I3T2pwb1Z4cDJyR0dhUjNTVWtoMHV6b1k1ZXE4UEcwSjhub2lud0ltT1FZejNpZEhYODZwZ3B5dUZ6NmRUam8zVEY5c09YNnljcDQ1dFZILXk1bndhS0xBYjF5NzVUX2pqdHhtdVdxdUQwV0Jv?oc=5",
+   "source": "explainx.ai",
+   "published": "2026-11-17",
+   "channel": "news",
+   "value_usd_b": 900.0,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": "TPU",
+   "parties": [
+    "Anthropic"
+   ],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-11-22",
+   "status": "new",
+   "matched_contract": null
   }
  ],
- "scanned_on": "2026-11-21",
+ "scanned_on": "2026-11-22",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",

@@ -293,71 +293,71 @@
    ]
   },
   "2025-11-17": {
-   "total": 2504625141405,
-   "closed": 1365767713856,
-   "open": 73226699044,
-   "others": 1065630728505,
+   "total": 1590224278446,
+   "closed": 876385553430,
+   "open": 45726091285,
+   "others": 668112633731,
    "partial": false,
-   "read_on": "2026-11-21",
-   "closed_min": 0.5453,
-   "closed_max": 0.97076,
+   "read_on": "2026-11-22",
+   "closed_min": 0.55111,
+   "closed_max": 0.97125,
    "models": [
     [
      "xAI: Grok Code Fast 1",
-     416292449913,
+     243073296957,
      "closed"
     ],
     [
      "xAI: Grok 4.1 Fast",
-     303289458300,
+     207652232421,
      "closed"
     ],
     [
      "Anthropic: Claude Sonnet 4.5",
-     174919821904,
-     "closed"
-    ],
-    [
-     "Google: Gemini 2.5 Flash",
-     137499818710,
+     101018521608,
      "closed"
     ],
     [
      "xAI: Grok 4.1 Fast",
-     117715014677,
+     100537139044,
+     "closed"
+    ],
+    [
+     "Google: Gemini 2.5 Flash",
+     83141851530,
      "closed"
     ],
     [
      "Google: Gemini 2.0 Flash",
-     76127685397,
+     49946892232,
      "closed"
     ],
     [
-     "Google: Gemini 3 Pro Preview",
-     76029449952,
+     "Google: Gemini 2.5 Flash Lite",
+     47455896813,
      "closed"
     ],
     [
      "MiniMax: MiniMax M2",
-     73226699044,
+     45726091285,
      "open"
     ],
     [
-     "Google: Gemini 2.5 Flash Lite",
-     63894015003,
+     "Google: Gemini 3 Pro Preview",
+     43559722825,
      "closed"
     ]
    ]
   },
   "2025-11-24": {
-   "total": 7184885909341,
+   "total": 7184184401756,
    "closed": 4041027142863,
    "open": 175044596604,
-   "others": 2968814169874,
+   "others": 2968112662289,
    "partial": false,
-   "read_on": "2026-11-21",
-   "closed_min": 0.56243,
-   "closed_max": 0.97564,
+   "read_on": "2026-11-22",
+   "closed_min": 0.56249,
+   "closed_max": 0.97563,
    "models": [
     [
      "xAI: Grok 4.1 Fast",
@@ -407,13 +407,13 @@
    ]
   },
   "2025-12-01": {
-   "total": 6183689082546,
+   "total": 6182971291777,
    "closed": 3159955374678,
    "open": 0,
-   "others": 3023733707868,
+   "others": 3023015917099,
    "partial": false,
-   "read_on": "2026-11-21",
-   "closed_min": 0.51101,
+   "read_on": "2026-11-22",
+   "closed_min": 0.51107,
    "closed_max": 1.0,
    "models": [
     [
@@ -464,13 +464,13 @@
    ]
   },
   "2025-12-08": {
-   "total": 5772746635719,
+   "total": 5772493119773,
    "closed": 2387256079968,
    "open": 323018614438,
-   "others": 3062471941313,
+   "others": 3062218425367,
    "partial": false,
-   "read_on": "2026-11-21",
-   "closed_min": 0.41354,
+   "read_on": "2026-11-22",
+   "closed_min": 0.41356,
    "closed_max": 0.94404,
    "models": [
     [
@@ -521,12 +521,12 @@
    ]
   },
   "2025-12-15": {
-   "total": 5840500610903,
+   "total": 5840494630323,
    "closed": 1948425462337,
    "open": 596472207918,
-   "others": 3295602940648,
+   "others": 3295596960068,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.33361,
    "closed_max": 0.89787,
    "models": [
@@ -578,12 +578,12 @@
    ]
   },
   "2025-12-22": {
-   "total": 5664949208500,
+   "total": 5664942244905,
    "closed": 1990030450310,
    "open": 706106471851,
-   "others": 2968812286339,
+   "others": 2968805322744,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.35129,
    "closed_max": 0.87536,
    "models": [
@@ -635,13 +635,13 @@
    ]
   },
   "2025-12-29": {
-   "total": 5566541388683,
+   "total": 5566523842994,
    "closed": 1943472395624,
    "open": 703198112166,
-   "others": 2919870880893,
+   "others": 2919853335204,
    "partial": false,
-   "read_on": "2026-11-21",
-   "closed_min": 0.34913,
+   "read_on": "2026-11-22",
+   "closed_min": 0.34914,
    "closed_max": 0.87367,
    "models": [
     [
@@ -692,12 +692,12 @@
    ]
   },
   "2026-01-05": {
-   "total": 6419683711082,
+   "total": 6419674830283,
    "closed": 2558919376212,
    "open": 708607396271,
-   "others": 3152156938599,
+   "others": 3152148057800,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.39861,
    "closed_max": 0.88962,
    "models": [
@@ -749,12 +749,12 @@
    ]
   },
   "2026-01-12": {
-   "total": 7643272557692,
+   "total": 7643267570233,
    "closed": 3202178819966,
    "open": 901038740283,
-   "others": 3540054997443,
+   "others": 3540050009984,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.41895,
    "closed_max": 0.88211,
    "models": [
@@ -806,14 +806,14 @@
    ]
   },
   "2026-01-19": {
-   "total": 7493679593018,
+   "total": 7493660882486,
    "closed": 3068257138317,
    "open": 970692537236,
-   "others": 3454729917465,
+   "others": 3454711206933,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.40945,
-   "closed_max": 0.87047,
+   "closed_max": 0.87046,
    "models": [
     [
      "Anthropic: Claude Sonnet 4.5",
@@ -863,12 +863,12 @@
    ]
   },
   "2026-01-26": {
-   "total": 8249934351918,
+   "total": 8249919577944,
    "closed": 2985240343764,
    "open": 1171079536977,
-   "others": 4093614471177,
+   "others": 4093599697203,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.36185,
    "closed_max": 0.85805,
    "models": [
@@ -920,13 +920,13 @@
    ]
   },
   "2026-02-02": {
-   "total": 9804326929861,
+   "total": 9804308427295,
    "closed": 2956932684571,
    "open": 2265174367798,
-   "others": 4582219877492,
+   "others": 4582201374926,
    "partial": false,
-   "read_on": "2026-11-21",
-   "closed_min": 0.30159,
+   "read_on": "2026-11-22",
+   "closed_min": 0.3016,
    "closed_max": 0.76896,
    "models": [
     [
@@ -977,12 +977,12 @@
    ]
   },
   "2026-02-09": {
-   "total": 13014630127221,
+   "total": 13014621245824,
    "closed": 2933113147344,
    "open": 4119001453500,
-   "others": 5962515526377,
+   "others": 5962506644980,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.22537,
    "closed_max": 0.68351,
    "models": [
@@ -1034,12 +1034,12 @@
    ]
   },
   "2026-02-16": {
-   "total": 13947727801492,
+   "total": 13947707590731,
    "closed": 2704544719987,
    "open": 5604149931115,
-   "others": 5639033150390,
+   "others": 5639012939629,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.19391,
    "closed_max": 0.5982,
    "models": [
@@ -1091,13 +1091,13 @@
    ]
   },
   "2026-02-23": {
-   "total": 13615671189056,
+   "total": 13615635379674,
    "closed": 3420593960578,
    "open": 3654297138013,
-   "others": 6540780090465,
+   "others": 6540744281083,
    "partial": false,
-   "read_on": "2026-11-21",
-   "closed_min": 0.25122,
+   "read_on": "2026-11-22",
+   "closed_min": 0.25123,
    "closed_max": 0.73161,
    "models": [
     [
@@ -1148,12 +1148,12 @@
    ]
   },
   "2026-03-02": {
-   "total": 14788910154996,
+   "total": 14788901299765,
    "closed": 3107677420536,
    "open": 4712078821414,
-   "others": 6969153913046,
+   "others": 6969145057815,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.21014,
    "closed_max": 0.68138,
    "models": [
@@ -1205,12 +1205,12 @@
    ]
   },
   "2026-03-09": {
-   "total": 16874474880619,
+   "total": 16874466272246,
    "closed": 3953185726570,
    "open": 4683150519778,
-   "others": 8238138634271,
+   "others": 8238130025898,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.23427,
    "closed_max": 0.72247,
    "models": [
@@ -1262,12 +1262,12 @@
    ]
   },
   "2026-03-16": {
-   "total": 20296794834531,
+   "total": 20296785655903,
    "closed": 6381624882497,
    "open": 3910692405696,
-   "others": 10004477546338,
+   "others": 10004468367710,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.31442,
    "closed_max": 0.80732,
    "models": [
@@ -1319,12 +1319,12 @@
    ]
   },
   "2026-03-23": {
-   "total": 22639924441575,
+   "total": 22639902006925,
    "closed": 7905804226263,
    "open": 4912680194750,
-   "others": 9821440020562,
+   "others": 9821417585912,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.3492,
    "closed_max": 0.78301,
    "models": [
@@ -1376,12 +1376,12 @@
    ]
   },
   "2026-03-30": {
-   "total": 27005556400914,
+   "total": 27005543633293,
    "closed": 12345107534747,
    "open": 3637540327369,
-   "others": 11022908538798,
+   "others": 11022895771177,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.45713,
    "closed_max": 0.8653,
    "models": [
@@ -1433,12 +1433,12 @@
    ]
   },
   "2026-04-06": {
-   "total": 20990845815775,
+   "total": 20990830453057,
    "closed": 5686605733630,
    "open": 4214051729067,
-   "others": 11090188353078,
+   "others": 11090172990360,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.27091,
    "closed_max": 0.79924,
    "models": [
@@ -1490,12 +1490,12 @@
    ]
   },
   "2026-04-13": {
-   "total": 20469273117201,
+   "total": 20469258962719,
    "closed": 6056476926317,
    "open": 3288351107308,
-   "others": 11124445083576,
+   "others": 11124430929094,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.29588,
    "closed_max": 0.83935,
    "models": [
@@ -1547,13 +1547,13 @@
    ]
   },
   "2026-04-20": {
-   "total": 21883269650188,
+   "total": 21883231944648,
    "closed": 4973519487415,
    "open": 4364736803105,
-   "others": 12545013359668,
+   "others": 12544975654128,
    "partial": false,
-   "read_on": "2026-11-21",
-   "closed_min": 0.22727,
+   "read_on": "2026-11-22",
+   "closed_min": 0.22728,
    "closed_max": 0.80054,
    "models": [
     [
@@ -1604,12 +1604,12 @@
    ]
   },
   "2026-04-27": {
-   "total": 23797756813570,
+   "total": 23797708238411,
    "closed": 3248486904754,
    "open": 7930802986138,
-   "others": 12618466922678,
+   "others": 12618418347519,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.1365,
    "closed_max": 0.66674,
    "models": [
@@ -1661,12 +1661,12 @@
    ]
   },
   "2026-05-04": {
-   "total": 25731788579578,
+   "total": 25731722669743,
    "closed": 3760928063339,
    "open": 7940307477805,
-   "others": 14030553038434,
+   "others": 14030487128599,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.14616,
    "closed_max": 0.69142,
    "models": [
@@ -1718,12 +1718,12 @@
    ]
   },
   "2026-05-11": {
-   "total": 26905682372472,
+   "total": 26905604441273,
    "closed": 5127102315510,
    "open": 7690461257959,
-   "others": 14088118799003,
+   "others": 14088040867804,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.19056,
    "closed_max": 0.71417,
    "models": [
@@ -1775,12 +1775,12 @@
    ]
   },
   "2026-05-18": {
-   "total": 28920204910828,
+   "total": 28920183072710,
    "closed": 6075146408684,
    "open": 9213711165256,
-   "others": 13631347336888,
+   "others": 13631325498770,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.21007,
    "closed_max": 0.68141,
    "models": [
@@ -1832,12 +1832,12 @@
    ]
   },
   "2026-05-25": {
-   "total": 31807747787522,
+   "total": 31807732282716,
    "closed": 5910987313111,
    "open": 11135343038016,
-   "others": 14761417436395,
+   "others": 14761401931589,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.18583,
    "closed_max": 0.64992,
    "models": [
@@ -1889,12 +1889,12 @@
    ]
   },
   "2026-06-01": {
-   "total": 36126105262907,
+   "total": 36126097183766,
    "closed": 5144296794060,
    "open": 14178620957227,
-   "others": 16803187511620,
+   "others": 16803179432479,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.1424,
    "closed_max": 0.60752,
    "models": [
@@ -1946,12 +1946,12 @@
    ]
   },
   "2026-06-08": {
-   "total": 44605812022870,
+   "total": 44605730575170,
    "closed": 8180369254417,
    "open": 18418549408316,
-   "others": 18006893360137,
+   "others": 18006811912437,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.18339,
    "closed_max": 0.58708,
    "models": [
@@ -2003,12 +2003,12 @@
    ]
   },
   "2026-06-15": {
-   "total": 46647905566215,
+   "total": 46647904607619,
    "closed": 8315322779312,
    "open": 18807493807272,
-   "others": 19525088979631,
+   "others": 19525088021035,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.17826,
    "closed_max": 0.59682,
    "models": [
@@ -2060,12 +2060,12 @@
    ]
   },
   "2026-06-22": {
-   "total": 46720348192435,
+   "total": 46720346165581,
    "closed": 7717420376243,
    "open": 20394686385588,
-   "others": 18608241430604,
+   "others": 18608239403750,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.16518,
    "closed_max": 0.56347,
    "models": [
@@ -2117,12 +2117,12 @@
    ]
   },
   "2026-06-29": {
-   "total": 46719738264038,
+   "total": 46719737216245,
    "closed": 4282798225186,
    "open": 23453161372775,
-   "others": 18983778666077,
+   "others": 18983777618284,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.09167,
    "closed_max": 0.498,
    "models": [
@@ -2174,12 +2174,12 @@
    ]
   },
   "2026-07-06": {
-   "total": 52619668699308,
+   "total": 52619665705462,
    "closed": 4286636386163,
    "open": 29621198101237,
-   "others": 18711834211908,
+   "others": 18711831218062,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.08146,
    "closed_max": 0.43707,
    "models": [
@@ -2231,12 +2231,12 @@
    ]
   },
   "2026-07-13": {
-   "total": 62773944339618,
+   "total": 62773943809235,
    "closed": 4241544202180,
    "open": 39563054702220,
-   "others": 18969345435218,
+   "others": 18969344904835,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.06757,
    "closed_max": 0.36975,
    "models": [
@@ -2288,12 +2288,12 @@
    ]
   },
   "2026-07-20": {
-   "total": 58041497415980,
+   "total": 58041496968855,
    "closed": 0,
    "open": 35304209620088,
-   "others": 22737287795892,
+   "others": 22737287348767,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.0,
    "closed_max": 0.39174,
    "models": [
@@ -2345,12 +2345,12 @@
    ]
   },
   "2026-07-27": {
-   "total": 56788588911921,
+   "total": 56788588338918,
    "closed": 1945077160070,
    "open": 30558901452398,
-   "others": 24284610299453,
+   "others": 24284609726450,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.03425,
    "closed_max": 0.46188,
    "models": [
@@ -2402,12 +2402,12 @@
    ]
   },
   "2026-08-03": {
-   "total": 69046537847932,
+   "total": 69046536667224,
    "closed": 6763583383872,
    "open": 36655269836847,
-   "others": 25627684627213,
+   "others": 25627683446505,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.09796,
    "closed_max": 0.46912,
    "models": [
@@ -2459,12 +2459,12 @@
    ]
   },
   "2026-08-10": {
-   "total": 75340581084831,
+   "total": 75340580565939,
    "closed": 10261535575547,
    "open": 36819663663288,
-   "others": 28259381845996,
+   "others": 28259381327104,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.1362,
    "closed_max": 0.51129,
    "models": [
@@ -2516,12 +2516,12 @@
    ]
   },
   "2026-08-17": {
-   "total": 93377577206324,
+   "total": 93377576557511,
    "closed": 16477743404242,
    "open": 45194721534855,
-   "others": 31705112267227,
+   "others": 31705111618414,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.17646,
    "closed_max": 0.516,
    "models": [
@@ -2573,12 +2573,12 @@
    ]
   },
   "2026-08-24": {
-   "total": 112996824136069,
+   "total": 112996817306045,
    "closed": 27421092791109,
    "open": 44787251623752,
-   "others": 40788479721208,
+   "others": 40788472891184,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.24267,
    "closed_max": 0.60364,
    "models": [
@@ -2630,12 +2630,12 @@
    ]
   },
   "2026-08-31": {
-   "total": 115463303706156,
+   "total": 115463299106750,
    "closed": 12937740557751,
    "open": 60282344235049,
-   "others": 42243218913356,
+   "others": 42243214313950,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.11205,
    "closed_max": 0.47791,
    "models": [
@@ -2687,12 +2687,12 @@
    ]
   },
   "2026-09-07": {
-   "total": 126763022044183,
+   "total": 126763021417962,
    "closed": 18180069685336,
    "open": 64693890233745,
-   "others": 43889062125102,
+   "others": 43889061498881,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.14342,
    "closed_max": 0.48965,
    "models": [
@@ -2722,7 +2722,7 @@
      "open"
     ],
     [
-     "DeepSeek: DeepSeek V4.1 Flash",
+     "DeepSeek: DeepSeek V4.1 Flash (batch)",
      4937738614053,
      "open"
     ],
@@ -2744,17 +2744,17 @@
    ]
   },
   "2026-09-14": {
-   "total": 128895269979077,
+   "total": 128887739378636,
    "closed": 9719171027551,
    "open": 71911665037767,
-   "others": 47264433913759,
+   "others": 47256903313318,
    "partial": false,
-   "read_on": "2026-11-21",
-   "closed_min": 0.0754,
-   "closed_max": 0.44209,
+   "read_on": "2026-11-22",
+   "closed_min": 0.07541,
+   "closed_max": 0.44206,
    "models": [
     [
-     "DeepSeek: DeepSeek V4.1 Flash",
+     "DeepSeek: DeepSeek V4.1 Flash (batch)",
      15768633499918,
      "open"
     ],
@@ -2801,17 +2801,17 @@
    ]
   },
   "2026-09-21": {
-   "total": 145845105335054,
+   "total": 145840644614688,
    "closed": 22385505792550,
    "open": 67889095713497,
-   "others": 55570503829007,
+   "others": 55566043108641,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.15349,
-   "closed_max": 0.53451,
+   "closed_max": 0.5345,
    "models": [
     [
-     "DeepSeek: DeepSeek V4.1 Flash",
+     "DeepSeek: DeepSeek V4.1 Flash (batch)",
      19575670827452,
      "open"
     ],
@@ -2858,12 +2858,12 @@
    ]
   },
   "2026-09-28": {
-   "total": 165847003742447,
+   "total": 165845035516658,
    "closed": 49213430261132,
    "open": 63114409293019,
-   "others": 53519164188296,
+   "others": 53517195962507,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.29674,
    "closed_max": 0.61944,
    "models": [
@@ -2873,7 +2873,7 @@
      "closed"
     ],
     [
-     "DeepSeek: DeepSeek V4.1 Flash",
+     "DeepSeek: DeepSeek V4.1 Flash (batch)",
      25608029388834,
      "open"
     ],
@@ -2915,17 +2915,17 @@
    ]
   },
   "2026-10-05": {
-   "total": 171839359685430,
+   "total": 171838284469017,
    "closed": 12097644983224,
    "open": 93569167078481,
-   "others": 66172547623725,
+   "others": 66171472407312,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.0704,
    "closed_max": 0.45548,
    "models": [
     [
-     "DeepSeek: DeepSeek V4.1 Flash",
+     "DeepSeek: DeepSeek V4.1 Flash (batch)",
      40971869015231,
      "open"
     ],
@@ -2972,17 +2972,17 @@
    ]
   },
   "2026-10-12": {
-   "total": 163830896595589,
+   "total": 163830682937581,
    "closed": 12377066891027,
    "open": 84075464157821,
-   "others": 67378365546741,
+   "others": 67378151888733,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.07555,
-   "closed_max": 0.48682,
+   "closed_max": 0.48681,
    "models": [
     [
-     "DeepSeek: DeepSeek V4.1 Flash",
+     "DeepSeek: DeepSeek V4.1 Flash (batch)",
      32756943780311,
      "open"
     ],
@@ -3029,12 +3029,12 @@
    ]
   },
   "2026-10-19": {
-   "total": 188012184445530,
+   "total": 188012161303177,
    "closed": 16621030481603,
    "open": 99347998794266,
-   "others": 72043155169661,
+   "others": 72043132027308,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.0884,
    "closed_max": 0.47159,
    "models": [
@@ -3044,7 +3044,7 @@
      "open"
     ],
     [
-     "DeepSeek: DeepSeek V4.1 Flash",
+     "DeepSeek: DeepSeek V4.1 Flash (batch)",
      17992473054984,
      "open"
     ],
@@ -3086,12 +3086,12 @@
    ]
   },
   "2026-10-26": {
-   "total": 193583878704232,
+   "total": 193583867307863,
    "closed": 20676391548773,
    "open": 99508502617514,
-   "others": 73398984537945,
+   "others": 73398973141576,
    "partial": false,
-   "read_on": "2026-11-21",
+   "read_on": "2026-11-22",
    "closed_min": 0.10681,
    "closed_max": 0.48597,
    "models": [
@@ -3106,7 +3106,7 @@
      "open"
     ],
     [
-     "DeepSeek: DeepSeek V4.1 Flash",
+     "DeepSeek: DeepSeek V4.1 Flash (batch)",
      14873506577897,
      "open"
     ],
@@ -3143,14 +3143,14 @@
    ]
   },
   "2026-11-02": {
-   "total": 209479742661067,
-   "closed": 13976086080055,
-   "open": 116237334639870,
-   "others": 79266321941142,
+   "total": 197041957398169,
+   "closed": 18240294024587,
+   "open": 103440485891719,
+   "others": 75361177481863,
    "partial": false,
-   "read_on": "2026-11-21",
-   "closed_min": 0.06672,
-   "closed_max": 0.44511,
+   "read_on": "2026-11-22",
+   "closed_min": 0.09257,
+   "closed_max": 0.47503,
    "models": [
     [
      "DeepSeek: DeepSeek V4.1 Flash 1017 (batch)",
@@ -3158,18 +3158,13 @@
      "open"
     ],
     [
-     "DeepSeek: DeepSeek V4.1 Flash",
+     "DeepSeek: DeepSeek V4.1 Flash (batch)",
      17608846481207,
      "open"
     ],
     [
      "Z.ai: GLM 5.3 Flash",
      13220234787161,
-     "open"
-    ],
-    [
-     "Tencent: Hy4",
-     12796848748151,
      "open"
     ],
     [
@@ -3196,18 +3191,23 @@
      "MoonshotAI: Kimi K3.1 Pro (batch)",
      4369995915337,
      "open"
+    ],
+    [
+     "Crouton Alpha",
+     4264207944532,
+     "closed"
     ]
    ]
   },
   "2026-11-09": {
-   "total": 211280142506486,
-   "closed": 14834727490691,
-   "open": 119193354724000,
-   "others": 77252060291795,
+   "total": 193858311623472,
+   "closed": 18542127880305,
+   "open": 101071486410836,
+   "others": 74244697332331,
    "partial": false,
-   "read_on": "2026-11-21",
-   "closed_min": 0.07021,
-   "closed_max": 0.43585,
+   "read_on": "2026-11-22",
+   "closed_min": 0.09565,
+   "closed_max": 0.47863,
    "models": [
     [
      "DeepSeek: DeepSeek V4.1 Flash 1017 (batch)",
@@ -3215,12 +3215,7 @@
      "open"
     ],
     [
-     "Tencent: Hy4",
-     18121868313164,
-     "open"
-    ],
-    [
-     "DeepSeek: DeepSeek V4.1 Flash",
+     "DeepSeek: DeepSeek V4.1 Flash (batch)",
      15545126927844,
      "open"
     ],
@@ -3253,62 +3248,67 @@
      "Z.ai: GLM 5.3 (batch)",
      3758045975594,
      "open"
+    ],
+    [
+     "OpenAI: GPT-6.1 Sol",
+     3707400389614,
+     "closed"
     ]
    ]
   },
   "2026-11-16": {
-   "total": 244485670907937,
-   "closed": 12450298833143,
-   "open": 169658780641406,
-   "others": 62376591433388,
+   "total": 178253219516302,
+   "closed": 13840319616983,
+   "open": 95123614554331,
+   "others": 69289285344988,
    "partial": true,
-   "read_on": "2026-11-21",
-   "closed_min": 0.05092,
-   "closed_max": 0.30606,
+   "read_on": "2026-11-22",
+   "closed_min": 0.07764,
+   "closed_max": 0.46636,
    "models": [
     [
-     "Tencent: Hy4 flash",
-     91871765862544,
-     "open"
-    ],
-    [
      "DeepSeek: DeepSeek V4.1 Flash 1017 (batch)",
-     46317679587433,
+     55329359949496,
      "open"
     ],
     [
-     "DeepSeek: DeepSeek V4.1 Flash",
-     11549576109632,
+     "DeepSeek: DeepSeek V4.1 Flash (batch)",
+     13263539595149,
      "open"
     ],
     [
      "Z.ai: GLM 5.3 Flash",
-     8077987831057,
+     10185782227991,
      "open"
     ],
     [
      "OpenAI: GPT-6 Luna (batch)",
-     6733338122546,
+     7521204589545,
      "closed"
-    ],
-    [
-     "Tencent: Hy4",
-     5825891225527,
-     "open"
     ],
     [
      "Anthropic: Claude Opus 5.5",
-     5716960710597,
+     6319115027438,
      "closed"
     ],
     [
-     "StepFun: Step 5 Preview",
-     3040260455600,
+     "Tencent: Hy4 flash",
+     6003692898800,
      "open"
     ],
     [
      "MiniMax: MiniMax M3.1 Flash",
-     2975619569613,
+     3602446084130,
+     "open"
+    ],
+    [
+     "MoonshotAI: Kimi K3.1 Pro (batch)",
+     3450324928842,
+     "open"
+    ],
+    [
+     "Xiaomi: MiMo-V2.6-Flash",
+     3288468869923,
      "open"
     ]
    ]
@@ -6980,8 +6980,86 @@
      ]
     ]
    }
+  },
+  "2026-11-22": {
+   "read_on": "2026-11-22",
+   "data_through": "2026-11-20",
+   "source": "live: every model in the weekly ranking",
+   "rows": 709,
+   "tokens": {
+    "closed": [
+     54656196302719,
+     1839770276089
+    ],
+    "open": [
+     139435297937784,
+     2900001330580
+    ],
+    "unknown": [
+     0,
+     0
+    ]
+   },
+   "closed_share_all": 0.28414,
+   "closed_share_out": 0.38816,
+   "unknown_share": 0.0,
+   "total_tokens": 198831265847172,
+   "top": {
+    "closed": [
+     [
+      "OpenAI: GPT-6 Luna (batch)",
+      0.0444
+     ],
+     [
+      "Anthropic: Claude Opus 5.5",
+      0.0365
+     ],
+     [
+      "Meta: Muse Spark 1.3 Contributor",
+      0.0153
+     ],
+     [
+      "TypeSafe: Jev 1.13",
+      0.0147
+     ],
+     [
+      "Anthropic: Claude Sonnet 5.5",
+      0.0145
+     ],
+     [
+      "Anthropic: Claude Haiku 5.5",
+      0.0141
+     ]
+    ],
+    "open": [
+     [
+      "DeepSeek: DeepSeek V4.1 Flash 1017 (batch)",
+      0.3139
+     ],
+     [
+      "DeepSeek: DeepSeek V4.1 Flash (batch)",
+      0.0787
+     ],
+     [
+      "Z.ai: GLM 5.3 Flash",
+      0.0542
+     ],
+     [
+      "StepFun: Step 5 Preview",
+      0.0241
+     ],
+     [
+      "MiniMax: MiniMax M3.1 Flash",
+      0.0206
+     ],
+     [
+      "Xiaomi: MiMo-V2.6-Flash",
+      0.0197
+     ]
+    ]
+   }
   }
  },
- "refreshed_at": "2026-11-21T08:54:04",
+ "refreshed_at": "2026-11-22T08:54:06",
  "backfill": "Built on 2026-10-13: weeks from OpenRouter's Top Models chart as read that day (53 weeks, 13 Oct 2025 to 12 Oct 2026); reads from the weekly rankings this project saved (4 Sep archive, top 76 models; daily snapshots from 28 Sep, top 250 models) classified with OpenRouter's catalog of 13 Oct 2026 and the registry, and the full ranking read on 13 Oct."
 }
