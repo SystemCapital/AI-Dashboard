@@ -2375,9 +2375,159 @@
    "first_seen": "2026-11-23",
    "status": "new",
    "matched_contract": "SpaceX/xAI - Anthropic (Colossus 1, Memphis)"
+  },
+  {
+   "title": "OpenAI Taps AMD Chips for 457 MW of AI Capacity in Six-Year TensorWave Deal",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9tNGtELUcxMkRmTWt1RWlvMmdYWnNEYVJxSVFqZWFjMmpPRDduMXdzZGV6NmExSk5WMl9IT3hMWTRPQUJnbTc3V0VBLVAwYmpvSlhaN2NkdElSOXpqb1FwMlFxQkx2SUJRU0xqWVh2V2E2UEJuU2c?oc=5",
+   "source": "BigGo Finance",
+   "published": "2026-11-17",
+   "channel": "news",
+   "value_usd_b": null,
+   "term_years": 6,
+   "gpus": null,
+   "mw": 457.0,
+   "chip": null,
+   "parties": [
+    "OpenAI",
+    "AMD"
+   ],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-11-24",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "Applied Digital\u2019s New 150 MW Lease Pays $2M per MW a Year",
+   "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNNjdEUVl6MlVGY0p2N2pfZVFxYTUydGJOa18yNWxmSzl6ZGl4a1d5ZHJFenhSS25VQWdSMVk2M3Z0R0xvekVOczRGeDU5djFabF9XdnFhNzliRkM5MU5vcV9qaWFDSUUxYTF4QjNsdUNNRGtKTWdxZERVMzA5bUR5dlhJTklPT0l5TDFz?oc=5",
+   "source": "FourWeekMBA",
+   "published": "2026-11-23",
+   "channel": "news",
+   "value_usd_b": 0.002,
+   "term_years": null,
+   "gpus": null,
+   "mw": 150.0,
+   "chip": null,
+   "parties": [
+    "Applied Digital"
+   ],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-11-24",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "Giga Energy signs USD $1 billion Texas data centre lease",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQQzI4bTFKR3h2WDBFdDJyaU5FVnF2amFHNmdxaG01OFNNRlJkeVRFVDdOc0ZrMGhWdG9mUV9mU2RfRkpwdldqQmZnLVZ2RWUtTjU1cVpSeTE4eGllOFhPaWt3Y093WmRoSy1xLWttWkoyM2Zjdl9PT2Z3RG5heWpuZHlyUHJCWlhmSjBsV05n?oc=5",
+   "source": "datacenter.news",
+   "published": "2026-11-18",
+   "channel": "news",
+   "value_usd_b": 1.0,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-11-24",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "Nvidia's $12.9 Billion Hugging Face Deal Survives Huang Exit as Microduck Robot Nears Shipment",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9DV1dQUlRsTy1GMDJoSmFZaTVVbTNDTEZMa0NYU0ZXZGZNVlplamktTkNIcFJsVWZOSHU3MGYyZ0dNcDV1Y005aDZ4WEpEUFYwY2VrSVgwWmVWQ3dLb2RpcWpPLVRBUkpoSUdRTHd1VTgtVEI0U0E?oc=5",
+   "source": "BigGo Finance",
+   "published": "2026-11-19",
+   "channel": "news",
+   "value_usd_b": 12.9,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "Nvidia",
+    "Hugging Face"
+   ],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-11-24",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "Giga Energy Signs $1B Texas AI Data Center Lease",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPOFBfQXNHUTRHRFdzR2NSb3JXV0xNZi1fY3M3T0JaY0xlRkg4cUtJT2hacDJoZndkX0F2S1prREtVZzdvbV9qLWhPYUxsaWpWRmxaMmE2b3J4Y3hFdjNrb3VuVDF2TnFKM0Q5cHEyZ2tjX09MbHR6VmlFN3lzRDVvSHNvUVI0bmdqNl9ZZ1NRbw?oc=5",
+   "source": "Wisevoter",
+   "published": "2026-11-18",
+   "channel": "news",
+   "value_usd_b": 1.0,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-11-24",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "Applied Digital Corporation signs US$5.4B AI data centre lease",
+   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOQVo0ZkN4Vlpuazk5WmN2MGFFLW5aR0lkamswLWJWOGs4NllzUEpGOTFRaF9lVzViWXE4Umg2dWh1bTZ6SFdEazFpaXg5TDQtRlBWQ20xa1JjNi0tcHN1aVVPX2JobldrR2Nuci1TOFhHNWFXWEtaRW10T2R5dXgySnAyeHZ1UQ?oc=5",
+   "source": "Mugglehead Investment Magazine",
+   "published": "2026-11-23",
+   "channel": "news",
+   "value_usd_b": 5.4,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "Applied Digital"
+   ],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-11-24",
+   "status": "new",
+   "matched_contract": "Applied Digital - unnamed hyperscaler (Polaris Forge 2)"
+  },
+  {
+   "title": "Applied Digital signs 150 MW hyperscaler lease, pushing contracted revenue above $41B",
+   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBHeG82Z0k2MV85Rzk4dDNCLWdtUUZVWHBZbGZXSFkwamJBLUtIY1VtS0tadnpYd2xXRVk3WjZyUFdybExoNko1U3Atcjl4VmVEUmxXLVFiMWNCQ2x6MmtzY1ltZWlRZk10WmVoT252N0lDdmdQRGZv?oc=5",
+   "source": "Crypto Briefing",
+   "published": "2026-11-23",
+   "channel": "news",
+   "value_usd_b": 41.0,
+   "term_years": null,
+   "gpus": null,
+   "mw": 150.0,
+   "chip": null,
+   "parties": [
+    "Applied Digital"
+   ],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-11-24",
+   "status": "new",
+   "matched_contract": null
+  },
+  {
+   "title": "Applied Digital Signs 150 MW AI Data Center Lease",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVFJ5eU5XOEhnNTF1X2gxa1FZZmZNTXNSWTNlUW5RYVhNUzh4ZktWZkpfMHNaRmFyd2hHZFpZMkFUenhSTUkyUTBUblNCZUtLaUtuSGZYeEdYNGd5d1hmREszY25PZDlkZUtkbGFqZ3Q2c1k4TDRaaVFfRnAxT25OOF9NUjZockJXZHpSUHFn?oc=5",
+   "source": "Wisevoter",
+   "published": "2026-11-23",
+   "channel": "news",
+   "value_usd_b": null,
+   "term_years": null,
+   "gpus": null,
+   "mw": 150.0,
+   "chip": null,
+   "parties": [
+    "Applied Digital"
+   ],
+   "kind_guess": "dc-lease",
+   "first_seen": "2026-11-24",
+   "status": "new",
+   "matched_contract": null
   }
  ],
- "scanned_on": "2026-11-23",
+ "scanned_on": "2026-11-24",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
