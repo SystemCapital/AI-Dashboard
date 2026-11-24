@@ -2525,9 +2525,29 @@
    "first_seen": "2026-11-24",
    "status": "new",
    "matched_contract": null
+  },
+  {
+   "title": "Oracle OpenAI Data Center Build: $300B Deal Fully Funded",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPdlZrdFFsM1dQbmFPNkhtX3RmZW1RRDJ0NWZVdnpMV1ptUjQ4SFMtWmVVVzBvd3ctZnB1SUpKSXZGWlE1bXV1MVd5NnZfNjFMSHRoOW11dXowczhEX20wVTFrdkZRRWtSY2RlOWR6WF83RUJXUnQ4Tk9XenBrcHc2VkFKMlpDRlN3b1RfWUszdlZDcktmUWln?oc=5",
+   "source": "Construction Review",
+   "published": "2026-11-23",
+   "channel": "news",
+   "value_usd_b": 300.0,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "OpenAI",
+    "Oracle"
+   ],
+   "kind_guess": "cloud-commit",
+   "first_seen": "2026-11-25",
+   "status": "new",
+   "matched_contract": "Oracle - OpenAI (Stargate, 4.5 GW)"
   }
  ],
- "scanned_on": "2026-11-24",
+ "scanned_on": "2026-11-25",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
