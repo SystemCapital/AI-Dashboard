@@ -277,6 +277,21 @@ def rerun(root, date, hist=None, want_tok=False):
     return (out, tok_from_result(res, dials, inputs)) if want_tok else out
 
 
+def lt_as_of(inputs, dials, date):
+    """the long-term rental rate on today's contract basis from the contracts announced on or before `date`; None when
+    the basis is 'contract' (the basis every pre-snapshot row was built on, so the as-built rate stands) or not a
+    contract median"""
+    basis = dials.get("rental_basis")
+    if dials.get("rental_rate_override") is not None:
+        return dials["rental_rate_override"]
+    if basis != "contract_median":
+        return None
+    import statistics
+    rows = [c for c in (inputs.get("rental") or {}).get("contracts", []) if c.get("per_gpu_hr") and c.get("use", True)
+            and (c.get("announced") or "") <= date]
+    return statistics.median([c["per_gpu_hr"] for c in rows]) if rows else None
+
+
 def rental_restate(r, prim, hist, inputs, dials, A_rental):
     """a row built before snapshots existed, put on today's rental bases: the near-term rate from the rate history as of
     the row's date (today's near-term basis), the long-term rate as built (it comes from the contracts list), and the
@@ -293,6 +308,11 @@ def rental_restate(r, prim, hist, inputs, dials, A_rental):
         return prim, "no %s rate in the history for %s; as-built near-term rate kept" % (dials["near_basis"], r["date"]), 1.0
     p = dict(prim)
     p["near"] = near
+    # the long-term rate on today's long-term basis, from the contracts disclosed by the row's date (as built when the
+    # basis is the one every pre-snapshot row was built on)
+    lt = lt_as_of(inputs, dials, r["date"])
+    if lt is not None:
+        p["lt"] = lt
     rr = dials.get("renter_roic") or 0.0
     ir = dials.get("implied_rate")
     base = (opts["spot"]["rate"] if ir == "spot" and opts["spot"]["rate"] else (near if ir in ("spot", "near") else p.get("lt")))

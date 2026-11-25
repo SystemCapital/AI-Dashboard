@@ -106,7 +106,7 @@
   "note": "null = take the mastersheet value. The GB300 sheet prices power at $110/MWh including T&D while the ROIC Dashboard sheet uses $50; the GB300 figure is used unless overridden here."
  },
  "rental": {
-  "basis": "contract",
+  "basis": "contract_median",
   "bases": {
    "contract": "GPU-weighted median of the disclosed multi-year GB300 / B300 GPU-rental rates (data/rental_rates.json: contracts with 'use' true), so the hyperscaler-scale deals set the level for a 410,000-GPU fleet; a market reference with no GPU count counts as 10,000",
    "contract_median": "Simple median of the same deals (small enterprise deals weigh as much as the 100,000-GPU ones)",
@@ -119,7 +119,7 @@
    "GB200"
   ],
   "term_structure": {
-   "near_term_basis": "all_median",
+   "near_term_basis": "spot",
    "near_term_bases": {
     "all_median": "Median of every current published GB300 / B300 per-GPU-hour rate - spot / preemptible, on-demand and capacity blocks, every provider tracked (data/rental_rates.json quotes; engine/rental_history.py). Default since 2026-10-13 (Lev): the median moves with the market when providers reprice, and a single provider's outlier rate (a hyperscaler list price, a deep spot discount) does not drag it. A quote counts as current when it was read within max_quote_age_days and the vendor still publishes it; reserved / contract rows and the aggregator indices are not in it.",
     "all_avg": "Average (mean) of the same rates. The default from 2026-10-12 to 2026-10-13; every provider's price change moves it in proportion, outliers included.",
@@ -134,8 +134,8 @@
     "B300"
    ],
    "spot_years": 1,
-   "converge_years": 3,
-   "note": "Years 1 to spot_years rent at the near-term rate (near_term_basis: the median of every current GB300/B300 rate by default); the rate then moves linearly to the long-term rate ('basis' above, contract by default) over converge_years, and stays there. With spot_years = 1 and converge_years = 3: year 1 = spot, year 2 = two thirds of the gap, year 3 = one third, year 4 onward = long-term. With spot_years = 3 and converge_years = 0 the spot rate holds for three years and steps to the long-term rate in year 4. rental_rate_decline_per_year in 'finance' compounds on top. Both are dials on the page; the cash-flow table shows the rate and utilisation assumed in every year. The Silicon Data and Ornn B200 indices are shown against every path as the two daily, market-based references; no GB200/GB300 index exists.",
+   "converge_years": 0,
+   "note": "Default since 2026-11-25 (Lev): year 1 at the median of current GB300/B300 spot rates, then a step (converge_years 0) to the simple median of the disclosed long-term contract rates (basis contract_median) for years 2 to 5. Years 1 to spot_years rent at the near-term rate (near_term_basis: the median of every current GB300/B300 rate by default); the rate then moves linearly to the long-term rate ('basis' above, contract by default) over converge_years, and stays there. With spot_years = 1 and converge_years = 3: year 1 = spot, year 2 = two thirds of the gap, year 3 = one third, year 4 onward = long-term. With spot_years = 3 and converge_years = 0 the spot rate holds for three years and steps to the long-term rate in year 4. rental_rate_decline_per_year in 'finance' compounds on top. Both are dials on the page; the cash-flow table shows the rate and utilisation assumed in every year. The Silicon Data and Ornn B200 indices are shown against every path as the two daily, market-based references; no GB200/GB300 index exists.",
    "chips_for_average": [
     "GB300",
     "B300"
