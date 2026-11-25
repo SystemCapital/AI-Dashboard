@@ -255,20 +255,18 @@ read carries no weight that day, so earlier days are unaffected). F did not exis
 15-28 September to within 0.02 points. D starts on 9 September and E on 14 September, as built. Not modelled: demand at these
 prices, price response to a 1 GW supply shock, training compute, sales cost, tax, financing, the ramp.
 
-**Rental basis and backfill (25 November 2026, at Lev's request).** The rental scenario now rents year 1 at the
-median of current GB300 / B300 spot rates and years 2-5 at the simple median of the disclosed long-term contract
-rates (`near_term_basis` spot, `basis` contract_median, `converge_years` 0). Because the open-weight GPU-hour is
-anchored to the year-1 rate, the change flows through every serving scenario, and every past day is restated on it;
-rows built before snapshots take the long-term rate from the contracts announced by their date. The restated history
-also reaches back before the first build (8 September 2026) with **weekly backfill estimates** from 20 April 2026, the
-first reading of GetDeploying's weekly median B300 spot rate (`engine/restate.py` `backfill()`): each week's year-1
-rate is that proxy chained to the first build day's year-1 rate (on-demand bases use the B300 on-demand median), the
-long-term rate is today's contract basis over the contracts announced by that week, and the serving scenarios keep
-the first build day's token market (prices, throughput, mix) with their revenue scaled with the open-weight GPU-hour
-target, exactly as rows built before snapshots are; E and F's block share are held. They are estimates, not market
-re-runs: the restated CSV marks them `backfill estimate` and the ROIC history page tags them; the as-built record
-(`data/roic_history.csv`) is unchanged. Before 20 April there is no Blackwell Ultra spot series to stand in for the
-year-1 rate, and the dashboard holds no token prices or usage before late August, so the backfill stops there.
+**Rental basis and token split (25 November 2026, at Lev's request).** The rental scenario rents year 1 at the median
+of current GB300 / B300 spot rates and years 2-5 at the simple median of the disclosed long-term contract rates
+(`near_term_basis` spot, `basis` contract_median, `converge_years` 0); because the open-weight GPU-hour is anchored to
+the year-1 rate, this flows through every serving scenario. The closed vs open-weight split of output tokens follows
+OpenRouter's weekly ranking (`split_mode` openrouter): both serving scenarios take the closed-weight share of
+completion tokens in the latest week, with the within-tier model mixes unchanged. Every day of the history is restated
+on both: days with a snapshot are re-run in full; the ten days built before snapshots (8-27 September) take the year-1
+rate from the provider rate history, the long-term rate from the contracts announced by their date, and the split
+exactly from their own recorded figures (revenue per serving GPU-hour = phi x frontier revenue + (1 - phi) x
+open-weight revenue, with the frontier GPU share phi re-derived at OpenRouter's share; `engine/restate.py`
+`split_restate()`), using the stored OpenRouter read where one exists and the share recorded that day otherwise. The
+history starts at the first build; nothing is estimated before it.
 
 ## Running it
 

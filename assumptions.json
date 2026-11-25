@@ -158,7 +158,7 @@
   "frontier_derate": 0.5,
   "tps_realisation": "market",
   "realisation": 1.0,
-  "split_mode": "cost",
+  "split_mode": "openrouter",
   "premium_tolerance": null,
   "closed_share_override": null,
   "notes": {
@@ -167,7 +167,7 @@
    "cache_hit_rate": "Only used under the 'list' price basis. null = each model's measured OpenRouter cache-hit rate; a number 0-1 overrides it for every model.",
    "frontier_derate": "The frontier basket's tokens per GPU = the largest open model measured on this chip and workload x this factor. No lab publishes its own throughput, so this is the one proxy left in the model, and it is labelled as such wherever it appears.",
    "realisation": "Multiplier on list price for frontier tokens (1.0 = list; 0.5 = everything at batch price).",
-   "split_mode": "How the frontier (closed) vs open-weight split of output tokens is set. 'cost' = the task framework's frontier share per task, pulled down where the frontier premium exceeds premium_tolerance (the dial). 'openrouter' = the closed-weight share of completion tokens OpenRouter routed in its latest weekly ranking (every closed lab, not just the basket), applied to both serving scenarios; the within-tier mixes stay. 'manual' = closed_share_override / closed_share_override_openai.",
+   "split_mode": "Default since 2026-11-25 (Lev): 'openrouter'. How the frontier (closed) vs open-weight split of output tokens is set. 'cost' = the task framework's frontier share per task, pulled down where the frontier premium exceeds premium_tolerance (the dial). 'openrouter' = the closed-weight share of completion tokens OpenRouter routed in its latest weekly ranking (every closed lab, not just the basket), applied to both serving scenarios; the within-tier mixes stay. 'manual' = closed_share_override / closed_share_override_openai.",
    "premium_tolerance": "The cost dial, in multiples of the open-weight price: a task keeps its framework frontier share while the frontier basket costs no more than this many times the routed open-weight mix for the task's own token shape (input and output priced separately, on the price basis in force, frontier at its realised price); above it the share falls as (tolerance / premium) ^ (1 - framework share), so a task rated 5 never moves, a 4 moves a third as fast as a 3, and 2-and-below stay open. null = no limit = the framework unchanged. Recomputed per basket from the live prices on every run and every dial move.",
    "closed_share_override": "Manual overlay for scenario B (Anthropic basket), used only when split_mode is 'manual': a number 0-1 forces the frontier share of OUTPUT tokens to that value, keeping the within-bucket mixes; null = the framework's derived share.",
    "tps_realisation": "Fraction of the published benchmark throughput a production GPU-hour realises. 'market' = implied per model by the open-weight token market: for each open model, (rental rate x (1 + renter_roic)) / (what a GPU-hour would earn at that model's benchmark peak x that model's own price), capped at 1. Each model carries its own factor; nothing is averaged across models. It bundles real utilisation, latency headroom and host margin into one number the market sets per model, and it means a competitively hosted open model earns the spot rental rate plus the renter's return per GPU-hour unless its benchmark ceiling is below it. 1.0 = benchmark peak (a ceiling). Any other number is one manual factor for every model. data/anchors.json holds public evidence to judge it against.",
