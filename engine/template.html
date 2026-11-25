@@ -1613,13 +1613,16 @@ function renderRoicHistory(R){
   // one entry per row: the as-built row, its basis entry and (restated view) every scenario on the chosen assumptions
   const byDate={}; if (B) B.rows.forEach(o=> byDate[o.date]=o);
   const restated = HB.mode==='restated' && B;
-  const X = rows.map(r=>{ const o=byDate[r.date]||null; if (!restated || !o) return {r, o, v:null};
+  // weekly backfill estimates before the first build (restated view only): no as-built row, so a stand-in row carries the rates
+  const bf = restated ? B.rows.filter(o=>o.src==='backfill').map(o=>({date:o.date, built_at:'', backfill:true, rent_rate_spot:o.prim.near, rent_rate_lt:o.prim.lt, capex_usd:B.fleet.capex, gpus:B.fleet.gpus})) : [];
+  const X = bf.concat(rows).map(r=>{ const o=byDate[r.date]||null; if (!restated || !o) return {r, o, v:null};
     const fl = (HB.fleet==='own' && o.built_fleet && o.built_fleet.gpus) ? o.built_fleet : B.fleet; return {r, o, v:restateRow(o.prim, HB.d, fl)}; });
   const built=(x,k,m)=> n(x.r[(m||M.key)+'_'+k]);
   const shown=(x,k,m)=>{ m=m||M.key; if (!restated) return built(x,k,m); const v=(x.v||{})[k]; return v ? (v[m]===undefined?null:v[m]) : null; };
   const custom = restated ? HB_DIALS.filter(([k])=>Math.abs(HB.d[k]-B.current[k])>1e-9).map(([k])=>`${hbLabel(k)} ${hbShow(k,B.current[k])} → ${hbShow(k,HB.d[k])}`) : [];
   if (restated && HB.fleet==='own') custom.push("each day's own fleet and capital");
   const extra=x=>{ const r=x.r; let s=`capital ${fmt.money(n(r.capex_usd))} · year-1 rate ${fmt.usd(n(r.rent_rate_spot))}${r.near_basis?' ('+esc(r.near_basis)+')':''} · long-term ${fmt.usd(n(r.rent_rate_lt))}<br>B200: Silicon Data ${r.sd_b200?fmt.usd(n(r.sd_b200)):'—'} / Ornn ${r.ornn_b200?fmt.usd(n(r.ornn_b200)):'—'} · H100: ${r.sd_h100?fmt.usd(n(r.sd_h100)):'—'} / ${r.ornn_h100?fmt.usd(n(r.ornn_h100)):'—'}<br>closed tokens B ${fmt.pct(n(r.closed_share_anthropic),0)} / C ${fmt.pct(n(r.closed_share_openai),0)} · closed $/M B ${fmt.usd(n(r.closed_price_anthropic))} / C ${fmt.usd(n(r.closed_price_openai))} · open $/M ${fmt.usd(n(r.open_price))}`;
+    if (restated && x.o && x.o.src==='backfill'){ s+=`<br><i>${esc(x.o.note)}</i>`; return s; }
     if (restated && x.o){ const d=hbDiffs(x.o.built, x.o.built_fleet, B); if (d.length) s+=`<br><i>restated: ${esc(d.join('; '))}</i>`; if (x.o.kept.length) s+=`<br><i>kept as built: ${esc(x.o.kept.join('; '))}</i>`; }
     return s; };
   const series=scen.map(([k,label,color])=>({key:'roic_'+k, label, short:label.split(' · ')[0], color, pts: X.filter(x=>shown(x,k)!==null).map(x=>({d:x.r.date, v:shown(x,k), stated:false, extra:extra(x)}))}));
@@ -1629,13 +1632,14 @@ function renderRoicHistory(R){
   const last=rows[rows.length-1];
   if (HB.check===null && B) HB.check=hbSelfCheck();
   const chk = B ? (HB.check!==null && HB.check<1e-9 ? ` · restatement matches the builder (worst gap ${HB.check.toExponential(1)})` : ` · <b>restatement differs from the builder</b> (worst gap ${HB.check})`) : '';
-  $('roicStatus').innerHTML = (rows.length ? `<b>${rows.length}</b> daily build${rows.length===1?'':'s'} recorded, ${esc(rows[0].date)} &rarr; ${esc(last.date)} (last build ${esc(last.built_at.replace('T',' '))})` : 'No builds recorded yet.') + chk;
+  $('roicStatus').innerHTML = (rows.length ? `<b>${rows.length}</b> daily build${rows.length===1?'':'s'} recorded, ${esc(rows[0].date)} &rarr; ${esc(last.date)} (last build ${esc(last.built_at.replace('T',' '))})` : 'No builds recorded yet.')
+    + (bf.length ? ` · plus <b>${bf.length}</b> weekly backfill estimates from ${esc(bf[0].date)} (rental proxy; token market held at the first build day)` : '') + chk;
   const nCmp = restated ? X.filter(x=>x.o && x.o.kept.length).length : 0, nSnap = B ? B.rows.filter(o=>o.src==='snapshot').length : 0;
   $('hbLabel').innerHTML = !B ? '' : restated
     ? (custom.length ? `<b>Every day restated on custom assumptions:</b> ${esc(custom.join('; '))} (against today’s).` : `<b>Every day restated on today’s assumptions</b> (assumptions.json and today’s mastersheet); each day keeps its own market data.`)
       + (nCmp ? ` <span class="tag est">${nCmp} day${nCmp===1?'':'s'} not fully comparable</span>` : '')
     : `<b>As built:</b> each day at the assumptions in force when it was built; changes of assumption show as steps.`;
-  $('roicChartSub').innerHTML = restated ? `&mdash; each point is that day’s market data run through the assumptions set above, so a move is a market move; hover a point for the inputs behind it` : `&mdash; each point is the ROIC the daily build computed at that day’s default dials, with that day’s market inputs; hover a point for the inputs behind it`;
+  $('roicChartSub').innerHTML = restated ? `&mdash; each point is that day’s market data run through the assumptions set above, so a move is a market move; hover a point for the inputs behind it${bf.length?`. Weekly points before ${esc(rows.length?rows[0].date:'')} are backfill estimates: the year-1 rate follows GetDeploying’s weekly median B300 rate chained to the first build day, the long-term rate uses the contracts announced by then, and the token market is held at the first build day`:''}` : `&mdash; each point is the ROIC the daily build computed at that day’s default dials, with that day’s market inputs; hover a point for the inputs behind it`;
   $('roicHint').textContent = `Every build of dashboard.html writes one row for its calendar day to ${RH.file} (a later build the same day replaces it), holding the six ROICs, IRRs and revenues per GPU-hour as built, the inputs that moved them, the day's assumptions and its market primitives, and saves the day's market inputs to data/snapshots. The restated view puts every day on one set of assumptions; ${B?B.file:'data/roic_history_restated.csv'} holds it at today's assumptions and is rewritten by every build, so a change of assumptions restates the whole history automatically.`;
   $('roicCsvLink').href = RH.file; if ($('roicCsvLink2')) $('roicCsvLink2').href = B ? B.file : '#';
   $('hbNote').innerHTML = !B ? '' : `How restating works: each day’s build is split into its market data &mdash; the year-1 and long-term rental rates, each serving scenario’s revenue per serving GPU-hour at full utilisation, and F’s Anthropic block &mdash; and the assumptions on this panel, which act on those exactly as the model does (the same code path; restating a day at its own as-built assumptions reproduces every as-built ROIC and IRR). Assumptions of the market model itself (the frontier baskets, split mode, premium tolerance, renter’s ROIC, throughput and volume bases) need the day’s full market inputs: from 28 Sep each build saves them and every build re-runs the model on each saved day under today’s assumptions (${nSnap} day${nSnap===1?'':'s'} so far). Every day’s rental quotes are rebuilt from the provider rate history (so a reading corrected later, such as Nebius’s 1 Oct rate card, is corrected on every day it applied) and its year-1 rate is recomputed on today’s basis; on days built before 28 Sep the serving revenues that rest on the open-weight GPU-hour target are scaled with it (exact unless a model sits at its benchmark ceiling). Those days otherwise keep their as-built market model and are tagged where one of its assumptions has since changed; F on 8&ndash;14 Sep (before the scenario existed) is derived from B’s frontier/open split that day, which reproduces the built F on 15&ndash;28 Sep to within 0.02 points.`;
@@ -1663,7 +1667,8 @@ function renderRoicHistory(R){
     const changed = pv ? ASSUMP.filter(([k])=> r[k]!==undefined && r[k]!=='' && pv[k]!==undefined && pv[k]!=='' && differs(r[k],pv[k]))
                                .map(([k,l,f])=> k.startsWith('basket_') ? basketDelta(l,pv[k],r[k]) : `${l} ${f(pv[k])} → ${f(r[k])}`) : [];
     let tags = (pv===null ? '<span class="tag">first row</span>' : (moved.length ? `<span class="tag meas">new: ${esc(moved.join(', '))}</span>` : (changed.length ? '<span class="tag est">same market inputs as the row before</span>' : '<span class="tag est">same inputs as the row before (rebuild, no refresh)</span>')));
-    if (!restated) tags += (changed.length ? ` <span class="tag fam">assumptions changed: ${esc(changed.join(', '))}</span>` : '');
+    if (r.backfill) tags = `<span class="tag f">backfill estimate</span> <span class="tag est">${esc(x.o.note)}</span>`;
+    else if (!restated) tags += (changed.length ? ` <span class="tag fam">assumptions changed: ${esc(changed.join(', '))}</span>` : '');
     else if (x.o){ const d=hbDiffs(x.o.built, x.o.built_fleet, B);
       tags += d.length ? ` <span class="tag fam">restated: ${esc(d.join(', '))}</span>` : ' <span class="tag fam">already on these assumptions</span>';
       if (x.o.src==='snapshot') tags += ' <span class="tag meas">market model re-run from the day’s snapshot</span>';

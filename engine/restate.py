@@ -286,10 +286,7 @@ def lt_as_of(inputs, dials, date):
         return dials["rental_rate_override"]
     if basis != "contract_median":
         return None
-    import statistics
-    rows = [c for c in (inputs.get("rental") or {}).get("contracts", []) if c.get("per_gpu_hr") and c.get("use", True)
-            and (c.get("announced") or "") <= date]
-    return statistics.median([c["per_gpu_hr"] for c in rows]) if rows else None
+    return contract_rate_as_of(inputs, basis, date)
 
 
 def rental_restate(r, prim, hist, inputs, dials, A_rental):
@@ -324,6 +321,95 @@ def rental_restate(r, prim, hist, inputs, dials, A_rental):
                 p[key] = p[key] * k
         return p, "rental rates restated from the rate history (%s %.2f); serving revenue scaled x%.3f with the open-weight GPU-hour target" % (dials["near_basis"], near, k), k
     return p, "rental near-term rate restated from the rate history (%s %.2f)" % (dials["near_basis"], near), 1.0
+
+
+# ------------------------------------------------------------------------------------------------ backfill before the first build
+# Proxy for the year-1 rate before the dashboard's own provider quotes begin: GetDeploying's weekly median B300 rate
+# (spot for the spot basis, on-demand for the on-demand style bases), chained to the first build day's year-1 rate.
+BACKFILL_PROXY = {"spot": "b300_spot", "all_median": "b300_on_demand", "all_avg": "b300_on_demand", "ondemand": "b300_on_demand",
+                  "neocloud": "b300_on_demand"}
+
+
+def contract_rate_as_of(inputs, basis, date):
+    """a contract basis computed from the contracts announced on or before `date` (None if not a contract basis)"""
+    import statistics
+    from engine.model import wmedian
+    rows = [c for c in (inputs.get("rental") or {}).get("contracts", []) if c.get("per_gpu_hr") and c.get("use", True)
+            and (c.get("announced") or "") <= date]
+    if not rows:
+        return None
+    if basis == "contract_median":
+        return statistics.median([c["per_gpu_hr"] for c in rows])
+    if basis == "contract":
+        return wmedian([(c["per_gpu_hr"], float(c.get("gpus") or 10000.0)) for c in rows])
+    return None
+
+
+def _series_values(hist, key):
+    s = ((hist.get("getdeploying_index") or {}).get("series") or {}).get(key) or {}
+    v = s.get("values") if isinstance(s, dict) and "values" in s else s
+    return {d: float(x) for d, x in (v or {}).items() if x not in (None, "")}
+
+
+def backfill(hist, inputs, dials, rows_out):
+    """estimated rows for the weeks before the first build day, on today's assumptions.
+
+    The first build day's restated primitives (`anchor`) carry the token market as it stood then: prices, throughput,
+    model mix and the frontier/open split. Each earlier week takes
+      - year-1 rate: the anchor's year-1 rate x (proxy that week / proxy in force on the anchor day), the proxy being
+        GetDeploying's weekly median B300 rate (BACKFILL_PROXY);
+      - long-term rate: today's contract basis from the contracts announced by that week (as held if not a contract basis);
+      - serving primitives: the anchor's, scaled with what an open-weight GPU-hour is made to earn (the same scaling
+        rental_restate applies to rows built before snapshots), so the token market's structure is held at the anchor
+        day and only the rental market moves; E (benchmark peak) and F's block share are held.
+    Weekly, from the proxy's first reading. Not a market re-run: flagged as an estimate wherever it is shown."""
+    if not rows_out or rows_out[0]["prim"].get("near") is None:
+        return []
+    anchor = rows_out[0]
+    # each serving primitive is anchored on the first day it exists (D began on 9 Sep, E on 14 Sep), at that day's year-1 rate
+    first = {}
+    for o in rows_out:
+        for kk in ("anthropic", "openai", "open", "open_peak", "aws_phi", "aws_frontier", "aws_open"):
+            if kk not in first and o["prim"].get(kk) is not None and o["prim"].get("near"):
+                first[kk] = (o["prim"][kk], o["prim"]["near"], o["prim"].get("lt"))
+    key = BACKFILL_PROXY.get(dials.get("near_basis"))
+    vals = _series_values(hist, key) if key else {}
+    a_date = anchor["date"]
+    before = sorted(d for d in vals if d <= a_date)
+    if not before:
+        return []
+    p0 = vals[before[-1]]
+    n0 = anchor["prim"]["near"]
+    lt0 = anchor["prim"].get("lt")
+    rr = dials.get("renter_roic") or 0.0
+    ir = dials.get("implied_rate")
+    out = []
+    for d in before:
+        if d >= a_date:
+            continue
+        near = dials["near_rate_override"] if dials.get("near_rate_override") is not None else n0 * vals[d] / p0
+        lt = dials["rental_rate_override"] if dials.get("rental_rate_override") is not None else contract_rate_as_of(inputs, dials.get("rental_basis"), d)
+        if lt is None:
+            lt = lt0
+        p = dict(anchor["prim"])
+        p["near"], p["lt"] = near, lt
+        k = None
+        for kk, (v0, n_a, lt_a) in first.items():
+            if kk in ("open_peak", "aws_phi"):
+                p[kk] = v0                                  # benchmark peak and F's block share: held
+                continue
+            base_new, base_old = ((lt, lt_a) if ir == "longterm" else (near, n_a))
+            kk_k = base_new / base_old if base_old else 1.0
+            p[kk] = v0 * kk_k
+            if kk == "anthropic":
+                k = kk_k
+        k = k if k is not None else 1.0
+        note = ("backfill estimate: year-1 rate from GetDeploying's weekly median %s (%.2f) chained to %s (%.2f -> %.2f); "
+                "long-term rate from contracts announced by %s; token market held at %s, serving revenue scaled x%.3f"
+                % (key.replace("_", " "), vals[d], a_date, p0, n0, d, a_date, k))
+        out.append({"date": d, "prim": p, "src": "backfill", "note": note, "built": None, "built_fleet": None, "kept": [], "tok": None,
+                    "proxy": {"series": key, "value": vals[d], "anchor_value": p0}})
+    return out
 
 
 # ------------------------------------------------------------------------------------------------ model-assumption checks
@@ -405,13 +491,17 @@ def history_basis(root, rows, inputs, dials, log=print):
         bd, bfl = row_built(r)
         kept = [] if src == "snapshot" else model_changes(r, today, launched)
         out.append({"date": r["date"], "prim": prim, "src": src, "note": note, "built": bd, "built_fleet": bfl, "kept": kept, "tok": tok})
+    bf = backfill(hist, inputs, dials, out)
+    out = bf + out
     py = [restate(o["prim"], cur_d, cur_fl) for o in out]
+    by_date = {r["date"]: r for r in rows}
     with open(root / "data" / "roic_history_restated.csv", "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=RESTATED_COLS)
         w.writeheader()
-        for r, o, x in zip(rows, out, py):
-            row = {"date": r["date"], "built_at": r["built_at"], "market_model": ("re-run from the day's snapshot" if o["src"] == "snapshot" else "as built"),
-                   "not_comparable": "; ".join(o["kept"])}
+        for o, x in zip(out, py):
+            r = by_date.get(o["date"]) or {"date": o["date"], "built_at": ""}
+            mm = {"snapshot": "re-run from the day's snapshot", "backfill": "backfill estimate (rental proxy; token market held at the first build day)"}.get(o["src"], "as built")
+            row = {"date": r["date"], "built_at": r["built_at"], "market_model": mm, "not_comparable": "; ".join(o["kept"])}
             for s, v in x.items():
                 row["roic_" + s], row["irr_" + s], row["rev_per_gpu_hr_" + s] = round(v["roic"], 4), (round(v["irr"], 4) if v["irr"] is not None else ""), round(v["rev_per_gpu_hr"], 4)
                 if s == "rent":
@@ -425,5 +515,6 @@ def history_basis(root, rows, inputs, dials, log=print):
                 row[inv[k]] = v
             row.update({"gpus": int(round(cur_fl["gpus"])), "capex_usd": int(round(cur_fl["capex"])), "fleet_kw": round(cur_fl["kw"], 3), "shell_cost_usd": int(round(cur_fl["shell"]))})
             w.writerow(row)
-    log("roic history restated on today's assumptions: %d rows (%d re-run from snapshots) -> roic_history_restated.csv" % (len(rows), n_snap))
+    log("roic history restated on today's assumptions: %d rows (%d re-run from snapshots) plus %d weekly backfill estimates from %s -> roic_history_restated.csv"
+        % (len(rows), n_snap, len(bf), bf[0]["date"] if bf else "-"))
     return {"rows": out, "current": cur_d, "fleet": cur_fl, "py": py, "sep_keys": SEP_KEYS, "file": "data/roic_history_restated.csv", "launched": launched}
