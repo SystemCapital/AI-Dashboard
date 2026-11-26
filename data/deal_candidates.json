@@ -2545,19 +2545,34 @@
    "first_seen": "2026-11-25",
    "status": "new",
    "matched_contract": "Oracle - OpenAI (Stargate, 4.5 GW)"
+  },
+  {
+   "title": "ESDS details US$1.26 billion Sharon AI deal for Sydney GPU cluster",
+   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPQ0EtbVEyUWFyRU5VcTl2U1FzVFIwWUhQNENQUnJRUkZQY3dkSnhBeEFzSUVjU3VXems2NU1VdUx2RWxZZzBCZXkwYTdKYmlsUU8yeUJ5ejdNSUZsN2pINmJLLUVoRlFTSUdWOGNVZVRGY2V0aEhXZF9WaTFQdVhNTTlHZkViZGs5bXBscmZvbmhkeDgzZ0NkZTN6SzFlVzBVRm1vTDJ4c1BJaUJIekdaSDV1LVpGNWNVX2wyWi01cnlZbWNIVGhYcUNsbGt6bHRqbXNTS1hxRE5tbDBuWHUxdVZlcHdfZE10X1Jr0gHwAUFVX3lxTE0xUlRFT2o2akFXYUp1a21FeDdoNDhuNjRUSlNtWDhuNTBLOUlBc0dYYXoyOG94X3o5bEt6NVlMaFEyLUZ2OWdKZy1RVFJ6dFBSOGxfTER4QzllTmF3Zk5OWnNiRUFyRGVpM3BKZW9mZ180LUJfWTRZWWsxVDJYcUhGWHY1aHNkTFJFTHd2ZFNZckJhR3B0OVhnZFlta3l1d0puci1NZGFsZVROYko5cXZLY2NPeTFuUVV6SWhHVHB0aHdYZmdROWNrMjRMX0pqc2w5ZEc5c3NMOTB0TmRBaGRkTmszdXBKME05TF9kUUlocQ?oc=5",
+   "source": "ET Datacenters",
+   "published": "2026-11-26",
+   "channel": "news",
+   "value_usd_b": 1.26,
+   "term_years": null,
+   "gpus": null,
+   "mw": null,
+   "chip": null,
+   "parties": [
+    "Sharon AI"
+   ],
+   "kind_guess": "gpu-rental",
+   "first_seen": "2026-11-27",
+   "status": "new",
+   "matched_contract": "Sharon AI - unnamed global AI lab (New Zealand)"
   }
  ],
- "scanned_on": "2026-11-26",
+ "scanned_on": "2026-11-27",
  "queries": [
   "\"GPU\" (agreement OR contract OR deal OR lease) billion (\"multi-year\" OR \"five-year\" OR \"six-year\" OR \"10-year\" OR \"15-year\") when:7d",
   "(\"AI cloud\" OR \"compute capacity\" OR neocloud OR \"AI compute\") (agreement OR contract OR deal OR signs) billion when:7d",
   "(\"data center\" OR \"data centre\") lease (MW OR gigawatt) (AI OR GPU OR hyperscaler) billion when:7d"
  ],
  "edgar_phrases": [],
- "errors": [
-  "news: HTTP Error 503: Service Unavailable",
-  "news: HTTP Error 503: Service Unavailable",
-  "news: HTTP Error 503: Service Unavailable"
- ],
+ "errors": [],
  "note": "Headlines and filings the daily scan matched to a multi-year GPU / AI-compute contract, with the figures it could read from them. Review each one: a confirmed deal goes into data/rental_rates.json 'contracts' (classified; see engine/deals_seed.py for the fields); set status to 'added' or 'dismissed' here to drop it from the page's review box. Nothing here enters the model until it is moved."
 }
