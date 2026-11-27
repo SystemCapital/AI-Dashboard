@@ -24,7 +24,7 @@
  ],
  "source": "SemiAnalysis InferenceX public API, https://inferencex.semianalysis.com/api/v1/benchmarks?model=<name>",
  "license": "Apache-2.0 (per the dataset metadata on every compare page)",
- "read_on": "2026-11-27",
+ "read_on": "2026-11-28",
  "columns": [
   "model",
   "hw",
@@ -4396,7 +4396,7 @@
    "Qwen-3.5-397B-A17B",
    "GB300",
    "agentx",
-   26,
+   29,
    "2026-11-26",
    "fp4+fp8",
    "dynamo-sglang+dynamo-trt",
